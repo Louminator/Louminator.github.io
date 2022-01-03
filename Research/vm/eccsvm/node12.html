@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>High Reynolds Number Vortex Dipole Evolution</TITLE>
+<META NAME="description" CONTENT="High Reynolds Number Vortex Dipole Evolution">
+<META NAME="keywords" CONTENT="eccsvm">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="eccsvm.css">
+</HEAD>
+<BODY LANG="EN">
+ <A NAME="tex2html154" HREF="node13.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html152" HREF="node10.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html148" HREF="node11.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html155" HREF="node13.html">Concluding Remarks</A>
+<B>Up:</B> <A NAME="tex2html153" HREF="node10.html">Sample Calculations</A>
+<B> Previous:</B> <A NAME="tex2html149" HREF="node11.html">A Simple Spreading Gaussian </A>
+<BR> <P>
+<H2><A NAME="SECTION00052000000000000000">High Reynolds Number Vortex Dipole Evolution</A></H2>
+<P>
+Vortex dipole evolution provides a challenging opportunity for any numerical
+method because of the high strain rates involved.  Unlike more popular
+same-signed vortex merger examples, dipoles create closed streamlines in the
+flow, confining regions of positive and negative vorticity.  As the dipole
+propagates along, vorticity diffuses across the narrow boundary layer
+along the streamline which encloses both regions.  Also, vorticity erosion
+is strongly enhanced at the separatrix at the rear of the dipole
+[<A HREF="node16.html#lingevitchbernoff">14</A>, <A HREF="node16.html#rhinesyoung">20</A>].  Buntine and Pullen studied
+three-dimensional Burger's vortices using a spectral scheme in a reference
+frame that moves with the dipole [<A HREF="node16.html#buntinepullen">4</A>].  
+The problem reduces to a two-dimensional
+dipole evolution problem with an external straining field which forces the
+dipoles together.  As it is described in this paper, ECCSVM cannot reproduce
+this simulation because ECCSVM is strictly two-dimensional.  However, a
+two-dimensional dipole experiment can capture the similar features and
+difficulties.
+<P>
+<P><A NAME="1051">&#160;</A><A NAME="figdipoleevolve">&#160;</A> <IMG WIDTH=577 HEIGHT=202 ALIGN=BOTTOM ALT="figure1047" SRC="img249.gif"  > <BR>
+<STRONG>Figure 5.3:</STRONG> Evolution of vortex dipole.  As indicated, snapshots progress from
+left to right.  Vorticity contours have increments of 0.5 (T=0.0), 0.25
+(T=2.0) and 0.125 (T=4.0).  Positive vorticity is shown with solid contours
+and negative vorticity is shown with dashed contours.  The contour is
+produced by projecting the basis functions onto a 100X100 grid over the
+domain shown.<BR>
+<P>
+For this experiment, the same choice of parameters as in the previous
+section are sufficient but with different initial conditions:
+<P> <IMG WIDTH=540 HEIGHT=40 ALIGN=BOTTOM ALT="equation1054" SRC="img250.gif"  > <P>
+One can see that the dipole is composed of two vortices
+( <IMG WIDTH=47 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline3093" SRC="img251.gif"  > ,  <IMG WIDTH=51 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline3095" SRC="img252.gif"  > ) placed close to one another to generate a
+high strain.  Once again, the fluid viscosity is 0.01.
+These parameters are slightly more severe than those
+used by Buntine and Pullen, but this simulation lacks external straining.  
+Buntine and Pullen used a
+larger separation initially, but the external straining field draws the
+individual monopoles together into a configuration similar to the one used
+here.  Of course, in the case of this calculation, there is absolutely no
+customization for the calculation.  As shown in Fig. (<A HREF="node12.html#figdipoleevolve">5.3</A>),
+ECCSVM adaptively captures the dynamics of this coherent vortical structure.
+In Fig. (<A HREF="node12.html#figdipolepositions">5.4</A>), one can see that computational elements
+position themselves in the appropriate domain, and the domain coverage
+appears ideal.  One can also see the effect
+of basis function deformation as blobs orient themselves with respect to
+local flow deviations.
+<P><A NAME="1335">&#160;</A><A NAME="figdipolepositions">&#160;</A> <IMG WIDTH=575 HEIGHT=306 ALIGN=BOTTOM ALT="figure1061" SRC="img253.gif"  > <BR>
+<STRONG>Figure 5.4:</STRONG> Basis function positions and orientations in vortex dipole
+calculations.  These plots show vortex element positions from a low
+resolution ( <IMG WIDTH=105 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2339" SRC="img17.gif"  > ) dipole calculation.  There are 2299
+computational elements at this point in the calculation.  The X's correspond
+to  <IMG WIDTH=27 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline2341" SRC="img18.gif"  >  and  <IMG WIDTH=27 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline2341" SRC="img18.gif"  >  oriented at an angle  <IMG WIDTH=11 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2345" SRC="img19.gif"  > .  Each
+element is drawn in a rotating greyscale tone so that one can distinguish
+elements from one another.  Vorticity contours have increments of 0.125
+(left) and 0.0625 (right).
+The right plot is a zoomed version of the right showing detailed positions
+near the aft separatrix.<BR>
+<P>
+<P>
+<P><A NAME="1069">&#160;</A><A NAME="figconvdipole">&#160;</A> <IMG WIDTH=307 HEIGHT=274 ALIGN=BOTTOM ALT="figure1067" SRC="img254.gif"  > <BR>
+<STRONG>Figure 5.5:</STRONG> Spatial convergence for vortex dipole evolution problem.  The
+reference solution has been calculated with an ADI method.  Since the ADI
+solution noticeably interacts with the domain boundary at later times,
+samples were measured at T=1.0 and T=2.0.  Though not as clean as for the
+simple vortex experiment, this is to be expected because the ADI solution is
+not exact.<BR>
+<P>
+There is no known analytic solution to this dipole propagation problem, so
+it is not possible to compare ECCSVM solutions to another solution with zero
+error.  Comparing successive runs with themselves yields a  <IMG WIDTH=35 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2335" SRC="img15.gif"  > 
+convergence rate, but this reasoning is flawed because one might be
+converging to the wrong answer.  Instead, 
+a simple,
+stable alternating-direction implicit (ADI) finite difference code provides
+a reference solution [<A HREF="node16.html#peyrettaylor">19</A>].
+Though the finite difference code is easy to implement, there is nothing
+sophisticated about the treatement of boundary conditions, so no
+comparisons about domain coverage are made.  The highest resolution of 
+ <IMG WIDTH=105 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline3107" SRC="img255.gif"  >  is substantially better than the highest 
+resolution of
+the ECCSVM trial runs as is the temporal discretization.  Though successive
+ADI runs show measurable though converging
+differences, limited computational resources
+preclude higher resolution runs, so the highest resolution ADI
+calculation is the reference solution for comparison with ECCSVM.  The
+resulting convergence is shown in Fig. (<A HREF="node12.html#figconvdipole">5.5</A>).
+<P>
+<HR><A NAME="tex2html154" HREF="node13.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html152" HREF="node10.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html148" HREF="node11.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html155" HREF="node13.html">Concluding Remarks</A>
+<B>Up:</B> <A NAME="tex2html153" HREF="node10.html">Sample Calculations</A>
+<B> Previous:</B> <A NAME="tex2html149" HREF="node11.html">A Simple Spreading Gaussian </A>
+<P><ADDRESS>
+<I>Louis F. Rossi <BR>
+Thu Nov  4 15:02:00 EST 1999</I>
+</ADDRESS>
+</BODY>
+</HTML>

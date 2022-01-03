@@ -1,0 +1,500 @@
+\batchmode
+\documentclass[12pt]{article}
+\makeatletter
+\usepackage{epsf,amsmath}
+
+\oddsidemargin0in
+\textwidth6.5in
+\topmargin-0.5in
+\textheight9in
+\parindent0in
+
+\providecommand{\OneFigure}[1]{\begin{center}
+\parbox{1.5in}{\epsfysize=1.5in \epsfbox{#1}}\end{center}}
+\par\usepackage[dvips]{color}
+\pagecolor[gray]{.7}
+
+
+\makeatletter
+\count@=\the\catcode`\_ \catcode`\_=8 
+\newenvironment{tex2html_wrap}{}{} \catcode`\_=\count@
+\makeatother
+\let\mathon=$
+\let\mathoff=$
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\global\topskip=2sp
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize
+ \parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}\normalsize}%
+\def\lthtmltypeout#1{{\let\protect\string\immediate\write\lthtmlwrite{#1}}}%
+\newcommand\lthtmlhboxmathA{\adjustnormalsize\setbox\sizebox=\hbox\bgroup}%
+\newcommand\lthtmlvboxmathA{\adjustnormalsize\setbox\sizebox=\vbox\bgroup%
+ \let\ifinner=\iffalse }%
+\newcommand\lthtmlboxmathZ{\@next\next\@currlist{}{\def\next{\voidb@x}}%
+ \expandafter\box\next\egroup}%
+\newcommand\lthtmlmathtype[1]{\def\lthtmlmathenv{#1}}%
+\newcommand\lthtmllogmath{\lthtmltypeout{l2hSize %
+:\lthtmlmathenv:\the\ht\sizebox::\the\dp\sizebox::\the\wd\sizebox.\preveqno}}%
+\newcommand\lthtmlfigureA[1]{\let\@savefreelist\@freelist
+       \lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmlfigureZ{\lthtmlboxmathZ\lthtmllogmath\copy\sizebox
+       \global\let\@freelist\@savefreelist}%
+\newcommand\lthtmldisplayA[1]{\lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmldisplayB[1]{\edef\preveqno{(\theequation)}%
+  \lthtmldisplayA{#1}\let\@eqnnum\relax}%
+\newcommand\lthtmldisplayZ{\lthtmlboxmathZ\lthtmllogmath\lthtmlsetmath}%
+\newcommand\lthtmlinlinemathA[1]{\lthtmlmathtype{#1}\lthtmlhboxmathA  \vrule height1.5ex width0pt }%
+\newcommand\lthtmlinlineA[1]{\lthtmlmathtype{#1}\lthtmlhboxmathA}%
+\newcommand\lthtmlinlineZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetinline}
+\newcommand\lthtmlinlinemathZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetmath}
+\def\lthtmlsetinline{\hbox{\vrule width.1em\vtop{\vbox{%
+  \kern.1em\copy\sizebox}\ifdim\dp\sizebox>0pt\kern.1em\else\kern.3pt\fi
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\lthtmlsetmath{\hbox{\vrule width.1em\vtop{\vbox{%
+  \kern.1em\kern0.8 pt\hbox{\hglue.17em\copy\sizebox\hglue0.8 pt}}\kern.3pt%
+  \ifdim\dp\sizebox>0pt\kern.1em\fi \kern0.8 pt%
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\centerinlinemath{%\dimen1=\ht\sizebox
+  \dimen1=\ifdim\ht\sizebox<\dp\sizebox \dp\sizebox\else\ht\sizebox\fi
+  \advance\dimen1by.5pt \vrule width0pt height\dimen1 depth\dimen1 
+ \dp\sizebox=\dimen1\ht\sizebox=\dimen1\relax}
+
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize\expandafter\vfill
+  \else\expandafter\vss\fi}%
+\makeatletter \tracingstats = 1 
+
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\makeatother
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline216}%
+$n \times n$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath164}%
+\begin{displaymath}Ax = 0 \ \ \ \ Ay = 0
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath165}%
+\begin{displaymath}A(x+y) = Ax + Ay = \v 0 + \v 0 = \v 0.
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath166}%
+\begin{displaymath}A(cx) = cAx = c\v 0 = \v 0.
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath167}%
+\begin{displaymath}u = 
+\left[
+\begin{matrix}
+1 \\
+-1  \\
+1
+\end{matrix}
+\right], \ \ \ \ 
+v = 
+\left[
+\begin{matrix}
+2 \\
+1  \\
+1
+\end{matrix}
+\right].
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath168}%
+\begin{displaymath}u \cdot v = \cos \theta \|u\| \|v\|.
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline238}%
+$\arccos(\sqrt{2}/3)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath169}%
+\begin{displaymath}A = \left[
+\begin{matrix}
+4 & 1 & 2 & 4 \\
+-1 & 0 & 1 & 3 \\
+10 & 2 & 2 & 2 \\
+3 & 1 & 3 & 7
+\end{matrix}
+\right].
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath170}%
+\begin{displaymath}\left[
+\begin{matrix}
+1 & 0 & -1 & -3 \\
+0 & 1 & 6 & 16\\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0
+\end{matrix}
+\right].
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath171}%
+\begin{displaymath}\left[
+\begin{matrix}
+s + 3 t \\
+-6 s - 16 t \\
+s \\
+t
+\end{matrix}
+\right].
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath172}%
+\begin{displaymath}\left\{
+\left[
+\begin{matrix}
+1 \\-6 \\1 \\0
+\end{matrix}
+\right],
+\left[
+\begin{matrix}
+3 \\-16 \\0 \\1
+\end{matrix}
+\right]
+\right\}.
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath174}%
+\begin{displaymath}A =
+\left[
+\begin{matrix}
+3 & 0 & 0 \\
+0 & 2 & 0 \\
+0 & 0 & 1/2
+\end{matrix}
+\right].
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath175}%
+\begin{displaymath}u^T A v = 3 u_1 v_1 + 2u_2 v_2 + \frac{1}{2} u_3 v_3.
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline260}%
+$(u,u) \geq 0$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline264}%
+$u = \v 0$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath177}%
+\begin{displaymath}\|u+v\|^2 = \|u\|^2 + \|v\|^2
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{eqnarraystar46}%
+\begin{eqnarray*}\|u+v\|^2 & = & (u+v,u+v) \\
+& = & (u,u) + 2(u,v) + (v,v) \\
+& = & \|u\|^2 + \|v\|^2 + 2(u,v)
+\end{eqnarray*}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath178}%
+\begin{displaymath}W = {\rm span}
+\left\{
+\left[
+\begin{matrix}
+3  \\
+0  \\
+0 \\
+1
+\end{matrix}
+\right],
+\left[
+\begin{matrix}
+1  \\
+0 \\
+1  \\
+1
+\end{matrix}
+\right],
+\left[
+\begin{matrix}
+0 \\
+-1  \\
+0  \\
+1
+\end{matrix}
+\right]
+\right\}.
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath179}%
+\begin{displaymath}\overline{v}_1 = 
+\left[
+\begin{matrix}
+3  \\
+0  \\
+0 \\
+1
+\end{matrix}
+\right]
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath180}%
+\begin{displaymath}\overline{v}_2 = w_2 - 
+\frac{w_2 \cdot \overline{v}_1}{\|\overline{v}_1\|^2}\overline{v}_1 =
+\left[
+\begin{matrix}
+-\frac{1}{5}  \\
+0  \\
+1 \\
+\frac{3}{5}
+\end{matrix}
+\right]
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath181}%
+\begin{displaymath}\overline{v}_3 = w_3 - 
+\frac{w_3 \cdot \overline{v}_1}{\|\overline{v}_1\|^2}\overline{v}_1 -
+\frac{w_3 \cdot \overline{v}_2}{\|\overline{v}_2\|^2}\overline{v}_2 =
+\left[
+\begin{matrix}
+-\frac{3}{14}  \\
+-1  \\
+-\frac{3}{7} \\
+\frac{9}{14}
+\end{matrix}
+\right]
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath182}%
+\begin{displaymath}\left\{
+\frac{\sqrt{10}}{10}
+\left[
+\begin{matrix}
+3  \\
+0  \\
+0 \\
+1
+\end{matrix}
+\right]
+,
+\sqrt{\frac{5}{7}}
+\left[
+\begin{matrix}
+-\frac{1}{5}  \\
+0  \\
+1 \\
+\frac{3}{5}
+\end{matrix}
+\right]
+,
+\sqrt{\frac{14}{23}}
+\left[
+\begin{matrix}
+-\frac{3}{14}  \\
+-1  \\
+-\frac{3}{7} \\
+\frac{9}{14}
+\end{matrix}
+\right]
+\right\}
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline302}%
+$L: P^3 \rightarrow P^3$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath183}%
+\begin{displaymath}L(p) = \frac{1}{2} x \frac{dp}{dx} - p.
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline304}%
+$\ker L$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath185}%
+\begin{displaymath}L(p) = \frac{1}{2} a x^3 -\frac{1}{2} c x -d
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath186}%
+\begin{displaymath}S = \left\{ 
+\left[
+\begin{matrix}
+1 \\3 \\2
+\end{matrix}
+\right],
+\left[
+\begin{matrix}
+1 \\-1 \\0
+\end{matrix}
+\right],
+\left[
+\begin{matrix}
+2 \\1 \\1
+\end{matrix}
+\right]
+\right\}, \ \ \ \ \
+T = 
+\left\{ 
+\left[
+\begin{matrix}
+1 \\-1 \\0
+\end{matrix}
+\right],
+\left[
+\begin{matrix}
+1 \\0 \\0
+\end{matrix}
+\right],
+\left[
+\begin{matrix}
+0 \\-1 \\1
+\end{matrix}
+\right]
+\right\}.
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline328}%
+$P_{S \leftarrow T}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath187}%
+\begin{displaymath}[u]_T =
+\left[
+\begin{matrix}
+2 \\0 \\1
+\end{matrix}
+\right].
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath188}%
+\begin{displaymath}P_{S \leftarrow T} = 
+\left[
+\begin{matrix}
+0 & -\frac{1}{2} & 2 \\
+1 & -\frac{1}{2} & 4 \\
+0 & 1 & -3 \\
+\end{matrix}
+\right].
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath189}%
+\begin{displaymath}[u]_S = \left[
+\begin{matrix}
+2 \\6 \\-3
+\end{matrix}
+\right].
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+
+\end{document}

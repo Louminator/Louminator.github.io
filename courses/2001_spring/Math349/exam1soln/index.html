@@ -1,0 +1,606 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="exam1soln">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="exam1soln.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+Name: Math 349: Linear Algebra
+<BR>
+ <B>Exam 1 Solutions</B> <BR>
+8 March 2001 <BR>
+
+<P>
+<BR>
+<BR>
+<BR>
+
+<P>
+<EM>Were it not for Occam's Razor, which always demands simplicity, I'd be
+tempted to believe that human beings are more influenced by distant causes
+than immediate ones.  This would be especially true of overeducated people,
+who are capable of thinking past the immediate and becoming obsessed by the
+remote.</EM> <BR>
+- from ``Straight Man'' by Richard Russo 
+
+<P>
+<BR>
+<BR>
+<BR>
+
+<P>
+Instructions: <B>Show all work to receive full or partial credit.</B>  
+All University rules and guidelines for
+student conduct are applicable.
+
+<P>
+<DL COMPACT>
+<DD><P>
+<DT>1.
+<DD>[15 pts] Prove that the set of all vectors <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\v x$">
+such that 
+<!-- MATH: $A
+\v x = \v 0$ -->
+<IMG
+ WIDTH="64" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$A
+\v x = \v 0$">
+for a real <I>m</I> by <I>n</I> matrix is a subspace of <IMG
+ WIDTH="30" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.gif"
+ ALT="${\bf
+R}^n$">.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>Many students struggled with this one.
+</EM>
+<P>
+<EM>Since </EM><IMG
+ WIDTH="30" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.gif"
+ ALT="${\bf
+R}^n$"><EM> with vector addition and scalar multiplication
+is a vector space, it is enough to show that the subset of solutions
+is closed under these operations.  Suppose that </EM><IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\v u$"><EM> and </EM><IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\v v$"><EM>satisfy </EM>
+<!-- MATH: $A \v u = \v 0$ -->
+<IMG
+ WIDTH="64" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$A \v u = \v 0$"><EM> and </EM>
+<!-- MATH: $A \v v = \v 0$ -->
+<IMG
+ WIDTH="63" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$A \v v = \v 0$"><EM>.  Then,
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+A (\v u + \v v) = A\v u + A\v v = 0 + 0 = 0
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="269" HEIGHT="43"
+ SRC="img8.gif"
+ ALT="\begin{displaymath}A (\v u + \v v) = A\v u + A\v v = 0 + 0 = 0
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+from the properties of matrix multiplication.  Thus, </EM>
+<!-- MATH: $\v u+ \v v$ -->
+<IMG
+ WIDTH="48" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\v u+ \v v$"><EM> also
+solves the homogeneous equation, and the subset is closed under
+addition.  Similarly,
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+A (c \v u) = c A \v u = 0,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="144" HEIGHT="43"
+ SRC="img10.gif"
+ ALT="\begin{displaymath}A (c \v u) = c A \v u = 0,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+so that </EM><IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.gif"
+ ALT="$c \v u$"><EM> is also in the subset.  Therefore, the subset is
+closed under multiplication.  Thus, the subset is a subspace.
+</EM>
+
+<P>
+
+<P>
+<DT>2.
+<DD>[15 pts] Given
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+A = \left[ \begin{array}{ccc}
+1 & 1 & 2 \\
+2 & 0 & 1 \\
+1 & 1 & 1
+\end{array}\right] \ \ \ \ \
+B = \left[ \begin{array}{cccc}
+0 & 3 & 1 & 1 \\
+4 & 0 & -1 & 3\\
+0 & -2 & 1 & 0
+\end{array}\right],
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="378" HEIGHT="86"
+ SRC="img12.gif"
+ ALT="\begin{displaymath}A = \left[ \begin{array}{ccc}
+1 & 1 & 2 \\
+2 & 0 & 1 \\
+1 &...
+...1 & 1 \\
+4 & 0 & -1 & 3\\
+0 & -2 & 1 & 0
+\end{array}\right],
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+calculate <I>AB</I>.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>This is accomplished with straightforward matrix multiplication.
+The solution is
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+AB = \left[ \begin{array}{cccc}
+4 & -1 & 2 & 4 \\
+0 & 4  & 3 & 2 \\
+4 & 1  & 1 & 4
+\end{array}\right].
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="202" HEIGHT="86"
+ SRC="img13.gif"
+ ALT="\begin{displaymath}AB = \left[ \begin{array}{cccc}
+4 & -1 & 2 & 4 \\
+0 & 4 & 3 & 2 \\
+4 & 1 & 1 & 4
+\end{array}\right].
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>3.
+<DD>[15 pts] Find <I>A</I><SUP>-1</SUP> where <I>A</I> is defined in Question 2.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>The most effective approach to this problem is by reducing the
+augmented matrix, although it is also possible to solve it with brute
+force by finding
+nine unknowns.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="227" HEIGHT="385"
+ SRC="img14.gif"
+ ALT="\begin{eqnarray*}& \left[ \begin{array}{ccc\vert ccc}
+1 & 1 & 2 & 1 & 0 & 0\\
+2...
+...& \frac{3}{2}\\
+0 & 0 & 1 & 1 & 0 & -1
+\end{array}\right] & \\
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL">
+<P><I>A</I><SUP>-1</SUP><EM> is the right side of the augmented system.
+</EM>
+
+<P>
+
+<P>
+<DT>4.
+<DD>[15 pts] Given
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+A = \left[ \begin{array}{ccc}
+1 & 1 & 2 \\
+2 & 0 & 1 \\
+1 & 1 & 1
+\end{array}\right] \ \ \ \ \
+\v b = \left[ \begin{array}{c}
+2 \\
+6 \\
+-2
+\end{array}\right],
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="280" HEIGHT="86"
+ SRC="img15.gif"
+ ALT="\begin{displaymath}A = \left[ \begin{array}{ccc}
+1 & 1 & 2 \\
+2 & 0 & 1 \\
+1 &...
+...b = \left[ \begin{array}{c}
+2 \\
+6 \\
+-2
+\end{array}\right],
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+use <B>Gaussian elimination</B> to find <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\v x$">
+where
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+A \v x = \v b.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="62" HEIGHT="39"
+ SRC="img16.gif"
+ ALT="\begin{displaymath}A \v x = \v b.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>The method of Gaussian elimination requires one to put the system into
+row echelon form.  Row echelon form is not unique, so you might obtain
+a slightly different form with the same solution given here.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="185" HEIGHT="227"
+ SRC="img17.gif"
+ ALT="\begin{eqnarray*}& \left[ \begin{array}{ccc\vert c}
+1 & 1 & 2 & 2\\
+2 & 0 & 1 &...
+...
+0 & 1 & \frac{3}{2} & -1\\
+0 & 0 & 1 & 4
+\end{array}\right] &.
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><EM>By backward substitution, one finds the solution
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left[ \begin{array}{c}
+1 \\
+-7 \\
+4
+\end{array}\right].
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="67" HEIGHT="86"
+ SRC="img18.gif"
+ ALT="\begin{displaymath}\left[ \begin{array}{c}
+1 \\
+-7 \\
+4
+\end{array}\right].
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>5.
+<DD>[10 pts] Given
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+A = \left[ \begin{array}{ccc}
+1 & 1 & 2 \\
+2 & 0 & 1 \\
+1 & 1 & 1
+\end{array}\right] \ \ \ \ \
+\v b = \left[ \begin{array}{c}
+2 \\
+6 \\
+-2
+\end{array}\right],
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="280" HEIGHT="86"
+ SRC="img15.gif"
+ ALT="\begin{displaymath}A = \left[ \begin{array}{ccc}
+1 & 1 & 2 \\
+2 & 0 & 1 \\
+1 &...
+...b = \left[ \begin{array}{c}
+2 \\
+6 \\
+-2
+\end{array}\right],
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+use <B>Gauss-Jordan reduction</B> to find <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\v x$">
+where
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+A \v x = \v b.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="62" HEIGHT="39"
+ SRC="img16.gif"
+ ALT="\begin{displaymath}A \v x = \v b.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>Here, one can continue from the previous problem to put the augmented
+matrix into reduced row echelon form.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="156" HEIGHT="227"
+ SRC="img19.gif"
+ ALT="\begin{eqnarray*}& \left[ \begin{array}{ccc\vert c}
+1 & 1 & 2 & 2\\
+0 & 1 & \fr...
+...& 0 & 1\\
+0 & 1 & 0 & -7\\
+0 & 0 & 1 & 4
+\end{array}\right] &.
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><EM>Then, one can read the solution right off of the augmented matrix to
+obtain the same solution as above.
+</EM>
+
+<P>
+
+<P>
+<DT>6.
+<DD>[15 pts] Let
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+S = \left\{
+\left[\begin{array}{c} 1 \\2 \\1\end{array}\right],
+\left[\begin{array}{c} 2 \\3 \\-1\end{array}\right],
+\left[\begin{array}{c} 1 \\3 \\4\end{array}\right]
+\right\}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="268" HEIGHT="86"
+ SRC="img20.gif"
+ ALT="\begin{displaymath}S = \left\{
+\left[\begin{array}{c} 1 \\ 2 \\ 1\end{array}\rig...
+...\left[\begin{array}{c} 1 \\ 3 \\ 4\end{array}\right]
+\right\}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Is <I>S</I> a basis for <IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="${\bf R}^3$">?
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>The answer is no because one can write the third vector as a
+weighted sum of the first two.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+3\left[\begin{array}{c} 1 \\2 \\1\end{array}\right] -
+\left[\begin{array}{c} 2 \\3 \\-1\end{array}\right] =
+\left[\begin{array}{c} 1 \\3 \\4\end{array}\right].
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="236" HEIGHT="86"
+ SRC="img22.gif"
+ ALT="\begin{displaymath}3\left[\begin{array}{c} 1 \\ 2 \\ 1\end{array}\right] -
+\left...
+...right] =
+\left[\begin{array}{c} 1 \\ 3 \\ 4\end{array}\right].
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+We can see this by setting up another appropriate system and solving
+for the unknown coefficients, or by determining whether or not the
+corresponding linear system is singular.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>7.
+<DD>[15 pts] If <I>A</I> is an invertible matrix, prove that its
+inverse is <B>unique</B>.  That is, show that there are not two
+different matrices <I>B</I> and <I>C</I> such that 
+<!-- MATH: $AB = BA = I$ -->
+<I>AB</I> = <I>BA</I> = <I>I</I> and 
+<!-- MATH: $AC = CA = I$ -->
+<I>AC</I> = <I>CA</I> = <I>I</I>.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>Many students struggled with this one.
+</EM>
+<P>
+<EM>The proof is simply a matter of algebra.  Suppose we had two such inverses.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+C = CI = C(AB) = (CA)B = IB = B
+\end{displaymath} -->
+
+
+<I>C</I> = <I>CI</I> = <I>C</I>(<I>AB</I>) = (<I>CA</I>)<I>B</I> = <I>IB</I> = <I>B</I>
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Thus </EM><I>C</I>=<I>B</I><EM> and there is only one inverse.
+</EM>
+
+<P>
+</DL>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2001-03-12</I>
+</ADDRESS>
+</BODY>
+</HTML>

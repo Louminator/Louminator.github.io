@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Complex exponentials and trigonometric solutions to ODEs</TITLE>
+<META NAME="description" CONTENT="Complex exponentials and trigonometric solutions to ODEs">
+<META NAME="keywords" CONTENT="complex_roots">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="complex_roots.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+
+<P>
+<H1 ALIGN="CENTER">Complex exponentials and trigonometric solutions to ODEs</H1>
+<P ALIGN="CENTER"><STRONG>L. F. Rossi</STRONG></P>
+<P ALIGN="CENTER"><STRONG>26 November 2001</STRONG></P>
+<P ALIGN="LEFT"></P>
+
+<P>
+When solving second order differential equation such as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+y''+y=0,
+\end{equation} -->
+<A NAME="prob1">&#160;</A>
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP>
+<I>y</I>''+<I>y</I>=0,
+</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(1)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+most students are comfortable looking for a general solution composed
+of two linearly independent solutions such as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+y(x) = C_1 \sin(x) + C_2 \cos x.
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="soln1a">&#160;</A><IMG
+ WIDTH="222" HEIGHT="33"
+ SRC="img1.gif"
+ ALT="\begin{displaymath}y(x) = C_1 \sin(x) + C_2 \cos x.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+However, it is understandable that some find it confusing that there
+is another perfectly good general solution of the form
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+y(x) = C_1 e^{ix} + C_2 e^{-ix}.
+\end{equation} -->
+<A NAME="soln1b">&#160;</A>
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP>
+<I>y</I>(<I>x</I>) = <I>C</I><SUB>1</SUB> <I>e</I><SUP><I>ix</I></SUP> + <I>C</I><SUB>2</SUB> <I>e</I><SUP>-<I>ix</I></SUP>.
+</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+Notice that the arbitrary constants in (<A HREF="complex_roots.html#soln1a">2</A>) and (<A HREF="complex_roots.html#soln1b">3</A>)
+are different from one another.
+To help resolve the issue, I will point out that <EM>there is no preferred
+general solution to any ODE.</EM>  In the case of (<A HREF="complex_roots.html#prob1">1</A>), there are
+more than two ways to write the general solution.  There are
+infinitely many!  For instance,
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+y(x) = C_1 \left(\frac{1}{2}\sin x + \frac{1}{2}\cos x \right) +
+C_2 \left(\frac{1}{2}\sin x - \frac{1}{2}\cos x \right)
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="soln1c">&#160;</A><IMG
+ WIDTH="438" HEIGHT="46"
+ SRC="img2.gif"
+ ALT="\begin{displaymath}y(x) = C_1 \left(\frac{1}{2}\sin x + \frac{1}{2}\cos x \right) +
+C_2 \left(\frac{1}{2}\sin x - \frac{1}{2}\cos x \right)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+is also a general solution to (<A HREF="complex_roots.html#prob1">1</A>).
+
+<P>
+The correct way to think about it is that once one has one linearly
+independent set of solutions to an ODE (i.e. a basis), one is free to
+re-express this basis any way one would like.  For (<A HREF="complex_roots.html#soln1c">4</A>), I
+took <IMG
+ WIDTH="42" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\sin x$">
+and <IMG
+ WIDTH="44" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\cos x$">
+from (<A HREF="complex_roots.html#soln1a">2</A>), and recombined them
+into another basis.  Both bases span the same set of general
+solutions.  That is,
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\rm span}\{\sin x,\cos x\} =
+{\rm span}\left\{\frac{1}{2}\sin x + \frac{1}{2}\cos x,
+\frac{1}{2}\sin x - \frac{1}{2}\cos x\right\}.
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="507" HEIGHT="46"
+ SRC="img5.gif"
+ ALT="\begin{displaymath}{\rm span}\{\sin x,\cos x\} =
+{\rm span}\left\{\frac{1}{2}\s...
+...ac{1}{2}\cos x,
+\frac{1}{2}\sin x - \frac{1}{2}\cos x\right\}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+It's a good exercise to prove this to yourself before proceeding.
+
+<P>
+Now we can turn to the mysterious arrival of complex numbers in our
+course.  Complex numbers first roared to life when we sought solutions
+of the form <I>e</I><SUP><I>rx</I></SUP> in (<A HREF="complex_roots.html#prob1">1</A>).  (This is a perfectly good way to
+solve constant coefficient ODEs, by the way. Complex numbers should
+not scare you away.)  The resulting characteristic polynomial is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+P(r) = r^2 + 1
+\end{displaymath} -->
+
+
+<I>P</I>(<I>r</I>) = <I>r</I><SUP>2</SUP> + 1
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+which has roots at <IMG
+ WIDTH="26" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\pm i$">.
+Thus, if we knew nothing about sines and
+cosines, we would write down the general solution seen in
+(<A HREF="complex_roots.html#soln1b">3</A>).  In fact, this solution is often more satisfying to
+students because it came from a rigous procedure whereas the solution
+involving trig functions comes from an initial guess that the solution
+will look like a sine or a cosine.  Anyway, we know that (<A HREF="complex_roots.html#soln1a">2</A>)
+and (<A HREF="complex_roots.html#soln1b">3</A>) span the same general solution space.  How can we
+see this?
+
+<P>
+The answer comes from Euler's relation
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+e^{ix} = \cos x + i\sin x.
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="euler">&#160;</A><IMG
+ WIDTH="157" HEIGHT="30"
+ SRC="img7.gif"
+ ALT="\begin{displaymath}e^{ix} = \cos x + i\sin x.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+This is a big deal, so you should commit it to memory.  (It is so short
+and beautiful that many students just learn it.)  One can turn the
+tables on this relationship and write
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\cos x = \frac{1}{2} \left(e^{ix} + e^{-ix}\right), \ \ \ \
+\sin x = \frac{1}{2 i} \left(e^{ix} - e^{-ix}\right).
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="euler2">&#160;</A><IMG
+ WIDTH="401" HEIGHT="45"
+ SRC="img8.gif"
+ ALT="\begin{displaymath}\cos x = \frac{1}{2} \left(e^{ix} + e^{-ix}\right), \ \ \ \
+\sin x = \frac{1}{2 i} \left(e^{ix} - e^{-ix}\right).
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+These are also worth learning, and a great way to learn them to start
+with (<A HREF="complex_roots.html#euler">5</A>) and prove (<A HREF="complex_roots.html#euler2">6</A>).
+
+<P>
+Now, all the pieces fit together.  If I start with a general solution
+like (<A HREF="complex_roots.html#soln1a">2</A>), I can write it as complex exponentials using
+(<A HREF="complex_roots.html#euler2">6</A>).
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="413" HEIGHT="124"
+ SRC="img9.gif"
+ ALT="\begin{eqnarray*}y(x) & = & C_1 \sin x + C_2 \cos x \\
+& = & C_1 \left[\frac{1}...
+...rac{1}{2}(C_1 - iC_2) e^{ix}
++ \frac{1}{2} (C_1 + iC_2) e^{-ix}
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL">Here, I exploited the fact that 1/<I>i</I>=-<I>i</I>.  Thus, if we had an answer
+in terms of sines and cosines, I could convert it into complex
+exponentials.  As an exercise, you should make sure that you can take
+(<A HREF="complex_roots.html#soln1b">3</A>) and convert it into sines and cosines.
+
+<P>
+The moral of this essay is that there are infinitely many pairs of
+linearly independent solutions to (<A HREF="complex_roots.html#prob1">1</A>), and this is a general
+property of ODEs.  It is not enough to know how to solve a
+problem one way because often the difficulty of a problem is governed by
+which pair you choose to use.  Complex exponentials can be terribly
+useful as can be trigonometric functions.  Master them both, and you
+will have little to fear from constant coefficient ODEs.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2001-11-26</I>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,24 @@
+T1 = 0:0.01:2;
+x1 = 0:0.04:0.96;
+T2 = 0:0.005:2;
+x2 = 0:0.02:0.98;
+T3 = 0:0.0025:2;
+x3 = 0:0.01:0.99;
+
+u01 = exp(-(x1-0.5).^2/4/0.005);
+u02 = exp(-(x2-0.5).^2/4/0.005);
+u03 = exp(-(x3-0.5).^2/4/0.005);
+u1lw = laxwendroff(x1,T1,1,u01);
+u2lw = laxwendroff(x2,T2,1,u02);
+u3lw = laxwendroff(x3,T3,1,u03);
+u1up = upwind(x1,T1,1,u01);
+u2up = upwind(x2,T2,1,u02);
+u3up = upwind(x3,T3,1,u03);
+
+figure;
+subplot(2,2,1);
+plot(x1,u01,x1,u1lw(end,:),x1,u1up(end,:));
+subplot(2,2,2);
+plot(x2,u02,x2,u2lw(end,:),x2,u2up(end,:));
+subplot(2,2,3);
+plot(x3,u03,x3,u3lw(end,:),x3,u3up(end,:));

@@ -1,0 +1,11 @@
+x = 0:0.1:1;
+t = 0:0.001:0.1;
+u0 = x.*(1-x);
+u1 = mol(x,t,1,u0);
+u2 = mol(x,t,1,u0);
+surf(x,t,u1); xlabel('x'); ylabel('t'); zlabel('u');
+surf(x,t,u1-u2); xlabel('x'); ylabel('t'); zlabel('error');
+t = 0:0.01:0.1;
+u1 = mol(x,t,1,u0);
+surf(x,t,u1); xlabel('x'); ylabel('t'); zlabel('u');
+diary off

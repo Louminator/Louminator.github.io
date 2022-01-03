@@ -1,0 +1,997 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="exam2soln">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="exam2soln.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<BR>
+<BR>
+<BR>
+<BR>
+
+<P>
+<DIV ALIGN="CENTER">
+<FONT SIZE="+2"><B>Math 351
+<BR>
+Solution Notes for the Second Exam</B></FONT>
+<BR>
+<BR>
+<BR>
+</DIV>
+<DIV ALIGN="LEFT">
+Name:<U>K. F. Gauss</U>
+</DIV>
+<DIV ALIGN="RIGHT">
+Signature:
+<BR>
+</DIV>
+<BR>
+<BR>
+<BR>
+<BR>
+
+<P>
+<DL COMPACT>
+<DT>1.
+<DD>Answer all questions.
+<DT>2.
+<DD>Show <B>ALL</B> your work in the space provided.  If work
+is continued on the back of any test page, clearly indicate its
+presence.
+<DT>3.
+<DD>All University rules and guidelines for student conduct are
+applicable.
+<DT>4.
+<DD>Calculators with algebraic, calculus or matrix functions may not be used.
+<P>
+<DT>5.
+<DD> There are six problems on seven pages (this page and six others).
+</DL>
+<BR>
+<BR>
+<BR>
+<BR>
+
+<P>
+<DIV ALIGN="LEFT">Results:
+<DL COMPACT>
+<DT>1.
+<DD> out of 16 points you got <U>16</U>
+<DT>2.
+<DD> out of 16 points you got <U>16</U>
+<DT>3.
+<DD> out of 16 points you got <U>16</U>
+<DT>4.
+<DD> out of 16 points you got <U>16</U>
+<DT>5.
+<DD> out of 20 points you got <U>20</U>
+<DT>6.
+<DD> out of 16 points you got <U>16</U>
+</DL>
+<DIV ALIGN="CENTER">
+<B> Your total: <U>100</U> out of 100</B>
+</DIV>
+<DL COMPACT>
+<DT>1.
+<DD>Let 
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+A=\left(\begin{array}{ccc}1&0&1\\3&3&4\\2&2&3\end{array}\right)
+\end{displaymath} -->
+
+<IMG
+ WIDTH="142" HEIGHT="116"
+ SRC="img1.gif"
+ ALT="\begin{displaymath}A=\left(\begin{array}{ccc}1&0&1\\ 3&3&4\\ 2&2&3\end{array}\right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Find <I>A</I><SUP>-1</SUP> and use it to solve
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+\left(\begin{array}{ccc}1&0&1\\3&3&4\\2&2&3\end{array}\right)
+\left(\begin{array}{c}x_1\\x_2\\x_3\end{array}\right)=
+\left(\begin{array}{c}1\\1\\1\end{array}\right)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="252" HEIGHT="116"
+ SRC="img2.gif"
+ ALT="\begin{displaymath}\left(\begin{array}{ccc}1&0&1\\ 3&3&4\\ 2&2&3\end{array}\righ...
+...ray}\right)=
+\left(\begin{array}{c}1\\ 1\\ 1\end{array}\right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>To find the inverse, one sets up an augmented system with </EM><I>A</I><EM> on the
+left and </EM><I>I</I><EM> on the right:
+</EM>
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+\left(
+\begin{array}{ccc|ccc}
+1&0&1&1&0&0\\3&3&4&0&1&0\\2&2&3&0&0&1
+\end{array}
+\right).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="186" HEIGHT="116"
+ SRC="img3.gif"
+ ALT="\begin{displaymath}\left(
+\begin{array}{ccc\vert ccc}
+1&0&1&1&0&0\\ 3&3&4&0&1&0\\ 2&2&3&0&0&1
+\end{array}\right).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+If one uses row operations to convert </EM><I>A</I><EM> on the left into </EM><I>I</I><EM>, the
+entries on the right will be </EM><I>A</I><SUP>-1</SUP><EM> so that
+</EM>
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+A^{-1}=\left(\begin{array}{ccc}1&2&-3\\-1&1&-1\\0&-2&3\end{array}\right).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="217" HEIGHT="116"
+ SRC="img4.gif"
+ ALT="\begin{displaymath}A^{-1}=\left(\begin{array}{ccc}1&2&-3\\ -1&1&-1\\ 0&-2&3\end{array}\right).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Once one finds the inverse, one can use it to solve for </EM><IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\bf x$"><EM>.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="318" HEIGHT="193"
+ SRC="img6.gif"
+ ALT="\begin{eqnarray*}\left(\begin{array}{c}x_1\\ x_2\\ x_3\end{array}\right) & = &
+\...
+...ht) \\
+& = & \left(\begin{array}{c}0\\ -1\\ 1\end{array}\right)
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><EM>Now, you can move on to other things.
+</EM>
+
+<P>
+
+<P>
+<DT>2.
+<DD>Are
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+{\rm span}\left\{\left(\begin{array}{c}1\\3\\1\end{array}\right),
+\left(\begin{array}{c}2\\-1\\1\end{array}\right)\right\}
+\;\mbox{ and }\;
+{\rm span}\left\{\left(\begin{array}{c}0\\-7\\-1\end{array}\right),
+\left(\begin{array}{c}4\\-2\\2\end{array}\right)\right\}
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="504" HEIGHT="116"
+ SRC="img7.gif"
+ ALT="\begin{displaymath}{\rm span}\left\{\left(\begin{array}{c}1\\ 3\\ 1\end{array}\r...
+...t),
+\left(\begin{array}{c}4\\ -2\\ 2\end{array}\right)\right\}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+the same or not? Why?
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>There are several ways to solve this problem, all of which are
+mathematically equivalent.
+</EM><DL COMPACT>
+<DT>(a)
+<DD>One can determine the span for each set and compare them
+directly.
+<P>
+<DT>(b)
+<DD>One can prove that each vector in the set on the right can be expressed a
+linear combination of the vectors on the left, and vice versa.
+
+<P>
+<DT>(c)
+<DD>One can prove that any element in the left span is in the span
+on the right, and vice versa.
+</DL><EM>I will work the problem using the first method.
+</EM>
+<P>
+<EM>On the right, every element in the span can be described as
+</EM>
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+\left(\begin{array}{c}x_1\\x_2\\x_3\end{array}\right) =
+\alpha_1 \left(\begin{array}{c}1\\3\\1\end{array}\right) +
+\alpha_2 \left(\begin{array}{c}2\\-1\\1\end{array}\right).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="294" HEIGHT="116"
+ SRC="img8.gif"
+ ALT="\begin{displaymath}\left(\begin{array}{c}x_1\\ x_2\\ x_3\end{array}\right) =
+\al...
+...+
+\alpha_2 \left(\begin{array}{c}2\\ -1\\ 1\end{array}\right).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+We seek a description of </EM>
+<!-- MATH: $x_1, x_2, x_3$ -->
+<I>x</I><SUB>1</SUB>, <I>x</I><SUB>2</SUB>, <I>x</I><SUB>3</SUB><EM> which will come from
+consistency conditions on the linear system above.  The actually
+values of </EM>
+<!-- MATH: $\alpha_1, \alpha_2$ -->
+<IMG
+ WIDTH="52" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\alpha_1, \alpha_2$"><EM> are irrelevant for answering this
+question.  To find the consistency conditions, we row-reduce the system
+</EM>
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+\left(\begin{array}{ccc}1&2&x_1\\3&-1&x_2\\1&1&x_3\end{array}\right)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="121" HEIGHT="116"
+ SRC="img10.gif"
+ ALT="\begin{displaymath}\left(\begin{array}{ccc}1&2&x_1\\ 3&-1&x_2\\ 1&1&x_3\end{array}\right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+to yield
+</EM>
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+\left(\begin{array}{ccc}1&2&x_1\\0&-7&x_2-3x_1\\0&0&x_3-\frac{4}{7}
+x_1 - \frac{1}{7} x_2\end{array}\right)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="225" HEIGHT="116"
+ SRC="img11.gif"
+ ALT="\begin{displaymath}\left(\begin{array}{ccc}1&2&x_1\\ 0&-7&x_2-3x_1\\ 0&0&x_3-\frac{4}{7}
+x_1 - \frac{1}{7} x_2\end{array}\right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Remember, consistency conditions come from the row(s) of zeros in your
+linear system.  The other rows simply tell you how to get the
+</EM><IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\alpha$"><EM>'s from the </EM><I>x</I><EM>'s which is not the subject of the question.  
+You may have more than one row of equations
+corresponding to more than
+one equation.
+Thus, the span on the right is a plane described by
+</EM>
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+x_3-\frac{4}{7}x_1 - \frac{1}{7} x_2 = 0.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="165" HEIGHT="85"
+ SRC="img13.gif"
+ ALT="\begin{displaymath}x_3-\frac{4}{7}x_1 - \frac{1}{7} x_2 = 0.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<EM>Performing the same procedure on the right, we obtain
+</EM>
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+\left(\begin{array}{ccc}0&4&x_1\\-7&-2&x_2\\-1&2&x_3\end{array}\right).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="149" HEIGHT="116"
+ SRC="img14.gif"
+ ALT="\begin{displaymath}\left(\begin{array}{ccc}0&4&x_1\\ -7&-2&x_2\\ -1&2&x_3\end{array}\right).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+After many happy row operations, we have
+</EM>
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+\left(\begin{array}{ccc}1&2&x_3\\0&12&x_2+7x_3\\
+0&0&x_1 + \frac{1}{4}x_2-\frac{7}{4}x_3\end{array}\right).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="233" HEIGHT="116"
+ SRC="img15.gif"
+ ALT="\begin{displaymath}\left(\begin{array}{ccc}1&2&x_3\\ 0&12&x_2+7x_3\\
+0&0&x_1 + \frac{1}{4}x_2-\frac{7}{4}x_3\end{array}\right).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Thus,
+</EM>
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+x_1 + \frac{1}{4}x_2-\frac{7}{4}x_3 = 0.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="165" HEIGHT="85"
+ SRC="img16.gif"
+ ALT="\begin{displaymath}x_1 + \frac{1}{4}x_2-\frac{7}{4}x_3 = 0.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+If we multiply this equation by </EM>
+<!-- MATH: $-\frac{4}{7}$ -->
+<IMG
+ WIDTH="30" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$-\frac{4}{7}$"><EM>, we have the exact same
+equation as on the left, so we see that the two spans are the same.
+</EM>
+
+<P>
+
+<DT>3.
+<DD>For what values of <I>s</I> does 
+<!-- MATH: $A\mbox{\boldmath {$x$ }}=\mbox{\boldmath {$b$ }}$ -->
+<IMG
+ WIDTH="79" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.gif"
+ ALT="$A\mbox{\boldmath {$x$ }}=\mbox{\boldmath {$b$ }}$">
+have a solution for
+any 
+<!-- MATH: $\mbox{\boldmath {$b$ }}$ -->
+<IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\mbox{\boldmath {$b$ }}$">
+when
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+A=\left(\begin{array}{ccc}
+1&2&1\\1&0&1\\2&0&s\end{array}\right).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="155" HEIGHT="116"
+ SRC="img20.gif"
+ ALT="\begin{displaymath}A=\left(\begin{array}{ccc}
+1&2&1\\ 1&0&1\\ 2&0&s\end{array}\right).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<!-- MATH: $A\mbox{\boldmath {$x$ }}=\mbox{\boldmath {$b$ }}$ -->
+<IMG
+ WIDTH="79" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.gif"
+ ALT="$A\mbox{\boldmath {$x$ }}=\mbox{\boldmath {$b$ }}$"><EM> has a solution for all </EM>
+<!-- MATH: $\mbox{\boldmath {$b$ }}$ -->
+<IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\mbox{\boldmath {$b$ }}$"><EM> if and only if
+</EM>
+<!-- MATH: $\mbox{\boldmath {$A$ }}$ -->
+<IMG
+ WIDTH="28" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$\mbox{\boldmath {$A$ }}$"><EM> is invertible.  </EM>
+<!-- MATH: $\mbox{\boldmath {$A$ }}$ -->
+<IMG
+ WIDTH="28" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="$\mbox{\boldmath {$A$ }}$"><EM> is invertible if and only if 
+</EM>
+<!-- MATH: $\det \mbox{\boldmath {$A$ }} \neq 0$ -->
+<IMG
+ WIDTH="91" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$\det \mbox{\boldmath {$A$ }} \neq 0$"><EM>.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="444" HEIGHT="138"
+ SRC="img23.gif"
+ ALT="\begin{eqnarray*}\det \left(\begin{array}{ccc}
+1&2&1\\ 1&0&1\\ 2&0&s\end{array}\...
+...ft(\begin{array}{cc}
+1&2\\ 1&0\end{array}\right) \\
+& = & 4-2s.
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><EM>Thus, there is a solution for any  </EM>
+<!-- MATH: $\mbox{\boldmath {$b$ }}$ -->
+<IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\mbox{\boldmath {$b$ }}$"><EM> as long as </EM><IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.gif"
+ ALT="$s \neq 2$"><EM>.
+Note: Even when </EM><I>s</I>=2<EM>, there may be (and are) solutions for certain
+</EM>
+<!-- MATH: $\mbox{\boldmath {$b$ }}$ -->
+<IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\mbox{\boldmath {$b$ }}$"><EM>'s, but there are some </EM>
+<!-- MATH: $\mbox{\boldmath {$b$ }}$ -->
+<IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\mbox{\boldmath {$b$ }}$"><EM>'s for which there is no solution.
+</EM>
+
+<P>
+
+<DT>4.
+<DD>Let 
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+T={\rm span}\left\{ \left(\begin{array}{c}1\\2\\3\end{array}\right),\;
+\left(\begin{array}{c}-1\\0\\1\end{array}\right),\;
+\left(\begin{array}{c}0\\2\\4\end{array}\right)\right\}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="345" HEIGHT="116"
+ SRC="img25.gif"
+ ALT="\begin{displaymath}T={\rm span}\left\{ \left(\begin{array}{c}1\\ 2\\ 3\end{array...
+...,\;
+\left(\begin{array}{c}0\\ 2\\ 4\end{array}\right)\right\}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Is the given set of vectors a basis for <I>T</I> and why?  What is the
+dimension of <I>T</I>?  If the set is not a basis, find a basis for <I>T</I>.
+
+<P>
+<EM>The quick way to get an answer to the first question is to take the
+determinant of the matrix whose columns are the vectors in the set
+above.  The determinant is zero, so we would know that the vectors are
+not linearly independent and cannot form a basis.
+</EM>
+<P>
+<EM>Now that we know that it is not a basis, we need to figure out which
+vectors in the set are redundant.  We need to know for values of
+</EM>
+<!-- MATH: $\alpha_1, \alpha_2, \alpha_3$ -->
+<IMG
+ WIDTH="80" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.gif"
+ ALT="$\alpha_1, \alpha_2, \alpha_3$"><EM> such that
+</EM>
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+\alpha_1 \left(\begin{array}{c}1\\2\\3\end{array}\right)+
+\alpha_2 \left(\begin{array}{c}-1\\0\\1\end{array}\right)+
+\alpha_3 \left(\begin{array}{c}0\\2\\4\end{array}\right) =
+\left(\begin{array}{c}0\\0\\0\end{array}\right).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="395" HEIGHT="116"
+ SRC="img27.gif"
+ ALT="\begin{displaymath}\alpha_1 \left(\begin{array}{c}1\\ 2\\ 3\end{array}\right)+
+\...
+...y}\right) =
+\left(\begin{array}{c}0\\ 0\\ 0\end{array}\right).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<EM>Again, we resort to Gaussian elimination on
+</EM>
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+\left(\begin{array}{ccc}1&-1&0\\2&0&2\\3&1&4\end{array}\right).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="125" HEIGHT="116"
+ SRC="img28.gif"
+ ALT="\begin{displaymath}\left(\begin{array}{ccc}1&-1&0\\ 2&0&2\\ 3&1&4\end{array}\right).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+After many row operations, we obtain
+</EM>
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+\left(\begin{array}{ccc}1&0&1\\0&2&2\\0&0&0\end{array}\right).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="111" HEIGHT="116"
+ SRC="img29.gif"
+ ALT="\begin{displaymath}\left(\begin{array}{ccc}1&0&1\\ 0&2&2\\ 0&0&0\end{array}\right).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Thus, we see that </EM>
+<!-- MATH: $\alpha_1 = -\alpha_3$ -->
+<IMG
+ WIDTH="84" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\alpha_1 = -\alpha_3$"><EM> and </EM>
+<!-- MATH: $\alpha_2=-\alpha_3$ -->
+<IMG
+ WIDTH="84" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.gif"
+ ALT="$\alpha_2=-\alpha_3$"><EM>.  We
+have only one free variable;
+</EM><IMG
+ WIDTH="24" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="$\alpha_3$"><EM> is arbitrary.  For instance, if </EM>
+<!-- MATH: $\alpha_3=1$ -->
+<IMG
+ WIDTH="59" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.gif"
+ ALT="$\alpha_3=1$"><EM>,
+</EM>
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+\left(\begin{array}{c}1\\2\\3\end{array}\right)+
+\left(\begin{array}{c}-1\\0\\1\end{array}\right)=
+\left(\begin{array}{c}0\\2\\4\end{array}\right).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="240" HEIGHT="116"
+ SRC="img34.gif"
+ ALT="\begin{displaymath}\left(\begin{array}{c}1\\ 2\\ 3\end{array}\right)+
+\left(\beg...
+...ay}\right)=
+\left(\begin{array}{c}0\\ 2\\ 4\end{array}\right).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+So, we can drop the last vector in the set to obtain a linearly
+independent spanning set.
+</EM>
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+T={\rm span}\left\{ \left(\begin{array}{c}1\\2\\3\end{array}\right),\;
+\left(\begin{array}{c}-1\\0\\1\end{array}\right)\right\}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="270" HEIGHT="116"
+ SRC="img35.gif"
+ ALT="\begin{displaymath}T={\rm span}\left\{ \left(\begin{array}{c}1\\ 2\\ 3\end{array...
+...\;
+\left(\begin{array}{c}-1\\ 0\\ 1\end{array}\right)\right\}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Since there is only one free variable, one
+can only drop one vector, and we can see that </EM>
+<!-- MATH: $\dim T = 2$ -->
+<IMG
+ WIDTH="87" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="$\dim T = 2$"><EM>.
+</EM>
+
+<P>
+
+<DT>5.
+<DD>(Hint: these questions can be answered without calculation by
+appealing to theorems from the class)
+<DL COMPACT>
+<DT>(a)
+<DD>If <I>A</I> is a <IMG
+ WIDTH="47" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.gif"
+ ALT="$7\times 5$">
+matrix, why can the rank of <I>A</I> not be 6?
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>The row rank is equivalent to the column rank, and there are only 5
+columns, so the maximum rank is 5.
+</EM>
+
+<P>
+<DT>(b)
+<DD>Is
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+\left\{\left(\begin{array}{c}1\\2\\7\end{array}\right),\;
+\left(\begin{array}{c}2\\1\\4\end{array}\right),\;
+\left(\begin{array}{c}2\\2\\1\end{array}\right),\;
+\left(\begin{array}{c}3\\3\\3\end{array}\right)\right\}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="313" HEIGHT="116"
+ SRC="img38.gif"
+ ALT="\begin{displaymath}\left\{\left(\begin{array}{c}1\\ 2\\ 7\end{array}\right),\;
+\...
+...),\;
+\left(\begin{array}{c}3\\ 3\\ 3\end{array}\right)\right\}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+a basis for 
+<!-- MATH: ${\mathbb R}^3$ -->
+<IMG
+ WIDTH="26" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img39.gif"
+ ALT="${\mathbb R}^3$">
+(why)?
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>No.  </EM>
+<!-- MATH: ${\mathbb R}^3$ -->
+<IMG
+ WIDTH="26" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img39.gif"
+ ALT="${\mathbb R}^3$"><EM> has three dimensions and so any spanning set should
+have three vectors in it.
+</EM>
+
+<P>
+<DT>(c)
+<DD>Let
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+A=\left(\begin{array}{ccc}
+1 & 2 & -1\\
+2 & 3 & 1\\
+1 & 4 & 0\\
+1 & 1 &1 \end{array}\right),\;
+B=\left(\begin{array}{cccc}
+1 & 0 & -1 & 4\\
+-1 & 3 & 1 &0\\
+1 & 1 &1 &1\end{array}\right), \mbox{ so }
+AB=\left(\begin{array}{cccc}
+-2&5&0&3\\0&10&2&9\\-3&12&3&4\\1&4&1&5\end{array}\right)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="632" HEIGHT="139"
+ SRC="img40.gif"
+ ALT="\begin{displaymath}A=\left(\begin{array}{ccc}
+1 & 2 & -1\\
+2 & 3 & 1\\
+1 & 4 &...
+...c}
+-2&5&0&3\\ 0&10&2&9\\ -3&12&3&4\\ 1&4&1&5\end{array}\right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Find <I>B</I><SUP><I>T</I></SUP><I>A</I><SUP><I>T</I></SUP>?
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>We all know that </EM>
+<!-- MATH: $B^T A^T =(AB)^T$ -->
+<I>B</I><SUP><I>T</I></SUP> <I>A</I><SUP><I>T</I></SUP> =(<I>AB</I>)<SUP><I>T</I></SUP><EM>, so
+</EM>
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+B^TA^T =
+\left(\begin{array}{cccc}
+-2&0&-3&1\\5&10&12&4\\0&2&3&1\\3&9&4&5\end{array}\right)
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="242" HEIGHT="139"
+ SRC="img41.gif"
+ ALT="\begin{displaymath}B^TA^T =
+\left(\begin{array}{cccc}
+-2&0&-3&1\\ 5&10&12&4\\ 0&2&3&1\\ 3&9&4&5\end{array}\right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</DL>
+<P>
+
+<DT>6.
+<DD>Expand the vector 
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+\left(\begin{array}{c} 1\\1\\1\\1\end{array}\right)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="48" HEIGHT="139"
+ SRC="img42.gif"
+ ALT="\begin{displaymath}\left(\begin{array}{c} 1\\ 1\\ 1\\ 1\end{array}\right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+in terms of the basis
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+\left\{
+\left(\begin{array}{c}1\\0\\2\\0\end{array}\right),\;
+\left(\begin{array}{c}0\\1\\0\\0\end{array}\right),\;
+\left(\begin{array}{c}2\\0\\-1\\-5\end{array}\right),\;
+\left(\begin{array}{c}2\\0\\-1\\1\end{array}\right)
+\right\}.
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="353" HEIGHT="139"
+ SRC="img43.gif"
+ ALT="\begin{displaymath}\left\{
+\left(\begin{array}{c}1\\ 0\\ 2\\ 0\end{array}\right...
+...eft(\begin{array}{c}2\\ 0\\ -1\\ 1\end{array}\right)
+\right\}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>Essentially, you are trying to find </EM>
+<!-- MATH: $\alpha_1, \alpha_2, \alpha_3,
+\alpha_4$ -->
+<IMG
+ WIDTH="108" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.gif"
+ ALT="$\alpha_1, \alpha_2, \alpha_3,
+\alpha_4$"><EM> such that
+</EM>
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+\left(\begin{array}{c} 1\\1\\1\\1\end{array}\right) =
+\alpha_1\left(\begin{array}{c}1\\0\\2\\0\end{array}\right) +
+\alpha_2\left(\begin{array}{c}0\\1\\0\\0\end{array}\right) +
+\alpha_3\left(\begin{array}{c}2\\0\\-1\\-5\end{array}\right) +
+\alpha_4\left(\begin{array}{c}2\\0\\-1\\1\end{array}\right).
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="510" HEIGHT="139"
+ SRC="img45.gif"
+ ALT="\begin{displaymath}\left(\begin{array}{c} 1\\ 1\\ 1\\ 1\end{array}\right) =
+\al...
+...alpha_4\left(\begin{array}{c}2\\ 0\\ -1\\ 1\end{array}\right).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Now, you could find all the </EM><IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\alpha$"><EM>'s by solving a linear system, but
+many inspected the basis and realized that it was orthogonal.  This
+being the case, we do not have to solve a linear system because the
+basis vectors are all at right angles to one another, and so
+</EM>
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+\alpha_i = \frac{\mbox{\boldmath {$u$ }} \cdot \mbox{\boldmath {$e$ }}_i}{| \mbox{\boldmath {$e$ }}_i |^2}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="105" HEIGHT="86"
+ SRC="img46.gif"
+ ALT="\begin{displaymath}\alpha_i = \frac{\mbox{\boldmath {$u$ }} \cdot \mbox{\boldmath {$e$ }}_i}{\vert \mbox{\boldmath {$e$ }}_i \vert^2}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+where the </EM>
+<!-- MATH: $\mbox{\boldmath {$e$ }}$ -->
+<IMG
+ WIDTH="22" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.gif"
+ ALT="$\mbox{\boldmath {$e$ }}$"><EM>'s are the basis vectors.  If you compute the
+</EM><IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\alpha$"><EM>'s correctly, you will find that
+</EM>
+<BR><P></P>
+<DIV>
+<!-- MATH: \begin{displaymath}
+\left(\begin{array}{c} 1\\1\\1\\1\end{array}\right) =
+\frac{3}{5}\left(\begin{array}{c}1\\0\\2\\0\end{array}\right) +
+\left(\begin{array}{c}0\\1\\0\\0\end{array}\right) -
+\frac{2}{15}\left(\begin{array}{c}2\\0\\-1\\-5\end{array}\right) +
+\frac{1}{3}\left(\begin{array}{c}2\\0\\-1\\1\end{array}\right).
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="478" HEIGHT="139"
+ SRC="img48.gif"
+ ALT="\begin{displaymath}\left(\begin{array}{c} 1\\ 1\\ 1\\ 1\end{array}\right) =
+\fr...
+...c{1}{3}\left(\begin{array}{c}2\\ 0\\ -1\\ 1\end{array}\right).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+
+<P>
+</DL>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2001-10-30</I>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,578 @@
+\batchmode
+\documentclass[12pt]{article}
+\makeatletter
+
+\usepackage{color,amsmath}
+
+\pagestyle{empty}
+
+\oddsidemargin0in
+\textwidth6.5in
+\topmargin0in
+\textheight8.5in
+
+\providecommand{\xin}{x_i}
+\providecommand{\xia}{x_{i+1}}
+\par\pagecolor[gray]{.7}
+
+
+\makeatletter
+\count@=\the\catcode`\_ \catcode`\_=8 
+\newenvironment{tex2html_wrap}{}{} \catcode`\_=\count@
+\makeatother
+\let\mathon=$
+\let\mathoff=$
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\global\topskip=2sp
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize
+ \parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}\normalsize}%
+\def\lthtmltypeout#1{{\let\protect\string\immediate\write\lthtmlwrite{#1}}}%
+\newcommand\lthtmlhboxmathA{\adjustnormalsize\setbox\sizebox=\hbox\bgroup}%
+\newcommand\lthtmlvboxmathA{\adjustnormalsize\setbox\sizebox=\vbox\bgroup%
+ \let\ifinner=\iffalse }%
+\newcommand\lthtmlboxmathZ{\@next\next\@currlist{}{\def\next{\voidb@x}}%
+ \expandafter\box\next\egroup}%
+\newcommand\lthtmlmathtype[1]{\def\lthtmlmathenv{#1}}%
+\newcommand\lthtmllogmath{\lthtmltypeout{l2hSize %
+:\lthtmlmathenv:\the\ht\sizebox::\the\dp\sizebox::\the\wd\sizebox.\preveqno}}%
+\newcommand\lthtmlfigureA[1]{\let\@savefreelist\@freelist
+       \lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmlfigureZ{\lthtmlboxmathZ\lthtmllogmath\copy\sizebox
+       \global\let\@freelist\@savefreelist}%
+\newcommand\lthtmldisplayA[1]{\lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmldisplayB[1]{\edef\preveqno{(\theequation)}%
+  \lthtmldisplayA{#1}\let\@eqnnum\relax}%
+\newcommand\lthtmldisplayZ{\lthtmlboxmathZ\lthtmllogmath\lthtmlsetmath}%
+\newcommand\lthtmlinlinemathA[1]{\lthtmlmathtype{#1}\lthtmlhboxmathA  \vrule height1.5ex width0pt }%
+\newcommand\lthtmlinlineA[1]{\lthtmlmathtype{#1}\lthtmlhboxmathA}%
+\newcommand\lthtmlinlineZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetinline}
+\newcommand\lthtmlinlinemathZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetmath}
+\def\lthtmlsetinline{\hbox{\vrule width.1em\vtop{\vbox{%
+  \kern.1em\copy\sizebox}\ifdim\dp\sizebox>0pt\kern.1em\else\kern.3pt\fi
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\lthtmlsetmath{\hbox{\vrule width.1em\vtop{\vbox{%
+  \kern.1em\kern0.8 pt\hbox{\hglue.17em\copy\sizebox\hglue0.8 pt}}\kern.3pt%
+  \ifdim\dp\sizebox>0pt\kern.1em\fi \kern0.8 pt%
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\centerinlinemath{%\dimen1=\ht\sizebox
+  \dimen1=\ifdim\ht\sizebox<\dp\sizebox \dp\sizebox\else\ht\sizebox\fi
+  \advance\dimen1by.5pt \vrule width0pt height\dimen1 depth\dimen1 
+ \dp\sizebox=\dimen1\ht\sizebox=\dimen1\relax}
+
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize\expandafter\vfill
+  \else\expandafter\vss\fi}%
+\makeatletter \tracingstats = 1 
+
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\makeatother
+{\newpage\clearpage
+\lthtmldisplayA{displaymath457}%
+\begin{displaymath}|I - I_n| \leq \frac{C}{n^p}
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath458}%
+\begin{displaymath}|I_n - I_{n/2}| \leq \frac{D}{n^p}.
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{alignstar18}%
+\begin{align*}|I_n - I_{n/2}| & = |I_n \textcolor{blue}{- I + I} - I_{n/2}| &
+\text{\textcolor{blue}{Add and subtract the same thing.}} \\
+& \leq |I_n - I| \textcolor{blue}{+} | I - I_{n/2}| &
+\text{\textcolor{blue}{Triangle inequality.}} \\
+& \leq \textcolor{blue}{\frac{C}{n^p} + \frac{C 2^p}{n^p}}&
+\text{\textcolor{blue}{Use the given bound.}} \\
+& \leq \frac{C}{n^p}\textcolor{blue}{(1 + 2^p)}&
+\text{\textcolor{blue}{So we see that $D = C(1+2^p)$ .}} \\
+\end{align*}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath459}%
+\begin{displaymath}\int_{\frac{1}{10}}^1 \frac{\cos\left(\frac{\ln(x)}{x}\right)}{x} dx
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline513}%
+$\epsilon$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath460}%
+\begin{displaymath}I \approx I_n = \frac{1}{2} f(x_1) h + \sum_{i=2}^{n} f(x_i) h +
+\frac{1}{2} f(x_{n+1}) h 
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath461}%
+\begin{displaymath}|I - I_n| \leq \frac{M(b-a)^3}{12 n^2}
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline527}%
+$|f''(x)| \leq M$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath462}%
+\begin{displaymath}\int_{x_i}^{x_{i+1}} f(x) dx = 
+\int_{x_i}^{x_{i+1}} \left[ \frac{1}{2}f(x)+ \frac{1}{2}f(x) \right] dx 
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{alignstar75}%
+\begin{align*}\frac{1}{2}f(x) & =
+\frac{1}{2} \left[
+f(x_i) + f'(x_i)(x-x_i) + \frac{1}{2} f''(x_i)(x-x_i)^2 +
+\frac{1}{3!}  f'''(\xi_1)(x-x_i)^3
+\right] \\
+\frac{1}{2}f(x) & =
+\frac{1}{2} \left[
+f(x_{i+1}) + f'(x_{i+1})(x-x_{i+1}) + \frac{1}{2} f''(x_{i+1})(x-x_{i+1})^2 +
+\frac{1}{3!}  f'''(\xi_1)(x-x_{i+1})^3
+\right] \\
+\end{align*}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{alignstar93}%
+\begin{align*}\int_{x_i}^{x_{i+1}} (x-x_i) dx, & = \frac{1}{2} h^2, & 
+\int_{x_i}^{x_{i+1}} (x-x_{i+1}) dx, & = -\frac{1}{2} h^2, \\
+\int_{x_i}^{x_{i+1}} (x-x_i)^2 dx, & = \frac{1}{3} h^3, &
+\int_{x_i}^{x_{i+1}} (x-x_{i+1})^2 dx, & = \frac{1}{3} h^3, \\
+\int_{x_i}^{x_{i+1}} (x-x_i)^3 dx, & = \frac{1}{4} h^4, &
+\int_{x_i}^{x_{i+1}} (x-x_{i+1})^3 dx, & = -\frac{1}{4} h^4.
+\end{align*}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{multline119}%
+\begin{multline}\int_{x_i}^{x_{i+1}} \frac{1}{2}f(x)+ \frac{1}{2}f(x) dx  = 
+\frac{1}{2} h \left[f(x_i) + f(x_{i+1}) \right] + \\
+\frac{1}{4} h^2 
+[f'(x_i) - f'(x_{i+1})] + 
+\frac{1}{12} h^3 [f''(x_i) + f''(x_{i+1})] + \\
+\frac{1}{12} \int_{x_i}^{x_{i+1}} 
+[f'''(\xi_1)(x-x_i)^3 + 
+f'''(\xi_2)(x-x_{i+1})^3]dx. 
+\end{multline}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{align137}%
+\begin{align}f'(x_{i+1}) & = f'(x_i) + h f''(x_i) + \frac{1}{2} h^2 f'''(\xi_3), \\
+f''(x_{i+1}) & = f''(x_i) + h f'''(\xi_4).
+\end{align}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{multlinestar141}%
+\begin{multline*}\int_{x_i}^{x_{i+1}} \frac{1}{2}f(x)+ \frac{1}{2}f(x) dx  = 
+\frac{1}{2} h \left[f(x_i) + f(x_{i+1}) \right] + \\
+-\frac{1}{4} h^3 f''(x_i) - \frac{1}{8} h^4 f'''(\xi_3)  +
+\frac{1}{6} h^3 f''(x_i) + \frac{1}{6} h^4 f''(\xi_4)\\
+\frac{1}{12} \int_{x_i}^{x_{i+1}} 
+[f'''(\xi_1)(x-x_i)^3 + 
+f'''(\xi_2)(x-x_{i+1})^3]dx. 
+\end{multline*}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath463}%
+\begin{displaymath}\int_{x_i}^{x_{i+1}} f(x) dx  = \frac{1}{2} h \left[f(x_i) + f(x_{i+1})
+\right] +
+-\frac{1}{12} h^3 f''(x_i) + O(h^4).
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath464}%
+\begin{displaymath}\left|\int_{x_i}^{x_{i+1}} f(x) dx  - 
+\frac{1}{2} h \left[f(x_i) + f(x_{i+1})
+\right]\right|  \leq
+\frac{1}{12} h^3 |f''(x_i)| + O(h^4),
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath465}%
+\begin{displaymath}p(x) = c_0 + c_1 x + \frac{c_2}{2} x^2.
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath466}%
+\begin{displaymath}I = \int_0^L p(x) dx = c_0 L + c_1 \frac{L^2}{2} + c_2 \frac{L^3}{6},
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath467}%
+\begin{displaymath}T_N = \frac{h}{2} \left[p(0) + p(L)\right] + h \sum_{i=2}^{N} p(x_i).
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline539}%
+$h = \frac{L}{N}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath468}%
+\begin{displaymath}T_N = \frac{L}{2N} \left[p(0) + p(L)\right] + 
+\frac{L}{N} \sum_{i=1}^{N-1} p\left(\frac{iL}{N}\right).
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{alignstar216}%
+\begin{align*}T_N & = \frac{L}{2N} 
+\left[c_0 + c_0 + c_1 L + \frac{1}{2} c_2 L^2
+\right] +
+\frac{L}{N} \sum_{i=1}^{N-1}
+\left[
+c_0 + c_1 \frac{iL}{N} + \frac{c_2}{2} \left(\frac{iL}{N}\right)^2
+\right] \\
+& = c_0 \left[\frac{L}{N} + \frac{L (N-1)}{N}
+\right] +
+c_1 \left[
+\frac{L^2}{2N} + \frac{L^2}{N^2} \sum_{i=1}^{N-1} i
+\right] +
+c_2 \left[ \frac{L^3}{4 N} + \frac{L^3}{2 N^3} \sum_{i=1}^{N-1} i^2
+\right] \\
+& =
+c_0 L + 
+c_1 \left[
+\frac{L^2}{2N} + \frac{L^2}{N^2} \frac{N(N-1)}{2}
+\right] +
+c_2 \left[ \frac{L^3}{4 N} + \frac{L^3}{2 N^3} \frac{N (N-1) (2N-1)}{6}
+\right] \\
+& =
+c_0 L + 
+c_1 \frac{L^2}{2} +
+c_2 \left[ \frac{L^3}{6} + \frac{L^3}{12 N^2} 
+\right]
+\end{align*}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath469}%
+\begin{displaymath}I - T_N = -\frac{c_2 L^3}{12 N^2} 
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline65}%
+$\mbox{$\bullet$}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline555}%
+$p'(\xi)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline557}%
+$\xi$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath470}%
+\begin{displaymath}p(0) = p_0, \ \ \ \ p(1) = p_1, \ \ \ \ p'(\xi) = p_\xi'.
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline559}%
+$p_\xi'$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{alignstar272}%
+\begin{align*}c_0 & = p_0, \\
+c_0 + c_1 + c_2 & = p_1, \\
+c_1 + 2 c_2 \xi & = p_\xi'.
+\end{align*}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath472}%
+\begin{displaymath}\left[
+\begin{array}{ccc}
+1 & 0 & 0 \\
+1 & 1 & 1 \\
+0 & 1 & 2 \xi
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+c_0 \\
+c_1 \\
+c_2
+\end{array}
+\right] =
+\left[
+\begin{array}{c}
+p_0 \\
+p_1 \\
+p_\xi'
+\end{array}
+\right]
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline561}%
+$2\xi - 1$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline563}%
+$\xi = \frac{1}{2}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline565}%
+$\xi
+\neq \frac{1}{2}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{alignstar289}%
+\begin{align*}c_0 & = p_0, \\
+c_0 + c_1 + c_2 + c_3& = p_1, \\
+c_1 + c_2 + \frac{3}{4} c_3 & = p_\xi'.
+\end{align*}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath474}%
+\begin{displaymath}\left[
+\begin{array}{ccc}
+1 & 0 & 0 \\
+1 & 1 & 0 \\
+0 & 1 & \frac{3}{4} \xi
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+c_0 \\
+d \\
+c_3
+\end{array}
+\right] =
+\left[
+\begin{array}{c}
+p_0 \\
+p_1 \\
+p_\xi'
+\end{array}
+\right].
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline587}%
+$\frac{3}{4}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath475}%
+\begin{displaymath}\int_0^1 f(x) dx
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline601}%
+$0, \frac{1}{3}, \frac{2}{3}, 1$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline607}%
+$3 \left[f\left(\frac{1}{3}\right)-f(0)\right]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline609}%
+$\frac{1}{3}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline611}%
+$f\left(\frac{1}{3}\right)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline613}%
+$\frac{9}{2} \left[f\left(\frac{2}{3}\right)-2
+f\left(\frac{1}{3}\right)+
+f(0)\right]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline615}%
+$3 \left[f\left(\frac{2}{3}\right)-f\left(\frac{1}{3}\right)\right]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline617}%
+$\frac{9}{2}\left[f(1)-3 f\left(\frac{2}{3}\right)+
+3 f\left(\frac{1}{3}\right)-f(0)\right]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline619}%
+$\frac{2}{3}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline621}%
+$f\left(\frac{2}{3}\right)$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline623}%
+$\frac{9}{2}\left[f(1)-
+2 f\left(\frac{2}{3}\right)+f\left(\frac{1}{3}\right)\right]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline625}%
+$3 \left[f(1)-f\left(\frac{2}{3}\right)\right]$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{multlinestar350}%
+\begin{multline*}p(x) =
+f(0) + 3 \left[f\left(\frac{1}{3}\right)-f(0)\right] x +
+\frac{9}{2} \left[f\left(\frac{2}{3}\right)-2
+f\left(\frac{1}{3}\right)+
+f(0)\right] x \left(x-\frac{1}{3}\right) +
+\\
+\frac{9}{2}\left[f(1)-3 f\left(\frac{2}{3}\right)+
+3 f\left(\frac{1}{3}\right)-f(0)\right]  
+x  \left(x-\frac{1}{3}\right) \left(x-\frac{2}{3}\right).
+\end{multline*}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlfigureA{multlinestar372}%
+\begin{multline*}\int_0^1 p(x) dx =
+f(0) + \frac{3}{2} \left[f\left(\frac{1}{3}\right)-f(0)\right]  +
+\frac{3}{4} \left[f\left(\frac{2}{3}\right)-2
+f\left(\frac{1}{3}\right)+
+f(0)\right]  +
+\\
+\frac{1}{8}\left[f(1)-3 f\left(\frac{2}{3}\right)+
+3 f\left(\frac{1}{3}\right)-f(0)\right].
+\end{multline*}%
+\lthtmlfigureZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath476}%
+\begin{displaymath}\int_0^1 p(x) dx = \frac{1}{8} f(0) +
+\frac{3}{8} f\left(\frac{1}{3}\right) +
+\frac{3}{8} f\left(\frac{2}{3}\right) +
+\frac{1}{8} f(1).
+\end{displaymath}%
+\lthtmldisplayZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline633}%
+$\frac{3}{8}$%
+\lthtmlinlinemathZ
+\hfill\lthtmlcheckvsize\clearpage}
+
+
+\end{document}

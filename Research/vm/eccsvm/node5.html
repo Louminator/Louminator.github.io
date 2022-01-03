@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>The Evolution of Elliptical Gaussians</TITLE>
+<META NAME="description" CONTENT="The Evolution of Elliptical Gaussians">
+<META NAME="keywords" CONTENT="eccsvm">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="eccsvm.css">
+</HEAD>
+<BODY LANG="EN">
+ <A NAME="tex2html86" HREF="node6.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html84" HREF="node3.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html78" HREF="node4.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html87" HREF="node6.html">The High Spatial Order </A>
+<B>Up:</B> <A NAME="tex2html85" HREF="node3.html">The Vortex Method</A>
+<B> Previous:</B> <A NAME="tex2html79" HREF="node4.html">The Continuous Formulation of </A>
+<BR> <P>
+<H2><A NAME="SECTION00032000000000000000">The Evolution of Elliptical Gaussians</A></H2>
+<P>
+Elliptical Gaussians has five internal degrees of freedom: position,
+ <IMG WIDTH=31 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2391" SRC="img43.gif"  > , orientation,  <IMG WIDTH=30 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2393" SRC="img44.gif"  > , major axis,  <IMG WIDTH=31 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2395" SRC="img45.gif"  > , and core
+width,  <IMG WIDTH=31 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2397" SRC="img46.gif"  > . To approximate a solution to the Navier-Stokes
+equations, these basis functions translate, rotate, elongate and
+spread under the convective action of the linearized flow field and
+the diffusive action of viscosity. A single basis function has the
+form
+<P><A NAME="basisfn">&#160;</A> <IMG WIDTH=550 HEIGHT=61 ALIGN=BOTTOM ALT="eqnarray163" SRC="img47.gif"  > <P>
+where  <IMG WIDTH=79 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2399" SRC="img48.gif"  >  and  <IMG WIDTH=76 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2401" SRC="img49.gif"  > .  This formulation
+where the product of the semi-major and semi-minor axes is unity isolates
+the core size parameter,  <IMG WIDTH=13 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline2403" SRC="img50.gif"  > , and the aspect ratio,  <IMG WIDTH=14 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2405" SRC="img51.gif"  > .
+Implementing geometric variables rather than a general quadratic form as
+Leonard and Teng have done permits one to more easily control the relevant
+convergenc parameters.  Of course, the entire vorticity field is
+approximated as a linear combination of these basis functions:
+<P> <IMG WIDTH=500 HEIGHT=47 ALIGN=BOTTOM ALT="equation168" SRC="img52.gif"  > <P>
+where all indexed parameters with the exception of  <IMG WIDTH=12 HEIGHT=16 ALIGN=MIDDLE ALT="tex2html_wrap_inline2407" SRC="img53.gif"  >  evolve with
+time.
+<P>
+To derive the differential equations governing the parameters of each basis
+function, we apply (<A HREF="node4.html#betterbasis">3.8</A>),
+<P> <IMG WIDTH=551 HEIGHT=40 ALIGN=BOTTOM ALT="eqnarray172" SRC="img54.gif"  > <P>
+where  <IMG WIDTH=29 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2409" SRC="img55.gif"  >  and  <IMG WIDTH=43 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2411" SRC="img56.gif"  >  arise from Biot-Savart integrations on the
+Gaussian basis functions.
+Numerous expansions and manipulations yield the following discrete dynamical
+system describing the motion and deformation of the computational elements:
+<P><A NAME="systemodes">&#160;</A> <IMG WIDTH=539 HEIGHT=169 ALIGN=BOTTOM ALT="eqnarray176" SRC="img57.gif"  > <P>
+where  <IMG WIDTH=80 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2413" SRC="img58.gif"  >  and 
+ <IMG WIDTH=48 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2415" SRC="img59.gif"  >  has elements  <IMG WIDTH=95 HEIGHT=29 ALIGN=MIDDLE ALT="tex2html_wrap_inline2417" SRC="img60.gif"  > , 
+ <IMG WIDTH=95 HEIGHT=30 ALIGN=MIDDLE ALT="tex2html_wrap_inline2419" SRC="img61.gif"  > , etc.
+<P>
+Another way to approach the coefficients describing the evolution of  <IMG WIDTH=14 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2405" SRC="img51.gif"  > 
+and  <IMG WIDTH=11 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2345" SRC="img19.gif"  >  is through their connection with
+the velocity deviation tensor oriented in a reference frame
+aligned with the elliptical Gaussian.  If  <IMG WIDTH=31 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2425" SRC="img62.gif"  >  denotes a standard
+rotation matrix through an angle of  <IMG WIDTH=7 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2427" SRC="img63.gif"  > , one can change bases into a
+coordinate system aligned with the basis function axes:
+<P> <IMG WIDTH=540 HEIGHT=64 ALIGN=BOTTOM ALT="eqnarray199" SRC="img64.gif"  > <P>
+Decomposing the transformed tensor into symmetric and antisymmetric parts
+respectively,
+one finds:
+
+<P> <IMG WIDTH=574 HEIGHT=108 ALIGN=BOTTOM ALT="eqnarray216" SRC="img65.gif"  > <P>
+In this expression, we see that coefficients corresponding to elongation are
+represented in the symmetric part of the velocity deviation tensor.  At the
+same time, the symmetric part can also contribute to the rotation because
+the eigenvectors of  <IMG WIDTH=23 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2429" SRC="img39.gif"  >  need not be aligned with the axes of the basis
+function.  Similarly, the antisymmetric part of  <IMG WIDTH=23 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2429" SRC="img39.gif"  >  corresponds to a
+pure rigid body rotation as appears in the first term of the evolution
+equation for  <IMG WIDTH=11 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2345" SRC="img19.gif"  > .
+<P>
+From system (<A HREF="node5.html#systemodes">3.12</A>), one observes certain properties in these
+elliptical Gaussians.  The first equation is no surprise. From the second
+equation, one can see that elongation of the basis functions augments
+spreading as one might expect.  As with CCSVM, the width,  <IMG WIDTH=13 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline2403" SRC="img50.gif"  >  must be
+numerically controlled by adaptive refinement.  This procedure will be
+described in more detail in &#167;<A HREF="node9.html#secrefine">4</A>, but here we will use the fact
+that the refinement procedure exists and guarantees that  <IMG WIDTH=40 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline2437" SRC="img67.gif"  > 
+where <I>l</I> is a controllable numerical parameter associated with the accuracy
+of the method.
+<P>
+In the third equation, one can see that in the absense of viscosity,
+one can expect the basis function to elongate exponentially when the
+velocity field imposes some form of strain.  Thus,
+one would expect the growth of the aspect ratio to be bounded by
+<P> <IMG WIDTH=500 HEIGHT=19 ALIGN=BOTTOM ALT="equation246" SRC="img68.gif"  > <P>
+where  <IMG WIDTH=21 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline2441" SRC="img69.gif"  >  is the largest positive value of  <IMG WIDTH=12 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline2303" SRC="img3.gif"  >  where
+<P><A NAME="lambda">&#160;</A> <IMG WIDTH=500 HEIGHT=19 ALIGN=BOTTOM ALT="equation249" SRC="img70.gif"  > <P>
+over a relevant spatial or temporal domain.  For the linearized analysis
+under consideration,  <IMG WIDTH=10 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2363" SRC="img40.gif"  >  and its derivatives are known and bounded, so
+one can be certain that  <IMG WIDTH=21 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline2441" SRC="img69.gif"  >  exists.
+<P>
+To analyze this method, the typical domain is the trajectory of a
+computational element through the flow, or perhaps the entire flow over all
+space and time.
+The bound,  <IMG WIDTH=21 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline2441" SRC="img69.gif"  > , is valid for all indices,
+<I>i</I> and all time and assumes unit initial aspect ratios.
+If  <IMG WIDTH=37 HEIGHT=25 ALIGN=MIDDLE ALT="tex2html_wrap_inline2453" SRC="img71.gif"  > , viscosity naturally
+regulates the elongation, and there is an upper bound, 
+ <IMG WIDTH=58 HEIGHT=27 ALIGN=MIDDLE ALT="tex2html_wrap_inline2455" SRC="img72.gif"  > :
+<P><A NAME="aspectbound">&#160;</A> <IMG WIDTH=500 HEIGHT=39 ALIGN=BOTTOM ALT="equation255" SRC="img73.gif"  > <P>
+Thus, the maximum elongation of each basis function is controlled by
+the dimensionless quantity
+<P><A NAME="rblob">&#160;</A> <IMG WIDTH=500 HEIGHT=35 ALIGN=BOTTOM ALT="equation261" SRC="img74.gif"  > <P>
+which from this point on shall be referred to as the <B>basis function
+Reynolds number</B> somewhat related to the grid Reynolds number used to
+analyze finite difference schemes.
+<P>
+Herein lies a hidden advantage of corrected core spreading methods.
+We shall see later that the
+spatial accuracy of this method is  <IMG WIDTH=90 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2457" SRC="img75.gif"  > .
+Thus, an investigator might be tempted to use two numerical parameters to
+control <I>l</I> and  <IMG WIDTH=42 HEIGHT=26 ALIGN=MIDDLE ALT="tex2html_wrap_inline2461" SRC="img76.gif"  > , respectively.  In fact, we have just see that
+this is not necessary.  For small <I>l</I> 
+(and therefore small basis function Reynolds number), we can expand
+(<A HREF="node5.html#aspectbound">3.17</A>) as
+<P> <IMG WIDTH=500 HEIGHT=32 ALIGN=BOTTOM ALT="equation267" SRC="img77.gif"  > <P>
+Thus,  <IMG WIDTH=100 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2465" SRC="img78.gif"  > ,
+and <I>l</I> is the
+only relevant numerical parameter for this scheme. No additional
+adaptive refinement is required to force the method to converge.  If
+one were to employ an operator splitting technique with deformable
+blobs, one would need to implement a scheme that would reduce the
+aspect ratio of elements to take full advantage of their high spatial
+order.
+<P>
+In the fourth equation, we see that rotation is induced through two
+distinct mechanisms.  The first term on the right hand side corresponds
+to revolution due to pure rotation in  <IMG WIDTH=23 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2429" SRC="img39.gif"  > .  The second term
+corresponds to rotation induced by strain that is not aligned with the
+major or minor axis.  If  <IMG WIDTH=12 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline2471" SRC="img79.gif"  >  is not close to 1, the evolution equations
+can be solved directly.
+<P>
+However, it is not unreasonable for the aspect ratio to pass through unity
+as the blob evolves under (<A HREF="node5.html#systemodes">3.12</A>), but such a circumstance might be disasterous for
+numerical integration even though the phase is of little importance in this
+situation.
+As  <IMG WIDTH=46 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline2473" SRC="img80.gif"  > , one can see that there
+is a removable singularity in this evolution equation.  
+If  <IMG WIDTH=12 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline2471" SRC="img79.gif"  >  is
+close to unity, the second term dominates the equation, and the elliptical blob
+will rapidly align itself with the flow deviations so that
+<P><A NAME="realign">&#160;</A> <IMG WIDTH=500 HEIGHT=33 ALIGN=BOTTOM ALT="equation272" SRC="img81.gif"  > <P>
+Solving for  <IMG WIDTH=11 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2345" SRC="img19.gif"  > , one obtains
+<P><A NAME="rapidreorient">&#160;</A> <IMG WIDTH=500 HEIGHT=91 ALIGN=BOTTOM ALT="eqnarray278" SRC="img82.gif"  > <P>
+If one lets
+<P> <IMG WIDTH=500 HEIGHT=78 ALIGN=BOTTOM ALT="eqnarray287" SRC="img83.gif"  > <P>
+and applies the trigonometric identity
+<P> <IMG WIDTH=500 HEIGHT=41 ALIGN=BOTTOM ALT="equation293" SRC="img84.gif"  > <P>
+one can see that (<A HREF="node5.html#rapidreorient">3.21</A>) guarantees that the denominator is
+zero.  Therefore,  <IMG WIDTH=17 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2479" SRC="img85.gif"  >  and  <IMG WIDTH=17 HEIGHT=25 ALIGN=MIDDLE ALT="tex2html_wrap_inline2481" SRC="img86.gif"  >  are complementary.
+Not surprisingly, the two complementary angles
+which satisfy (<A HREF="node5.html#realign">3.20</A>) also maximize (or minimize)
+ <IMG WIDTH=12 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline2303" SRC="img3.gif"  >  with respect to  <IMG WIDTH=7 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2427" SRC="img63.gif"  > , so that
+one can see that if the aspect ratio passes through unity, the computational
+element aligns itself with a phase that maximizes its rate of elongation.
+Numerically, one would merely calculate this angle when the aspect ratio
+become sufficiently close to one.
+<P>
+Whether or not the aspect ratio moves through a value of one,
+one can calculate the maximum value of  <IMG WIDTH=12 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline2303" SRC="img3.gif"  >  with respect to
+phase by 
+factoring  <IMG WIDTH=23 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline2489" SRC="img87.gif"  >  out of
+(<A HREF="node5.html#lambda">3.16</A>) and applying (<A HREF="node5.html#realign">3.20</A>) to obtain
+<P> <IMG WIDTH=500 HEIGHT=39 ALIGN=BOTTOM ALT="eqnarray301" SRC="img88.gif"  > <P>
+Applying (<A HREF="node5.html#rapidreorient">3.21</A>) to  <IMG WIDTH=24 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline2491" SRC="img89.gif"  > , one finds that
+<P><A NAME="maxstretch">&#160;</A> <IMG WIDTH=500 HEIGHT=85 ALIGN=BOTTOM ALT="equation309" SRC="img90.gif"  > <P>
+Without loss of generality, we chose the solution,  <IMG WIDTH=17 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2493" SRC="img85.gif"  >  to determine
+<I>k</I>.
+<P> <IMG WIDTH=337 HEIGHT=48 ALIGN=BOTTOM ALT="displaymath2389" SRC="img92.gif"  > <P>
+of (<A HREF="node5.html#rapidreorient">3.21</A>) to evaluate  <IMG WIDTH=23 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline2489" SRC="img87.gif"  > .
+Routine analysis of the (<A HREF="node5.html#maxstretch">3.25</A>)
+reveals
+the relationship between  <IMG WIDTH=23 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2383" SRC="img39.gif"  >  and  <IMG WIDTH=12 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline2303" SRC="img3.gif"  >  as described
+in Fig. (<A HREF="node5.html#figlambda">3.1</A>).
+<P><A NAME="1347">&#160;</A><A NAME="figlambda">&#160;</A> <IMG WIDTH=387 HEIGHT=286 ALIGN=BOTTOM ALT="figure329" SRC="img94.gif"  > <BR>
+<STRONG>Figure 3.1:</STRONG> Functional relationship between flow derivatives
+ <IMG WIDTH=29 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline2299" SRC="img1.gif"  >  and  <IMG WIDTH=62 HEIGHT=32 ALIGN=MIDDLE ALT="tex2html_wrap_inline2505" SRC="img93.gif"  >  and  <IMG WIDTH=12 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline2303" SRC="img3.gif"  > .<BR>
+<P>
+<P>
+The analysis in the section can be summarized as follows:
+<UL><LI> In a linearized regime where the velocity field is know,
+the basis function Reynolds number (<A HREF="node5.html#rblob">3.18</A>) remains bounded, independent
+of the dynamics of the basis function.<LI> If  <IMG WIDTH=37 HEIGHT=25 ALIGN=MIDDLE ALT="tex2html_wrap_inline2453" SRC="img71.gif"  > , the aspect ratio of every blob is bounded by
+(<A HREF="node5.html#aspectbound">3.17</A>).<LI> One can numerically integrate (<A HREF="node5.html#systemodes">3.12</A>) directly except when  <IMG WIDTH=12 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline2471" SRC="img79.gif"  >  passes
+through unity.  In this case, the dynamics dictate that the basis function
+rapidly orient itself to an angle which corresponds to the maximum
+elongation rate.
+<P>
+</UL>
+<P>
+Also, by determining
+the absolute bound on  <IMG WIDTH=12 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline2303" SRC="img3.gif"  > , we are guaranteed that the aspect ratios
+will collapse to 1 as <I>l</I> approaches zero.  Also, this results enables an
+investigator to use  <IMG WIDTH=23 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2383" SRC="img39.gif"  >  as a means of tracking the basis function
+Reynolds number and therefore the accuracy of a given calculation.
+<P>
+<HR><A NAME="tex2html86" HREF="node6.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html84" HREF="node3.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html78" HREF="node4.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html87" HREF="node6.html">The High Spatial Order </A>
+<B>Up:</B> <A NAME="tex2html85" HREF="node3.html">The Vortex Method</A>
+<B> Previous:</B> <A NAME="tex2html79" HREF="node4.html">The Continuous Formulation of </A>
+<P><ADDRESS>
+<I>Louis F. Rossi <BR>
+Thu Nov  4 15:02:00 EST 1999</I>
+</ADDRESS>
+</BODY>
+</HTML>

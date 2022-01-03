@@ -1,0 +1,29 @@
+t1 = 0:0.5:10;
+t2 = 0:0.75:10.5;
+t3 = 0:1:10;
+t4 = 0:1.5:10.5;
+t5 = 0:2:10;
+t6 = 0:2.5:10;
+[t1,y1] = fce(t1,1);
+[t2,y2] = fce(t2,1);
+[t3,y3] = fce(t3,1);
+[t4,y4] = fce(t4,1);
+[t5,y5] = fce(t5,1);
+[t6,y6] = fce(t6,1);
+e1 = exp(-t1)-y1;
+e2 = exp(-t2)-y2;
+e3 = exp(-t3)-y3;
+e4 = exp(-t4)-y4;
+e5 = exp(-t5)-y5;
+e6 = exp(-t6)-y6;
+plot(t1,abs(e1),'r');
+hold on;
+plot(t2,abs(e2),'g');
+plot(t3,abs(e3),'b');
+plot(t4,abs(e4),'r');
+plot(t5,abs(e5),'g');
+plot(t6,abs(e6),'b');
+hold off;
+% Now use the GUI on the plot to add a legend, fiddle with the colors,
+% and dump the picture to a file.
+diary off;

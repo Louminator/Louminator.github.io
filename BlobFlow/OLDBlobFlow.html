@@ -1,0 +1,188 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.76 [en] (X11; U; SunOS 5.8 sun4u) [Netscape]">
+   <meta name="Author" content="L. F. Rossi">
+   <title>The Official BlobFlow Website</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+
+<h1>
+The Official BlobFlow<font size=+0>(TM) </font>Website.</h1>
+
+<center><img SRC="BlobFlow_logo.jpg" NOSAVE height=247 width=400>
+<p>
+<hr WIDTH="100%"></center>
+
+<h2>
+Contents:</h2>
+
+<blockquote>
+<li>
+<b><a href="#General Information.">General information.</a></b></li>
+
+<li>
+<b><a href="#Source Code.">Source code.</a></b></li>
+
+<li>
+<b><a href="#Documentation.">Documentation.</a></b></li>
+
+<li>
+<b><a href="#To do.">To do.</a></b></li>
+
+<li>
+<b><a href="#Known bugs.">Known bugs.</a></b></li>
+</blockquote>
+
+<center>
+<hr WIDTH="100%"></center>
+
+<h2>
+<a NAME="General Information."></a><b>General Information.</b></h2>
+
+<p><br><b>Project coordinator: </b><a href="httpd://www.math.udel.edu/~rossi">L.
+F. Rossi</a> (<a href="mailto:rossi@math.udel.edu">rossi@math.udel.edu</a>).&nbsp;
+Assistant Professor.&nbsp; Department of Mathematical Sciences.&nbsp; University
+of Massachusetts Lowell.<img SRC="nsf.gif" NOSAVE height=100 width=91 align=RIGHT>
+<br><b>Creation date: </b>August 2000
+<br><b>Purpose:</b> The purpose of this project is to provide a powerful,
+reliable, open source vortex method for scientists, engineers and mathematicians.&nbsp;
+BlobFlow(TM) is a general Navier-Stokes solver for two-dimensional, incompressible
+flows.&nbsp; It is a variation of the vortex method, and as such, will
+be most effective when used for flows dominated by isolated regions of
+vorticity.&nbsp; This particular variation is based on elliptical Gaussian
+basis functions and the formal term for the algorithm is the "elliptical
+corrected core spreading vortex method" or ECCSVM, for short.&nbsp; The
+documentation covers the specifics in a little more detail.
+<br><b>Acknowledgements: </b>Louis Rossi would like to acknowledge the
+support of the <a href="http://www.nsf.gov">National Science Foundation</a>
+(DMS-9971800) and the <a href="http://www.uml.edu">University of Massachusetts
+Lowell</a>.
+<br>
+<hr WIDTH="100%">
+<h2>
+<a NAME="Source Code."></a>Source Code.</h2>
+The source code for BlobFlow(TM) is free, and you are welcome to have it.&nbsp;
+It will be downloadable from this section.
+<br>&nbsp;
+<table BORDER COLS=4 WIDTH="100%" NOSAVE >
+<tr NOSAVE>
+<td WIDTH="10%" NOSAVE><b><font size=+1>Release</font></b></td>
+
+<td WIDTH="15%" NOSAVE><b><font size=+1>Date</font></b></td>
+
+<td><b><font size=+1>Download</font></b></td>
+
+<td><b><font size=+1>Changes</font></b></td>
+</tr>
+
+<tr>
+<td>BlobFlow v1.0</td>
+
+<td>17 November 2000</td>
+
+<td><a href="downloads/BlobFlow_1_0.tar.gz">BlobFlow_1_0.tar.gz</a></td>
+
+<td>Introductory release</td>
+</tr>
+
+<tr>
+<td>BlobFlow v1.1</td>
+
+<td>8 December 2000</td>
+
+<td><a href="downloads/BlobFlow_1_1.tar.gz">BlobFlow_1_1.tar.gz</a></td>
+
+<td>Updated merging algorithm</td>
+</tr>
+
+<tr>
+<td>BlobFlow v2.0</td>
+
+<td>1 June 2001</td>
+
+<td><a href="downloads/BlobFlow_2_0.tar.gz">BlobFlow_2_0.tar.gz</a></td>
+
+<td>Error checking in simulation and control files.
+<br>Fixed bug in AB4 header.
+<br>Fixed bug in old refinement subroutine.
+<br>Improved refinement algorithm
+<br>Improved Adams Bashforth startup routine
+<br>Improved merging algorithm and better flexibility.
+<br>Improved fine grid generation for multipole summation routine.</td>
+</tr>
+
+<tr>
+<td>BlobFlow v2.01</td>
+
+<td>17 July 2001</td>
+
+<td><a href="downloads/BlobFlow_2_01.tar.gz">BlobFlow_2_01.tar.gz</a></td>
+
+<td>Fixed bug in split.
+<br>Improved tools (egrid, vtx2vel).
+<br>Documentation for v2.x released.
+<br>The revised documentation is available <a href="#Documentation.">below</a>.</td>
+</tr>
+
+<tr>
+<td>BlobFlow v2.02</td>
+
+<td>2 Aug 2001</td>
+
+<td><a href="downloads/BlobFlow_2_02.tar.gz">BlobFlow_2_02.tar.gz</a></td>
+
+<td>Updated documentation.
+<br>Internal changes so that dpos_vel and dpos_vel_fast have the same parameters
+when called.
+<br>Removed deriv_ext and all references to it.</td>
+</tr>
+</table>
+<img SRC="PythonPowered.png" height=44 width=110>
+<br>
+<hr WIDTH="100%">
+<h2>
+<a NAME="Documentation."></a>Documentation.</h2>
+Yes, there is documentation for BlobFlow(TM) <b>version 2.0</b>.&nbsp;
+It is available in <a href="documentation/documentation.ps">postscript</a>
+and <a href="documentation/documentation.html">HTML</a>.
+<br>
+<hr WIDTH="100%">
+<h2>
+<a NAME="Sample simulations."></a>Sample simulations.</h2>
+Version 1 only: For a&nbsp; Lamb dipole simulation, click <a href="downloads/lamb_dipole.tar.gz">here.</a>
+<br>Version 2 examples coming soon.
+<br>
+<hr WIDTH="100%">
+<h2>
+<a NAME="To do."></a>To do.</h2>
+As usual, there is a long list of&nbsp; minor features to add to the code.&nbsp;
+If you have any suggestions, please feel free to send them to me.
+<ol>
+<li>
+Solid boundaries.</li>
+
+<li>
+Passive tracer elements.</li>
+
+<li>
+Improve time integration scheme.</li>
+
+<li>
+Improve parallel algorithm.</li>
+</ol>
+<b>Another major project is to extend BlobFlow to three dimensions.</b>
+<br>
+<hr WIDTH="100%">
+<h2>
+<a NAME="Known bugs."></a>Known bugs.</h2>
+Well... None known so far...
+<br>
+<hr WIDTH="100%">
+<br>&nbsp;
+<address>
+<a href="mailto:rossi@math.udel.edu">rossi@math.udel.edu</a></address>
+
+</body>
+</html>

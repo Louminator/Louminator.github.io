@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Message passing and parallelization.</TITLE>
+<META NAME="description" CONTENT="Message passing and parallelization.">
+<META NAME="keywords" CONTENT="documentation">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="documentation.css">
+<LINK REL="next" HREF="node20.html">
+<LINK REL="previous" HREF="node18.html">
+<LINK REL="up" HREF="documentation.html">
+<LINK REL="next" HREF="node20.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html215"
+ HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html213"
+ HREF="documentation.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html207"
+ HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html216"
+ HREF="node20.html">About this document ...</A>
+<B> Up:</B> <A NAME="tex2html214"
+ HREF="documentation.html">=2.5in figs/BlobFlow_logo_short.eps A high</A>
+<B> Previous:</B> <A NAME="tex2html208"
+ HREF="node18.html">GNU Free Documentation License</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00700000000000000000">
+Message passing and parallelization.</A>
+</H1>
+
+<P>
+When using BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+on many processors whether it is one SMP machine or
+several networked processors, there are three things to remember. Every
+multicomputer is different. Every multicomputer is different. Every
+multicomputer is different.  
+
+<P>
+While it is more and more common to find large numbers of unused computers to
+run your calculations, using BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+with MPI may require some tuning.
+The most important of these is communication overhead.  Scaling across
+multiple processors requires that the individual processors communicate from
+time to time.  Naturally, it is best to keep this to a minimum because
+message passing is the slowest operation in this algorithm.  
+Both the peer and the master-slave scheme do their best to keep all
+processors busy, but network latency can spoil things.
+
+<P>
+For the master-slave algorithm, WORKSIZE is a key parameter that can be
+tuned.  This integer controls the size, in blobs or computational elements,
+of the work to be performed by individual processes.  Larger worksizes mean
+larger packets will be exchanged less frequently.  Smaller worksizes mean
+smaller packets will be exchanged more often.  Tuning WORKSIZE for your
+network can dramatically improve (or diminish) the performance of BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+.
+
+<P>
+For the perr algorithm, a similar parameter called SMALLWORK governs whether
+or not a process will share work with its companion if the
+companion has finished all of its tasks.  If the processor has SMALLWORK or
+less to do, it does not share the work because it would not be worth the
+transmission time.  However, if the processor has more than SMALLWORK, it
+will share half of it with the companion.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html215"
+ HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html213"
+ HREF="documentation.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html207"
+ HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html216"
+ HREF="node20.html">About this document ...</A>
+<B> Up:</B> <A NAME="tex2html214"
+ HREF="documentation.html">=2.5in figs/BlobFlow_logo_short.eps A high</A>
+<B> Previous:</B> <A NAME="tex2html208"
+ HREF="node18.html">GNU Free Documentation License</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2001-08-01</I>
+</ADDRESS>
+</BODY>
+</HTML>

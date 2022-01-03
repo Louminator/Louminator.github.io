@@ -1,0 +1,483 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Louis F. Rossi publication list</title>
+<meta name="generator" content="Bluefish 1.0.7">
+<meta name="author" content="Louis Frank Rossi">
+<meta name="date" content="2010-04-30T21:57:09+1000">
+<meta name="keywords" content="Rossi Math">
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel=stylesheet type="text/css" href="2010spring.css">
+</head>
+<body>
+<hr align="left" size="4" width="50%">
+<table class="banner">
+<tr>
+<td><a href="louroo_med.jpg"><img src="louroo_sm.jpg" width="123" height="145" border="0" alt="Have some mathematics... It's on me." align="bottom"></a></td>
+<td width="100%" valign="bottom" nowrap>
+<p>
+<img class="right" src="udmath.png" width="211" height="140" border="0" alt="" align="bottom">
+<b><font size="+1"><a href="http://www.math.udel.edu/~rossi">Louis F. Rossi</a></font></b> <br>
+Associate Professor <br>
+<a href="http://www.math.udel.edu">Department of Mathematical Sciences</a><br>
+University of Delaware
+</p>
+</table>
+<hr align="left" size="4" width="70%">
+<table cellpadding="12" cellspacing="0" border="0">
+<!-- <tr> -->
+<td class="leftmid" width="50%" valign="top">
+<h3>Peer reviewed publication list</h3>
+
+<table cellpadding="0" cellspacing="0" border="1">
+<tr>
+<td><b>Journals</b></td>
+<td><b>NumAnal</b></td>
+<td><b>Mod/Anal</b></td>
+<td><b>SciComp</b></td>
+<td><b>ACO</b></td>
+<td><b>Swarm</b></td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+Claudio E. Torres, Louis F. Rossi, Jeremy Keﬀer, Ke Li,
+Chien-Chung Shen.
+<a href="SI10.pdf">Modeling, analysis and simulation of ant-based network
+routing protocols.</a>
+<i>Swarm Intelligence</i>, submitted.
+</td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+</tr>
+
+<tr>
+	<td>L. A. Barba, and L. F. Rossi. <a href="JCP10.pdf">Global field interpolation
+for particle methods.</a> 
+<i>Journal of Computational Physics</i>, 229, pp. 1292-1310. 2010. </td>
+	<td bgcolor="#0000FF"></td>
+	<td></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>				
+</tr>
+<tr>
+<td>R. B. Platte, L. F. Rossi and T. B. Mitchell. <a href="SISC09.pdf">Using global
+interpolation to evaluate the Biot-Savart
+integral for deformable elliptical Gaussian vortex elements.</a> 
+<i>SIAM Journal on Scientific Computing</i>, 31 (2), pp. 2342-2360. 2009.</td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T. B. Mitchell and L. F. Rossi. 
+<a href="POF08.pdf">The evolution of Kirchoff elliptic vortices.</a> <i>Physics of Fluids</i> 20, 
+054103-1 - 054103-12, May 2008.</td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>H. I. Inyang, L. F. Rossi., Graham-Eagle, J. and Pennell, S.
+Modeling Smectite Illitization in Earthen Barriers
+of Buried Radioactive Wastes. <i>Geomechanics and Geoengineering: An
+International Journal</i> 2 (2), pp. 87-95. 2007.</td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>L. F. Rossi. <a href="SISC06b.pdf">Evaluation of the Biot-Savart
+    integral for deformable elliptical Gaussian vortex elements.</a>
+  <i>SIAM Journal on Scientific Computing</i> 28 (4), pp. 1509-1532. 2006.</td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+L. F. Rossi. <a href="SISC06.pdf">A Comparative Study of
+      Lagrangian Methods Using
+      Axisymmetric and Deforming Blobs.</a>
+    <i>SIAM Journal on Scientific Computing</i> 27 (4), 
+    pp. 1168-1180. 2006.</td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+L. F. Rossi, Gareth McKinley and L. P. Cook.
+    <a href="JNNFM06.pdf">Slippage and Migration in Taylor-Couette Flow of a Model
+    for Dilute Wormlike Micellar Solutions.</a>
+  <i>Journal on Non-Newtonian Fluids</i> 136 (2-3), pp. 79-92. 2006.</td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+K. Johnson and L. F. Rossi.  <a href="JTB06.pdf">A mathematical and
+experimental study of ant foraging trail dynamics.</a>
+<i>Journal of Theoretical Biology</i>. 241 (2), pp. 360-399. 2006.
+</td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+L. F. Rossi. <a href="SISC05.pdf">Achieving High-order Convergence Rates with Deforming
+Basis Functions.</a>
+<i>SIAM Journal on Scientific Computing</i> 26 (3), pp. 885-906. 2005.
+</td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+L. F. Rossi, Hilary Inyang, J. Graham-Eagle and S. Pennell.
+<a href="JEE04.pdf">A Model of Coupled Heat and Moisture Transport in an Annular
+Clay Barrier.</a>
+<i>American Society of Civil Engineering Journal on
+Environmental Engineering</i>, 130 (8), pp. 855-862. 2004.
+</td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+L. P. Cook and L. F. Rossi.
+<a href="JNNFM04.pdf">Shear Layers and Demixing in a Model for Shear Flow of
+Self-assembling Micellar Solutions.</a>  
+<i>Journal on Non-Newtonian Fluids</i>, 116, pp. 347-369. 2004.
+</td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+L. F. Rossi and James Graham-Eagle.
+<a href="SIAP02.pdf">On the Existence of Two-dimensional, Localized, Self-similar
+Vortical Structures.</a>
+<i>SIAM Journal on Applied Mathematics</i>, 62 (6), pp. 2114-2128. 2002.</td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+L. F. Rossi. <a href="http://books.google.com.au/books?hl=en&lr=&id=-J4VUJy48Y4C&oi=fnd&pg=PA433&dq=a+high+order+lagrangian+scheme+for+flow+through+porous+media+rossi&ots=7rlbkuyMZc&sig=xlQG7-19zXEl9127ujhNk8WSmQY#v=onepage&q=a high order lagrangian scheme for flow through porous media rossi&f=false">
+A High Order Lagrangian Scheme for Flow Through 
+Unsaturated Porous Media</a>
+in <i>Contemporary Mathematics 295: Fluid Flow
+and Transport in Porous Media:
+Mathematical and Numerical Treatment</i>, pp.433-445. 2002.
+</td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+L. F. Rossi and G. Sohos.
+<a href="FGCS99.pdf">Interactive Simulation of Contaminant Evolution Through Porous Media.</a> \\
+<i>Future Generation Computer Systems</i>, 15, pp. 477-484. 1999.
+</td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+D. Sarocka, A. J. Bernoff and L. F. Rossi.
+<a href="PHYSD99.pdf">Large-amplitude Interfaces in the Riley-Davis and Sivashinsky 
+Equations for Directional Solidification.</a> 
+<i>Physica D</i>. 127, pp. 146-176. 1999.
+</td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+L. F. Rossi}, J. F. Lingevitch and A. J. Bernoff.
+<a href="POF97.pdf">Quasi-steady Monopole and Tripole Attractors for Relaxing
+Vortices.</a>
+<i>Physics of Fluids</i>, 9 (8), pp. 2329-2338. 1997.
+</td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+L. F. Rossi.
+<a href="SISC97.pdf">Merging Computational Elements in Vortex Simulations.</a>
+<i>SIAM Journal on Scientific Computing</i>, 18 (4), pp. 1014-1027. 1997.
+</td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+L. F. Rossi.
+<a href="SISC96.pdf">Resurrecting Core Spreading Vortex Methods: A Scheme that is both
+Deterministic and Convergent.</a>
+<i>SIAM Journal on Scientific Computing</i>, 17 (2), pp. 370-397. 1996.
+</td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+L. F. Rossi.
+Fundamental Properties of a Continuous Dynamic Neural Network.
+<i>Interface</i> 12 (2), pp. 31-53. 1988.
+</td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+<b>Refereed proceedings.</b>
+</td>
+<td><b>NumAnal</b></td>
+<td><b>Mod/Anal</b></td>
+<td><b>SciComp</b></td>
+<td><b>ACO</b></td>
+<td><b>Swarm</b></td>
+</tr>
+
+<tr>
+<td>
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+Jinfa Cai, John A. Pelesko and Louis F. Rossi.
+<a href="proceedings_eimi_2010.pdf">Modeling modeling:  Seven habits of mind of effective
+mathematicians.</a>
+<i>Educational Interfaces between Mathematics and Industry. </i> 
+Lisbon Portugal. 2010
+</td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+Ke Li, Kyle Thomas , Claudio E. Torres, Louis F. Rossi and Chien-Chung
+Shen.
+<a href="SASO09.pdf">Naturally Adaptive Protocol for Wireless Sensor Networks Based on
+Slime Mold.</a>
+<i>Third IEEE International Conference on Self-Adaptive and
+Self-Organizing Systems (SASO).</i>
+San Francisco, September 14-18, 2009.
+</td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+Stephen F. Siegel and Louis F. Rossi.
+<a href="LNCS08.pdf">Analyzing BlobFlow: 
+A Case Study Using Model Checking to Verify 
+Parallel Scientific Software.</a>
+Lecture Notes in Computer Science:  Recent
+Advances in
+Parallel Virtual
+Machine and Message Passing Interface 15th European PVM/MPI Users Group
+Meeting, Dublin, Ireland, September 7-10, 2008. Proceedings.
+</td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+Ke Li, Kyle Thomas, Louis F. Rossi and Chien-Chung Shen.
+<a href="SASO08.pdf">A Slime-Mold Inspired Protocol
+for Wireless Sensor Networks. </a>
+Second IEEE International Conference on
+Self-Adaptive and 
+Self-Organizing Systems (SASO). Venice, Italy, October
+20-24, 2008.
+</td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+Louis F. Rossi, Ke Li, Justin Yackoski, Chien-Chung Shen.
+<a href="ACM07.pdf">Slime mold inspired coordinations for wireless sensor 
+and actor networks.</a>
+International Conference on Mobile Computing and Networking 
+<i>Proceedings of the First ACM
+Workshop on Sensor and Actor Networks</i>. Montreal, Quebec, Canada, pp 55 - 56.
+2007.
+</td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+Xiaofeng Han, L. F. Rossi, and Chien-Chung Shen. 
+<a href="ROBO07.pdf">Autonomous navigation of wireless robot
+swarms with covert leadership.</a>
+<i>1st International Conference on Robot Communication and
+Coordination (ROBOCOMM)</i>, Athens, Greece, October 15-17. 2007.
+</td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+</tr>
+
+<tr>
+<td>
+L. F. Rossi, G. Kaiser and D. Washburn. 
+Recovery of Kolmogorov Statistics in Thermal Mixing in the
+Troposphere: The Hazards of Real Data.
+<i>SPIE Proceedings</i> Vol 3381, pp. 246-255. 1998.
+</td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+<a href="sandia_proc.pdf">Vortex Computations of Wall Jet Flows.</a>
+<i>Proceedings of ``A Forum on the Application of Vortex
+Methods to Engineering Problems,''</i>
+Sandia National Laboratory. 1995.
+</td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td bgcolor="#0000FF"></td>
+<td></td>
+<td></td>
+</tr>
+
+
+
+
+</table>
+</td>
+
+<!-- </tr> -->
+</table>
+</body>
+</html>

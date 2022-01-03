@@ -1,0 +1,304 @@
+This is TeX, Version 3.14159 (Web2C 7.3.3.1) (format=latex 2001.9.20)  8 MAY 2002 10:21
+**./images.tex
+(./images.tex
+LaTeX2e <2000/06/01>
+Loading CZ hyphenation patterns: Pavel Sevecek, v3, 1995
+Loading SK hyphenation patterns: Jana Chlebikova, 1992
+Babel <v3.7h> and hyphenation patterns for english, dumylang, nohyphenation, cz
+ech, slovak, german, ngerman, danish, spanish, catalan, finnish, french, ukengl
+ish, greek, croatian, hungarian, italian, latin, mongolian, dutch, norwegian, p
+olish, portuguese, russian, ukrainian, serbocroat, swedish, loaded.
+
+(/opt-cassandra/TeXLive6/texmf/tex/latex/base/article.cls
+Document Class: article 2000/05/19 v1.4b Standard LaTeX document class
+(/opt-cassandra/TeXLive6/texmf/tex/latex/base/size12.clo
+File: size12.clo 2000/05/19 v1.4b Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/opt-cassandra/TeXLive6/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(/opt-cassandra/TeXLive6/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+) (/opt-cassandra/TeXLive6/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 1999/02/16 v1.0l Standard LaTeX Graphics (DPC,SPQR)
+(/opt-cassandra/TeXLive6/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+) (/opt-cassandra/TeXLive6/texmf/tex/latex/texlive/graphics.cfg
+File: graphics.cfg 2001/03/31 v1.0 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: dvips.def on input line 80.
+(/opt-cassandra/TeXLive6/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+) (/opt-cassandra/TeXLive6/texmf/tex/latex/amslatex/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+For additional information on amsmath, use the `?' option.
+(/opt-cassandra/TeXLive6/texmf/tex/latex/amslatex/amstext.sty
+Package: amstext 2000/06/29 v2.01
+(/opt-cassandra/TeXLive6/texmf/tex/latex/amslatex/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks15
+\ex@=\dimen105
+)) (/opt-cassandra/TeXLive6/texmf/tex/latex/amslatex/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen106
+) (/opt-cassandra/TeXLive6/texmf/tex/latex/amslatex/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks16
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks17
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks18
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+) (/opt-cassandra/TeXLive6/texmf/tex/latex/graphics/color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+(/opt-cassandra/TeXLive6/texmf/tex/latex/texlive/color.cfg
+File: color.cfg 2001/03/31 v1.0 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: dvips.def on input line 125.
+(/opt-cassandra/TeXLive6/texmf/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\sizebox=\box28
+\lthtmlwrite=\write3
+(./images.aux)
+\openout1 = `images.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+latex2htmlLength hsize=349.0pt
+latex2htmlLength vsize=681.295pt
+latex2htmlLength hoffset=0.0pt
+latex2htmlLength voffset=0.0pt
+latex2htmlLength topmargin=0.0pt
+latex2htmlLength topskip=0.00003pt
+latex2htmlLength headheight=0.0pt
+latex2htmlLength headsep=0.0pt
+latex2htmlLength parskip=0.0pt plus 1.0pt
+latex2htmlLength oddsidemargin=0.0pt
+latex2htmlLength evensidemargin=0.0pt
+l2hSize :displaymath138:36.65584pt::0.0pt::349.0pt.
+[1
+
+
+]
+File: regionint.eps Graphic file (type eps)
+<regionint.eps>
+l2hSize :tex2html_wrap244:158.30827pt::0.0pt::349.0pt.
+[2
+
+
+]
+l2hSize :displaymath139:39.79317pt::0.0pt::349.0pt.
+[3
+
+
+]
+File: triple.eps Graphic file (type eps)
+<triple.eps>
+l2hSize :tex2html_wrap264:141.13731pt::0.0pt::349.0pt.
+[4
+
+
+]
+File: triple2.eps Graphic file (type eps)
+<triple2.eps>
+l2hSize :tex2html_wrap266:72.26779pt::0.0pt::349.0pt.
+[5
+
+
+]
+File: triple3.eps Graphic file (type eps)
+<triple3.eps>
+l2hSize :tex2html_wrap268:72.26935pt::0.0pt::349.0pt.
+[6
+
+
+]
+l2hSize :eqnarraystar44:130.11931pt::0.0pt::349.0pt.
+[7
+
+
+]
+File: hourglass.eps Graphic file (type eps)
+<hourglass.eps>
+l2hSize :tex2html_wrap290:216.8139pt::0.0pt::349.0pt.
+[8
+
+
+]
+l2hSize :displaymath141:36.65584pt::0.0pt::349.0pt.
+[9
+
+
+]
+l2hSize :tex2html_wrap_inline170:10.01027pt::10.01027pt::58.68372pt.
+[10
+
+
+]
+l2hSize :tex2html_wrap_inline172:10.01027pt::10.01027pt::83.89882pt.
+[11
+
+
+]
+File: sphere.eps Graphic file (type eps)
+<sphere.eps>
+l2hSize :tex2html_wrap312:154.73506pt::0.0pt::349.0pt.
+[12
+
+
+]
+l2hSize :tex2html_wrap_inline182:8.66922pt::8.66922pt::31.07059pt.
+[13
+
+
+]
+l2hSize :displaymath142:37.35425pt::0.0pt::349.0pt.
+[14
+
+
+]
+l2hSize :tex2html_wrap_inline186:8.25pt::8.25pt::6.06036pt.
+[15
+
+
+]
+l2hSize :tex2html_wrap_inline190:8.46431pt::8.46431pt::53.86395pt.
+[16
+
+
+]
+l2hSize :tex2html_wrap_inline192:8.25pt::8.25pt::46.64182pt.
+[17
+
+
+]
+l2hSize :displaymath143:40.49158pt::0.0pt::349.0pt.
+[18
+
+
+]
+l2hSize :tex2html_wrap_inline194:10.01027pt::10.01027pt::29.52615pt.
+[19
+
+
+]
+l2hSize :tex2html_wrap_inline196:8.25pt::8.25pt::25.36359pt.
+[20
+
+
+]
+l2hSize :displaymath144:42.62492pt::0.0pt::349.0pt.
+[21
+
+
+]
+l2hSize :displaymath145:31.58282pt::0.0pt::349.0pt.
+[22
+
+
+]
+l2hSize :displaymath146:34.66695pt::0.0pt::349.0pt.
+[23
+
+
+]
+
+LaTeX Warning: Command \v invalid in math mode on input line 259.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.259 \begin{displaymath}\v r
+                              (s,t) = \langle 3,4 \rangle t.
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in display math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.259 \begin{displaymath}\v r
+                              (s,t) = \langle 3,4 \rangle t.
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no ^^e8 in font cmex10!
+l2hSize :displaymath147:24.0pt::0.0pt::349.0pt.
+[24
+
+
+]
+l2hSize :displaymath148:36.65584pt::0.0pt::349.0pt.
+[25
+
+
+] (./images.aux) ) 
+Here is how much of TeX's memory you used:
+ 1359 strings out of 60985
+ 16661 string characters out of 4939378
+ 65358 words of memory out of 8000001
+ 4342 multiletter control sequences out of 10000+65535
+ 7813 words of font info for 27 fonts, out of 1000000 for 1000
+ 276 hyphenation exceptions out of 1000
+ 27i,7n,21p,204b,232s stack positions out of 15000i,4000n,6000p,200000b,40000s
+
+Output written on images.dvi (25 pages, 9476 bytes).

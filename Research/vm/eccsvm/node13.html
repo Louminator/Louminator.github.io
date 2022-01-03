@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>Concluding Remarks</TITLE>
+<META NAME="description" CONTENT="Concluding Remarks">
+<META NAME="keywords" CONTENT="eccsvm">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="eccsvm.css">
+</HEAD>
+<BODY LANG="EN">
+ <A NAME="tex2html164" HREF="node14.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html162" HREF="eccsvm.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html156" HREF="node12.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html165" HREF="node14.html">Acknowledgments</A>
+<B>Up:</B> <A NAME="tex2html163" HREF="eccsvm.html">High Order Vortex Methods </A>
+<B> Previous:</B> <A NAME="tex2html157" HREF="node12.html">High Reynolds Number Vortex </A>
+<BR> <P>
+<H1><A NAME="SECTION00060000000000000000">Concluding Remarks</A></H1>
+<P>
+The use of deforming elliptical Gaussian basis functions for
+Lagrangian schemes has yielded a naturally adaptive scheme with a high
+spatial accuracy.  More than anything else, the underlying motivation
+is to boost the accuracy of Lagrangian schemes without sacrificing the
+compactness of the basis function.  ECCSVM achieves this result, but
+the per element computational cost for the Biot-Savart integration is
+high.  However, it is hard to lose with this approach.  Whether one
+uses direct summation or fast summation, a high spatial order method will
+eventually outperform any low order scheme.
+<P>
+Though the sample 
+calculations make use of the high order method coupled with adaptive
+refinement and merging, the merging procedure is omitted in this work in
+the interests of space and continuity.  The methodology is a
+modification of previous work on merging [<A HREF="node16.html#rossimerge">23</A>], and
+more specifics will be provided in a later manuscript.
+<P>
+This introduces numerous avenues for further exploration.  For one, this
+method has only been implemented using direct summation, but
+elliptical Gaussians are suited for fast summation methods
+[<A HREF="node16.html#andersoncorrections">1</A>, <A HREF="node16.html#anderson1a">2</A>, <A HREF="node16.html#draghicescu2">5</A>, <A HREF="node16.html#draghicescu1">6</A>, <A HREF="node16.html#greengardrokhlin">9</A>, <A HREF="node16.html#vandommelenrundensteiner">29</A>].  
+By decreasing the total number of computational elements and
+increasing their individual complexity, 
+the method is more suitable for parallelization on MIMD platforms and
+workstation farms because of the relatively low communication costs.
+Adding constraints for solid boundaries would be a simple extension,
+and the elliptical basis functions will resolve boundary layers
+more efficiently than radially symmetric boundary layers as Marshall, Grant
+and Teng have
+found 
+[<A HREF="node16.html#marshallgrant1">17</A>, <A HREF="node16.html#teng1">26</A>].  
+More challenging still would be
+extending this method to three dimensions.  Though increasing
+dimensionality adds several new challenging, particularly in
+evaluating the streamfunction, these problems are accessible using
+similar asymptotics employed here.  Finally, the high order method is
+a new tool for exploring vorticity dynamics in high Reynolds number
+flows.  The improved spatial resolution and adaptivity make this
+scheme a natural choice for problems involving vorticity-dominated flows.
+<P>
+<HR><A NAME="tex2html164" HREF="node14.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html162" HREF="eccsvm.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html156" HREF="node12.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html165" HREF="node14.html">Acknowledgments</A>
+<B>Up:</B> <A NAME="tex2html163" HREF="eccsvm.html">High Order Vortex Methods </A>
+<B> Previous:</B> <A NAME="tex2html157" HREF="node12.html">High Reynolds Number Vortex </A>
+<P><ADDRESS>
+<I>Louis F. Rossi <BR>
+Thu Nov  4 15:02:00 EST 1999</I>
+</ADDRESS>
+</BODY>
+</HTML>

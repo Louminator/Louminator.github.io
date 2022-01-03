@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>What is a vortex method? Will it solve my problem?</TITLE>
+<META NAME="description" CONTENT="What is a vortex method? Will it solve my problem?">
+<META NAME="keywords" CONTENT="documentation">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="documentation.css">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="node4.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html81"
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html79"
+ HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html75"
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html82"
+ HREF="node7.html">Building BlobFlow</A>
+<B> Up:</B> <A NAME="tex2html80"
+ HREF="node4.html">Preliminaries</A>
+<B> Previous:</B> <A NAME="tex2html76"
+ HREF="node5.html">What is in a</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00220000000000000000">
+What is a vortex method?  Will it solve my problem?</A>
+</H1>
+
+<P>
+A vortex method is a numerical algorithm for calculating fluid flows.
+BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+is restricted to two-dimensional, incompressible, viscous flows
+though it is my intent to develop a three dimensional version.
+Vortex methods are effective for flows dominated by isolated regions of
+vorticity.  Examples include vorticity shedding from bluff bodies,
+simulation of coherent vortical structures, boundary layers, jets and so
+forth.  There are situations where vortex methods would not be a good
+choice, so it is best to analyze the problem for choosing this algorithm.
+
+<P>
+BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+is based on the elliptical core spreading vortex method.  A vortex
+method is an algorithm that approximates the vorticity field, <IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\omega$">,
+of a fluid flow
+as a linear combination of moving, localized basis functions, sometimes
+called <EM>blobs</EM>.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="basis-fn">&#160;</A>
+<!-- MATH: \begin{eqnarray}
+&& \omega(\v x,t) = \sum_{i=1}^N g(\v x;\gamma_i,\v x_i,\sigma_i,a_i,\theta_i)
+\nonumber \\
+&& g(\v x;\gamma_i,\v x_i,\sigma_i,a_i,\theta_i) = \hfill \nonumber \\
+&& {\gamma_i \over 4 \pi \sigma_i^2}
+\exp\left\{
+-{[c_i (x-x_i)+s_i (y-y_i)]^2/a_i^2 +
+[-s_i (x-x_i)+c_i (y-y_i)]^2 a_i^2
+\over
+4 \sigma_i^2}
+\right\}
+\end{eqnarray} -->
+
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="262" HEIGHT="70" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\displaystyle \omega(\v x,t) = \sum_{i=1}^N g(\v x;\gamma_i,\v x_i,\sigma_i,a_i,\theta_i)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="178" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\displaystyle g(\v x;\gamma_i,\v x_i,\sigma_i,a_i,\theta_i) = \hfill$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="596" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\displaystyle {\gamma_i \over 4 \pi \sigma_i^2}
+\exp\left\{
+-{[c_i (x-x_i)+s_i (y-y_i)]^2/a_i^2 +
+[-s_i (x-x_i)+c_i (y-y_i)]^2 a_i^2
+\over
+4 \sigma_i^2}
+\right\}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.1)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where the parameters <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\v x_i$">,
+<IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\sigma_i$">,
+<I>a</I><SUB><I>i</I></SUB> and <IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\theta_i$">
+are
+functions of time.  The evolution equations for these quantities which can
+be found in [<A
+ HREF="node17.html#rossi-01">1</A>], are related to the flow velocity and the
+derivatives of the flow velocity.  The centroid of the blob is <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\v x_i$">.
+The width, aspect ratio and orientation of the blob is <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\sigma_i$">.
+<I>a</I><SUB><I>i</I></SUB><SUP>2</SUP> and <IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\theta_i$">,
+respectively.  The total number of blobs, <I>N</I>, is
+often referred to as the <EM>problem size</EM> and can be compared to the
+number of mesh points in a finite difference computation.
+
+<P>
+Where finite
+difference schemes use mesh points as the fundamental computational element,
+a vortex method uses moving basis functions so that there is no grid imposed
+upon the problem.  Schemes using elements that move with the flow are called
+Lagrangian schemes because they are formulated in Lagrangian coordinates
+that move with the fluid rather than Eulerian coordinates which are fixed in
+some laboratory reference frame.  This is both a strength and a weakness.
+One of the main strengths is that the method is naturally adaptive.
+Vorticity moves through the domain as dictated by the governing
+Navier-Stokes equations.  The main disadvantage is the lack of a regular
+grid.  A regular grid has more than aesthetic advantages.  Having a regular
+grid means that memory can be allocated in a geometrically relevant way.
+In a Lagrangian scheme, no such assumptions can be made.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html81"
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html79"
+ HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html75"
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html82"
+ HREF="node7.html">Building BlobFlow</A>
+<B> Up:</B> <A NAME="tex2html80"
+ HREF="node4.html">Preliminaries</A>
+<B> Previous:</B> <A NAME="tex2html76"
+ HREF="node5.html">What is in a</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2001-08-01</I>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,236 @@
+\documentclass[12pt]{article}
+\usepackage{pgf,amsmath}
+
+\topmargin-0.5in
+\oddsidemargin0in
+\textwidth6.5in
+\textheight9in
+\parindent0in
+
+\def\v#1{{\bf #1}}
+\def\h#1{\widehat{#1}}
+
+\begin{document}
+
+Name: \hfill Math 353: Engineering Mathematics III\\
+
+{\center {\bf Exam 2 solution guide} \\
+11 April 2007 \\}
+
+\vspace{0.25in}
+
+{\em And by-and-by Christopher Robin came to an end of the things, and
+was silent, and he sat there looking out over the world, and wishing
+it wouldn't stop.} 
+
+\medskip
+
+\underline{The House at Pooh Corner} by A. A. Milne
+
+
+\vspace{0.25in}
+
+Instructions: {\bf Show all work to receive full or partial credit.}
+All University rules and guidelines for
+student conduct are applicable.
+
+\begin{enumerate}
+
+\item{[20 pts]} You write a script to do a least squares fit of data
+to the model
+\[
+f(x) = A \sin(\pi x) + B \cos(\pi x) + C
+\]
+and obtain the following curve.  The data points are marked with x's.
+\begin{center}
+\pgfimage[width=3in]{least-squares}
+\end{center}
+A peer says your script needs to be fixed.  Is she right?  Why or why not?
+
+\bigskip
+
+{\em 
+Yes, she is right.  The free parameter $C$ controls the vertical
+displacement of the curve.  The curve passes below all the data
+points, so increasing $C$ slightly will reduce the difference at all the
+data points and lower the root mean square error.
+
+A common error is to note the position of the curve but not to mention
+that $C$ can control this aspect of the curve.  If $C$ were missing in
+the model, this might be a best fit.
+}
+
+\newpage
+
+\item{[20 pts]} Perform two Jacobi interactions to solve $A \vec{x} =
+  \vec{b}$ where
+\[
+A = \left[\begin{array}{rr}
+10 & -3 \\ 2 & 5
+\end{array}\right], \ \ \ \vec{b} = \left[\begin{array}{r}
+4 \\ 12
+\end{array}\right],
+\]
+using $\vec{x}_0 = [0,  0]^T$ as a starting point.
+
+
+Now, perform two Jacobi interactions to solve the {\em same} $A \vec{x} =
+  \vec{b}$ where
+\[
+A = \left[\begin{array}{rr}
+2 & 5 \\ 10 & -3 
+\end{array}\right], \ \ \ \vec{b} = \left[\begin{array}{r}
+12 \\ 4
+\end{array}\right],
+\]
+using $\vec{x}_0 = [0,  0]^T$ as a starting point.  The only
+difference is the rows have been swapped.
+
+Explain the difference.  Hint: The exact solution is $\vec{x} = [1,
+  2]^T$.
+
+\bigskip
+
+{\em
+
+For the first problem, one Jacobi iteration yields $\vec{x}_1 = [0.4
+  2.4]$.  The second Jacobi iteration yields $\vec{x}_2 = [1.12
+  2.24]$.  Loosely speaking, it looks like we are converging.
+
+For the second problem, one Jacobi iteration yields $\vec{x}_1 = [6.0
+  -1.333\ldots]$.  The second Jacobi iteration yields $\vec{x}_2 = [9.333\ldots
+  18.666\ldots]$.  We see that the iterates are diverging from the
+exact solution.
+
+From lecture, we are guaranteed that Jacobi iterations of diagonally
+dominant matrices will always converge.  If a matrix is not diagonally
+dominant, the test fails, but in this case, the
+iterations are diverging from the exact solution.
+
+}
+
+\newpage
+
+\item{[20 pts]}  Suppose one has accurate samples of a smooth function $f(x)$
+  at 5 uniformly distributed points on $[0,1]$ and uses polynomial
+  interpolation to approximate $f(x)$ from these data.  These
+  measurements are expensive.  After some
+  testing, it is found that the interpolant $P(x)$ differs from $f(x)$
+  by as much as 1\%.  The desired accuracy is 1/100\%.  Estimate how many
+  uniformly distributed points should be used to achieve this goal.
+
+\bigskip
+
+{\em
+We need a $1/100$ reduction in error.  Interpolation errors for a
+smooth function are $C h^{N+1}$ where $N$ is the number of interpolation
+points.  Thus,
+\[
+C (1/5)^6 \approx 1/100.
+\]  Increasing the number of interpolation points also decreases $h$ because the interval $[0,1]$ is fixed.
+We seek an $N$ such that
+\[
+C (1/N)^{N+1} \leq 10^{-4}.
+\]
+So, we need an $N$ such that
+\[
+\frac{(1/N)^{N+1}}{(1/5)^6} \leq 10^{-2}.
+\]
+If you experiment, you will find that $N=7$ is sufficient.  The $C$'s for different $N$'s will differ, but if $f(x)$ is smooth these variations are dominated by the $h^N$ term.
+
+}
+
+\newpage
+
+\item{[20 pts]} Find the natural spline passing through the points
+  $(0,1)$, $(1,-1)$ and $(3,2)$.  The natural spline is when $P''(0) =
+  0$ and $P''(3) = 0$.
+
+\bigskip
+{\em
+The first approach is to apply the algorithm in the book (see pg. 286 at the top).
+
+A more direct approach is simply to calculate the spline.  Since it is a natural spline, we know that
+\[
+P''(x) = 
+\begin{cases}
+C x, & x \in [0,1), \\
+-\frac{C}{2} (x-3), & x \in [1,3].
+         \end{cases}
+\]
+$P''(x)$ is continuous, but we do not know $P''(1) = C$.
+Integrating once,
+\[
+P'(x) = 
+\begin{cases}
+\frac{C}{2} x^2 + D, & x \in [0,1), \\
+-\frac{C}{4} (x-3)^2 + E, & x \in [1,3].
+         \end{cases}
+\]
+Since $P'(x)$ is continuous at $x=1$, $E = \frac{3}{2} C + D$, so
+\[
+P'(x) = 
+\begin{cases}
+\frac{C}{2} x^2 + D, & x \in [0,1), \\
+-\frac{C}{4} (x-3)^2 + \frac{3}{2} C + D, & x \in [1,3].
+\end{cases}
+\]
+
+Now, integrate one more time.
+\[
+P(x) = 
+\begin{cases}
+\frac{C}{6} x^3 + Dx + F, & x \in [0,1), \\
+-\frac{C}{12} (x-3)^3 + \left(\frac{3}{2} C + D\right)(x-3) + G, & x \in [1,3].
+\end{cases}
+\]
+Since $P(0) = 1$, $F=1$, and since $P(3) = 2$, $G=2$.
+\[
+P(x) = 
+\begin{cases}
+\frac{C}{6} x^3 + Dx + 1, & x \in [0,1), \\
+-\frac{C}{12} (x-3)^3 + \left(\frac{3}{2} C + D\right)(x-3) + 2, & x \in [1,3].
+\end{cases}
+\]
+All that remains is to make sure that $P(x)$ is continuous at $x=1$.  Applying this condition, we find that $C=7/2$ and $D = -31/12$.
+
+\[
+P(x) = 
+\begin{cases}
+\frac{7}{12} x^3 - \frac{31}{12} x + 1, & x \in [0,1), \\
+-\frac{7}{24} (x-3)^3 + \frac{8}{3}(x-3) + 2, & x \in [1,3].
+\end{cases}
+\]
+Zing!  Your're done!
+}
+
+\newpage
+
+\item{[20 pts]} Determine the accuracy of the numerical
+  differentiation formula
+\[
+f'(x_i) \approx \frac{1}{h} \left( -\frac{3}{2} y_i + 2 y_{i+1} -
+\frac{1}{2} y_{i+2}\right),
+\]
+where the $x_i$'s are evenly spaced with mesh width $h$.
+
+\bigskip
+
+{\em
+Just Taylor expand all terms, cancel and see what remains.
+
+\begin{multline*}
+\frac{1}{h} \left( -\frac{3}{2} y_i + 2 y_{i+1} -
+\frac{1}{2} y_{i+2}\right) \\ 
+= \frac{1}{h} \left[ -\frac{3}{2} y_i + 
+2 \left(y_{i} + y_i' h + \frac{1}{2} y_i'' h^2 + \frac{1}{6} y_i''' h^3 + \ldots \right)- \right. \\
+\left. \frac{1}{2} \left(y_i + y_i' (2 h) + \frac{1}{2} y_i'' (2h)^2 + \frac{1}{6} y_i''' (2h)^3 + \ldots\right)\right] \\
+= \frac{1}{h} \left( y'_i h  - \frac{1}{3} y_i''' h^3 + \ldots\right) \\
+= y_i' + O(h^3).
+\end{multline*}
+This difference scheme is a second order method.
+}
+
+\end{enumerate}
+
+\end{document}

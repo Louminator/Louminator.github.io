@@ -1,0 +1,597 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="syllabus">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="syllabus.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<B><IMG
+ WIDTH="432" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\textstyle \parbox{5in}{
+Algorithms and Numerical Solutions of Differential Equations \\
+(Math 428 sec. 010)}$">
+Spring 2002</B> <BR>
+GOR 315 - Tuesday &amp; Thursday 1530-1645 <BR>
+&#169;2002 L. F. Rossi   All rights reserved.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+Prof. L. F. Rossi <BR>
+Office: Ewing 524 <BR>
+Telephone: x1880 <BR>
+Email: <TT>rossi@math.udel.edu</TT> <BR>
+WWW: <TT>http://math.udel.edu/</TT><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\sim$"><TT>rossi</TT> <BR>
+Computer project number: 2166
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Course description:</B> This course focuses on the numerical
+integration of equations.  Scientific computation can be studied
+abstractly, and 
+it can be practiced by professionals to solve problems.  This course
+emphasizes both in
+equal parts.  There is a rich mathematical theory
+underlying the application of numerical algorithms to various
+problems, and there is a lot to be learned by implementing numerical
+algorithms and studying their performance on specific problems.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Prerequisites:</B> Math426 or CISC410 is a prerequisite for this course.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Your objectives:</B>
+
+<P>
+I hope everyone will hone their mathematical abilities to
+reason quantitatively, logically, confidently and eventually correctly.
+In this course, everyone will master the following skills:
+<UL>
+<P>
+<LI>Understand and use mathematical basics such as Taylor's theorem to
+study algorithms.
+
+<P>
+<LI>Analyze numerical quadrature schemes.  
+Connect these ideas to restriction and prolongation
+operators and interpolating functions.
+
+<P>
+<LI>Implement quadrature schemes for general functions.
+
+<P>
+<LI>Understand and implement Richardson extrapolation for 
+numerical quadrature and other problems.
+
+<P>
+<LI>Understand and implement simple, single and multi-step integration
+schemes.
+
+<P>
+<LI>Use canned subroutines (from Matlab for instance) judiciously 
+to solve more complex problems.
+
+<P>
+<LI>Understand the accuracy and stability of ordinary differential
+equation solvers.
+
+<P>
+<LI>
+Use ordinary differential equation solvers to resolve boundary value
+problems using shooting or finite difference methods.
+
+<P>
+<LI>
+Analyze and use stiff solvers for stiff systems of differential
+equations.
+
+<P>
+<LI>
+Analyze and use methods to solve simple parabolic partial differential
+equations.
+
+<P>
+</UL>
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Your resources:</B> All of the following will help you achieve your
+objectives.
+<DL COMPACT>
+
+<P>
+<DT><IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\bullet$"><DD>Time: The best way to learn mathematics is to spend time with it.
+It is your responsibility to come to class each day, and it is
+unlikely that you will pass if you miss more than a day or two,
+regardless of the reason.  Attendance is crucial to success in this course.
+
+<P>
+<DT><IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\bullet$"><DD>Textbook: <B>Numerical Analysis </B>
+<!-- MATH: $2^{\rm nd}$ -->
+<IMG
+ WIDTH="27" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$2^{\rm nd}$"><B> ed.</B> by Kincaid
+&amp; Cheney.  I will not follow the book religiously, but the book will
+provide a good reference for most of the material.
+
+<P>
+<DT><IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\bullet$"><DD>Office hours:  
+Monday 0900-1000, Thursday 0900-1000, Friday 1030-1130  or by
+appointment.  This is time that I have set aside especially for you.
+Office hours are one of the most valuable and least used resources at
+the University, and I hope you will take advantage of them.  I want to
+help you learn this material, so do not be shy about seeing me outside
+of class.  Your exams will only be distributed during office hours.
+If you need to see me at a time other than an office hour, feel free
+to ``drop in'' or make an appointment.
+
+<P>
+<DT><IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\bullet$"><DD>Computers:  You may use any computer and any programming
+language for this course.  Since some assignments will make use of
+Matlab's differential equation solvers, I strongly encourage everyone to
+use Matlab for everything, but the choice is yours.  
+
+<P>
+<DT><IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\bullet$"><DD>Your classmates: Math is not a competitive sport.  There are
+many obvious reasons to work together.  Even if you end up helping
+others most of the time, teaching is one of the best ways to gain a
+deeper understanding of a subject.
+
+<P>
+</DL>
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Grading policy:</B>  Your grade is determined solely by your
+understanding of mathematics and your ability to communicate this
+knowledge to me on exams and other assignments. <BR>
+ <TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Homework</TD>
+<TD ALIGN="LEFT">20%</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Projects (15% each)</TD>
+<TD ALIGN="LEFT">45%</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Exams (8% each)</TD>
+<TD ALIGN="LEFT">24%</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Final exam</TD>
+<TD ALIGN="LEFT">11%</TD>
+</TR>
+</TABLE> <BR>
+Final letter grades will be assigned strictly based on the following
+percentages of your total point score: <BR> <FONT SIZE="-1">100 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> A
+</FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 93 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> A- </FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 90 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> B+
+</FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 87 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> B </FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 83 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> B-
+</FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 80 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> C+ </FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 77 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> C <BR>
+C </FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 73 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> C- </FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 70 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> D+
+</FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 67 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> D </FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 63 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> D-
+</FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 60 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> F </FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 0 <BR> <BR>
+<BR>
+<BR></FONT> 
+I reserve the right to
+adjust this scale to improve grades if the course material proves to be
+unreasonably demanding.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Exams:</B>  All exams will occur in class on the days listed on the
+syllabus.  There are no makeup exams without prior notification and a
+valid, documented reason.  Graded exams will be handed back in person in
+office hours only.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Problem sets:</B> I will drop your lowest three homework
+scores during the semester.  I do not accept late homework, so do
+not squander these three assignments.  You might be sick sometime and
+not be able to do your homework on time.  
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Projects:</B> Projects are larger scale problems that require you to
+implement computational algorithms to solve a problem.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Student conduct:</B> To provide the best learning environment for
+all my students, I expect all my students to conduct all their
+scholarly activities with honesty and integrity. Students should note
+that in certain situations doing nothing can be dishonest.  Though I
+hope there will never be a need to address academic dishonesty, I will
+strongly enforce all provisions noted in the Academic Regulations for
+Undergraduates. See <EM>The University of Delaware Undergraduate and
+Graduate Catalog</EM> 
+
+<P>
+
+<P></P>
+
+<P>
+<TT>http://www.udel.edu/catalog/current/ugacadregs.html#acadhonesty</TT>
+
+<P>
+
+<P></P>
+
+<P>
+for further discussion on basic
+responsibilities.
+
+<P>
+This course involves students creating software which should be
+treated no differently than any other academic endeavor.  For example,
+if you copy part of a students computer program or script, you are
+being dishonest.
+
+<P>
+
+<P>
+<B>Tentative schedule:</B>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+The schedule listed below is experimental, and I do not expect to
+follow the book closely during the semester.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">Week of</TD>
+<TD ALIGN="LEFT">Section(s)</TD>
+<TD ALIGN="LEFT">Topic(s)</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Feb 7</TD>
+<TD ALIGN="LEFT">6.1, 6.2</TD>
+<TD ALIGN="LEFT">Preliminaries, prolongation, restriction,
+interpolation.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Feb 12</TD>
+<TD ALIGN="LEFT">7.1-7.5</TD>
+<TD ALIGN="LEFT">Numerical quadrature (Simpson, Romburg, etc), adaptive
+methods.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Feb 19</TD>
+<TD ALIGN="LEFT">8.1, 8.6</TD>
+<TD ALIGN="LEFT">Preliminaries: systems of ODES, forward Euler
+(*snore*), consistency and stability.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Feb 26</TD>
+<TD ALIGN="LEFT">8.2, 8.5</TD>
+<TD ALIGN="LEFT">Taylor series methods, backward Euler, the scalar test
+equation.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Mar 5</TD>
+<TD ALIGN="LEFT">8.4</TD>
+<TD ALIGN="LEFT"><B> Exam 1</B>, multistep methods.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Mar 12</TD>
+<TD ALIGN="LEFT">8.4</TD>
+<TD ALIGN="LEFT">Multistep methods (cont'd), the Adams' family, accuracy and
+stability.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Mar 19</TD>
+<TD ALIGN="LEFT">8.3</TD>
+<TD ALIGN="LEFT">Runge-Kutta methods, analysis and error estimators.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Mar 26</TD>
+<TD ALIGN="LEFT">8.7-8.9</TD>
+<TD ALIGN="LEFT">Boundary value problems, finite differences, shooting.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Apr 9</TD>
+<TD ALIGN="LEFT">8.12</TD>
+<TD ALIGN="LEFT"><B> Exam 2</B>, stiff equations and methods.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Apr 16</TD>
+<TD ALIGN="LEFT">8.12</TD>
+<TD ALIGN="LEFT">More stiff equations and methods, introduction 
+to parabolic PDEs.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Apr 23</TD>
+<TD ALIGN="LEFT">9.1, 9.2</TD>
+<TD ALIGN="LEFT">Discretizations, implicit/explicit methods and CFL conditions.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Apr 30</TD>
+<TD ALIGN="LEFT">9.2</TD>
+<TD ALIGN="LEFT">Crank-Nicholson, ADI, Fourier stability analysis and other
+magic.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">May 7</TD>
+<TD ALIGN="LEFT">9.9</TD>
+<TD ALIGN="LEFT"><B> Exam 3</B>, elliptic problems, fast Poisson solvers.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">May 14</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">Catch-up, synopsis, fun topic or review.</TD>
+</TR>
+</TABLE>
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Important dates:</B>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">Feb 18</TD>
+<TD ALIGN="LEFT">Last day to drop without record.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Mar 5</TD>
+<TD ALIGN="LEFT">Project #1 due.  <B> Exam 1</B>.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Apr 9</TD>
+<TD ALIGN="LEFT">Project #2 due. <B> Exam 2</B>.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Apr 22</TD>
+<TD ALIGN="LEFT">Last day to drop with a ``W''.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">May 7</TD>
+<TD ALIGN="LEFT">Project #3 due.  <B> Exam 3</B>.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">TBA in March</TD>
+<TD ALIGN="LEFT"><B> Final exam</B>.</TD>
+</TR>
+</TABLE>
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Problem sets:</B> The best way to learn and understand mathematics
+is by trying problems.  To be a computational scientist, you must
+implement algorithms.  To receive credit, you must show your work.
+Homework assignments will be distributed in class and posted on the
+course website.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2002-02-07</I>
+</ADDRESS>
+</BODY>
+</HTML>

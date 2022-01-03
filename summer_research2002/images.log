@@ -1,0 +1,132 @@
+This is TeX, Version 3.14159 (Web2C 7.3.3.1) (format=latex 2001.9.20)  2 APR 2002 14:42
+**./images.tex
+(./images.tex
+LaTeX2e <2000/06/01>
+Loading CZ hyphenation patterns: Pavel Sevecek, v3, 1995
+Loading SK hyphenation patterns: Jana Chlebikova, 1992
+Babel <v3.7h> and hyphenation patterns for english, dumylang, nohyphenation, cz
+ech, slovak, german, ngerman, danish, spanish, catalan, finnish, french, ukengl
+ish, greek, croatian, hungarian, italian, latin, mongolian, dutch, norwegian, p
+olish, portuguese, russian, ukrainian, serbocroat, swedish, loaded.
+
+(/opt-cassandra/TeXLive6/texmf/tex/latex/base/article.cls
+Document Class: article 2000/05/19 v1.4b Standard LaTeX document class
+(/opt-cassandra/TeXLive6/texmf/tex/latex/base/size11.clo
+File: size11.clo 2000/05/19 v1.4b Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/opt-cassandra/TeXLive6/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(/opt-cassandra/TeXLive6/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+) (/opt-cassandra/TeXLive6/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 1999/02/16 v1.0l Standard LaTeX Graphics (DPC,SPQR)
+(/opt-cassandra/TeXLive6/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+) (/opt-cassandra/TeXLive6/texmf/tex/latex/texlive/graphics.cfg
+File: graphics.cfg 2001/03/31 v1.0 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: dvips.def on input line 80.
+(/opt-cassandra/TeXLive6/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+) (/opt-cassandra/TeXLive6/texmf/tex/latex/graphics/color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+(/opt-cassandra/TeXLive6/texmf/tex/latex/texlive/color.cfg
+File: color.cfg 2001/03/31 v1.0 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: dvips.def on input line 125.
+(/opt-cassandra/TeXLive6/texmf/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\sizebox=\box26
+\lthtmlwrite=\write3
+(./images.aux)
+\openout1 = `images.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+latex2htmlLength hsize=349.0pt
+latex2htmlLength vsize=681.295pt
+latex2htmlLength hoffset=0.0pt
+latex2htmlLength voffset=0.0pt
+latex2htmlLength topmargin=0.0pt
+latex2htmlLength topskip=0.00003pt
+latex2htmlLength headheight=0.0pt
+latex2htmlLength headsep=0.0pt
+latex2htmlLength parskip=0.0pt plus 1.0pt
+latex2htmlLength oddsidemargin=0.0pt
+latex2htmlLength evensidemargin=0.0pt
+File: dipole_schem2.eps Graphic file (type eps)
+<dipole_schem2.eps>
+l2hSize :tex2html_wrap60:76.76775pt::0.0pt::349.0pt.
+[1
+
+
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 104.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 104.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 104.
+l2hSize :tex2html_wrap_inline213:33.70416pt::33.70416pt::289.07999pt.
+[2
+
+
+]
+File: lamb109d0030.eps Graphic file (type eps)
+<lamb109d0030.eps>
+l2hSize :tex2html_wrap64:67.8438pt::0.0pt::349.0pt.
+[3
+
+
+]
+l2hSize :tex2html_wrap_inline19:7.07185pt::0.0pt::5.475pt.
+[4
+
+
+]
+l2hSize :tex2html_wrap_inline224:28.50417pt::28.50417pt::216.81pt.
+[5
+
+
+]
+l2hSize :tex2html_wrap_inline50:7.07185pt::0.0pt::8.5167pt.
+[6
+
+
+] (./images.aux) ) 
+Here is how much of TeX's memory you used:
+ 748 strings out of 60985
+ 9831 string characters out of 4939378
+ 52901 words of memory out of 8000001
+ 3755 multiletter control sequences out of 10000+65535
+ 7142 words of font info for 24 fonts, out of 1000000 for 1000
+ 276 hyphenation exceptions out of 1000
+ 25i,5n,19p,202b,233s stack positions out of 15000i,4000n,6000p,200000b,40000s
+
+Output written on images.dvi (6 pages, 2104 bytes).

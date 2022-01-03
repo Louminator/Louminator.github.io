@@ -1,0 +1,78 @@
+\begin{thebibliography}{10}
+
+\bibitem{abramowitz-stegun}
+{\sc M.~Abramowitz and I.~A. Stegun}, eds., {\em Handbook of mathematical
+  functions}, Dover Publications, Inc., New York, 1970.
+
+\bibitem{chorin-1}
+{\sc A.~J. Chorin}, {\em Numerical study of slightly viscous flow}, J. Fluid
+  Mech., 57 (1973), pp.~785--796.
+
+\bibitem{mas-gallic-3}
+{\sc G.~H. Cottet and S.~Mas-Gallic}, {\em Particle methods to solve transport
+  diffusion equations - {P}art {II}: the {N}avier-{S}tokes system}, Numer.
+  Math., 57 (1990), p.~805.
+
+\bibitem{draghicescu-2}
+{\sc C.~I. Draghicescu}, {\em An efficient implementation of particle methods
+  for the incompressible {E}uler equations.}, SIAM J. Num. Anal., 31 (1994),
+  pp.~1090--1108.
+
+\bibitem{draghicescu-1}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em A fast algorithm for
+  vortex blob interactions.}, Journal of Computational Physics, 116 (1995),
+  pp.~69--78.
+
+\bibitem{greengard-rokhlin}
+{\sc L.~Greengard and V.~Rokhlin}, {\em A fast algorithm for particle
+  simulations}, J. Comp. Phys., 73 (1987), pp.~325--348.
+
+\bibitem{greengard-strain}
+{\sc L.~Greengard and J.~Strain}, {\em The fast {G}auss transform}, SIAM J.
+  Sci. Stat. Comp., 12 (1991), pp.~79--94.
+
+\bibitem{gustafson-sethian}
+{\sc K.~Gustafson and J.~A. Sethian}, eds., {\em Vortex Methods and Vortex
+  Motion}, Society for Industrial and Applied Mathematics, Philadelphia, PA,
+  1990.
+
+\bibitem{mas-gallic-1}
+{\sc S.~Mas-Gallic}, {\em These d' Etat}, PhD thesis, Paris 6, 1987.
+
+\bibitem{mas-gallic}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em Deterministic
+  particle methods: Diffusion and boundary conditions}, in Lectures in Applied
+  Mathematics: Vortex Methods and Vortex Dynamics, C.~Greengarde, ed., American
+  Mathematical Society, 1991, pp.~433--465.
+
+\bibitem{rhines-young}
+{\sc P.~B. Rhines and W.~R. Young}, {\em How rapidly is a passive scalar mixed
+  within closed streamlines?}, J. Fluid Mech., 133 (1983), pp.~133--145.
+
+\bibitem{rossi-1}
+{\sc L.~F. Rossi}, {\em Resurrecting core spreading methods: A new scheme that
+  is both deterministic and convergent}, SIAM J. Sci. Comp., 17 (1996),
+  pp.~370--397.
+
+\bibitem{rossi-merge}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em Merging
+  computational elements in {L}agrangian simulations}, SIAM J. Sci. Comp., 18
+  (1997), pp.~1014--1027.
+
+\bibitem{rossi-99}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em A high order vortex
+  method employing elliptical gaussian basis functions.}, SIAM J. Num. Anal.,
+  (1998).
+\newblock submitted to SIAM J. Num. Anal. Preprint available online: {\tt
+  http://sherlock.math.uml.edu/$\sim$rossi/vm/vm.html}.
+
+\bibitem{van-dommelen}
+{\sc L.~van Dommelen}, {\em A vortex redistribution technique}, Tech. Rep. FMRL
+  TR-3, Florida State University, August 1989.
+
+\bibitem{vandommelen-rundensteiner}
+{\sc L.~van Dommelen and E.~A. Rundensteiner}, {\em Fast, adaptive summation of
+  point forces in the two-dimensional poisson equation}, Journal of
+  Computational Physics, 83 (1989), pp.~126--147.
+
+\end{thebibliography}

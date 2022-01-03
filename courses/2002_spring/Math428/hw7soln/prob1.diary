@@ -1,0 +1,22 @@
+A = [[-30001/40 9999/40*sqrt(3)];[9999/40*sqrt(3) -10003/40]];
+h = 0.1;
+t = 0:0.1:1;
+trap = (eye(2,2)-h/2*A)^(-1)*(eye(2,2)+h/2*A);
+ytrap = zeros(2,1);
+ytrap(:,1) = [1; 1];
+for i=1:10
+ytrap(:,end+1) = trap*ytrap(:,end);
+end
+BDF2 = (eye(2,2)-2/3*h*A)^(-1);
+yBDF2 = zeros(2,1);
+yBDF2(:,1) = [1;1];
+yBDF2(:,end+1) = trap*yBDF2(:,end);
+for i=1:9
+yBDF2(:,end+1) = BDF2*(4/3*yBDF2(:,end)-1/3*yBDF2(:,end-1));
+end
+plot(t,ytrap(1,:),'r',t,yBDF2(1,:),'b');
+legend('Trap rule','BDF2');
+xlabel('t'); ylabel('y^{(1)}');
+plot(t,ytrap(2,:),'r',t,yBDF2(2,:),'b');
+legend('Trap rule','BDF2');
+xlabel('t'); ylabel('y^{(2)}');

@@ -1,0 +1,363 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta http-equiv="CONTENT-TYPE"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.76 [en] (X11; U; SunOS 5.8 sun4u) [Netscape]">
+  <meta name="AUTHOR" content="L. F. Rossi">
+  <meta name="CREATED" content="20010202;11114500">
+  <meta name="CHANGEDBY" content="Louis Rossi">
+  <meta name="CHANGED" content="20010202;11370200">
+  <title>Math 243: Calculus and Analytic Geometric C</title>
+</head>
+<body text="#000000" bgcolor="#66ffff" link="#0000ee" vlink="#551a8b"
+ alink="#ff0000">
+&nbsp;
+<center>
+<table border="0" cols="3" width="100%" nosave="">
+  <tbody>
+    <tr nosave="">
+      <td width="110" nosave=""><a href="fountain.jpg"><img
+ src="fountainsm.jpg" title="" alt=""
+ style="border: 0px solid ; width: 100px; height: 67px;"></a> </td>
+      <td nosave=""><small> </small>
+      <center><small> </small>
+      <h1><small><small> Math 243: Calculus and Analytic Geometric C</small><br>
+      <small> Section 013</small></small><small> </small></h1>
+      </center>
+      <small> </small>
+      <center><small> </small></center>
+      <small> </small></td>
+      <td width="110" nosave=""><img src="udmath.gif" height="89"
+ width="108" align="middle"></td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<h2>
+<hr width="100%"><a name="Contents:"></a>Contents:</h2>
+<ul>
+  <li> <b><font color="#330000"><font size="+1"><a
+ href="#Contact%20information.">Course contact information.</a></font></font></b></li>
+  <li> <b><font color="#330000"><font size="+1"><a
+ href="#Special%20information%20about%20Ewing%20205%20&amp;%20207.">Special
+information about Ewing 205 &amp; 207.</a></font></font></b></li>
+  <li> <b><font color="#330000"><font size="+1"><a
+ href="#Course%20materials.">Course materials.</a></font></font></b></li>
+  <li><b><font color="#330000"><font size="+1"><a
+ href="#Exam_performance.">Exam performance.</a></font></font></b></li>
+  <li><b><font color="#330000"><font size="+1"><a
+ href="#Alternative_Final_Exam_grading_policy.">Alternative final exam
+grading policy.</a><br>
+    </font></font></b></li>
+  <li><b><font color="#330000"><font size="+1"><a
+ href="#Maple_problems.">Maple problems.</a></font></font></b></li>
+  <li><b><font color="#330000"><font size="+1"><a
+ href="#Report_problems.">Report problems.</a><br>
+    </font></font></b></li>
+  <li> <b><font color="#330000"><font size="+1"><a href="#Links">Related
+links.</a></font></font></b></li>
+</ul>
+<h2>
+<hr width="100%"><a name="Contact information."></a><b>Contact
+information.</b></h2>
+<blockquote><b>Instructor: </b>Prof. L. F. Rossi <br>
+  <b>Meetings:</b>&nbsp; Monday, Wednesday, Thursday and Friday
+1115-1205 in Ewg 205.&nbsp; Also, there is a discussion meeting on
+Tuesdays1100-1150 in SHL 105. <br>
+  <b>Office Hours: </b>M 1000-1100,&nbsp; T 0930-1030 and F 1300-1400 <br>
+  <b>Email: </b><a href="mailto:rossi@math.udel.edu">rossi@math.udel.edu</a>.</blockquote>
+<div style="margin-left: 40px;">My fall schedule is <a
+ href="sched03F.jpg">here.</a>&nbsp; If you are trying to make an
+appointment with me, please note that Committees do not necessarily meet
+every week.&nbsp; Colloquia are only scheduled for a few times per
+semester.&nbsp; MEC lab standby in Drake only occurs when Math512
+students need access to the lab.<br>
+</div>
+<ul>
+  <b>Voice: </b>(302) 831-1880 (UDel x1880) <br>
+  <b>Snail mail:</b>
+  <blockquote>Department of Mathematical Sciences <br>
+University of Delaware <br>
+Newark, DE 19711 <br>
+USA</blockquote>
+</ul>
+<a href="#Contents:">Back to the top.</a>
+<h2>
+<hr width="100%"><a name="Special information about Ewing 205 &amp; 207."></a>Special
+information about Ewing 205 &amp; 207.</h2>
+<h3> Moving files on and off the math server.</h3>
+When you save files on the workstations in Ewing 205 or 207, they are
+stored on the math department server, not the UDel composer systems
+(strauss, copeland, etc).&nbsp; Thus, you may wish to move files on and
+off the math server from other machines.&nbsp; I present two ways to do
+this.
+<ol>
+  <li> <b>Using the File Transfer Program (ftp) or secure shell (ssh)
+from another networked computer like strauss.</b></li>
+  <br>
+FTP is a powerful little program for moving files from one machine to
+another.&nbsp; ssh and scp provide the same services with more
+security.&nbsp; If you are on strauss for instance, you might type <br>
+  <b>ftp newton.math.udel.edu</b> <br>
+Once you enter this command, you will be prompted for your username and
+password.&nbsp; Once you have done this, ftp will print some stuff, and
+you will arrive at a prompt "ftp&gt;".&nbsp; If you type <br>
+  <b>ls</b> <br>
+it will list all the files available in your account on the math
+server.&nbsp; You can download a file to strauss by typing <br>
+  <b>get &lt;myfile.mws&gt;</b> <br>
+where &lt;myfile.mws&gt; is the file you want.&nbsp; Similarly, you can
+move a maple file from strauss to the math server by typing <br>
+  <b>put &lt;myfile.mws&gt;</b> <br>
+When you are all done, simple type <br>
+  <b>quit</b> <br>
+and you will return to the command line. <li> <b>Save to a DOS
+formatted floppy disk.</b></li>
+  <br>
+This may well be the most direct way to do it.&nbsp; Put your disk into
+the drive on the workstation.&nbsp; On your workstation, open an XTERM
+using the right button menu.&nbsp; Type into the command line in the
+XTERM: <br>
+  <b>mcopy &lt;myfile.mws&gt; a:</b> <br>
+The file &lt;myfile.mws&gt; refers to the specific filename you chose
+when you saved your work.&nbsp; The disk drive should clunk a bit and
+then you can remove your disk.&nbsp; If you want to copy a file from
+your floppy onto the workstation, you would execute a command like <br>
+  <b>mcopy a:&lt;myfile.mws&gt; myfile.mws</b> <br>
+Again, the drive should clunk a bit and then the file will be copied on
+the math server.<br>
+</ol>
+<h2>
+<hr width="100%"><a name="Course materials."></a>Course materials.</h2>
+<h3> Some quick comments on file formats.</h3>
+When I distribute materials, I will distribute them in an appropriate
+format.&nbsp; Generally, I will distribute documents in Adobe's PDF
+format.&nbsp; I find that it produces output quality that is good enough
+to read on a screen or on a printed page, and still the file sizes are
+modest.&nbsp; A PDF viewer is freely for most computer architectures and
+operating systems.&nbsp; If your machine cannot make use of PDF's,
+please let me know and I will make other arrangements with you.
+<h3> Good things to have.<br>
+</h3>
+<ul>
+  <li> <a href="http://www.adobe.com/support/downloads/main.html">Download
+a free Acrobat reader</a> so that you can read PDF files.</li>
+  <li><a href="syllabus.pdf">Download a free syllabus</a> if you lose
+the one I gave you in class.</li>
+  <li><a
+ href="http://www.math.udel.edu/%7Erakesh/TEACH/M242/m242tutorial.pdf">Download
+a Maple tutorial</a> written by my colleague <a
+ href="http://www.math.udel.edu/%7Erakesh">Rakesh</a>.<br>
+  </li>
+  <li> Maple Handout #1 on the <b>LinearAlgebra</b> package [<a
+ href="handout/handout.html">HTML</a>, <a href="handout/handout.ps">PS</a>
+or <a href="handout/handout.pdf">PDF</a>].</li>
+  <li> Maple Handout #2 on the <b>plots</b> package [<a
+ href="plots/plots.html">HTML</a>, <a href="plots/plots.ps">PS</a> or <a
+ href="plots/plots.pdf">PDF</a>].</li>
+  <li><a href="thm_table.pdf">Download</a> a copy of "Integral Vector
+Calculus on One Page."<br>
+  </li>
+</ul>
+<h3>Old exams.<br>
+</h3>
+<table cellpadding="2" cellspacing="2" border="1"
+ style="text-align: left; width: 100%;">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Exam</span><br>
+      </td>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Fall
+2000*</span><br>
+      </td>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Spring
+2002</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Exam 1<br>
+      </td>
+      <td style="vertical-align: top;"><a
+ href="exam_archives/2000_fall/exam1.pdf">PDF</a>&nbsp; <a
+ href="exam_archives/2000_fall/exam1soln.pdf">Solutions</a><br>
+      </td>
+      <td style="vertical-align: top;"><a
+ href="exam_archives/2002_spring/exam1.pdf">PDF</a>&nbsp; <a
+ href="exam_archives/2002_spring/exam1soln.pdf">Solutions</a></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Exam 2<br>
+      </td>
+      <td style="vertical-align: top;"><a
+ href="exam_archives/2000_fall/exam2.pdf">PDF</a>&nbsp; <a
+ href="exam_archives/2000_fall/exam2soln.pdf">Solutions</a></td>
+      <td style="vertical-align: top;"><a
+ href="exam_archives/2002_spring/exam2.pdf">PDF</a>&nbsp; <a
+ href="exam_archives/2002_spring/exam2soln.pdf">Solutions</a></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Exam 3<br>
+      </td>
+      <td style="vertical-align: top;"><a
+ href="exam_archives/2000_fall/exam3.pdf">PDF</a>&nbsp; <a
+ href="exam_archives/2000_fall/exam3soln.pdf">Solutions</a></td>
+      <td style="vertical-align: top;"><a
+ href="exam_archives/2002_spring/exam3.pdf">PDF</a>&nbsp; <a
+ href="exam_archives/2002_spring/exam3soln.pdf">Solutions</a></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Final exam</td>
+      <td style="vertical-align: top;"><a
+ href="exam_archives/2000_fall/final.pdf">PDF</a> <br>
+      </td>
+      <td style="vertical-align: top;"><a
+ href="exam_archives/2002_spring/final.pdf">PDF</a></td>
+    </tr>
+  </tbody>
+</table>
+<p><i>*Note: Make no inferences about the content of new exams from
+these old exams.&nbsp; It was given at a different university under
+different circumstances.<br>
+<br>
+</i> <a href="#Contents:">Back to the top.</a></p>
+<hr width="100%" size="2">
+<h2><a name="Exam_performance."></a>Exam performance.</h2>
+The exam 1 <a href="exam1perf.jpg">performance</a> chart and <a
+ href="exam1soln.pdf">solution guide</a> are available.<br>
+The exam 2 <a href="exam2perf.jpg">performance</a> chart and <a
+ href="exam2soln.pdf">solution guide</a> are available. <br>
+The exam 3 <a href="exam3perf.jpg">performance</a> chart and <a
+ href="exam3soln.pdf">solution guide</a> are available.
+<hr style="width: 100%; height: 2px;" size="2" width="100%">
+<h2><a name="Alternative_Final_Exam_grading_policy."></a>Alternative
+final exam grading policy.</h2>
+<br>
+Some students did not master the material for Exam 3 well enough to
+score well.&nbsp; Since the final exam in cumulative, I am making the
+following allowances.&nbsp; Students may opt for this alternative
+grading policy as follows.<br>
+<ul>
+  <li>Students must notify me prior to the final via email stating that
+they choose the Alternative final exam grading policy.</li>
+  <li>Certain problems on the final exam include material covered under
+Exam 3.&nbsp; For example, on the Final exam from 2002, questions 5, 6,
+8 and 9 involve skills and concepts covered under exam 3.&nbsp; Note
+that flux concept in problem 9 is not covered, but the problem involves
+setting up and evaluating a triple integral which is covered.&nbsp; I
+will take the percentage of the points earned for these problems, and
+average this score with your original Exam 3 score to obtain a modified
+Exam 3 score.</li>
+  <li>The modified exam 3 score for the purposes of determining your
+final grade.</li>
+</ul>
+<span style="font-weight: bold;">Caution: The alternative final exam
+policy puts more weight on the final exam.&nbsp; Unless your Exam 3
+score was low and you are confident that you will do substantially
+better with this material on the final, I do not recommend taking the
+risk.</span><br>
+<br>
+<br>
+<hr style="width: 100%; height: 2px;"><br>
+<p> </p>
+<h1> </h1>
+<h2><a name="Maple_problems."></a>Maple problems.</h2>
+All maple problem sets are written as a Maple worksheet, so you must
+use maple to open them up and use them.<br>
+<br>
+<span style="font-weight: bold;">Downloading instructions:</span> I will
+assume that you are already logged into a machine such as a composer
+terminal that has maple on it.&nbsp; There are two ways to procede.<br>
+<br>
+<ol>
+  <li>Use the File -&gt; Open URL option in maple to directly open the
+file in Maple.&nbsp; I've listed the URL's below so that you can cut and
+paste them into Maple.<br>
+  </li>
+  <li>Download the file and open it on your machine.&nbsp; This task
+may vary somewhat depending upon which browser you use.&nbsp; Move your
+mouse cursor to the link that&nbsp; you wish to download, and then press
+and hold the right button.&nbsp; Select the option "Save Link Target
+As".&nbsp; Release the button and a Save File dialog box will
+open.&nbsp; Click OK and the file will be downloaded into your
+account.&nbsp; Now, you can use maple to open the file.&nbsp; To do
+this, you can either enter "xmaple &lt;filename&gt;" from a command
+prompt (assuming you are using a sane operating system that has command
+prompts) or you can fire up Maple and then read in the worksheet using
+File -&gt; Open.</li>
+</ol>
+<h4>The problem sets.</h4>
+<ol>
+  <li>Download Maple problem set 1in the <a
+ href="file:///home/math/rossi/public_html/courses/2003_fall/Math243/set1.mw">new
+Maple 9 format</a> or the <a
+ href="file:///home/math/rossi/public_html/courses/2003_fall/Math243/set1.mws">older
+Maple 8 format</a>.&nbsp; Note: when you use Maple 8, it will issue a
+warning that you are using a worksheet that was prepared with a newer
+version of Maple.&nbsp; You may disregard the warning and proceed with
+your work.<br>
+Maple 8 URL:
+http://www.math.udel.edu/~rossi/courses/2003_fall/Math243/set1.mws<br>
+Maple 9 URL:
+http://www.math.udel.edu/~rossi/courses/2003_fall/Math243/set1.mw</li>
+  <li>Download Maple problem set 2 in the <a href="set2.mw">new Maple
+9 format</a> or the <a href="set2.mws">older Maple 8 format</a>. <br>
+Maple 8 URL:
+http://www.math.udel.edu/~rossi/courses/2003_fall/Math243/set2.mws<br>
+Maple 9 URL:
+http://www.math.udel.edu/~rossi/courses/2003_fall/Math243/set2.mw</li>
+  <li>Download Maple problem set 3 in the <a href="set3.mw">new Maple
+9 format</a> or the <a href="set3.mws">older Maple 8 format</a>. <br>
+Maple 8 URL:
+http://www.math.udel.edu/~rossi/courses/2003_fall/Math243/set3.mws<br>
+Maple 9 URL:
+http://www.math.udel.edu/~rossi/courses/2003_fall/Math243/set3.mw</li>
+  <li>Download Maple problem set 4 in the <a href="set4.mw">new Maple
+9 format</a> or the <a href="set4.mws">older Maple 8 format</a>. <br>
+Maple 8 URL:
+http://www.math.udel.edu/~rossi/courses/2003_fall/Math243/set4.mws<br>
+Maple 9 URL:
+http://www.math.udel.edu/~rossi/courses/2003_fall/Math243/set4.mw</li>
+  <br>
+</ol>
+<hr style="width: 100%; height: 2px;">
+<h2><a name="Report_problems."></a>Report problems.<br>
+</h2>
+<ul>
+  <li><a href="report1.pdf">Download</a> Report Problem 1.</li>
+  <li><a href="report2.pdf">Download</a> Report Problem 2.<br>
+Sample Maple procedure (<a href="sample.mws">Maple 8 format</a> or <a
+ href="sample.mw">Maple 9 format</a>).<br>
+Maple 8 URL:
+http://www.math.udel.edu/~rossi/courses/2003_fall/Math243/sample.mws<br>
+Maple 9 URL:
+http://www.math.udel.edu/~rossi/courses/2003_fall/Math243/sample.mw</li>
+  <li><a href="report3.pdf">Download</a> Report Problem 3.</li>
+</ul>
+<h1>
+<hr width="100%"></h1>
+<h2><a name="Links"></a>Links.</h2>
+<ul>
+  <li> A virtual encyclopedia of mathematics: <a
+ href="http://mathworld.wolfram.com/">Eric Weisstein's World of
+Mathematics</a>.</li>
+  <li> The Consortium on Mathematics and its Applications (COMAP) <a
+ href="http://www.comap.com">home page</a>.</li>
+  <li> Prof. Rossi's <a href="http://www.math.udel.edu/%7Erossi">home
+page</a>.</li>
+  <li> The Department of Mathematical Sciences <a
+ href="http://www.math.udel.edu">home page</a>.</li>
+  <li> The University of Delaware <a href="http://www.udel.edu">home
+page</a>.</li>
+</ul>
+&nbsp;<a href="#Contents:">Back to the top.</a>
+<p style="margin-bottom: 0in;"><img src="vortex2.gif" name="Graphic7"
+ border="0" height="155" width="98" align="bottom"><i>Last modified: 1
+Dec 2003<br>
+</i></p>
+<address> <a href="mailto:rossi@math.udel.edu">rossi@math.udel.edu</a></address>
+</body>
+</html>

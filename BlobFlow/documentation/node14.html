@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Running BlobFlow </TITLE>
+<META NAME="description" CONTENT="Running BlobFlow ">
+<META NAME="keywords" CONTENT="documentation">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="documentation.css">
+<LINK REL="next" HREF="node15.html">
+<LINK REL="previous" HREF="node13.html">
+<LINK REL="up" HREF="node10.html">
+<LINK REL="next" HREF="node15.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html167"
+ HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html165"
+ HREF="node10.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html159"
+ HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html168"
+ HREF="node15.html">Postprocessing</A>
+<B> Up:</B> <A NAME="tex2html166"
+ HREF="node10.html">Using BlobFlow</A>
+<B> Previous:</B> <A NAME="tex2html160"
+ HREF="node13.html">The simulation and control</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00440000000000000000">
+Running BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+</A>
+</H1>
+
+<P>
+To run BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+after properly setting the environment variables, one merely
+executes the command:
+<PRE>
+eflow
+</PRE>
+<P>
+BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+generates a number of output files.  A computational log file,
+called <TT>$(ECCSVM_BASENAME)_comp.log</TT>, contains ordinary information about
+BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+as it progresses through the computation.  If one is running
+BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+across multiple processors with MPI, each process generates a computational log with
+the name <TT>$(ECCSVM_BASENAME)_comp</TT><I>n</I><TT>.log</TT> where <I>n</I> is the process rank
+beginning with 0.  There is a diagnostic log file called <TT>$ECCSVM_BASENAME_diag.log</TT> for debugging purposes.  Under ordinary
+circumstances, this file should remain empty.  If one is running the
+code with a multiprocessor, message passing log files are generated with the
+file names <TT>$(ECCSVM_BASENAME)_mpi</TT><I>n</I><TT>.log</TT>.
+
+<P>
+The vorticity field is written to files in the form <TT>$(ECCSVM_BASENAME)</TT><I>nnnn</I><TT>.vtx</TT> where <I>nnnn</I> a four digit index for the state
+being dumped.  If the FrameStep parameter is set to 0.1, the file
+<TT>$(ECCSVM_BASENAME)1234.vtx</TT> contains basis functions representing the
+vorticity field at time <I>t</I>=123.4.  Each line of the file contains six
+parameters describing a basis function as in the definition of VtxInit.  
+If one is running across multiple
+processors, only the process of rank 0 will write data files.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html167"
+ HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html165"
+ HREF="node10.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html159"
+ HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html168"
+ HREF="node15.html">Postprocessing</A>
+<B> Up:</B> <A NAME="tex2html166"
+ HREF="node10.html">Using BlobFlow</A>
+<B> Previous:</B> <A NAME="tex2html160"
+ HREF="node13.html">The simulation and control</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2001-08-01</I>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="handout">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="handout.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<DIV ALIGN="CENTER">
+<B>Math243: Maple Handout #1
+</B>
+<P>
+<B>Using the LinearAlgebra Package</B>
+
+<P>
+L. F. Rossi
+</DIV>
+<P>
+Maple has two packages containing features that allow the user to
+manipulate vectors and matrices.  The first package <TT>linalg</TT> was
+developed for Maple V, but it has numerous shortcomings.  It is still
+available in later versions of Maple, but Maple 6 and later have a new
+library called <TT>LinearAlgebra</TT>.  You can load <TT>LinearAlgebra</TT>
+into your worksheet by executing the command:
+<PRE>
+with(LinearAlgebra);
+</PRE>Maple will list all the new commands in the library.  If you do not
+like all this output, you can replace the semincolor (;) at the end
+with a colon(:).
+
+<P>
+<UL>
+<P>
+<LI>To create a <EM>column</EM> vector.
+<PRE>
+v := &lt;1,2,3&gt;;
+w := &lt;t,t^2,t^3&gt;;
+</PRE>Notice that this creates a <EM>column vector</EM> which is a correct
+interpretation of the vector notation in your book.
+
+<P>
+<LI>To create a <EM>row</EM> vector (if you ever need one.)
+
+<P>
+<LI>To add two vector together.
+<PRE>
+v+w;
+u := v+w;
+</PRE>
+<P>
+<LI>To multiply by a scalar.
+<PRE>
+3*u;
+c*u
+</PRE>
+<P>
+<LI>To take a dot product. <A NAME="tex2html1"
+ HREF="footnode.html#foot32"><SUP>1</SUP></A>
+<PRE>
+v . w;
+DotProduct(v,w);
+</PRE>Notice that the output may involve complex conjugates.  That's ok.  If
+<I>x</I> is real, then 
+<!-- MATH: $\overline{x} = x$ -->
+<IMG
+ WIDTH="48" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\overline{x} = x$">.
+
+<P>
+<LI>To take a cross product.
+<PRE>
+CrossProduct(v,w);
+</PRE>
+<P>
+<LI>To apply an operation onto each component of a vector.
+<PRE>
+map(sin,v);
+map(diff,w,t);
+</PRE>
+<P>
+</UL>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html4"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2002-02-15</I>
+</ADDRESS>
+</BODY>
+</HTML>

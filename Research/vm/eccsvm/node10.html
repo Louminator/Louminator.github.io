@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>Sample Calculations</TITLE>
+<META NAME="description" CONTENT="Sample Calculations">
+<META NAME="keywords" CONTENT="eccsvm">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="eccsvm.css">
+</HEAD>
+<BODY LANG="EN">
+ <A NAME="tex2html134" HREF="node11.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html132" HREF="eccsvm.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html126" HREF="node9.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html135" HREF="node11.html">A Simple Spreading Gaussian </A>
+<B>Up:</B> <A NAME="tex2html133" HREF="eccsvm.html">High Order Vortex Methods </A>
+<B> Previous:</B> <A NAME="tex2html127" HREF="node9.html">Adaptive Refinement (Splitting Elements)</A>
+<BR> <P>
+<H1><A NAME="SECTION00050000000000000000">Sample Calculations</A></H1>
+<P>
+<A NAME="secexamples">&#160;</A>
+<P>
+Two calculations are demonstrated to illustrate the convergence properties
+and capabilities of ECCSVM.  The purpose of this section is to analyze the
+method in its simplest form and verify its spatial accuracy. 
+The method has been implemented with direct
+summation which is  <IMG WIDTH=44 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2981" SRC="img235.gif"  >  and a fast multipole summation algorithm
+that has
+ <IMG WIDTH=78 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2983" SRC="img236.gif"  >  complexity.  Typical run times vary from 15 minutes for a low
+resolution dipole experiment to more than a day for a high resolution dipole
+experiment on a DEC Alpha 255/233.  The first example is a simple Gaussian
+vortex and it has a known analytic solution.  The second example is a dipole
+propagation and evolution problem which has no known solution.
+For a series of experiments, 
+as  <IMG WIDTH=38 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2337" SRC="img16.gif"  >  and  <IMG WIDTH=42 HEIGHT=11 ALIGN=BOTTOM ALT="tex2html_wrap_inline2895" SRC="img202.gif"  > , one
+would expect to see to see the numerical approximation,  <IMG WIDTH=10 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2387" SRC="img41.gif"  > 
+converge to the exact
+solution  <IMG WIDTH=10 HEIGHT=7 ALIGN=BOTTOM ALT="tex2html_wrap_inline2375" SRC="img31.gif"  >  with the following rate:
+<P> <IMG WIDTH=500 HEIGHT=29 ALIGN=BOTTOM ALT="equation989" SRC="img237.gif"  > <P>
+Since,  <IMG WIDTH=90 HEIGHT=27 ALIGN=MIDDLE ALT="tex2html_wrap_inline2993" SRC="img238.gif"  >  for small <I>l</I>, the last term matches the first
+term.  The second term tells us that  <IMG WIDTH=43 HEIGHT=26 ALIGN=MIDDLE ALT="tex2html_wrap_inline2997" SRC="img239.gif"  >  should scale like <I>l</I> in a
+sequence of experiments.  A table of parameters used for both experiments is
+provided in Table (<A HREF="node10.html#tabconvgaussian">5.1</A>).
+<P><A NAME="1013">&#160;</A><A NAME="tabconvgaussian">&#160;</A> <IMG WIDTH=288 HEIGHT=162 ALIGN=BOTTOM ALT="table993" SRC="img240.gif"  > <BR>
+<STRONG>Table 5.1:</STRONG> Table of parameters for convergence diagnostic.  The value of  <IMG WIDTH=11 HEIGHT=14 ALIGN=BOTTOM ALT="tex2html_wrap_inline2319" SRC="img10.gif"  > 
+corresponds to the maximum ``area'' that a blob can occupy.  The value of
+ <IMG WIDTH=29 HEIGHT=14 ALIGN=BOTTOM ALT="tex2html_wrap_inline2321" SRC="img11.gif"  >  is the blob width initially.<BR>
+<P>
+The initial conditions arrange computational elements along a regular array.
+The initial aspect ratios are 1.0 and the initial widths are 
+ <IMG WIDTH=50 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline3053" SRC="img241.gif"  > .  
+Since both initial conditions are linear combinations of Gaussians,
+the strength of each element is determined by the exact de-regularization
+procedure discussed in [<A HREF="node16.html#rossilingevitchbernoff">24</A>].
+<P>
+Two methods simultaneously integrate equation (<A HREF="node5.html#systemodes">3.12</A>).
+a third order
+Adams-Bashforth explicit scheme solves the convection term in 
+equation (<A HREF="node5.html#systemodes">3.12</A>) because velocity calculations are expensive.
+A fourth order Runge-Kutta scheme integrates the
+remaining deformation terms because they are inexpensive <I>O</I>(<I>N</I>)
+calculations.
+<P>
+<P><A NAME="1021">&#160;</A><A NAME="figmerge">&#160;</A> <IMG WIDTH=309 HEIGHT=274 ALIGN=BOTTOM ALT="figure1019" SRC="img242.gif"  > <BR>
+<STRONG>Figure 5.1:</STRONG> Regulation of problem size through an aggressive merging algorithm.
+The merging algorithm removes extraneous degrees of freedom by combining
+several overlapping elements into a single element when this action induces
+an error below a specified tolerance.  In all cases, the specified tolerance
+is well below the spatial error of the simulation.<BR>
+<P>
+An aggressive merging algorithm is used to control the problem size in
+experiments.  As  <IMG WIDTH=42 HEIGHT=11 ALIGN=BOTTOM ALT="tex2html_wrap_inline2895" SRC="img202.gif"  > , the problem size grows large but
+many elements in the simulation can be merged to remove extraneous degrees
+of freedom.  A similar scheme was successfully implemented for CCSVM
+[<A HREF="node16.html#rossimerge">23</A>].  Thus, the problem size for these calculations tends to
+stabilize as shown in Fig. (<A HREF="node10.html#figmerge">5.1</A>) for example.
+<P>
+<BR> <HR>
+<UL> 
+<LI> <A NAME="tex2html136" HREF="node11.html#SECTION00051000000000000000">A Simple Spreading Gaussian as a Diagnostic</A>
+<LI> <A NAME="tex2html137" HREF="node12.html#SECTION00052000000000000000">High Reynolds Number Vortex Dipole Evolution</A>
+</UL>
+<HR><A NAME="tex2html134" HREF="node11.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html132" HREF="eccsvm.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html126" HREF="node9.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html135" HREF="node11.html">A Simple Spreading Gaussian </A>
+<B>Up:</B> <A NAME="tex2html133" HREF="eccsvm.html">High Order Vortex Methods </A>
+<B> Previous:</B> <A NAME="tex2html127" HREF="node9.html">Adaptive Refinement (Splitting Elements)</A>
+<P><ADDRESS>
+<I>Louis F. Rossi <BR>
+Thu Nov  4 15:02:00 EST 1999</I>
+</ADDRESS>
+</BODY>
+</HTML>

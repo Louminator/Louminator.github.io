@@ -1,0 +1,189 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta http-equiv="CONTENT-TYPE"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.76 [en] (X11; U; SunOS 5.8 sun4u) [Netscape]">
+  <meta name="AUTHOR" content="L. F. Rossi">
+  <meta name="CREATED" content="20010202;11114500">
+  <meta name="CHANGEDBY" content="Louis Rossi">
+  <meta name="CHANGED" content="20010202;11370200">
+  <title>Particle methods and discontinuous Galerkin methods.</title>
+  <meta name="author" content="L. F. Rossi">
+</head>
+<body text="#000000" bgcolor="#ffcc99" link="#0000ee" vlink="#551a8b"
+ alink="#ff0000">
+&nbsp;
+<center>
+<table border="0" cols="3" width="100%" nosave="">
+  <tbody>
+    <tr nosave="">
+      <td width="110" nosave=""> <a href="fountain.jpg"><img
+ src="f15cover.gif" title="" alt=""
+ style="border: 0px solid ; width: 100px; height: 67px;"></a><br>
+      </td>
+      <td nosave="">
+      <center><small> </small>
+      <h1><small> Math 821 - Particle Methods and Discontinuous Galerkin
+Methods.<br>
+      </small></h1>
+      </center>
+      <center> </center>
+      </td>
+      <td width="110" nosave=""><img src="udmath.gif" height="89"
+ width="108" align="middle"> </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<h2>
+<hr width="100%"><a name="Contents:"></a>Contents:</h2>
+<ul>
+  <li> <b><font color="#330000"><font size="+1"><a
+ href="#Contact%20information.">Course contact information.</a></font></font></b></li>
+  <li> <b><font color="#330000"><font size="+1"><a
+ href="#Course%20description.">Course description.</a></font></font></b></li>
+  <li><b><font color="#330000"><font size="+1"><a href="#Projects.">Projects.</a><br>
+    </font></font></b></li>
+  <li><b><font color="#330000"><font size="+1"><a href="#Grading.">Grading.</a><br>
+    </font></font></b></li>
+  <li> <b><font color="#330000"><font size="+1"><a href="#Links">Related
+links.</a></font></font></b></li>
+</ul>
+<h2>
+<hr width="100%"><a name="Contact information."></a><b>Contact
+information.</b></h2>
+<blockquote><span style="font-weight: bold;"></span>
+  <table cellpadding="2" cellspacing="2" border="0" style="width: 100%;">
+    <tbody>
+      <tr>
+        <td style="vertical-align: top;"><b>Instructor:</b><br>
+        </td>
+        <td style="vertical-align: top;">Prof. L. F. Rossi.</td>
+      </tr>
+      <tr>
+        <td valign="top"><b>Email:</b><br>
+        </td>
+        <td valign="top"><a href="mailto:rossi@math.udel.edu">rossi@math.udel.edu</a><br>
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align: top;"><b>Phone:</b><br>
+        </td>
+        <td style="vertical-align: top;">(302) 831-1880&nbsp; or&nbsp;
+UDel x1880<br>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <br>
+  <b>Meetings: </b>Tuesday and Thursday, 1530-1645 in Gore 114.<br>
+</blockquote>
+<ul>
+</ul>
+<a href="#Contents:">Back to the top.</a> <br>
+&nbsp;
+<h2> </h2>
+<hr width="100%" size="2">
+<h2> <a name="Course description."></a>Course description.</h2>
+This course focuses on two leading edge methods of computational
+mathematics for solving challenging fluid flow problems and
+electromagnetic wave propagation problems.&nbsp; Half of the course will
+emphasize particle methods for vorticity dynamics in fluids.&nbsp;
+Particle methods capture field equations as a linear combination of
+moving basis functions.&nbsp; The other half will emphasize
+discontinuous Galerkin (DG) methods for a variety of applications and in
+particular electromagnetic wave propagation.&nbsp; DG methods represent
+solutions as an ensemble of possibly discontinuous functions over the
+domain of interest.&nbsp; The physical foundations for these problems
+including the Maxwell equations and the Navier-Stokes equations will be
+presented for a general technical audience.&nbsp; To develop robust and
+accurate schemes, the instructors will develop the rich theoretical
+foundations of the methods. &nbsp; In addition to the development and
+analysis of numerical algorithms, instructors will also introduce topics
+related to high performance computing such as parallelization and fast
+summation.&nbsp; This course will be heavily computational and
+assessment will be heavily weighted toward student projects.&nbsp; We
+hope students will pursue nontrivial applications including flow around
+bluff bodies or investigations of the performance of the methods on
+model problems.&nbsp; Knowledge of a programming language (matlab
+counts) is required for success in this class.
+<hr style="width: 100%; height: 2px;">
+<h2><a name="Projects."></a>Projects.</h2>
+<ol>
+  <li>Reproduce Rosenhead's computation of a mixing layer.&nbsp;
+Continue his calculation by increasing the problem size and report your
+findings.&nbsp; Try different regularizations of the velocity field,
+including no regularization at all.&nbsp; Review papers by R. Krasny<br>
+    <ul>
+      <li>Krasny, R. <span style="font-style: italic;">Desingularization
+of periodic vortex sheet roll-up</span>.&nbsp; J. Comp. Phys.&nbsp; 9
+(1986), pp. 292-313.</li>
+      <li>Krasny, R. <span style="font-style: italic;">A study of
+singularity formation in a vortex sheet by the point vortex approximation</span>.&nbsp;
+J. Fluid Mech.&nbsp; 167 (1986), pp. 65-93.</li>
+      <li>Krasny, R.&nbsp; <span style="font-style: italic;">Vortex
+sheet computations: roll-up, wake separation</span> in C. Anderson and C.
+Greengard, eds. <span style="font-weight: bold;">Vortex Dynamics and
+Vortex Methods</span>, vol 28 of Lectures in Applied Mathematics, pp.
+385-402.<br>
+      </li>
+    </ul>
+  </li>
+  <li>Calculate the evolution of an inviscid rotating patch of
+vorticity for several turnover times using different initialization
+strategies.&nbsp; Discuss your results as you increase the problem
+size.&nbsp; Add diffusion using random walks and compare your results
+to exact solutions.<br>
+  </li>
+  <li>Simulate the motion of an inviscid vortex dipole inside a square
+domain with solid boundaries.</li>
+  <li>Calculate the viscous flow around a square cylinder.</li>
+  <li>Compare inviscid and viscous collisions of two dipoles.<br>
+  </li>
+</ol>
+<hr style="width: 100%; height: 2px;">
+<h2><a name="Grading."></a>Grading.</h2>
+<br>
+<p><a href="#Contents:">Back to the top.</a> </p>
+<h2> </h2>
+<h1>
+<hr width="100%"><a name="Links"></a>Links.</h1>
+<ul>
+  <li>Go to <a href="http://www.udel.edu/webct">WebCT.</a><br>
+  </li>
+  <li>Do you add cream or milk to your coffee? &nbsp; Check out my <a
+ href="http://www.math.udel.edu/%7Erossi/mixing">inviscid mixing</a>
+demonstration.</li>
+  <li>Play with a Java <a
+ href="http://www.math.udel.edu/%7Erossi/ptvortex">point vortex method</a>.<br>
+  </li>
+  <li>The MEClab <a
+ href="http://www.math.udel.edu/%7Epelesko/MECLab/Lab1.html">home page</a>.<br>
+  </li>
+  <li> The Consortium on Mathematics and its Applications (COMAP) <a
+ href="http://www.comap.com">home page</a>.</li>
+  <li> Prof. Rossi's <a href="http://www.math.udel.edu/%7Erossi">home
+page</a>.</li>
+  <li> The Department of Mathematical Sciences <a
+ href="http://www.math.udel.edu">home page</a>.</li>
+  <li> A virtual encyclopedia of mathematics: <a
+ href="http://mathworld.wolfram.com/">Eric Weisstein's World of
+Mathematics</a>.</li>
+</ul>
+&nbsp;<a href="#Contents:">Back to the top.</a>
+<p style="margin-bottom: 0in;"><img src="vortex2.gif" name="Graphic7"
+ border="0" height="155" width="98" align="bottom"> <i>Last modified:
+24 Feb 2004.</i> </p>
+<address> <a href="mailto:rossi@math.udel.edu">rossi@math.udel.edu</a></address>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>

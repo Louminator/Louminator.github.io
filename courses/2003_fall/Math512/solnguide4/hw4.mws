@@ -1,0 +1,45 @@
+{VERSION 4 0 "SUN SPARC SOLARIS" "4.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Heading
+ 1" 0 3 1 {CSTYLE "" -1 -1 "" 1 18 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }1 0 0 
+0 8 4 0 0 0 0 0 0 -1 0 }{PSTYLE "Title" 0 18 1 {CSTYLE "" -1 -1 "" 1 
+18 0 0 0 0 0 1 1 0 0 0 0 0 0 0 }3 0 0 -1 12 12 0 0 0 0 0 0 19 0 }
+{PSTYLE "Author" 0 19 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 }3 0 0 -1 8 8 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 18 "" 0 "" {TEXT -1 43 "Math512: Maple companion \+
+for Problem Set #4" }}{PARA 19 "" 0 "" {TEXT -1 70 "L. F. Rossi\nDepar
+tment of Mathematical Sciences\nUniversity of Delaware" }}}{SECT 0 
+{PARA 3 "" 0 "" {TEXT -1 21 "Define the functions." }}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 72 "q1 := (x,F,Q,L,k,U) ->\nF/U+(U*Q-F*L)*exp(U*
+(x-L/2)/k)/2/k/sinh(U*L/2/k);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 114 "q2 := (x,F,Q,L,k,h1,h2) ->\n-F*L/k/(h2-h1)*ln((h2-h1)/L*x+h1)+
+\n(Q+F*(L/(h2-h1))^2*(h2*(ln(h2)-1)-h1*(ln(h1)-1)))/L;" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 127 "q3 := (x,F,Q,L,k,h1,h2) ->\npiecew
+ise(x<1/2,-F/k/h1*x+Q/L+3*L/8*F/k/h1+L*F/8/k/h2,\nx>1/2,-F/k/h2*x+Q/L-
+L/8*F/k/h1+5*L*F/8/k/h2);" }}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{SECT 
+0 {PARA 3 "" 0 "" {TEXT -1 20 "Generate some plots." }}{PARA 0 "" 0 "
+" {TEXT -1 0 "" }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "with(plots
+):" }}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 68 "plot(q1(x,1,1,1,1,2),x=0..1,color=red,thickness=2,lab
+els=['x','q']);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 76 "plot(q2(
+x,1,1,1,1,1/2,3/2),x=0..1,color=green,thickness=2,labels=['x','q']);" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 75 "plot(q3(x,1,1,1,1,1/2,3/2
+),x=0..1,color=blue,thickness=2,labels=['x','q']);" }}}{PARA 0 "" 0 "
+" {TEXT -1 0 "" }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 75 "gr1 := plo
+t(q1(x,1,1,1,1,2),x=0..1,color=red,thickness=2,labels=['x','q']):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 83 "gr2 := plot(q2(x,1,1,1,1,1/2
+,3/2),x=0..1,color=green,thickness=2,labels=['x','q']):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 82 "gr3 := plot(q3(x,1,1,1,1,1/2,3/2),x
+=0..1,color=blue,thickness=2,labels=['x','q']):" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 21 "display(gr1,gr2,gr3);" }}}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 77 "gr1 := plot(
+q1(x,1,1,1,1,1/2),x=0..1,color=red,thickness=2,labels=['x','q']):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 83 "gr2 := plot(q2(x,1,1,1,1,3/2
+,1/2),x=0..1,color=green,thickness=2,labels=['x','q']):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 82 "gr3 := plot(q3(x,1,1,1,1,3/2,1/2),x
+=0..1,color=blue,thickness=2,labels=['x','q']):" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 21 "display(gr1,gr2,gr3);" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 
+0 "" {TEXT -1 0 "" }}}}{MARK "0 1 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 
+1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

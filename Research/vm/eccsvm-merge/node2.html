@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>A Brief Overview of Vortex Methods Using Deforming Elliptical Blobs</TITLE>
+<META NAME="description" CONTENT="A Brief Overview of Vortex Methods Using Deforming Elliptical Blobs">
+<META NAME="keywords" CONTENT="eccsvm-merge">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="eccsvm-merge.css">
+</HEAD>
+<BODY LANG="EN">
+ <A NAME="tex2html37" HREF="node3.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html35" HREF="eccsvm-merge.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html29" HREF="node1.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html38" HREF="node3.html">Merging elliptical Gaussian basis </A>
+<B>Up:</B> <A NAME="tex2html36" HREF="eccsvm-merge.html">High Order Vortex Methods </A>
+<B> Previous:</B> <A NAME="tex2html30" HREF="node1.html">Introduction</A>
+<BR> <P>
+<H1><A NAME="SECTION00020000000000000000">A Brief Overview of Vortex Methods Using Deforming Elliptical Blobs</A></H1>
+<P>
+<A NAME="secoverview">&#160;</A>
+<P>
+Vortex methods attempt to capture the inviscid and viscous, incompressible
+vorticity equations
+<P> <IMG WIDTH=500 HEIGHT=43 ALIGN=BOTTOM ALT="eqnarray134" SRC="img4.gif"  > <P>
+where  <IMG WIDTH=8 HEIGHT=7 ALIGN=BOTTOM ALT="tex2html_wrap_inline1388" SRC="img5.gif"  >  is the viscosity.  Though many have applied vortex methods to
+three-dimensional flows, this paper is restricted to two-dimensional flows.
+Vortex methods approximate the vorticity field as a linear combination of
+moving basis functions:
+<P> <IMG WIDTH=500 HEIGHT=47 ALIGN=BOTTOM ALT="equation136" SRC="img6.gif"  > <P>
+Each basis functions,  <IMG WIDTH=12 HEIGHT=16 ALIGN=MIDDLE ALT="tex2html_wrap_inline1390" SRC="img7.gif"  > , has a position,  <IMG WIDTH=62 HEIGHT=48 ALIGN=MIDDLE ALT="tex2html_wrap_inline1392" SRC="img8.gif"  > ,
+and circulation  <IMG WIDTH=12 HEIGHT=16 ALIGN=MIDDLE ALT="tex2html_wrap_inline1394" SRC="img9.gif"  > , but may also have other parameters.  For
+instance, core spreading methods have widths that vary with time.
+<P>
+The elliptical corrected core spreading vortex method (ECCSVM) is similar to
+the original corrected core spreading vortex method (CCSVM) except that it
+achieves fourth order spatial accuracy by using deforming elliptical
+Gaussian basis functions.  In addition to advecting with the flow velocity
+calculated at the basis function centroid, deforming basis functions also
+rotate, elongate and spread based on local flow deviations and viscous
+diffusion.  Thus, the exact vorticity field is approximated by
+<P> <IMG WIDTH=500 HEIGHT=47 ALIGN=BOTTOM ALT="equation141" SRC="img10.gif"  > <P>
+where
+<P><A NAME="basisfn">&#160;</A> <IMG WIDTH=552 HEIGHT=61 ALIGN=BOTTOM ALT="eqnarray144" SRC="img11.gif"  > <P>
+where  <IMG WIDTH=79 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline1396" SRC="img12.gif"  >  and  <IMG WIDTH=76 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline1398" SRC="img13.gif"  > .  The elliptical
+Gaussian basis function is oriented at an angle  <IMG WIDTH=11 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline1400" SRC="img14.gif"  >  with width
+ <IMG WIDTH=16 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline1402" SRC="img15.gif"  >  and aspect ratio  <IMG WIDTH=14 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline1404" SRC="img16.gif"  >  (or  <IMG WIDTH=30 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline1406" SRC="img17.gif"  >  if  <IMG WIDTH=42 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline1408" SRC="img18.gif"  > ).  Each of
+these parameters evolve under the action of the linearized vorticity equations
+<P> <IMG WIDTH=555 HEIGHT=40 ALIGN=BOTTOM ALT="eqnarray151" SRC="img19.gif"  > <P>
+expanded by the vortex element position  <IMG WIDTH=13 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline1410" SRC="img20.gif"  > .  After some
+simplification, the motion and deformation of each individual basis function
+is found to be
+<P><A NAME="systemodes">&#160;</A> <IMG WIDTH=538 HEIGHT=169 ALIGN=BOTTOM ALT="eqnarray155" SRC="img21.gif"  > <P>
+where  <IMG WIDTH=84 HEIGHT=48 ALIGN=MIDDLE ALT="tex2html_wrap_inline1412" SRC="img22.gif"  >  and 
+ <IMG WIDTH=48 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline1414" SRC="img23.gif"  >  has elements  <IMG WIDTH=95 HEIGHT=29 ALIGN=MIDDLE ALT="tex2html_wrap_inline1416" SRC="img24.gif"  > , 
+ <IMG WIDTH=95 HEIGHT=30 ALIGN=MIDDLE ALT="tex2html_wrap_inline1418" SRC="img25.gif"  > , etc.
+The dynamics of elliptical Gaussian basis functions and the subtleties
+associated with the integration of their trajectories are found in
+[<A HREF="node9.html#rossi99">14</A>].
+<P>
+Like other core spreading methods, this method is only
+accurate if one can make the blob widths  <IMG WIDTH=13 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline1420" SRC="img26.gif"  >  controllably small.
+Unfortunately, the individual dynamics of a single element
+do not permit such a restriction because the width of any element is bounded below by the fluid
+viscosity the flow velocity and velocity derivatives as seen in
+equation (<A HREF="node2.html#systemodes">2.7</A>).  This problem was originally solved with CCSVM by
+replacing elements whose widths have grown beyond a specified tolerance <I>l</I>
+with several thinner elements of width  <IMG WIDTH=14 HEIGHT=11 ALIGN=BOTTOM ALT="tex2html_wrap_inline1424" SRC="img27.gif"  >  where  <IMG WIDTH=64 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline1426" SRC="img28.gif"  > 
+is a parameter that controls the frequency and accuracy of the refinement
+process.  A similar but not identical process refines elliptical Gaussian
+elements for ECCSVM.  For both CCSVM and ECCSVM, the refinement process
+becomes more accurate but also more frequent as  <IMG WIDTH=42 HEIGHT=11 ALIGN=BOTTOM ALT="tex2html_wrap_inline1428" SRC="img29.gif"  > .
+Thus,  <IMG WIDTH=76 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline1430" SRC="img30.gif"  >  for all <I>i</I> and for all time.
+However, problem size can now grow large without bound.  Since vortex
+methods require <I>O</I>(<I>N</I>),  <IMG WIDTH=78 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline1436" SRC="img31.gif"  >  or  <IMG WIDTH=44 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline1438" SRC="img32.gif"  >  computations to calculate
+the velocity field for time integrations
+depending upon which summation algorithm one uses, it is crucial that one
+control the problem size, <I>N</I>, for large scale
+calculations.
+<P>
+After undergoing many refinements, it is quite likely that many
+computational elements will nearly overlap one another.  More specifically,
+one might expect to find a collection <I>S</I> such that  <IMG WIDTH=102 HEIGHT=25 ALIGN=MIDDLE ALT="tex2html_wrap_inline1444" SRC="img33.gif"  >  for <I>i</I>,<I>j</I> in <I>S</I>.  In fact, one might expect to find many such
+collections throughout the domain.  For CCSVM, one can almost neglect the
+fact that different elements in <I>S</I> have different widths because the widths
+are effectively controlled by <I>l</I> and  <IMG WIDTH=10 HEIGHT=7 ALIGN=BOTTOM ALT="tex2html_wrap_inline1454" SRC="img34.gif"  >  [<A HREF="node9.html#rossimerge">13</A>]. This is
+not true with all the deformation parameters in elliptical Gaussian blobs.
+For instance, while it is true that the  <IMG WIDTH=12 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline1456" SRC="img35.gif"  > 's approach unity as  <IMG WIDTH=38 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline1458" SRC="img36.gif"  > , it is impractical to force it there.  From experience, many
+meaningful and accurate calculations are possible with aspect ratios of 2 or
+more.  Thus, forcing <I>l</I> is to be so small as to bound the  <IMG WIDTH=12 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline1456" SRC="img35.gif"  > 's close to
+1 is not desirable.  Therefore, one can expect that overlapping elements may
+have differing aspect ratios and widths.
+<P>
+<HR><A NAME="tex2html37" HREF="node3.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html35" HREF="eccsvm-merge.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html29" HREF="node1.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html38" HREF="node3.html">Merging elliptical Gaussian basis </A>
+<B>Up:</B> <A NAME="tex2html36" HREF="eccsvm-merge.html">High Order Vortex Methods </A>
+<B> Previous:</B> <A NAME="tex2html30" HREF="node1.html">Introduction</A>
+<P><ADDRESS>
+<I>Louis F. Rossi <BR>
+Thu Nov  4 15:01:50 EST 1999</I>
+</ADDRESS>
+</BODY>
+</HTML>

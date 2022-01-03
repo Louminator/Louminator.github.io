@@ -1,0 +1,23 @@
+{VERSION 4 0 "SUN SPARC SOLARIS" "4.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Title" 
+0 18 1 {CSTYLE "" -1 -1 "" 1 18 0 0 0 0 0 1 1 0 0 0 0 0 0 0 }3 0 0 -1 
+12 12 0 0 0 0 0 0 19 0 }{PSTYLE "Author" 0 19 1 {CSTYLE "" -1 -1 "" 0 
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }3 0 0 -1 8 8 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {PARA 18 "" 0 "" {TEXT -1 0 "" }{TEXT -1 35 "A quick phase por
+trait using Maple." }}{PARA 19 "" 0 "" {TEXT -1 73 "Prof. LF Rossi\nDe
+partment of Mathematical Sciences\nUniversity of Delaware" }}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "with(DEtools);" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 58 "eqns := [diff(p(t),t) = (1-r)*p, diff(r(t),t
+) = -(1-p)*r];" }}}{PARA 0 "" 0 "" {TEXT -1 0 "" }{TEXT -1 281 "In thi
+s phase portrait command, I set a few options to make the plot look ni
+cer.  I defined the colors of the trajectories and the vector field.  \+
+I also set the stepsize for the time integration to be smaller than th
+e default so that the curves would be smoother and more accurate." }}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 176 "phaseportrait(eqns,[p(t),r(
+t)],t=0..8,\n[[p(0)=1,r(0)=1/4],[p(0)=1,r(0)=1/2],[p(0)=1,r(0)=3/4]],
+\nstepsize=0.1,\ntitle=\"Lotka-Volterra\",color=pink,linecolor=[blue,g
+reen,magenta]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}
+{MARK "1 0" 50 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 
+33 1 1 }

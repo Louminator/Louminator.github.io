@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>Adaptive Refinement (Splitting Elements)</TITLE>
+<META NAME="description" CONTENT="Adaptive Refinement (Splitting Elements)">
+<META NAME="keywords" CONTENT="eccsvm">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="eccsvm.css">
+</HEAD>
+<BODY LANG="EN">
+ <A NAME="tex2html124" HREF="node10.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html122" HREF="eccsvm.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html116" HREF="node8.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html125" HREF="node10.html">Sample Calculations</A>
+<B>Up:</B> <A NAME="tex2html123" HREF="eccsvm.html">High Order Vortex Methods </A>
+<B> Previous:</B> <A NAME="tex2html117" HREF="node8.html">Asymptotic Calculation of Velocity </A>
+<BR> <P>
+<H1><A NAME="SECTION00040000000000000000">Adaptive Refinement (Splitting Elements)</A></H1>
+<P>
+<A NAME="secrefine">&#160;</A>
+<P>
+More accurate spatial refinement is another
+advantage to increasing the spatial accuracy of vortex methods by
+increasing the number of internal degrees of freedom.  In CCSVM, a Gaussian
+blob which has spread beyond a prescribed spatial resolution <I>l</I> would be
+replaced an overlapping configuration of ``thinner'' blobs.  The new
+configuration would approximate the original element in the sense that it
+would conserve the zeroth, first and second moments.  It should be noted
+that it only conserved a composite second moment
+( <IMG WIDTH=166 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2885" SRC="img195.gif"  > ) rather than the individual second
+moments in the cardinal directions.  Furthermore, the limited number of
+internal degrees of freedom required each configuration to split into four
+to preserve symmetries in the cardinal directions.  In the case of
+elliptical Gaussian basis functions, it is possible to conserve <EM>all</EM>
+second moments while only requiring a configuration of two elliptical
+Gaussian elements.  Naturally, these elements are aligned along the
+semimajor axes of the element to be refined.  Without loss of generality, we
+shall assume that the zeroth (<I>i</I>=0) element will be refined and that
+ <IMG WIDTH=146 HEIGHT=25 ALIGN=MIDDLE ALT="tex2html_wrap_inline2889" SRC="img196.gif"  > .
+Using equation (<A HREF="node5.html#basisfn">3.9</A>), we wish to replace
+<P> <IMG WIDTH=500 HEIGHT=40 ALIGN=BOTTOM ALT="equation896" SRC="img197.gif"  > <P>
+with the configuration
+<P> <IMG WIDTH=571 HEIGHT=40 ALIGN=BOTTOM ALT="equation900" SRC="img198.gif"  > <P>
+The appropriate convergence parameter controlling the refinement process is 
+ <IMG WIDTH=64 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2891" SRC="img199.gif"  >  
+process where  <IMG WIDTH=63 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline2893" SRC="img200.gif"  > .  Therefore, to
+conserve all zeroth, first and second moments, one must require that 
+<P><A NAME="splita">&#160;</A><A NAME="splitr">&#160;</A> <IMG WIDTH=500 HEIGHT=43 ALIGN=BOTTOM ALT="eqnarray906" SRC="img201.gif"  > <P>
+Similar to the refinement process for CCSVM, the elliptical refinement
+process becomes more accurate as  <IMG WIDTH=42 HEIGHT=11 ALIGN=BOTTOM ALT="tex2html_wrap_inline2895" SRC="img202.gif"  > 
+[<A HREF="node16.html#rossiresurrect">22</A>].
+<P>
+Unlike CCSVM wherein refinement in the zero-convection limit can be studied
+in great detail, an exact solution to (<A HREF="node5.html#systemodes">3.12</A>) even for a simple
+linear flow elude the author.  However, using slightly different
+analysis, we can recover a strong uniform estimate for the total
+induced error.
+<P>
+To begin, one must determine how many times a computational element will be
+refined during its lifetime  <IMG WIDTH=59 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2897" SRC="img203.gif"  > .  From 
+the system (<A HREF="node5.html#systemodes">3.12</A>), we see that
+<P> <IMG WIDTH=500 HEIGHT=58 ALIGN=BOTTOM ALT="eqnarray914" SRC="img204.gif"  > <P>
+Since a given element's width goes from  <IMG WIDTH=20 HEIGHT=7 ALIGN=BOTTOM ALT="tex2html_wrap_inline2899" SRC="img205.gif"  >  to  <IMG WIDTH=9 HEIGHT=7 ALIGN=BOTTOM ALT="tex2html_wrap_inline2669" SRC="img155.gif"  > , splits
+and then repeats the cycle, we see that the total number of refinement
+events is
+<P><A NAME="n">&#160;</A> <IMG WIDTH=500 HEIGHT=40 ALIGN=BOTTOM ALT="eqnarray918" SRC="img206.gif"  > <P>
+However, for values of  <IMG WIDTH=10 HEIGHT=7 ALIGN=BOTTOM ALT="tex2html_wrap_inline2329" SRC="img13.gif"  >  moderately close to unity,  <IMG WIDTH=47 HEIGHT=17 ALIGN=MIDDLE ALT="tex2html_wrap_inline2905" SRC="img207.gif"  > 
+achieves its extreme value at the origin so that
+<P> <IMG WIDTH=500 HEIGHT=40 ALIGN=BOTTOM ALT="equation922" SRC="img208.gif"  > <P>
+A Taylor expansion of the right-hand side yields
+<P> <IMG WIDTH=540 HEIGHT=40 ALIGN=BOTTOM ALT="equation927" SRC="img209.gif"  > <P>
+This uniform error is exponentially localized so that
+<P> <IMG WIDTH=500 HEIGHT=40 ALIGN=BOTTOM ALT="equation933" SRC="img210.gif"  > <P>
+However, the refinement process is repeated <I>n</I> times, and the
+cumulative error must analyzed.
+<P>
+Calculating upper bounds on refinement errors under all possible
+circumstances, that is all possible velocity fields, would be exhaustive and
+crude.  However, a model problem similar to that of using scalar test
+problems for finite difference solutions for ordinary differential equations
+can correspondingly meaningful error estimates.  To review, studying the
+stability of a finite difference scheme for all possible ordinary
+differential equations is exhaustive and unreasonable.  However, the linear
+behavior of the discretized system can be discerned by analyzing the finite
+difference method's capacity to solve a ``scalar test equation,''
+<P><A NAME="scalartesteqn">&#160;</A> <IMG WIDTH=500 HEIGHT=34 ALIGN=BOTTOM ALT="equation937" SRC="img211.gif"  > <P>
+where  <IMG WIDTH=8 HEIGHT=11 ALIGN=BOTTOM ALT="tex2html_wrap_inline2909" SRC="img212.gif"  >  is an eigenvalue which can represent the linearization
+of the problem of interest near some value <I>x</I>(<I>T</I>).
+By studying this system, one can determine what eigenvalues,  <IMG WIDTH=8 HEIGHT=11 ALIGN=BOTTOM ALT="tex2html_wrap_inline2909" SRC="img212.gif"  > ,
+correspond to stable regions for the discrete system.  One would then have
+some insight into the suitability of a particular discretization for a
+particular problem.
+<P>
+Similarly, we propose a linearized flow to study the behavior of the
+given refinement scheme. One can assume that  <IMG WIDTH=39 HEIGHT=17 ALIGN=BOTTOM ALT="tex2html_wrap_inline2915" SRC="img213.gif"  >  because drift will
+not affect diffusion and refinement and, 
+without losing much generality,
+that  <IMG WIDTH=23 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2383" SRC="img39.gif"  >  is a simple strain ( <IMG WIDTH=50 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline2919" SRC="img214.gif"  > ,  <IMG WIDTH=94 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline2921" SRC="img215.gif"  > ).
+Adding rotation to the linearization would only yield a rotating system 
+with the same qualities.
+Initially, one begins with a blob at the origin aligned with the cardinal
+axes and allow it to evolve with time.  The width will grow from  <IMG WIDTH=45 HEIGHT=11 ALIGN=BOTTOM ALT="tex2html_wrap_inline2923" SRC="img216.gif"  >  to  <IMG WIDTH=35 HEIGHT=11 ALIGN=BOTTOM ALT="tex2html_wrap_inline2925" SRC="img217.gif"  >  and then refinement shall occur.  For a given <I>l</I>,
+we choose <I>a</I> so that  <IMG WIDTH=54 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline2931" SRC="img218.gif"  >  when  <IMG WIDTH=45 HEIGHT=11 ALIGN=BOTTOM ALT="tex2html_wrap_inline2923" SRC="img216.gif"  >  and  <IMG WIDTH=44 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline2935" SRC="img219.gif"  > 
+when  <IMG WIDTH=35 HEIGHT=11 ALIGN=BOTTOM ALT="tex2html_wrap_inline2925" SRC="img217.gif"  > .  Of course,  <IMG WIDTH=73 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2939" SRC="img220.gif"  > .  It is always possible to choose such an  <IMG WIDTH=14 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline2941" SRC="img221.gif"  >  because
+the aspect ratio grows monotonically in this example.
+<P>
+In this example, we see that elements spread, split and repeat,
+forming a collection of identical elements along the x-axis.  Without
+loss of generality, we shall study cases when <I>n</I> is even.  The
+elements lie on mesh with width 2 <I>r</I> at positions  <IMG WIDTH=113 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2947" SRC="img222.gif"  > , 
+where <I>r</I> is defined
+in equation (<A HREF="node9.html#splitr">4.3</A>).  Elements will collocate yielding a binomial
+distribution with <I>p</I>=1/2.  As in the case of CCSVM, one can interpret
+this as a deterministic block-walking alternative to random walk
+diffusive methods.  However, unlike CCSVM and random walking methods,
+this type of splitting is anisotropic.  If we combine collocated
+elements at positions  <IMG WIDTH=13 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline2953" SRC="img223.gif"  > , we see that the circulation at these
+points will be
+<P> <IMG WIDTH=500 HEIGHT=58 ALIGN=BOTTOM ALT="equation946" SRC="img224.gif"  > <P>
+As <I>n</I> grows large, the DeMoivre-Laplace Theorem asserts that this
+distribution will approach an exponential distribution relatively
+quickly [<A HREF="node16.html#feller">7</A>].  Applying Equations (<A HREF="node9.html#splitr">4.3</A>) and (<A HREF="node9.html#n">4.6</A>),
+<P> <IMG WIDTH=547 HEIGHT=97 ALIGN=BOTTOM ALT="eqnarray956" SRC="img225.gif"  > <P>
+This expression is bounded in the limit as  <IMG WIDTH=38 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2337" SRC="img16.gif"  >  and 
+ <IMG WIDTH=43 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2959" SRC="img226.gif"  >  because  <IMG WIDTH=47 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline2961" SRC="img227.gif"  > .
+<P>
+Thus, the cumulative effect of the refinement error, <I>e</I>, 
+is a Riemann sum of a
+convolution:
+<P> <IMG WIDTH=559 HEIGHT=96 ALIGN=BOTTOM ALT="eqnarray964" SRC="img228.gif"  > <P>
+Evaluating the convolution yields
+<P> <IMG WIDTH=500 HEIGHT=166 ALIGN=BOTTOM ALT="eqnarray972" SRC="img229.gif"  > <P>
+The second term is of higher order and shall be discarded at this point.
+The ratio  <IMG WIDTH=35 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2965" SRC="img230.gif"  >  is often discussed in the literature because
+it represents how much computational elements overlap one another.  If
+one presumes that circulations are determined based on an area  <IMG WIDTH=51 HEIGHT=14 ALIGN=BOTTOM ALT="tex2html_wrap_inline2967" SRC="img231.gif"  > , then  <IMG WIDTH=128 HEIGHT=29 ALIGN=MIDDLE ALT="tex2html_wrap_inline2969" SRC="img232.gif"  > .  Many
+investigators choose <I>p</I>=1/2 [<A HREF="node16.html#bealemajda">3</A>, <A HREF="node16.html#hald2">10</A>].  In this
+case, it is most appropriate to choose  <IMG WIDTH=158 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2973" SRC="img233.gif"  > .
+Wrapping this analysis into one statement, we have
+<P> <IMG WIDTH=589 HEIGHT=36 ALIGN=BOTTOM ALT="thm984" SRC="img234.gif"  > <P>
+<P>
+This result allows one to choose values of  <IMG WIDTH=10 HEIGHT=7 ALIGN=BOTTOM ALT="tex2html_wrap_inline2329" SRC="img13.gif"  >  and <I>l</I> to control one
+source of error in a simulation.  The only other source of error comes from the
+spatial discretization and dynamics, discussed in the previous section, so
+now we have bounded the total error induced by the ECCSVM approximation.
+<P>
+<HR><A NAME="tex2html124" HREF="node10.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html122" HREF="eccsvm.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html116" HREF="node8.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html125" HREF="node10.html">Sample Calculations</A>
+<B>Up:</B> <A NAME="tex2html123" HREF="eccsvm.html">High Order Vortex Methods </A>
+<B> Previous:</B> <A NAME="tex2html117" HREF="node8.html">Asymptotic Calculation of Velocity </A>
+<P><ADDRESS>
+<I>Louis F. Rossi <BR>
+Thu Nov  4 15:02:00 EST 1999</I>
+</ADDRESS>
+</BODY>
+</HTML>

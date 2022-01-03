@@ -1,0 +1,40 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.7 [en] (X11; I; OSF1 V4.0 alpha) [Netscape]">
+   <meta name="Author" content="L. F. Rossi">
+   <title>A Sample Vortex Computation</title>
+</head>
+<body>
+
+<h2>
+A sample vortex calculation.</h2>
+Here is a sample calculation of a vortex dipole collision performed with
+a high order vortex method using deforming elliptical Gaussians.
+<p><img SRC="collision.jpg" height=635 width=681>
+<p>The red regions are positive vorticity. The blue are negative vorticity.
+Each frame is 2.0 time units apart. The fluid viscosity is 0.005. If this
+calculation were to run longer, the dipoles would exchange partners one
+more time and then the original pairs would continue on their merry way
+as if nothing had happened! In terms of the scientific literature, this
+calculation is fairly ambitious in that the Reynolds number is very high.
+Remarkably enough, it is not hard to perform with this method.
+<p>Here's a look at what happens to perform this calculation. In a snapshot
+at t=8.0, you can see the vorticity field on the left and the computational
+domain on the right.
+<p><img SRC="vortpos.jpg" height=268 width=595>
+<p>Each little "X" on the right represents an elliptical Gaussian basis
+function. The crosses correspond to the basis function in position, aspect
+ratio and orientation. Red crosses have negative circulation and blue ones
+have positive circulation. Considering the difficulty of this calculation,
+there are very few basis functions used (around 3000 in fact), but each
+basis function requires more calculations than traditional gridded methods.
+<p>Click <a href="collision.mpeg">here</a> to view an MPEG movie of a vortex
+dipole collision.
+<p>Last modified: 1 August 2000.
+<address>
+<a href="mailto:Louis_Rossi@uml.edu">Louis_Rossi@uml.edu</a></address>
+
+</body>
+</html>

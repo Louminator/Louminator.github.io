@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>BlobFlow</title>
+<meta name="generator" content="Bluefish 2.0.3" >
+<meta name="author" content="Unknown" >
+<meta name="date" content="2011-12-12T08:31:50-0500" >
+<meta name="keywords" content="Rossi Math Vortex method Vorticty">
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<script type="text/javascript" src="flowplayer-3.1.4.min.js"></script>
+
+<link rel=stylesheet type="text/css" href="../2009fall.css">
+</head>
+<body>
+<hr align="left" size="4" width="50%">
+<table class="banner">
+<tr>
+<td>
+<div align="center"><img src="ud.png" width="140" height="140" border="0" alt="">
+</div></td>
+<td width="60%" valign="bottom" nowrap>
+<div align="center"><img SRC="BlobFlow_logo.png" NOSAVE height=247 width=400>
+</div></td>
+<td>
+ <div align="center"><img src="udmath.png" width="211" height="140" border="0" alt="">
+</div></td>
+</tr>
+</table>
+<hr align="left" size="4" width="70%">
+<strong><font size="+1">Department of Mathematical Sciences - University of Delaware
+</font></strong><hr align="left" size="4" width="72%">
+<table cellpadding="12" cellspacing="0" border="0">
+<tr>
+<td class="leftmid" width="50%" valign="top">
+<h3>General information</h3>
+<p>The purpose of this project is to provide a powerful,
+reliable, open source vortex method for scientists, engineers and mathematicians.
+BlobFlow is a general Navier-Stokes solver for two-dimensional, incompressible
+flows. It is a variation of the vortex method, and as such, will
+be most effective when used for flows dominated by isolated regions of
+vorticity. This particular variation is based on elliptical Gaussian
+basis functions and the formal term for the algorithm is the "elliptical
+corrected core spreading vortex method" or ECCSVM, for short. The
+documentation covers the specifics in a little more detail.</p>
+
+<hr width=100%>
+
+<h3>Downloads</h3>
+
+This is the current version.
+
+<ul>
+<li><a href="downloads/BlobFlow_3_02.tgz">BlobFlow_3_02.tgz</a>,
+<a href="documentation.pdf">documentation</a>, benchmark simulations 
+[<a href="downloads/Lamb_monopole.tgz">Lamb monopole</a>] 
+[<a href="downloads/Lamb_dipole.tgz">Lamb dipole</a>], 
+demo simulations.</li>
+<li><a href="downloads/BlobFlow_3_01.tgz">BlobFlow_3_01.tgz</a></li>
+</ul>
+
+<p>You will need the <a href="downloads/domain.tgz">domain look-up tables</a> 
+(binaries) to run the code.</p>
+
+<p>You may want to use my <a href="downloads/utils.tgz">utilities</a> to project your results onto a regular mesh 
+and perform other useful tasks.</p>
+
+<hr width=100%>
+
+<h3>Archives</h3>
+
+The following are versions that I used in past projects.  
+You welcome to use them at your own risk.  The newest version does everything
+these can do and more.
+
+<ul>
+<li><a href="downloads/BlobFlow_2_02.tar.gz">BlobFlow_2_02.tar.gz</a></li>
+
+<li>Old documentation (<a href="documentation/documentation.ps">postscript</a>
+and <a href="documentation/documentation.html">HTML</a>)</li>
+
+<li><a href="downloads/BlobFlow_2_01.tar.gz">BlobFlow_2_01.tar.gz</a></li>
+
+<li><a href="downloads/BlobFlow_2_0.tar.gz">BlobFlow_2_0.tar.gz</a></li>
+
+<li><a href="downloads/BlobFlow_1_1.tar.gz">BlobFlow_1_1.tar.gz</a></li>
+
+<li><a href="downloads/BlobFlow_1_0.tar.gz">BlobFlow_1_0.tar.gz</a></li>
+</ul>
+
+</td>
+<td class="rightmid" width="50%" valign="top">
+<h3> Demonstration: Collisions, filamentation and instabilities.</h3>
+<div id="page">
+   <!-- this A tag is where your Flowplayer will be placed. it can be anywhere -->
+   <a
+     href="http://www.math.udel.edu/~rossi/collision.flv"
+     style="display:block;width:400px;height:400px"
+     id="player">
+    </a>
+
+    <!-- this will install flowplayer inside previous A- tag. -->
+    <script>
+      flowplayer("player", "flowplayer-3.1.4.swf", {        // supply the configuration 
+ 
+    clip : {            // Clip is an object, hence '{...}' 
+        autoPlay: false, 
+        autoBuffering: true, 
+        baseUrl: 'http://www.math.udel.edu/~rossi/' 
+    }, 
+ 
+    playlist: [            // playlist is an array of Clips, hence [...] 
+        'collision.flv',            // simple playlist entry: video 
+        'MZM2.0E.flv',
+        'equilibrium.flv',
+        'MZM9.0E.flv'
+    ], 
+ 
+    plugins: {            // load one or more plugins 
+        controls: {            // load the controls plugin 
+            url: 'flowplayer.controls-3.1.4.swf',    // always: where to find the Flash object 
+            playlist: true,                // now the custom options of the Flash object 
+            backgroundColor: '#aedaff', 
+            tooltips: {                // this plugin object exposes a 'tooltips' object 
+                buttons: true, 
+                fullscreen: 'Enter Fullscreen mode' 
+            } 
+        } 
+    }, 
+ 
+    onFinish: function() {        // set an event handler in the configuration 
+        alert("Click Player to start video again"); 
+    } 
+});
+    </script>
+</div>
+
+<h3>References</h3>
+
+<p>R. B. Platte, L. F. Rossi and T. B. Mitchell. 
+<i>Using global interpolation to evaluate the Biot-Savart integral for deformable
+elliptical Gaussian vortex elements.</i> SIAM Journal on Scientiﬁc Computing,
+31 (3), pp. 2342-2360. 2009. </p>
+
+
+<p>L. F. Rossi. <i>Evaluation of the Biot-Savart integral for deformable elliptical 
+Gaussian vortex elements.</i>
+SIAM Journal on Scientiﬁc Computing 28 (4), pp. 1509-1532. 2006.</p>
+
+
+<p>L. F. Rossi. <i>A Comparative Study of Lagrangian Methods Using Axisymmetric and 
+Deforming Blobs.</i>
+SIAM Journal on Scientiﬁc Computing 27 (4), pp. 1168-1180. 2006.</p>
+
+<p>L. F. Rossi. <i>Achieving High-order Convergence Rates with Deforming Basis Functions.</i>
+SIAM Journal on Scientiﬁc Computing 26 (3), pp. 885-906. 2005.</p>
+
+
+<h3>Links</h3>
+</td>
+</tr>
+</table>
+<hr align="left" size="4" width="100%">
+<address><a href="mailto::rossi@math.udel.edu">rossi@math.udel.edu</a></address><br>
+Revised October 2009
+<!-- Place this tag where you want the +1 button to render -->
+<g:plusone annotation="inline"></g:plusone>
+
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+</body>
+</html>

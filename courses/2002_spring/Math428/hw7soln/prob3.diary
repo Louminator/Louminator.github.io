@@ -1,0 +1,81 @@
+r = zeros(1,11);
+r(1) = -2; r(2) = 1.0;
+c = zeros(1,11);
+c(1) = -2; c(2) = 1.0;
+D = toeplitz(c,r);
+%% Now fix the BC's.
+h = 0.1; k=0.1;
+expM = (eye(11,11)+k/h.^2*D);
+expM(1,:) = zeros(1,11);
+expM(11,:) = zeros(1,11);
+%%Let the forcing function handle the BC's;
+x = 0:0.1:1;
+f = h*x.*(1-x);
+f(11) = 1.0;
+uexp1 = zeros(11,1);
+uexp1(:,end) = x';
+for i=1:20
+uexp1(:,end+1) = expM*uexp1(:,end)+f';
+end
+
+%% Now try a smaller timestep.
+h = 0.1; k=2.5e-3;
+expM = (eye(11,11)+k/h.^2*D);
+expM(1,:) = zeros(1,11);
+expM(11,:) = zeros(1,11);
+%%Let the forcing function handle the BC's;
+x = 0:0.1:1;
+f = h*x.*(1-x);
+f(11) = 1.0;
+uexp2 = zeros(11,1);
+uexp2(:,end) = x';
+for i=1:800
+uexp2(:,end+1) = expM*uexp2(:,end)+f';
+end
+
+%% Crank Nicholson
+h = 0.1; k=0.1;
+impM = (eye(11,11)-k/h.^2/2*D)^(-1)*(eye(11,11)+k/h.^2/2*D);
+impM(1,:) = zeros(1,11);
+impM(11,:) = zeros(1,11);
+%%Let the forcing function handle the BC's;
+x = 0:0.1:1;
+f = h*x.*(1-x);
+f(11) = 1.0;
+uimp1 = zeros(11,1);
+uimp1(:,end) = x';
+for i=1:20
+uimp1(:,end+1) = impM*uimp1(:,end)+f';
+end
+
+%% Crank Nicholson - higher resolution
+h = 0.1; k=2.5e-3;
+impM = (eye(11,11)-k/h.^2/2*D)^(-1)*(eye(11,11)+k/h.^2/2*D);
+impM(1,:) = zeros(1,11);
+impM(11,:) = zeros(1,11);
+%%Let the forcing function handle the BC's;
+x = 0:0.1:1;
+f = h*x.*(1-x);
+f(11) = 1.0;
+uimp2 = zeros(11,1);
+uimp2(:,end) = x';
+for i=1:800
+uimp2(:,end+1) = impM*uimp2(:,end)+f';
+end
+
+plot(x,uexp1(:,21))
+title('Explicit finite differences - h=0.1 - k = 0.1');
+xlabel('x'); ylabel('v');
+figure;
+plot(x,uexp2(:,401))
+title('Explicit finite differences - h=0.1 - k = 2.5 \times 10^{-3}');
+xlabel('x'); ylabel('v');
+figure;
+plot(x,uimp1(:,21))
+title('Implicit finite differences - h=0.1 - k = 0.1');
+xlabel('x'); ylabel('v');
+figure;
+plot(x,uimp2(:,401))
+title('Implicit finite differences - h=0.1 - k = 2.5 \times 10^{-3}');
+xlabel('x'); ylabel('v');
+diary off;

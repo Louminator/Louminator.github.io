@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Environment variables</TITLE>
+<META NAME="description" CONTENT="Environment variables">
+<META NAME="keywords" CONTENT="documentation">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="documentation.css">
+<LINK REL="next" HREF="node13.html">
+<LINK REL="previous" HREF="node11.html">
+<LINK REL="up" HREF="node10.html">
+<LINK REL="next" HREF="node13.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html147"
+ HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html145"
+ HREF="node10.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html139"
+ HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html148"
+ HREF="node13.html">The simulation and control</A>
+<B> Up:</B> <A NAME="tex2html146"
+ HREF="node10.html">Using BlobFlow</A>
+<B> Previous:</B> <A NAME="tex2html140"
+ HREF="node11.html">For the impatient.</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00420000000000000000">
+Environment variables</A>
+</H1>
+
+<P>
+It is necessary that you set two environment variables.
+<DL COMPACT>
+<DD><P>
+<DT>1.
+<DD><TT>ECCSVM_HOME</TT>: This environment variable tells BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+where to find the
+simulation configuration files.  The results will be written to this file.
+
+<P>
+<DT>2.
+<DD><TT>ECCSVM_BASENAME</TT>: This environment variable tells BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+the
+file name base for the simulation and control files.  If the environment
+variable is set to <TT>myfluid</TT>, the eflow will look for a simulation
+description called <TT>myfluid.sim</TT> and a control file called <TT>myfluid.ctl</TT> in the directory whose path is given by ECCSVM_HOME.
+
+<P>
+</DL>
+<P>
+The syntax for setting these environment variables depends upon the
+operating system.  For Unix users using csh or tcsh, one would enter:
+<PRE>
+setenv ECCSVM_HOME /home/myname/mydirectory
+setenv ECCSVM_BASENAME myfluid
+</PRE>For Unix users using the Korn shell or bash, one would enter:
+<PRE>
+ECCSVM_HOME=/home/myname/mydirectory
+ECCSVM_BASENAME=myfluid
+export ECCSVM_HOME ECCSVM_BASENAME
+</PRE>As a caution to those using multiple processors, these variables must be
+configured in your login script so that they may be inherited as the
+individual processes
+are spawned.  Check your local MPI documentation for the proper way to
+inherit environment variables.  For instance, under LAM/MPI, the inherited
+environment variables are set when one executes <TT>lamboot</TT>.  If you
+change the environment variables, you must reboot the LAM/MPI daemons.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html147"
+ HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html145"
+ HREF="node10.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html139"
+ HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html148"
+ HREF="node13.html">The simulation and control</A>
+<B> Up:</B> <A NAME="tex2html146"
+ HREF="node10.html">Using BlobFlow</A>
+<B> Previous:</B> <A NAME="tex2html140"
+ HREF="node11.html">For the impatient.</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2001-08-01</I>
+</ADDRESS>
+</BODY>
+</HTML>

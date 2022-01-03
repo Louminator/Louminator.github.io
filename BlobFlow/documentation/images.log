@@ -1,0 +1,332 @@
+This is TeX, Version 3.14159 (Web2C 7.3.2x) (format=latex 2000.11.2)  1 AUG 2001 15:59
+**./images.tex
+(./images.tex
+LaTeX2e <1999/12/01> patch level 1
+Babel <v3.6Z> and hyphenation patterns for english, french, german, ngerman, du
+mylang, nohyphenation, loaded.
+
+(/opt-cassandra/TeXLive5/texmf/tex/latex/base/report.cls
+Document Class: report 1999/09/10 v1.4a Standard LaTeX document class
+(/opt-cassandra/TeXLive5/texmf/tex/latex/base/size12.clo
+File: size12.clo 1999/09/10 v1.4a Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/opt-cassandra/TeXLive5/texmf/tex/generic/dvips/epsf.sty
+This is `epsf.tex' v2.7 <25 October 1996>
+\epsffilein=\read1
+\epsfframemargin=\dimen103
+\epsfframethickness=\dimen104
+\epsfrsize=\dimen105
+\epsftmp=\dimen106
+\epsftsize=\dimen107
+\epsfxsize=\dimen108
+\epsfysize=\dimen109
+\pspoints=\dimen110
+) (/opt-cassandra/TeXLive5/texmf/tex/latex/graphics/color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+(/opt-cassandra/TeXLive5/texmf/tex/latex/texlive/color.cfg)
+Package color Info: Driver file: dvips.def on input line 125.
+(/opt-cassandra/TeXLive5/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+) (/opt-cassandra/TeXLive5/texmf/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\sizebox=\box26
+\lthtmlwrite=\write3
+(./images.aux)
+\openout1 = `images.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+latex2htmlLength hsize=349.0pt
+latex2htmlLength vsize=632.5pt
+latex2htmlLength hoffset=0.0pt
+latex2htmlLength voffset=0.0pt
+latex2htmlLength topmargin=0.0pt
+latex2htmlLength topskip=0.00003pt
+latex2htmlLength headheight=0.0pt
+latex2htmlLength headsep=0.0pt
+latex2htmlLength parskip=0.0pt plus 1.0pt
+latex2htmlLength oddsidemargin=0.0pt
+latex2htmlLength evensidemargin=0.0pt
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 112.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 112.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 112.
+l2hSize :tex2html_wrap_inline965:9.82137pt::0.0pt::14.42242pt.
+[1
+
+
+]
+l2hSize :tex2html_wrap_inline23:7.75pt::0.0pt::6.00002pt.
+[2
+
+
+]
+l2hSize :tex2html_wrap_inline244:7.75pt::0.0pt::7.74713pt.
+[3
+
+
+]
+
+LaTeX Warning: Command \v invalid in math mode on input line 136.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2}\spacefactor \accent...
+l.136 $\displaystyle \omega(\v x
+                                ,t) = \sum_{i=1}^N g(\v x;\gamma_i,\v x_i,\s...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...factor }\accent #1 #2}\spacefactor 
+                                                  \accent@spacefactor 
+l.136 $\displaystyle \omega(\v x
+                                ,t) = \sum_{i=1}^N g(\v x;\gamma_i,\v x_i,\s...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \v invalid in math mode on input line 136.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2}\spacefactor \accent...
+l.136 ...tyle \omega(\v x,t) = \sum_{i=1}^N g(\v x
+                                                  ;\gamma_i,\v x_i,\sigma_i,...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...factor }\accent #1 #2}\spacefactor 
+                                                  \accent@spacefactor 
+l.136 ...tyle \omega(\v x,t) = \sum_{i=1}^N g(\v x
+                                                  ;\gamma_i,\v x_i,\sigma_i,...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \v invalid in math mode on input line 136.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2}\spacefactor \accent...
+l.136 ... x,t) = \sum_{i=1}^N g(\v x;\gamma_i,\v x
+                                                  _i,\sigma_i,a_i,\theta_i)$%
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...factor }\accent #1 #2}\spacefactor 
+                                                  \accent@spacefactor 
+l.136 ... x,t) = \sum_{i=1}^N g(\v x;\gamma_i,\v x
+                                                  _i,\sigma_i,a_i,\theta_i)$%
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no ^^e8 in font cmex10!
+Missing character: There is no ^^e8 in font cmex10!
+Missing character: There is no ^^e8 in font cmex10!
+l2hSize :tex2html_wrap_indisplay1005:19.9667pt::19.9667pt::161.5749pt.
+[4
+
+
+]
+
+LaTeX Warning: Command \v invalid in math mode on input line 142.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2}\spacefactor \accent...
+l.142 $\displaystyle g(\v x
+                           ;\gamma_i,\v x_i,\sigma_i,a_i,\theta_i) = \hfill$%
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...factor }\accent #1 #2}\spacefactor 
+                                                  \accent@spacefactor 
+l.142 $\displaystyle g(\v x
+                           ;\gamma_i,\v x_i,\sigma_i,a_i,\theta_i) = \hfill$%
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \v invalid in math mode on input line 142.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2}\spacefactor \accent...
+l.142 $\displaystyle g(\v x;\gamma_i,\v x
+                                         _i,\sigma_i,a_i,\theta_i) = \hfill$%
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...factor }\accent #1 #2}\spacefactor 
+                                                  \accent@spacefactor 
+l.142 $\displaystyle g(\v x;\gamma_i,\v x
+                                         _i,\sigma_i,a_i,\theta_i) = \hfill$%
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no ^^e8 in font cmex10!
+Missing character: There is no ^^e8 in font cmex10!
+l2hSize :tex2html_wrap_indisplay1006:9.5pt::9.5pt::108.72739pt.
+[5
+
+
+]
+l2hSize :tex2html_wrap_indisplay1007:18.50014pt::18.50014pt::374.08344pt.
+
+Overfull \hbox (29.05594pt too wide) in paragraph at lines 155--156
+[]|[] 
+ []
+
+[6
+
+
+]
+
+LaTeX Warning: Command \v invalid in math mode on input line 160.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2}\spacefactor \accent...
+l.160 $\v x
+           _i$%
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...factor }\accent #1 #2}\spacefactor 
+                                                  \accent@spacefactor 
+l.160 $\v x
+           _i$%
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no ^^e8 in font cmex10!
+l2hSize :tex2html_wrap_inline246:8.25pt::8.25pt::10.07098pt.
+[7
+
+
+]
+l2hSize :tex2html_wrap_inline248:8.25pt::8.25pt::10.07236pt.
+[8
+
+
+]
+l2hSize :tex2html_wrap_inline252:8.83331pt::8.83331pt::8.86958pt.
+[9
+
+
+]
+l2hSize :tex2html_wrap_inline310:8.25pt::8.25pt::6.74744pt.
+[10
+
+
+]
+l2hSize :tex2html_wrap_inline312:7.75pt::0.0pt::7.10896pt.
+[11
+
+
+]
+l2hSize :tex2html_wrap_inline316:8.33331pt::0.0pt::5.80202pt.
+[12
+
+
+]
+
+LaTeX Warning: Command \v invalid in math mode on input line 203.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2}\spacefactor \accent...
+l.203 $\omega (\v x
+                   ,t=0)$%
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...factor }\accent #1 #2}\spacefactor 
+                                                  \accent@spacefactor 
+l.203 $\omega (\v x
+                   ,t=0)$%
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no ^^e8 in font cmex10!
+l2hSize :tex2html_wrap_inline318:9.5pt::9.5pt::54.75009pt.
+[13
+
+
+]
+l2hSize :tex2html_wrap_inline322:7.75pt::0.0pt::7.54993pt.
+[14
+
+
+]
+l2hSize :tex2html_wrap_inline326:7.75pt::0.0pt::14.65889pt.
+[15
+
+
+]
+l2hSize :displaymath214:26.85977pt::0.0pt::349.0pt.
+[16
+
+
+]
+l2hSize :tex2html_wrap_inline1088:7.75pt::0.0pt::9.33336pt.
+[17
+
+
+] (./images.aux) ) 
+Here is how much of TeX's memory you used:
+ 626 strings out of 10872
+ 8068 string characters out of 70739
+ 50472 words of memory out of 263001
+ 3593 multiletter control sequences out of 10000+0
+ 6376 words of font info for 23 fonts, out of 200000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 22i,5n,19p,182b,217s stack positions out of 300i,100n,500p,200000b,4000s
+
+Output written on images.dvi (17 pages, 4496 bytes).

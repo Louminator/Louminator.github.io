@@ -1,0 +1,251 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="hw4soln">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="hw4soln.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<DIV ALIGN="CENTER">
+<B>Math428: Problem Set #4 Solution Guide</B>
+</DIV>
+<P>
+<DL COMPACT>
+<DD><P>
+<DT>1.
+<DD>Derive the optimal coefficients for 3rd order Adams-Bashforth.
+
+<P>
+<DT>2.
+<DD>[KC 8.4:4] Use the method of undetermined coefficients to derive 
+the fourth-order Adams-Bashforth formula
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+x_{n+1} = x_n + \frac{h}{24}\left[24 f_n - 59 f_{n-1} + 37 f_{n-2} - 9
+f_{n-3}\right]
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="398" HEIGHT="46"
+ SRC="img1.gif"
+ ALT="\begin{displaymath}x_{n+1} = x_n + \frac{h}{24}\left[24 f_n - 59 f_{n-1} + 37 f_{n-2} - 9
+f_{n-3}\right]
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>Just set </EM><I>h</I>=1<EM>, plug in a quartic and solve the resulting linear system.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>3.
+<DD>[KC 8.4:5]
+Derive the fourth-order Adams-Moulton formula
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+x_{n+1} = x_n + \frac{h}{24}\left[9 f_{n+1} +
+19 f_n - 5 f_{n-1} + f_{n-2}\right]
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="369" HEIGHT="46"
+ SRC="img2.gif"
+ ALT="\begin{displaymath}x_{n+1} = x_n + \frac{h}{24}\left[9 f_{n+1} +
+19 f_n - 5 f_{n-1} + f_{n-2}\right]
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>Just set </EM><I>h</I>=1<EM>, plug in a quartic and solve the resulting linear system.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>4.
+<DD>Consider the ``poor man's orbital problem''
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+x' = -y, \ \ \ \ y' = x \ \ \ \ x(0) = 1, y(0) = 0.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="321" HEIGHT="33"
+ SRC="img3.gif"
+ ALT="\begin{displaymath}x' = -y, \ \ \ \ y' = x \ \ \ \ x(0) = 1, y(0) = 0.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solve the problem for 
+<!-- MATH: $0 \leq t \leq 8 \pi$ -->
+<IMG
+ WIDTH="92" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$0 \leq t \leq 8 \pi$">
+(four revolutions) with
+<IMG
+ WIDTH="80" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$h=\pi/20$">
+and <IMG
+ WIDTH="80" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$h=\pi/40$">
+using forward Euler, backward Euler, 3rd order
+Adams-Bashforth, 3rd order Adams-Bashforth-Moulton.  Use an appropriate 
+Taylor series start-up procedure.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>I implemented all four methods and plot the results below.
+</EM>
+<DIV ALIGN="CENTER">
+<!-- MATH: $\resizebox{3in}{!}{\includegraphics{fe.eps}}$ -->
+<IMG
+ WIDTH="345" HEIGHT="286" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="\resizebox{3in}{!}{\includegraphics{fe.eps}}">
+<!-- MATH: $\resizebox{3in}{!}{\includegraphics{be.eps}}$ -->
+<IMG
+ WIDTH="345" HEIGHT="281" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.gif"
+ ALT="\resizebox{3in}{!}{\includegraphics{be.eps}}">
+<P>
+<!-- MATH: $\resizebox{3in}{!}{\includegraphics{ab3.eps}}$ -->
+<IMG
+ WIDTH="345" HEIGHT="284" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="\resizebox{3in}{!}{\includegraphics{ab3.eps}}">
+<!-- MATH: $\resizebox{3in}{!}{\includegraphics{abm3.eps}}$ -->
+<IMG
+ WIDTH="346" HEIGHT="285" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.gif"
+ ALT="\resizebox{3in}{!}{\includegraphics{abm3.eps}}"></DIV>
+<P>
+<EM>Of course, the Euler methods are not as accurate as the Adams family
+methods.  More interesting is the qualitative behavior of these
+methods.  All methods orbit roughly four times.
+Notice that the forward method spirals out which is
+precisely what one would expect from the stability test via the scalar 
+test equation.  Remember that the imaginary axis for the forward Euler 
+equation is entirely in the unstable region.  The opposite is true for 
+the backward Euler method.  The imaginary axis is entirely within the
+stable region.  Ideally, a numerical method would ``hug'' the
+imaginary axis in the </EM><IMG
+ WIDTH="27" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.gif"
+ ALT="$h\lambda$"><EM> plane so reproduce oscillator
+behavior with as little decay or growth as possible.  
+</EM>
+<P>
+<EM>Looking at the lower two plots, we see that the
+Adam's family methods are much more accurate for the given step-size,
+and they have been stability properties.  Remember in class how the
+AB4 hugged the imaginary axis for small </EM><I>h</I><EM>?  This is important!  Both 
+AB3 and ABM3 have the same order of accuracy, but if you examine the
+stability diagrams ABM3 does a far
+better job of hugging the imaginary axis than AB3.  Below, I zoom in
+on the starting and ending positions of ABM3.  Where AB3 spirals
+inward slightly, ABM3 spirals outward slightly (why?).
+</EM>
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH: $\resizebox{3in}{!}{\includegraphics{abm3zoom.eps}}$ -->
+<IMG
+ WIDTH="346" HEIGHT="288" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.gif"
+ ALT="\resizebox{3in}{!}{\includegraphics{abm3zoom.eps}}"></DIV>
+
+<P>
+</DL>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2002-04-08</I>
+</ADDRESS>
+</BODY>
+</HTML>

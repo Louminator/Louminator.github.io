@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>A Greedy Cluster Merging Algorithm</TITLE>
+<META NAME="description" CONTENT="A Greedy Cluster Merging Algorithm">
+<META NAME="keywords" CONTENT="eccsvm-merge">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="eccsvm-merge.css">
+</HEAD>
+<BODY LANG="EN">
+ <A NAME="tex2html77" HREF="node7.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html75" HREF="eccsvm-merge.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html69" HREF="node5.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html78" HREF="node7.html">An Example</A>
+<B>Up:</B> <A NAME="tex2html76" HREF="eccsvm-merge.html">High Order Vortex Methods </A>
+<B> Previous:</B> <A NAME="tex2html70" HREF="node5.html">Error estimates</A>
+<BR> <P>
+<H1><A NAME="SECTION00040000000000000000">A Greedy Cluster Merging Algorithm</A></H1>
+<P>
+<A NAME="secalgorithm">&#160;</A>
+<P>
+In this section, we use the error bounds derived in this paper to design a
+merging algorithm to control the exponential growth of the problem size.
+The name of the algorithm, ``greedy cluster merging,''  is fairly
+descriptive.  One begins by clustering computational elements together into
+small subgroups based on proximity.  Such clustering can be performed in
+<I>O</I>(<I>N</I>) computations in many practical instances (see
+[<A HREF="node9.html#greengardrokhlin">6</A>] for example).  The algorithm then walks through
+each cluster seeking to find opportunities to add elements to a mergeable
+collection.  An element is added only if the merging operation induces an
+acceptable error. The element always takes adds an element to the collection
+when it can, hence the algorithm is greedy.
+<P>
+There are two ways to calculate an upper bound on the error induced by the
+merging process.  The first way is simple because it relies upon the
+restrictions placed on the numerical method itself.  That is,
+<P><P>
+Though these bounds are inherent in the method, they are not very tight.
+That is, a cluster may reside in a much smaller region of parameter space.
+Another way to apply Theorem 2 is to calculate the bounds on parameter space
+for each collection of elements.  For instance, if one were considering
+merging elements 1, 3, and 18, one would find the ,
+ etc for this list of elements directly as well as the parameters for
+the post merger element.  One could then calculate  and  from
+these values.
+These observations together with the error bounds from the previous section
+suggest the greedy cluster merging algorithm:
+<OL><LI> Create a cluster  of vortices such that
+.<LI> Set <I>n</I>=1.<LI> Set <I>m</I>=<I>n</I>+1.<LI> Create a new subset of <I>C</I> called .  Set
+<P><P>
+Note that the <I>t</I> moments are relative to the origin, not the center of
+vorticity.<LI> Calculate 
+<P><P><LI> To decide if element <I>m</I> should be added to , calculate the
+center of vorticity and bootstrap moments relative to the center of vorticity.
+<P><P>
+From this set of moments, one can determine  and  for the
+merged element using (<A HREF="node4.html#mergesoln">3.5</A>).
+If ,  and the upper bound on the merger
+error is acceptable, then element  is added
+to .  When an element is added to , the trial moments are also
+adjusted.
+<P><P><LI> Increase <I>m</I> while . Go to Step 5.<LI> If the size of  is greater than 1, remove elements of   from
+<I>C</I> and merge  into a single element.<LI> Increase <I>n</I>. Go to Step 3.
+<P>
+</OL>
+<P>
+This merging algorithm does not raise of the computational complexity beyond
+that of
+the Biot-Savart integral for the velocity
+field of the flow.  If one is using direct summation where a given element
+interacts with every other element, the distance between every pair of elements
+must be calculated, and this information can also be used to determine
+clusters of elements.  The complexity of this algorithm is  <IMG WIDTH=44 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline1438" SRC="img32.gif"  >  where
+<I>N</I> is the total number of elements.  If one is using fast multipole
+summation methods, one still must calculate pairwise velocity interactions at some
+fine scale
+[<A HREF="node9.html#draghicescu1">5</A>, <A HREF="node9.html#draghicescu2">4</A>, <A HREF="node9.html#greengardrokhlin">6</A>, <A HREF="node9.html#greengardstrain">7</A>, <A HREF="node9.html#vandommelenrundensteiner">16</A>].
+At this fine scale, computational elements are subdivided into
+groups based on proximity.  If <I>k</I> is the number of elements in each group
+at the finest scale, this requires  calculations.  The merging
+algorithm can use this information by using the fine scale groupings as
+initial <I>C</I>'s.  Searching these clusters would only require 
+calculations.
+<P>
+<HR><A NAME="tex2html77" HREF="node7.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html75" HREF="eccsvm-merge.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html69" HREF="node5.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html78" HREF="node7.html">An Example</A>
+<B>Up:</B> <A NAME="tex2html76" HREF="eccsvm-merge.html">High Order Vortex Methods </A>
+<B> Previous:</B> <A NAME="tex2html70" HREF="node5.html">Error estimates</A>
+<P><ADDRESS>
+<I>Louis F. Rossi <BR>
+Thu Nov  4 15:01:50 EST 1999</I>
+</ADDRESS>
+</BODY>
+</HTML>

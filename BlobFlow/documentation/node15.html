@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Postprocessing</TITLE>
+<META NAME="description" CONTENT="Postprocessing">
+<META NAME="keywords" CONTENT="documentation">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="documentation.css">
+<LINK REL="next" HREF="node16.html">
+<LINK REL="previous" HREF="node14.html">
+<LINK REL="up" HREF="node10.html">
+<LINK REL="next" HREF="node16.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html177"
+ HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html175"
+ HREF="node10.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html169"
+ HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html178"
+ HREF="node16.html">Credits</A>
+<B> Up:</B> <A NAME="tex2html176"
+ HREF="node10.html">Using BlobFlow</A>
+<B> Previous:</B> <A NAME="tex2html170"
+ HREF="node14.html">Running BlobFlow</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00450000000000000000">
+Postprocessing</A>
+</H1>
+
+<P>
+BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+basis functions are seldom a desirable form of output for
+interpretation or analysis.  Most graphics packages like to read data on
+some form of regular grid.  The program <TT>egrid</TT> projects 
+vortex basis functions onto a regular
+grid.  As a tool, <TT>egrid</TT> is fairly unfriendly.  It will look for a file
+called <TT>egrid.default</TT> which should have five numbers in it:
+(<I>x</I><SUB>0</SUB>,<I>y</I><SUB>0</SUB>), (<I>x</I><SUB>1</SUB>,<I>y</I><SUB>1</SUB>) and <I>n</I>, where the first coordinate pair specifies
+the lower left corner of the domain onto which you wish to project your
+data.  The second coordinate is the upper right corner, and <I>n</I> is the
+desired number of mesh points.  If it cannot find <TT>egrid.default</TT>, it
+will query the user for this information.
+
+<P>
+There are two switches for <TT>egrid</TT>.  Ordinarily, <TT>egrid</TT>
+will keep the user informed of its progress row by row.  However, if the
+<TT>-q</TT> switch is set, <TT>egrid</TT> will run silently.  The <TT>-x</TT>
+switch generates the x-antisymmetric projection of the vorticity field
+corresponding to the <TT>XANTISYMM</TT> compiler directive.  There used
+to be a separate program to perform the x-antisymmetric projection,
+but this has been deprecated.
+
+<P>
+Since users typically want to project an whole group of files onto a regular
+grid, there is a Python front end for <TT>egrid</TT> which
+presents all this information in one place, and once the user sets all the
+parameters, will repeatedly run <TT>egrid</TT>.
+
+<P>
+Another useful, but somewhat unfriendly tool, is <TT>vtx2vel</TT>.  It
+reads <TT>.vtx</TT> files and computes the induced velocity field on the
+regular grid defined by the <TT>egrid.default</TT> file.  The <TT>-x</TT>
+flag will impose x-antisymmetry for computations using the
+<TT>XANTISYMM</TT> compiler directive.
+
+<P>
+Note that one can easily hack any of these code to recover the
+vorticity or velocity field wherever one wants by rewriting the top
+level subroutines.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html177"
+ HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html175"
+ HREF="node10.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html169"
+ HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html178"
+ HREF="node16.html">Credits</A>
+<B> Up:</B> <A NAME="tex2html176"
+ HREF="node10.html">Using BlobFlow</A>
+<B> Previous:</B> <A NAME="tex2html170"
+ HREF="node14.html">Running BlobFlow</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2001-08-01</I>
+</ADDRESS>
+</BODY>
+</HTML>

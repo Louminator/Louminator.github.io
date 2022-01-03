@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>An Example</TITLE>
+<META NAME="description" CONTENT="An Example">
+<META NAME="keywords" CONTENT="eccsvm-merge">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="eccsvm-merge.css">
+</HEAD>
+<BODY LANG="EN">
+ <A NAME="tex2html87" HREF="node8.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html85" HREF="eccsvm-merge.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html79" HREF="node6.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html88" HREF="node8.html">Conclusion</A>
+<B>Up:</B> <A NAME="tex2html86" HREF="eccsvm-merge.html">High Order Vortex Methods </A>
+<B> Previous:</B> <A NAME="tex2html80" HREF="node6.html">A Greedy Cluster Merging </A>
+<BR> <P>
+<H1><A NAME="SECTION00050000000000000000">An Example</A></H1>
+<P>
+<A NAME="secexample">&#160;</A>
+<P>
+The algorithm in the previous section is implemented for the ECCSVM code
+using a fast multipole solver for the velocity field.  To implement the fast
+solver, elements are grouped together on an hierarchy of cells for the
+velocity computation.  This grouping is also used for the creation of
+clusters for the merging algorithm.  Since the computational elements are
+localized, merging events in one cell do not induce errors in other cells.
+When searching a cluster, a certain error is budgeted for all merging events
+so this total error budget is divided evenly amongst all possible merging
+events. The following simple scheme yielded consistently strong results.  If
+one were considering merging <I>n</I> elements in a cell with <I>m</I> elements, then
+the total acceptable error is is  were  is the
+maximum allowable uniform error.
+<P>
+<P><A NAME="775">&#160;</A><A NAME="figdipole1">&#160;</A><BR>
+<STRONG>Figure 5.1:</STRONG> Contour plot of advecting vortex dipole at <I>t</I>=4.0.  The
+algorithm attempts to merge redundant elements at time intervals of 0.2 so
+that this configuration has experienced the algorithm 20 times.  The maximum
+acceptable error for each pass is 0.08 though the actual error never
+exceeds a
+tenth of this value. On the left, vorticity contours (solid for positive and
+dashed for negative) are evenly
+spaced at intervals of 0.25.  On the right, the difference between the
+vorticity field before and after merging is displayed.
+The
+error contours (solid) are evenly spaced at intervals of  <IMG WIDTH=31 HEIGHT=15 ALIGN=BOTTOM ALT="tex2html_wrap_inline1378" SRC="img1.gif"  > .<BR>
+<P>
+<P>
+<P><A NAME="776">&#160;</A><A NAME="figmergeevent">&#160;</A><BR>
+<STRONG>Figure:</STRONG> The anatomy of a single merging event.  For the same snapshot at in
+Fig. (<A HREF="node7.html#figdipole1">5.1</A>), the merged elements are displayed.  Contour lines and
+computational elements are superposed on the right.  Computational elements
+are shown by X's where the length of the lines are proportional to the
+semi-major and semi-minor axes.  Negative elements are
+displayed slightly darker than positive elements.  The black elements are
+the elements that are merged.  The area in the box on the left plot is
+expanded on the right.  Notice that nearby elements tend to align with one
+another because the Reynolds number is high.<BR>
+<P>
+<P>
+The sample problem is that of a high Reynolds number dipole with viscosity
+0.01 and initial conditions
+<P><P>
+The details and numerical parameters of the simulation are discussed in more
+detail in [<A HREF="node9.html#rossi99">14</A>]. As the oppositely signed regions of vorticity
+propel the entire structure upward, vorticity is sheared along streamlines
+and diffuses across streamlines.  Vorticity leaks out the aft separatrix as
+the dipole evolves with time causing it to slow down slightly. The merging
+algorithm is applied at time intervals of 0.2 which is forty times the
+time integration step size, and the maximum allowable uniform error is
+0.08.
+<P>
+Fig. (<A HREF="node7.html#figdipole1">5.1</A>)
+illustrates the merger-induced errors at <I>t</I>=4.0 and is typical of merging
+events in an ECCSVM simulation.  In this sample, there were 660 merging
+events.  In this figure, one can
+see that there are a small number of merging events that induce a large error.
+Though most merging events involve combining pairs of elements, sometimes
+larger numbers of elements are combined into a single element, and it is the
+merging events involving large collections of elements that induce the
+larger errors.
+In this example, roughly 97.7% of the merging events are pairs, and 2.0% are
+triples.  The remaining 0.3% are four-way merging events.  The overall
+average of the 8485 merging events from <I>t</I>=0.0 to <I>t</I>=4.0 is 
+95.8% pairs, 3.6% triples, 0.5% four-way groupings and so on.
+Since the algorithm is greedy, the ordering of the
+computational elements may dictate which events happen first.  It is
+possible for there to be a large number of relatively non-disruptive merging
+events, or a few major merging events depending upon which opportunities the
+algorithm encounters first.
+<P>
+Fig. (<A HREF="node7.html#figmergeevent">5.2</A>) examines one of these four-way merging events.
+As the algorithm steps through the cluster, it selects elements based on
+whether or the post-merger element will yield an acceptable error.  The
+merging
+process for the example shown in Fig. (<A HREF="node7.html#figmergeevent">5.2</A>) is tabulated below. <BR> 
+<P><P> <BR> 
+The first element in the list induces no error because no merging is
+required to replace one element with itself.  As consecutive elements are
+added, the relative and absolute error grows.  Also, the post-merger element
+grows longer and wider for this example.
+<P>
+<P><A NAME="681">&#160;</A><BR>
+<STRONG>Figure 5.3:</STRONG> Growth of the problem size with time for the dipole example.  In
+this figure, we see that the merging algorithm effectively controls the
+otherwise exponential growth of the problem size for ECCSVM.  Three examples
+are shown.  The first measurements are for ECCSVM without merging where the
+problem size grows exponentially.  The program halted when <I>N</I> grew to be
+too large. The second set of measurements are with a low uniform merging
+error of 0.08 both before and after merging.  Again, this bound is used
+every time the merging scheme is applied at intervals of 0.2. The third data
+set is with a high uniform merging error of 0.16.  Since the third curve
+produces merging errors that are roughly half as large, the problem size is
+larger though it still exhibits the same trend.  After some transient
+effects, the problem size behavior stabilizes
+and grows quadratically with time.<BR>
+<P>
+As the problem evolves over a long period of time, one would not expect to
+see the problem size stabilize.  Indeed, the support of the vorticity grows
+with time through the action of viscous diffusion.  For a simple example
+such as a vortex monopole, the support of the vorticity field grows linearly
+with time.  For other more complex flows, the support of the vorticity may
+grow more quickly through enhanced diffusion [<A HREF="node9.html#rhinesyoung">11</A>].
+Regardless, one would expect the problem size in a naturally adaptive method
+such as ECCSVM to grow with time <EM>even with a perfectly efficient
+merging scheme</EM> because the support of the vorticity field is growing.
+Without a merging algorithm, the problem size of ECCSVM grows exponentially.
+With merging, the problem size is constrained though the actual growth rate
+will depend upon the particular fluid flow.
+<P>
+<HR><A NAME="tex2html87" HREF="node8.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html85" HREF="eccsvm-merge.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html79" HREF="node6.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html88" HREF="node8.html">Conclusion</A>
+<B>Up:</B> <A NAME="tex2html86" HREF="eccsvm-merge.html">High Order Vortex Methods </A>
+<B> Previous:</B> <A NAME="tex2html80" HREF="node6.html">A Greedy Cluster Merging </A>
+<P><ADDRESS>
+<I>Louis F. Rossi <BR>
+Thu Nov  4 15:01:50 EST 1999</I>
+</ADDRESS>
+</BODY>
+</HTML>

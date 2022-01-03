@@ -1,0 +1,405 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="solnguide2">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="solnguide2.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html5"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html6"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<DIV ALIGN="CENTER">
+<FONT SIZE="+2"><B>Problem set #2
+</B></FONT></DIV>
+<P>
+The following problems require you to compute least squares fits and
+linear interpolants.  Many software packages will perform basic
+operations for you.  Maple and Matlab are examples, but even simple
+plotting packages often have ``linear regression'' subroutines that
+will find the best fit for you.
+
+<P>
+<DL COMPACT>
+<DD><P>
+<DT>1.
+<DD>Download <EM>dataset A</EM> from the course web site.  Find an
+interpolating polynomial through this dataset, and record the
+coefficients.
+Find the
+best fit of this data for linear, quadratic, cubic, fourth and fifth
+order polynomials and record the root mean squared errors.  Assuming
+the data came from a systematic source, <I>f</I>(<I>x</I>), with random noise added,
+speculate the form of the underlying system.  Justify your answer.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="fig.prob1">&#160;</A><A NAME="27">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>Figure 1:</STRONG>
+Best fig polynomials and RMS errors for dataset A.  The
+interpolating polynomial is the fifth order best fit because there are
+only six data points.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: $\resizebox{3in}{!}{\includegraphics{prob1.eps}}$ -->
+<IMG
+ WIDTH="382" HEIGHT="274" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="\resizebox{3in}{!}{\includegraphics{prob1.eps}}"></DIV></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+<EM>The solutions are shown in Figure <A HREF="solnguide2.html#fig.prob1">1</A>.  Notice that the
+cubic, quartic and quintic polynomials all perform reasonably well.
+The quadratic and linear look noticeably bad, and there is a rapid
+plunge in the RMS errors when going from quadratic to cubic.  Of
+course, if </EM><I>f</I>(<I>x</I>)<EM> were cubic, the quartic and quintic fits would look
+good too.  Thus, one suspects that the </EM><I>f</I>(<I>x</I>)<EM> might be cubic and that
+subsequent improvement might be because one is fitting the curve to
+the noise.  These are the hazards of having a small sample.
+Investigators who fall into this trap tend to find that they can
+always fit their model to the data.</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>2.
+<DD>Download <EM>dataset B</EM> from the course web site.  This is a
+second set of measurements from the same source.  Find an
+interpolating polynomial through these points and compare with the
+interpolating polynomial from <EM>dataset A</EM>. Are the interpolants
+consistent in any way?
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="fig.prob2">&#160;</A><A NAME="35">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>Figure 2:</STRONG>
+These are the interpolating polynomials for dataset A
+compared to dataset B.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: $\resizebox{3in}{!}{\includegraphics{prob2.eps}}$ -->
+<IMG
+ WIDTH="417" HEIGHT="297" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="\resizebox{3in}{!}{\includegraphics{prob2.eps}}"></DIV></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+<EM>In Figure <A HREF="solnguide2.html#fig.prob2">2</A>, we see that they are not very close though several
+students noticed that the max's and min's occur at similar points.
+Thus, we see the interpolation can be rather erratic, especially with
+a paucity of data.  Notice too that the ``bad'' behavior occurs where
+the gaps in the data is greatest.</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>3.
+<DD>Download <EM>dataset C</EM> from the course web site.  This is a
+third set of measurements from the same source.  Find the
+best fit of this data for linear, quadratic, cubic, fourth and fifth
+order polynomials and record the root mean squared errors.  Based
+solely on the information from this third dataset, speculate on the
+form of the underlying system.  Compare
+these results with those from <EM>dataset A</EM>.  Justify
+your answer.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="fig.prob3">&#160;</A><A NAME="43">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>Figure 3:</STRONG>
+Best fit polynomials for dataset C.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: $\resizebox{3in}{!}{\includegraphics{prob3.eps}}$ -->
+<IMG
+ WIDTH="418" HEIGHT="297" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.gif"
+ ALT="\resizebox{3in}{!}{\includegraphics{prob3.eps}}"></DIV></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+<P>
+<EM>In Figure <A HREF="solnguide2.html#fig.prob3">3</A>, we see that we have a large sample.  When
+examining the RMS errors, we find that there is a drop between
+quadratic and cubic.  The steady RMS errors beyond this point can be
+attributed to the noise.  If we use very high order polynomials so
+that the number of coefficients was close to the sample size, we
+would find that we would start fitting the curve to the noise again.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>4.
+<DD>Assuming that both datasets came from the same source, what is
+your best guess of the underlying system, <I>f</I>(<I>x</I>)?  Justify your
+answer.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>The information from questions #1 and 3 all point to cubic form.  I
+wrote the problem, so my opinion is irrelevant.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>5.
+<DD>The following is a true story.  My neighbor, Mrs. X [not her
+real name, of course], approached me for some help in a lawsuit
+which she had brought against her former employers.  She had
+suffered serious health problems and attributed them to a faulty
+furnace at her former place of employment. The furnace had cracked and was
+leaking carbon monoxide (CO) into the building.  Continual exposure to
+carbon monoxide can cause a wide variety of health problems.  An
+environmental consulting firm hired by the defendants measured the
+extent of the leak in the following way.  They turned off the furnace
+and allowed the building to vent for many hours.  
+<BR>
+<DIV ALIGN="CENTER"><A NAME="59">&#160;</A>
+<TABLE>
+<CAPTION><STRONG>Table 1:</STRONG>
+Tables of first 
+(left) and second (right) carbon monoxide measurements.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="350" HEIGHT="258" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\textstyle \parbox{3in}{\begin{tabular}{\vert l\vert l\vert}
+\hline Time (min) ...
+...line
+60 & 19.1 \\ \hline
+70 & 19.8 \\ \hline
+80 & 20.5 \\ \hline
+\end{tabular}}$">
+<IMG
+ WIDTH="350" HEIGHT="235" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\textstyle \parbox{3in}{\begin{tabular}{\vert l\vert l\vert}
+\hline Time (min) ...
+...line
+50 & 21.9 \\ \hline
+60 & 22.2 \\ \hline
+70 & 22.3 \\ \hline
+\end{tabular}}$"></DIV></TD></TR>
+</TABLE>
+</DIV>
+<BR>
+Then, they turned on
+the furnace and measured the carbon monoxide levels at a duct to a
+common area at regular time intervals (see Table 1). 
+After this test, they turned off the furnace, waited a few hours, and
+ran a second test (see Table 1 again).  I ask you the same
+questions that my neighbor asked me at the time.
+<UL>
+<P>
+<LI>The second set of data appears to be very different from the
+first which would imply that there is some nonsystematic behavior in
+the furnace.  Do the two data sets reflect the same physical phenomena
+or not?
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+em
+Yes, they do represent the same phenomenon.  If you translate the
+second curve by plotting <I>f</I>(<I>x</I>+<I>x</I><SUB>0</SUB>) and choose <I>x</I><SUB>0</SUB> properly, the
+almost lie on top of one another.  Many students noticed this and
+speculated that the environmental firm has not allowed enough time for
+excess CO<SUB>2</SUB> to dissipate from the first test.  I share this view. 
+
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<LI>The CO levels are increasing in all measurements.  The
+environmental firm
+claims that they stopped measuring CO levels because they would not
+have increased substantially more.  (How would they know if they
+stopped measuring???)  Was the environmental firm correct when the
+stopped taking measurements?  If not, how high would the CO levels
+eventually go?
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>This question is a bit of a red herring because it asks you to
+speculate on an extrapolation.  Without any knowledge of the
+underlying physics, it is hard to say anything about what will happen
+in the future.  The curve might level off for a while and then shoot
+up.  (This is what happens with white cell counts in AIDS/HIV patients for
+example.)
+</EM>
+<P>
+<EM>Many students attempted to fit polynomials to the data, and correctly
+observed that the polynomials would not be useful for extrapolation.
+Remember that using best fits does not necessarily mean that
+polynomials should be used.  The family of functions used will heavily
+influence what you see.  Polynomials all blow up for large time, so
+this is what you will see if you try to fit a polynomial to this
+data.  No one attempted to fit nonpolynomial curves.  For instance,
+one could use a family like
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\{1,e^{-x},e^{-2x},...,e^{-nx}\}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="179" HEIGHT="33"
+ SRC="img6.gif"
+ ALT="\begin{displaymath}\{1,e^{-x},e^{-2x},...,e^{-nx}\}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+The exponentials decay at infinity and might give one better insight
+into the asymptotic behavior.  My choice to decay rates was arbitrary,
+and one could fiddle with these to produce a strong fit.
+</EM>
+<P>
+<EM>Clearly, the firm has some field
+experience doing these measurements, but by the same token, they
+represent the defendant so there is no incentive for them to make more
+measurements.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+</UL>
+<P>
+In addition, I ask you the following question:  Assuming the employer
+repaired the furnace after the tests so that no further measurements
+were possible, what additional information would you want or need to have to
+confidently answer the questions above?
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>The whole point behind modeling is to gain some understanding of the
+problem and quantify it.  In this case, one would learn something
+about diffusion in a duct and perhaps furnaces and see if one could
+build a general solution.  Then, one would try to determine any
+unknown coefficients by fitting this solution to the known data.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+</DL>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html7"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html5"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html6"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2001-10-17</I>
+</ADDRESS>
+</BODY>
+</HTML>

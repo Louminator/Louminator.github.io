@@ -1,0 +1,25 @@
+x = 0:0.01:0.99;
+T = 0:0.005:2;
+u0 = zeros(1,length(x));
+u0(25:50) = 1;
+plot(x,u0);
+u = upwind(x,T,1,u0);
+Warning: Column wins diagonal conflict.
+> In /usr/local/matlab6p1/toolbox/matlab/elmat/toeplitz.m at line 18
+  In /home/rossi/courses/2002_fall/Math612/upwind.m (upwind1) at line 13
+  In /home/rossi/courses/2002_fall/Math612/upwind.m at line 5
+fschange('/home/rossi/courses/2002_fall/Math612/upwind.m');
+clear upwind
+u = upwind(x,T,1,u0);
+plot(x,u(1,:));
+plot(x,u(1,:),x,u(2,:));
+plot(x,u(1,:),x,u(100,:));
+plot(x,u(1,:),x,u(200,:));
+plot(x,u(1,:),x,u(200,:),x,u(400,:));
+u = upwind(x,T,-1,u0);
+plot(x,u(1,:),x,u(2,:));
+plot(x,u(1,:),x,u(10,:));
+u = cenwind(x,T,1,u0);
+plot(x,u(1,:),x,u(2,:));
+plot(x,u(1,:),x,u(10,:));
+diary

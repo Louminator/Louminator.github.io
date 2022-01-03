@@ -1,0 +1,60 @@
+# LaTeX2HTML 96.1 (Feb 5, 1996)
+# Associate sections original text with physical files.
+
+$key = q/0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/;
+$section_info{$key} = '0%:%eccsvm.html%:%High Order Vortex Methods with Deforming Elliptical Gaussian Blobs 1: Derivation and Validation ' unless ($section_info{$key}); 
+$done{"eccsvm.html"} = 1;
+$key = q/0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/;
+$section_info{$key} = '3%:%node1.html%:%Introduction' unless ($section_info{$key}); 
+$done{"node1.html"} = 1;
+$key = q/0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/;
+$section_info{$key} = '3%:%node2.html%:%Natural Adaptivity and the Need for Refinement and Merging' unless ($section_info{$key}); 
+$done{"node2.html"} = 1;
+$key = q/0 0 0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/;
+$section_info{$key} = '3%:%node3.html%:%The Vortex Method' unless ($section_info{$key}); 
+$done{"node3.html"} = 1;
+$key = q/0 0 0 3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/;
+$section_info{$key} = '4%:%node4.html%:%The Continuous Formulation of Convergence' unless ($section_info{$key}); 
+$done{"node4.html"} = 1;
+$key = q/0 0 0 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/;
+$section_info{$key} = '3%:%node9.html%:%Adaptive Refinement (Splitting Elements)' unless ($section_info{$key}); 
+$done{"node9.html"} = 1;
+$key = q/0 0 0 3 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/;
+$section_info{$key} = '4%:%node5.html%:%The Evolution of Elliptical Gaussians' unless ($section_info{$key}); 
+$done{"node5.html"} = 1;
+$key = q/0 0 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/;
+$section_info{$key} = '3%:%node10.html%:%Sample Calculations' unless ($section_info{$key}); 
+$done{"node10.html"} = 1;
+$key = q/0 0 0 3 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/;
+$section_info{$key} = '4%:%node6.html%:%The High Spatial Order Residual' unless ($section_info{$key}); 
+$done{"node6.html"} = 1;
+$key = q/0 0 0 5 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/;
+$section_info{$key} = '4%:%node11.html%:%A Simple Spreading Gaussian as a Diagnostic' unless ($section_info{$key}); 
+$done{"node11.html"} = 1;
+$key = q/0 0 0 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/;
+$section_info{$key} = '3%:%node13.html%:%Concluding Remarks' unless ($section_info{$key}); 
+$done{"node13.html"} = 1;
+$key = q/0 0 0 3 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/;
+$section_info{$key} = '4%:%node7.html%:%Integral Invariants' unless ($section_info{$key}); 
+$done{"node7.html"} = 1;
+$key = q/0 0 0 5 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/;
+$section_info{$key} = '4%:%node12.html%:%High Reynolds Number Vortex Dipole Evolution' unless ($section_info{$key}); 
+$done{"node12.html"} = 1;
+$key = q/0 0 0 7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/;
+$section_info{$key} = '3%:%node14.html%:%Acknowledgments' unless ($section_info{$key}); 
+$done{"node14.html"} = 1;
+$key = q/0 0 0 3 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/;
+$section_info{$key} = '4%:%node8.html%:%Asymptotic Calculation of Velocity and Velocity Derivatives.' unless ($section_info{$key}); 
+$done{"node8.html"} = 1;
+$key = q/0 0 0 8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/;
+$section_info{$key} = '3%:%node15.html%:%Derivation of Elliptical Gaussian Basis Function Dynamics' unless ($section_info{$key}); 
+$done{"node15.html"} = 1;
+$key = q/0 0 0 9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/;
+$section_info{$key} = '3%:%node16.html%:%References' unless ($section_info{$key}); 
+$done{"node16.html"} = 1;
+$key = q/0 0 0 10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0/;
+$section_info{$key} = '3%:%node17.html%:%  About this document ... ' unless ($section_info{$key}); 
+$done{"node17.html"} = 1;
+
+1;
+

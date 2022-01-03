@@ -1,0 +1,57 @@
+{VERSION 4 0 "SUN SPARC SOLARIS" "4.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Heading
+ 1" 0 3 1 {CSTYLE "" -1 -1 "" 1 18 0 0 0 0 0 1 0 0 0 0 0 0 0 0 }1 0 0 
+0 8 4 0 0 0 0 0 0 -1 0 }{PSTYLE "Title" 0 18 1 {CSTYLE "" -1 -1 "" 1 
+18 0 0 0 0 0 1 1 0 0 0 0 0 0 0 }3 0 0 -1 12 12 0 0 0 0 0 0 19 0 }
+{PSTYLE "Author" 0 19 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 }3 0 0 -1 8 8 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 18 "" 0 "" {TEXT -1 47 "A very simple example of \+
+least squares fitting." }}{PARA 19 "" 0 "" {TEXT -1 70 "L. F. Rossi\nD
+epartment of Mathematical Sciences\nUniversity of Delaware" }}}{PARA 
+0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 59 "We will use bot
+h the LinearAlgebra and the plots libraries." }}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 33 "with(LinearAlgebra): with(plots):" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 20 "Let's get some data." }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 21 "x := <1,2.5,4,6,7.5>;" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 20 "y:= <1.5,1,3,4,4.5>;" }}}{PARA 0 "" 0 "" 
+{TEXT -1 69 "When plotting raw data, be sure to use the PLOT function.
+.. not plot." }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "PLOT(POINTS(
+seq([x[i],y[i]],i=1..5)));" }}}{SECT 1 {PARA 3 "" 0 "" {TEXT -1 12 "Li
+near fits." }}{EXCHG {PARA 0 "" 0 "" {TEXT -1 77 "Now, to perform the \+
+least squares fit, we need to do some quick calculations." }}{PARA 0 "
+" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 83 "We are going to bu
+ild the appropriate matrix and solve the system for a linear fit." }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "f := (i,j) -> x[i]^(j-1);" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "A := Matrix(5,2,f);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "Transpose(A).A;" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "Transpose(A).y;" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 50 "c:=MatrixInverse(Transpose(A).A).(Transpose
+(A).y);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "plot(c[1]+c[2]*s
+,s=0..8);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 96 "grA := PLOT(PO
+INTS(seq([x[i],y[i]],i=1..5))):\ngrB := plot(c[1]+c[2]*s,s=0..8):\ndis
+play(grA,grB);" }}}}{SECT 1 {PARA 3 "" 0 "" {TEXT -1 15 "Quadratic fit
+s." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 19 "A := Matrix(5,3,f);" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 15 "Transpose(A).A;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 15 "Transpose(A).y;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 52 "c := MatrixInverse(Transpose(A).A).(Transpose(A).y);
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "plot(c[1]+c[2]*s+c[3]*s
+^2,s=0..8);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 105 "grA := PLOT
+(POINTS(seq([x[i],y[i]],i=1..5))):\ngrB := plot(c[1]+c[2]*s+c[3]*s^2,s
+=0..8):\ndisplay(grA,grB);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 0 "" 
+}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{SECT 1 {PARA 3 "" 0 "" {TEXT -1 
+13 "Quartic fits." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 19 "A := Matrix(5,5,f);" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 15 "Transpose(A).A;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 15 "Transpose(A).y;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 50 "c:=MatrixInverse(Transpose(A).A).(Transpose(A).y);" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "plot(c[1]+c[2]*s+c[3]*s^2+
+c[4]*s^3+c[5]*s^4,s=0..8);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+123 "grA := PLOT(POINTS(seq([x[i],y[i]],i=1..5))):\ngrB := plot(c[1]+c
+[2]*s+c[3]*s^2+c[4]*s^3+c[5]*s^4,s=0..8):\ndisplay(grA,grB);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{PARA 0 "" 0 "" {TEXT 
+-1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}}{MARK "12" 0 }{VIEWOPTS 1 
+1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

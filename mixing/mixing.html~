@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>A toy demonstration of inviscid mixing.</title>
+                                                              
+  <meta name="author" content="L. F. Rossi">
+</head>
+  <body text="#000000" bgcolor="#33ccff" link="#000099" vlink="#990099"
+ alink="#000099">
+           
+<div align="center">      
+<h1 align="left">An inviscid mixing toy.</h1>
+           
+<div align="left">L. F. Rossi<br>
+         Department of Mathematical Sciences<br>
+         University of Delaware<br>
+      <br>
+           
+<hr width="100%" size="2">      
+<h3>Welcome!  Come on in and play!</h3>
+         You do not have to know about mathematics or fluid dynamics to have
+  some   fun with fluids.  I wrote a more primitive applet a long time ago
+ to  demonstrate  inviscid mixing in a simple rotating fluid.  Many enjoyed
+ playing with it,  and I promised to refine the project one day.  Well, that
+ was many years ago.  This year, I spent a few hours updating the code and
+ adding more educational  features to it.  I hope you enjoy it.<br>
+           
+<hr><applet code="differential.class" width="500" height="500"><param
+ name="NPARTICLES" value="2000"><param name="POLYN" value="8"></applet>  
+   
+<hr width="100%" size="2">      
+<h3>What you need.</h3>
+         This applet requires a <b>Java 2</b> plugin.  Most browsers will 
+offer     to grab one for you if you do not have one already.<br>
+      <br>
+           
+<hr width="100%" size="2">      
+<h3>What is here:</h3>
+         In the applet below, you can see two small square windows and some 
+ sliders.     <br>
+      <br>
+           
+<ul>
+        <li><b>Some fluid:</b>  The window in the upper right contains the
+ fluid.    Actually, only the fluid in the circle can move.  You cannot see
+ the fluid,   but it's there within the circle.  The only way to visualize
+ the fluid is   to put markers in it.  You can do this by moving the mouse
+ into the circle   and clicking and dragging.  If you use the left button,
+ you add black markers.    If you use the right button, you will add blue
+markers.  If you have a center  button or wheel, you can use it to add red
+markers.  This is similar to having  a glass of water and adding some dye
+to it.  There are only a limited number  of markers available, so if you
+use them all, the applet will take away the  oldest ones to make room for
+new ones.</li>
+        <li><b>Stirring controls:</b>  To the right of the fluid, there are 
+ some   stirring controls.  The <b>stir/stop toggle button</b> allows the 
+fluid to  move.  The fluid moves in concentric circles about the center, but
+the rotation  rate may vary as a function of radius (see <b>angular velocity 
+control</b>   below).  In other words, every marker moves in a circular path, 
+and the  rate of rotation varies with distance from the center.  Press it 
+again to  freeze the fluid in place.  The <b> refresh interval slider</b> 
+controls the speed of the animation.  Lower the interval to speed up the animation.
+ Your top speed will depend upon your computer hardware.  The     <b>clear
+button</b>   removes all the markers.  The     <b>reverse button</b> negates
+the angular  velocity curve so that the flow will start running in the reverse
+direction.<br>
+        </li>
+        <li><b>Angular velocity control:</b> The lower left window is a graph 
+  of  the <b>angular velocity</b> of the fluid while it is stirred.  This 
+is  the  time rate of change of the angle made by a particle as a function 
+of  distance  from the center.  For instance, if the angular velocity curve 
+were  flat, the angular velocity would be uniform across the fluid.  The means
+that no matter where a particle sits, the period of its orbit stays the same.
+ The angular velocity curve can be adjusted by moving the parameter settings.
+  Each <b> parameter slider</b> corresponds to the position of one of the
+interpolation  points on the curve marker with a red dot.  Parameter 1 corresponds
+to the  leftmost dot.  Parameter 2 corresponds to the next dot to the right
+and so  forth.</li>
+           
+</ul>
+      <br>
+      </div>
+      <br>
+      </div>
+           
+<hr size="2">      
+<h3>What to do:</h3>
+       I wrote this applet to demonstrate inviscid mixing, but you can do 
+whatever    you want with it.  Here are some ideas.<br>
+           
+<ul>
+        <li>Put some markers in the fluid.  You can draw, paint or scribble.
+   Now,  set the fluid into motion by pressing stir.  If you let it go awhile, 
+  you  will find that you no longer recognize the original pattern of marker 
+  particles.  One might say that your particles are well-mixed.  Now, if you
+  punch the reverse button, you will see mixed up markers reassemble themselves
+  into the original pattern.</li>
+        <li>Now, play with the velocity field profile.  In particular, if 
+you   experiment  a bit, you will find that mixing is related to the derivative 
+  (the local slope of the curve) of the velocity profile.  For instance, if
+  you make a flat line, you will see no mixing at all.  If you curve flat 
+for  some radii and curvy in other areas, you will see that mixing only occurs 
+  in the bands where the curve is not flat.</li>
+           
+</ul>
+           
+<div align="left">      
+<hr width="100%" size="2" align="left">      
+<h3>For curious science geeks:</h3>
+      It's hard to mix without diffusion, so you might argue that no mixing 
+ goes  on here. &nbsp;In fact, if you reverse any flow field in these experiments,
+   you can reverse the mixing effect. &nbsp;This goes contrary to anyone
+who    has every stirred cream into their coffee. &nbsp;There are two important
+  mixing processes that are relevant to this discussion.<br>
+           
+<ul>
+        <li>Lagrangian mixing: &nbsp;This is the process shown in the applet. 
+  &nbsp;Essentially, big patches can be stretched and deformed, much like 
+a  taffy puller, so that marked and unmarked fluid become intermingled.</li>
+        <li>Molecular diffusion: &nbsp;This is an irreversible process where
+  molecules  of the passive marker (think of food coloring for instance)
+diffuse   among  the molecules of the bulk fluid. &nbsp;The ratio of the
+fluid forces   to diffusive  forces is known as the Pecl&egrave;t number.
+&nbsp;The larger   the number,  the lower the tendency for the fluid to diffuse.
+&nbsp; In this  applet, I  did not implement any molecular diffusion, and
+so the Pecl&egrave;t   number   is infinite.</li>
+           
+</ul>
+      Inviscid mixing greatly enhances molecular diffusion. &nbsp;Diffusion 
+ works  well over very short distances but terribly over moderate distances. 
+ &nbsp;Effective  inviscid mixing can intermingle the passive quantity among 
+ the bulk fluid  so that the distances are very small. &nbsp;Then, molecular 
+ diffusion can  act quickly to mix the two together. &nbsp;This is why it 
+is not enough to  simply add cream to coffee... it must be stirred if you 
+hope to enjoy it right away.<br>
+           
+<hr width="100%" size="2" align="left">      
+<h3>For curious computer geeks:</h3>
+      Feel free to take this applet, play with it, modify it and use it on
+ your   own web site. &nbsp;It's not pretty. &nbsp;I just coded it up for
+fun. &nbsp;If   you do take it, you must abide by the terms of the GNU Public
+License. &nbsp;(Essentially,   this means you need to keep the code open.)
+&nbsp;The applet accepts two  parameters. &nbsp;One is NPARTICLES that places
+an upper limit on total number  of markers that can be released into the
+fluid. &nbsp;The second parameter  is POLYN which sets the order of the polynomial
+used for the velocity profile.  &nbsp;I use a Lagrange polynomial interpolant
+on a uniform mesh for the radial  velocity profile, so POLYN is the total
+number of interpolation points.<br>
+      </div>
+      <br>
+      <a href="differential.java">The source.</a> <br>
+      <br>
+           
+<hr width="100%" size="2" align="left">      
+<address><a href="mailto:rossi@math.udel.edu"><img
+ src="file:///home/math/rossi/public_html/vortex2.gif" name="Graphic11"
+ border="0" height="100" width="63" align="bottom">
+     rossi@math.udel.edu</a> <br>
+      </address>
+      <br>
+      <br>
+      <br>
+     <br>
+     <br>
+   
+</body>
+</html>

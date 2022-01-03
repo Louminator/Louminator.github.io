@@ -1,0 +1,574 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="exam1soln">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="exam1soln.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+Name: <B>Solution Guide</B>Math 241: Calculus &amp; Analytic Geometry A
+<BR>
+ <B>Exam 1</B> <BR>
+4 October 2002 <BR>
+
+<P>
+<BR>
+<BR>
+<BR>
+
+<P>
+<EM>Always the beautiful answer who asks a more beautiful question.</EM> <BR>
+-E. E. Cummings
+
+<P>
+<BR>
+<BR>
+<BR>
+
+<P>
+Instructions: <B>Show all work to receive full or partial credit.</B>
+All University rules and guidelines for
+student conduct are applicable.
+
+<P>
+<DL COMPACT>
+<DD><P>
+<DT>1.
+<DD>[20 pts] 
+Find the equation of the hyperbola that passes through the points (-1,0) and (1,0), and has asymptotes of <I>y</I>=2<I>x</I> and <I>y</I>=-2<I>x</I>, as shown.
+<DIV ALIGN="CENTER">
+
+<!-- MATH: $\resizebox{3in}{!}{\includegraphics{hyperbola.eps}}$ -->
+<IMG
+ WIDTH="342" HEIGHT="344" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="\resizebox{3in}{!}{\includegraphics{hyperbola.eps}}"></DIV>
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>The standard form for a hyperbola with this orientation is
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="97" HEIGHT="55"
+ SRC="img2.gif"
+ ALT="\begin{displaymath}\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+and we simply need to find </EM><I>a</I><EM> and </EM><I>b</I><EM>.  Since it passes through
+</EM>(-1,0)<EM> and </EM>(1,0)<EM>, we see that </EM><I>a</I>=1<EM>.  The slopes of the asymptotes 
+will be </EM>
+<!-- MATH: $\pm \frac{b}{a}$ -->
+<IMG
+ WIDTH="29" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\pm \frac{b}{a}$"><EM>.  Therefore, we need </EM><I>b</I>=2<EM> to match the
+diagram, so that the equation is
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+x^2 - \frac{y^2}{4} = 1,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="95" HEIGHT="55"
+ SRC="img4.gif"
+ ALT="\begin{displaymath}x^2 - \frac{y^2}{4} = 1,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+
+<P>
+
+<P>
+<DT>2.
+<DD>[20 pts] For what value of <I>c</I> is <I>f</I>(<I>x</I>) 
+continuous on the whole real line? Why?
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+f(x) = \begin{cases}
+\frac{\sin(2x)}{x} & x<0 \\
+x + c & x \geq 0
+\end{cases}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="175" HEIGHT="69"
+ SRC="img5.gif"
+ ALT="\begin{displaymath}f(x) = \begin{cases}
+\frac{\sin(2x)}{x} & x<0 \\
+x + c & x \geq 0
+\end{cases}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>For a function to be continuous at a point </EM><I>x</I>=<I>a</I><EM>:
+</EM><UL>
+<LI><I>f</I>(<I>a</I>) must exist.
+<LI>
+<!-- MATH: $\lim_{x \rightarrow a} f(x)$ -->
+<IMG
+ WIDTH="95" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\lim_{x \rightarrow a} f(x)$">
+must exist.  This means you must
+check the limit from each side in cases like <I>x</I>=0.
+<LI>The limit and the value of the function must be the same.
+</UL>
+<P>
+<EM>We see that the function is defined to be the ratio of a sine function 
+and a polynomial on the left.  Since there are no singularities on the 
+left because </EM><I>x</I>=0<EM> is not in the domain, the function is continuous on 
+</EM>
+<!-- MATH: $(-\infty,0)$ -->
+<IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$(-\infty,0)$"><EM>.  Similarly, polynomials are continuous so the </EM><I>f</I>(<I>x</I>)<EM> is 
+also continuous on </EM>
+<!-- MATH: $(0,\infty)$ -->
+<IMG
+ WIDTH="52" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$(0,\infty)$"><EM>.  We just need to see what happens at
+</EM><I>x</I>=0<EM> where the two domains meet.
+</EM>
+<P>
+<EM>We see that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+f(0) = c,
+\end{displaymath} -->
+
+
+<I>f</I>(0) = <I>c</I>,
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+and that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\lim_{x\rightarrow0^+} f(x) = c.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="110" HEIGHT="51"
+ SRC="img10.gif"
+ ALT="\begin{displaymath}\lim_{x\rightarrow0^+} f(x) = c.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<EM>On the left, we find that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\lim_{x\rightarrow0^-} \frac{\sin(2x)}{x} =
+\lim_{x\rightarrow0^-} \frac{2\sin(x)\cos x}{x} =
+\lim_{x\rightarrow0^-} 2 \cos x \cdot
+\lim_{x\rightarrow0^-} \frac{\sin(x)}{x} = 2.
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="512" HEIGHT="46"
+ SRC="img11.gif"
+ ALT="\begin{displaymath}\lim_{x\rightarrow0^-} \frac{\sin(2x)}{x} =
+\lim_{x\rightarro...
+... 2 \cos x \cdot
+\lim_{x\rightarrow0^-} \frac{\sin(x)}{x} = 2.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Note: You can only break up products like this when you know that both 
+limits exist.
+</EM>
+<P>
+<EM>Thus, for </EM><I>f</I>(<I>x</I>)<EM> to be continuous, </EM><I>c</I>=2<EM>.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>3.
+<DD>[20 pts] Determine an equation for the line tangent to the
+curve
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+f(x) = x^2 + \sin x
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="130" HEIGHT="41"
+ SRC="img12.gif"
+ ALT="\begin{displaymath}f(x) = x^2 + \sin x
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+at 
+<!-- MATH: $x=\frac{\pi}{3}$ -->
+<IMG
+ WIDTH="50" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$x=\frac{\pi}{3}$">.
+Simplify your solution as much as possible.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>Anticipating that we are going to use point-slope form for the tangent 
+line, we need a point on the curve.  Only </EM>
+<!-- MATH: $x=\frac{\pi}{3}$ -->
+<IMG
+ WIDTH="50" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$x=\frac{\pi}{3}$"><EM> is given,
+we must find
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+f\left(\frac{\pi}{3}\right) =
+\frac{\pi^2}{9} + \sin\left(\frac{\pi}{3}\right) =
+\frac{\pi^2}{9} + \frac{\sqrt{3}}{2} =
+\frac{2 \pi^2 + 9 \sqrt{3}}{18}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="379" HEIGHT="57"
+ SRC="img14.gif"
+ ALT="\begin{displaymath}f\left(\frac{\pi}{3}\right) =
+\frac{\pi^2}{9} + \sin\left(\fr...
+...^2}{9} + \frac{\sqrt{3}}{2} =
+\frac{2 \pi^2 + 9 \sqrt{3}}{18}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<EM>Now that we have a point on the curve, we must find its slope 
+</EM>
+<!-- MATH: $m=f'\left(\frac{\pi}{3}\right)$ -->
+<IMG
+ WIDTH="89" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$m=f'\left(\frac{\pi}{3}\right)$"><EM>.
+<BR>
+<IMG
+ WIDTH="361" HEIGHT="64" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.gif"
+ ALT="\begin{gather}f'(x) = 2x + \cos(x) \\
+m = \frac{2 \pi}{3} + \frac{1}{2} = \frac{4 \pi + 3}{6}
+\end{gather}">
+<BR></EM>
+<P>
+<EM>Now, we have all the information that we need.  An equation for the
+tangent line would be
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left(y - \frac{2 \pi^2 + 9 \sqrt{3}}{18}\right) =
+\frac{4 \pi + 3}{6}
+\left(x- \frac{\pi}{3} \right).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="290" HEIGHT="69"
+ SRC="img17.gif"
+ ALT="\begin{displaymath}\left(y - \frac{2 \pi^2 + 9 \sqrt{3}}{18}\right) =
+\frac{4 \pi + 3}{6}
+\left(x- \frac{\pi}{3} \right).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P>
+<DT>4.
+<DD>[10 pts] Evaluate the following limit:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\lim_{x \rightarrow 2} \frac{(x^2+2x-8)^2}{x^2-4}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="148" HEIGHT="57"
+ SRC="img18.gif"
+ ALT="\begin{displaymath}\lim_{x \rightarrow 2} \frac{(x^2+2x-8)^2}{x^2-4}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="346" HEIGHT="116"
+ SRC="img19.gif"
+ ALT="\begin{eqnarray*}\lim_{x \rightarrow 2} \frac{(x^2+2x-8)^2}{x^2-4}
+& = &
+\lim_{...
+...
+\lim_{x \rightarrow 2} \frac{(x+4)^2 (x-2)}{(x+2)} \\
+& = & 0.
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL">
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>5.
+<DD>[10 pts] Evaluate the following limit:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\lim_{x \rightarrow 0} \frac{2 \sin x-\sin(2 x)}{x^3}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="160" HEIGHT="55"
+ SRC="img20.gif"
+ ALT="\begin{displaymath}\lim_{x \rightarrow 0} \frac{2 \sin x-\sin(2 x)}{x^3}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="394" HEIGHT="233"
+ SRC="img21.gif"
+ ALT="\begin{eqnarray*}\lim_{x \rightarrow 0} \frac{2 \sin x-\sin(2 x)}{x^3}
+& = &
+\li...
+...frac{1-\cos x }{x^2} \\
+& = & 2 \cdot \frac{1}{2} \\
+& = & 1.
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL">
+Once again, we can only break up limits like this, when we know that
+the individual limits exist.
+
+<P>
+
+<P>
+<DT>6.
+<DD>[10 pts] Evaluate the derivative of <I>f</I>(<I>x</I>) where
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+f(x) = \frac{\tan(x)}{x^2 - 1/x}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="131" HEIGHT="58"
+ SRC="img22.gif"
+ ALT="\begin{displaymath}f(x) = \frac{\tan(x)}{x^2 - 1/x}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>Here, we apply the quotient rule.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+f'(x) =
+\frac{\sec^2(x) (x^2 - 1/x) - \tan (x) (2x+x^{-2})}{(x^2 - 1/x)^2}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="354" HEIGHT="60"
+ SRC="img23.gif"
+ ALT="\begin{displaymath}f'(x) =
+\frac{\sec^2(x) (x^2 - 1/x) - \tan (x) (2x+x^{-2})}{(x^2 - 1/x)^2}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>7.
+<DD>[10 pts] Evaluate the derivative of <I>f</I>(<I>x</I>) where
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+f(x) = (x^2 - 1/x)\cos(x).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="190" HEIGHT="41"
+ SRC="img24.gif"
+ ALT="\begin{displaymath}f(x) = (x^2 - 1/x)\cos(x).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>Here we apply the product rule.
+</EM>
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+f'(x) = (2x+x^{-2})\cos x- (x^2 - 1/x)\sin x.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="324" HEIGHT="41"
+ SRC="img25.gif"
+ ALT="\begin{displaymath}f'(x) = (2x+x^{-2})\cos x- (x^2 - 1/x)\sin x.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+
+<P>
+</DL>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2002-10-09</I>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Worksheet><Version major="6" minor="0"/><View-Properties><Zoom percentage="100"/></View-Properties><Styles><Layout alignment="centred" bullet="none" name="Author" spaceabove="8.0" spacebelow="8.0"/><Layout alignment="left" bullet="none" firstindent="0.0" leftmargin="0.0" linebreak="space" name="Normal" rightmargin="0.0" spaceabove="0.0" spacebelow="0.0"/><Layout alignment="centred" bullet="none" name="Title" spaceabove="12.0" spacebelow="12.0"/><Font background="[0,0,0]" bold="false" family="Lucida Bright" foreground="[0,0,0]" italic="false" name="Text" opaque="false" size="12" underline="false"/><Font background="[0,0,0]" family="Lucida Bright" name="Author" opaque="false" size="12"/><Font background="[0,0,0]" bold="true" executable="true" family="Monospaced" foreground="[255,0,0]" name="Maple Input" opaque="false" size="12"/><Font background="[0,0,0]" bold="true" family="Lucida Bright" name="Title" opaque="false" size="18" underline="true"/></Styles><Group><Input><Text-field firstindent="0.0" layout="Title" leftmargin="0.0" linebreak="space" rightmargin="0.0" style="Title"><Font foreground="[0,0,0]" italic="false">A sample procedure in Maple.</Font></Text-field><Text-field firstindent="0.0" layout="Author" leftmargin="0.0" linebreak="space" rightmargin="0.0" style="Author"><Font bold="true" foreground="[0,0,0]" italic="false" underline="true">Math 243: L. F. Rossi</Font></Text-field><Text-field layout="Normal" prompt="&gt; " style="Maple Input">with(LinearAlgebra):</Text-field></Input></Group><Group><Input><Text-field layout="Normal" style="Text">Here is a sample subroutine, but it does not do anything to solve your problem.  A subroutine is a list of commands.  Your job is to generate a list of commands that will solve the problem.</Text-field></Input></Group><Group><Input><Text-field layout="Normal" prompt="&gt; " style="Maple Input">sample := proc(a,b,c,d,e,r0,v1,v2)
+#Local variables can here.
+local p0,v,t0,t1,t;
+
+#Here's a sample conditional.
+if (a=1) then
+v := v1;
+else
+v := v2;
+end if;
+
+p0 := r0;
+t0 := 1;
+t1 := 2;
+
+return([p0+v*t,t0,t1]);
+end proc;</Text-field></Input></Group><Group><Input><Text-field layout="Normal" style="Text">Now to test the subroutine with some input values.</Text-field></Input></Group><Group><Input><Text-field layout="Normal" prompt="&gt; " style="Maple Input">v1 := &lt;1,2,3&gt;;</Text-field></Input></Group><Group><Input><Text-field layout="Normal" prompt="&gt; " style="Maple Input">v2 := &lt;3,2,1&gt;;</Text-field></Input></Group><Group><Input><Text-field layout="Normal" prompt="&gt; " style="Maple Input">r0 := &lt;0,1,0&gt;;</Text-field></Input></Group><Group><Input><Text-field layout="Normal" style="Text">Here are the results in the right format.</Text-field></Input></Group><Group><Input><Text-field layout="Normal" prompt="&gt; " style="Maple Input">sample(1,2,3,4,5,r0,v1,v2);</Text-field></Input></Group><Group><Input><Text-field layout="Normal" prompt="&gt; " style="Maple Input"/></Input></Group><Text-field/><Text-field/></Worksheet>

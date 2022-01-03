@@ -1,0 +1,670 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="exam2soln">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="exam2soln.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+Name: Math 243: Calculus C
+<BR>
+ <B>Exam 2 Solution Guide</B> <BR>
+28 March 2002 <BR>
+
+<P>
+<BR>
+<BR>
+<BR>
+
+<P>
+<EM>My mind rebels at stagnation.  Give me problems, give me work ... and I
+am in my own proper atmosphere.</EM> <BR>
+-Sherlock Holmes from <EM>The Sign of the Four</EM> by A. C. Doyle.
+
+<P>
+<BR>
+<BR>
+<BR>
+
+<P>
+Instructions: <B>Show all work to receive full or partial credit.</B>
+You may use a scientific calculator on this exam.
+All University rules and guidelines for
+student conduct are applicable.
+
+<P>
+<DL COMPACT>
+<DD><P>
+<DT>1.
+<DD>[15 pts] 
+Find the arc length of the curve
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\v r = \langle t \cos t - \sin t, t \sin t + \cos t \rangle,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="264" HEIGHT="43"
+ SRC="img1.gif"
+ ALT="\begin{displaymath}\v r = \langle t \cos t - \sin t, t \sin t + \cos t \rangle,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+from <I>t</I>=0 to <I>t</I>=3.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>This problem involves a straightforward computation of the arclength
+of a parametric curve.  We know that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+L = \int_0^3 |r'(t)| dt.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="133" HEIGHT="64"
+ SRC="img2.gif"
+ ALT="\begin{displaymath}L = \int_0^3 \vert r'(t)\vert dt.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+We know that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+r'(t) = \langle -t \sin t, t \cos t \rangle,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="190" HEIGHT="43"
+ SRC="img3.gif"
+ ALT="\begin{displaymath}r'(t) = \langle -t \sin t, t \cos t \rangle,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+so that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+|r'(t)| = t,
+\end{displaymath} -->
+
+
+|<I>r</I>'(<I>t</I>)| = <I>t</I>,
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+when </EM><I>t</I><EM> is positive.  Thus,
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+L = \int_0^3 t dt = \frac{9}{2}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="133" HEIGHT="64"
+ SRC="img4.gif"
+ ALT="\begin{displaymath}L = \int_0^3 t dt = \frac{9}{2}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>2.
+<DD>[15 pts] 
+Find the curvature of
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\v r = \langle e^t \cos t, e^t \sin t, t \rangle
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="174" HEIGHT="43"
+ SRC="img5.gif"
+ ALT="\begin{displaymath}\v r = \langle e^t \cos t, e^t \sin t, t \rangle
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+at <I>t</I>=0.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>There are several ways to compute </EM><IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\kappa$"><EM>, but since we are given the
+parametric curve, the most direct is by computing
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\kappa(0)=\frac{|r'(0) \times r''(0)|}{|r'(0)|^3}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="173" HEIGHT="62"
+ SRC="img7.gif"
+ ALT="\begin{displaymath}\kappa(0)=\frac{\vert r'(0) \times r''(0)\vert}{\vert r'(0)\vert^3}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+So, we must differential </EM><I>r</I>(<I>t</I>)<EM> twice.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="346" HEIGHT="61"
+ SRC="img8.gif"
+ ALT="\begin{eqnarray*}r'(t) & = & \langle e^t(\cos t - \sin t), e^t(\sin t + \cos t)\rangle \\
+r''(t) & = & \langle -2 e^t \sin t, 2 e^t \cos t\rangle
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><EM>Now, you can substitute </EM><I>t</I>=0<EM>, and compute the curvature:
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\kappa(0) = \left(\frac{2}{3}\right)^{\frac{3}{2}}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="108" HEIGHT="69"
+ SRC="img9.gif"
+ ALT="\begin{displaymath}\kappa(0) = \left(\frac{2}{3}\right)^{\frac{3}{2}}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P>
+<DT>3.
+<DD>[15 pts] 
+Prove that
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\lim_{(x,y) \rightarrow (0,0)} \frac{xy}{x^2+3y^2}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="143" HEIGHT="56"
+ SRC="img10.gif"
+ ALT="\begin{displaymath}\lim_{(x,y) \rightarrow (0,0)} \frac{xy}{x^2+3y^2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+does not exist.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>We seek to find two (or more) paths, </EM><I>r</I><SUB>1</SUB><EM> and </EM><I>r</I><SUB>2</SUB><EM>, 
+which pass through the origin at </EM><I>t</I>=0<EM> such
+that </EM>
+<!-- MATH: $\lim_{t \rightarrow 0} f[r_1(t)] \neq \lim_{t \rightarrow 0}
+f[r_2(t)]$ -->
+<IMG
+ WIDTH="258" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\lim_{t \rightarrow 0} f[r_1(t)] \neq \lim_{t \rightarrow 0}
+f[r_2(t)]$"><EM>.  There are many ways to do this.  One example would be
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="122" HEIGHT="61"
+ SRC="img12.gif"
+ ALT="\begin{eqnarray*}r_1(t) & = & \langle t, 0\rangle \\
+r_2(t) & = & \langle t, t\rangle
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><EM>In the first case, </EM>
+<!-- MATH: $\lim_{t \rightarrow 0} f[r_1(t)] = 0$ -->
+<IMG
+ WIDTH="153" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$\lim_{t \rightarrow 0} f[r_1(t)] = 0$"><EM>.
+In the second case, </EM>
+<!-- MATH: $\lim_{t \rightarrow 0} f[r_2(t)] = \frac{1}{4}$ -->
+<IMG
+ WIDTH="155" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\lim_{t \rightarrow 0} f[r_2(t)] = \frac{1}{4}$"><EM>.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>4.
+<DD>[20 pts] 
+Find an equation for the tangent plane of the surface
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+f(x,y) = 3 - 2 xy + y^2 - x^2
+\end{displaymath} -->
+
+
+<I>f</I>(<I>x</I>,<I>y</I>) = 3 - 2 <I>xy</I> + <I>y</I><SUP>2</SUP> - <I>x</I><SUP>2</SUP>
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+at (1,3,5).
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>To find the equation of the tangent place, we first find the gradient
+because we know that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left\langle \frac{\partial f}{\partial x},
+\frac{\partial f}{\partial
+y}, -1 \right\rangle
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="117" HEIGHT="63"
+ SRC="img15.gif"
+ ALT="\begin{displaymath}\left\langle \frac{\partial f}{\partial x},
+\frac{\partial f}{\partial
+y}, -1 \right\rangle
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+is normal to the tangent plane.  Thus, </EM>
+<!-- MATH: $\langle -8, 4, -1\rangle$ -->
+<IMG
+ WIDTH="94" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.gif"
+ ALT="$\langle -8, 4, -1\rangle$"><EM> is
+normal to the tangent plane.  Using the standard form for a plane
+knowing a normal vector and a point on the plane
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+-8(x-1) + 4(y-3) - (z-5) = 0.
+\end{displaymath} -->
+
+
+-8(<I>x</I>-1) + 4(<I>y</I>-3) - (<I>z</I>-5) = 0.
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P>
+<DT>5.
+<DD>[15 pts] 
+Find the absolute maximum and minimum of
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+z = 7 + x + 3 y
+\end{displaymath} -->
+
+
+<I>z</I> = 7 + <I>x</I> + 3 <I>y</I>
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+on the disk 
+<!-- MATH: $x^2 + y^2 \leq 4$ -->
+<IMG
+ WIDTH="98" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$x^2 + y^2 \leq 4$">.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>To solve this problem, you must find the critical points in the
+interior and also check the boundary using Lagrange multipliers or
+some other technique.  Since
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\nabla f = \langle 1,3 \rangle,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="98" HEIGHT="43"
+ SRC="img18.gif"
+ ALT="\begin{displaymath}\nabla f = \langle 1,3 \rangle,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+we see that there are no critical points in the interior.  If we use
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+g(x,y) = x^2 + y^2 = 4
+\end{displaymath} -->
+
+
+<I>g</I>(<I>x</I>,<I>y</I>) = <I>x</I><SUP>2</SUP> + <I>y</I><SUP>2</SUP> = 4
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+as a constraint for the boundary, we must solve
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\nabla f = \lambda \nabla g.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="92" HEIGHT="42"
+ SRC="img19.gif"
+ ALT="\begin{displaymath}\nabla f = \lambda \nabla g.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Solving these equations, we see that </EM><I>y</I>=3<I>x</I><EM>.  Applying the constraint,
+we find that the two candidates are </EM>
+<!-- MATH: $(\sqrt{10}/5,3\sqrt{10}/5)$ -->
+<IMG
+ WIDTH="144" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$(\sqrt{10}/5,3\sqrt{10}/5)$"><EM> and
+</EM>
+<!-- MATH: $(-\sqrt{10}/5,-3\sqrt{10}/5)$ -->
+<IMG
+ WIDTH="173" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$(-\sqrt{10}/5,-3\sqrt{10}/5)$"><EM>.  The former corresponds to a maximum
+at </EM>
+<!-- MATH: $7 + 2\sqrt{10}$ -->
+<IMG
+ WIDTH="81" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.gif"
+ ALT="$7 + 2\sqrt{10}$"><EM> and the latter corresponds to the minimum at
+</EM>
+<!-- MATH: $7-2\sqrt{10}$ -->
+<IMG
+ WIDTH="82" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.gif"
+ ALT="$7-2\sqrt{10}$"><EM>.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>6.
+<DD>[20 pts] 
+Find all critical points, the absolute maximum and absolute minimum of
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+f(x,y) = \sin(\pi x) \sin(\pi y),
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="204" HEIGHT="43"
+ SRC="img24.gif"
+ ALT="\begin{displaymath}f(x,y) = \sin(\pi x) \sin(\pi y),
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+on the domain 
+<!-- MATH: $0 \leq x \leq 2, 0 \leq y \leq 2$ -->
+<IMG
+ WIDTH="173" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.gif"
+ ALT="$0 \leq x \leq 2, 0 \leq y \leq 2$">.
+Sketch a contour
+plot of <I>f</I>(<I>x</I>,<I>y</I>). 
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>This one looks harder than it is.  You must check the interior and
+the boundary.  However, if you look at </EM><I>f</I><EM>, you can see that
+</EM><I>f</I>(<I>x</I>,<I>y</I>)=0<EM> on the boundary.  Now, we only need to check the interior
+for critical points.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\nabla f = \langle
+\pi \cos(\pi x) \sin(\pi y),\pi \sin(\pi x) \cos(\pi y)
+\rangle.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="354" HEIGHT="43"
+ SRC="img26.gif"
+ ALT="\begin{displaymath}\nabla f = \langle
+\pi \cos(\pi x) \sin(\pi y),\pi \sin(\pi x) \cos(\pi y)
+\rangle.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Both components must be zero at the same time. For instance, for the
+first component to the be zero, either </EM>
+<!-- MATH: $x=\frac{1}{2}$ -->
+<IMG
+ WIDTH="51" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$x=\frac{1}{2}$">
+<!-- MATH: $x=\frac{3}{2}$ -->
+<IMG
+ WIDTH="51" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$x=\frac{3}{2}$"><EM>or </EM><I>y</I> = 1<EM>.  Remember, we are only interested in the interior of the
+domain, so we do not think about </EM><I>y</I>=0<EM> or </EM><I>y</I>=2<EM>, or many other
+possibilities for </EM><I>x</I><EM> and </EM><I>y</I><EM> that are completely outside the domain.
+However, notice also that if </EM>
+<!-- MATH: $x=\frac{1}{2}$ -->
+<IMG
+ WIDTH="51" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.gif"
+ ALT="$x=\frac{1}{2}$"><EM> than </EM><I>y</I><EM> must be either
+</EM>
+<!-- MATH: $\frac{1}{2}$ -->
+<IMG
+ WIDTH="15" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.gif"
+ ALT="$\frac{1}{2}$"><EM> or </EM>
+<!-- MATH: $\frac{3}{2}$ -->
+<IMG
+ WIDTH="15" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\frac{3}{2}$"><EM> to force the second component of the
+gradient to be zero.  Below, I will tabulate all the interior critical
+points together with </EM><I>D</I><EM> and the points' classification.  As usual, we
+can distinguish between a max and a min by checking the second
+derivative in either the </EM><I>x</I><EM> or </EM><I>y</I><EM> direction.
+</EM>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">Point</TD>
+<TD ALIGN="LEFT">D</TD>
+<TD ALIGN="LEFT">Type</TD>
+</TR>
+<TR><TD ALIGN="LEFT">
+<!-- MATH: $\left(\frac{1}{2},\frac{1}{2}\right)$ -->
+<IMG
+ WIDTH="52" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.gif"
+ ALT="$\left(\frac{1}{2},\frac{1}{2}\right)$"></TD>
+<TD ALIGN="LEFT">1</TD>
+<TD ALIGN="LEFT">max</TD>
+</TR>
+<TR><TD ALIGN="LEFT">
+<!-- MATH: $\left(\frac{1}{2},\frac{3}{2}\right)$ -->
+<IMG
+ WIDTH="52" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="$\left(\frac{1}{2},\frac{3}{2}\right)$"></TD>
+<TD ALIGN="LEFT">1</TD>
+<TD ALIGN="LEFT">min</TD>
+</TR>
+<TR><TD ALIGN="LEFT">
+<!-- MATH: $\left(\frac{3}{2},\frac{1}{2}\right)$ -->
+<IMG
+ WIDTH="52" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.gif"
+ ALT="$\left(\frac{3}{2},\frac{1}{2}\right)$"></TD>
+<TD ALIGN="LEFT">1</TD>
+<TD ALIGN="LEFT">min</TD>
+</TR>
+<TR><TD ALIGN="LEFT">
+<!-- MATH: $\left(\frac{3}{2},\frac{3}{2}\right)$ -->
+<IMG
+ WIDTH="52" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.gif"
+ ALT="$\left(\frac{3}{2},\frac{3}{2}\right)$"></TD>
+<TD ALIGN="LEFT">1</TD>
+<TD ALIGN="LEFT">max</TD>
+</TR>
+<TR><TD ALIGN="LEFT">
+<!-- MATH: $\left(1,1\right)$ -->
+<IMG
+ WIDTH="46" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.gif"
+ ALT="$\left(1,1\right)$"></TD>
+<TD ALIGN="LEFT">-1</TD>
+<TD ALIGN="LEFT">saddle</TD>
+</TR>
+</TABLE></DIV>
+<P>
+<EM>A rough sketch might look like
+</EM>
+<DIV ALIGN="CENTER">
+<!-- MATH: $\resizebox{3in}{!}{\includegraphics{sketch.eps}}$ -->
+<IMG
+ WIDTH="341" HEIGHT="351" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.gif"
+ ALT="\resizebox{3in}{!}{\includegraphics{sketch.eps}}"></DIV>
+
+<P>
+</DL>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2002-04-08</I>
+</ADDRESS>
+</BODY>
+</HTML>

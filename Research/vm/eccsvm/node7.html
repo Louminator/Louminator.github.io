@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>Integral Invariants</TITLE>
+<META NAME="description" CONTENT="Integral Invariants">
+<META NAME="keywords" CONTENT="eccsvm">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="eccsvm.css">
+</HEAD>
+<BODY LANG="EN">
+ <A NAME="tex2html106" HREF="node8.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html104" HREF="node3.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html98" HREF="node6.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html107" HREF="node8.html">Asymptotic Calculation of Velocity </A>
+<B>Up:</B> <A NAME="tex2html105" HREF="node3.html">The Vortex Method</A>
+<B> Previous:</B> <A NAME="tex2html99" HREF="node6.html">The High Spatial Order </A>
+<BR> <P>
+<H2><A NAME="SECTION00034000000000000000">Integral Invariants</A></H2>
+<P>
+The vorticity dynamics equations (<A HREF="node4.html#NSopr">3.2</A>,<A HREF="node4.html#NSexact">3.3</A>) 
+have many known integral
+invariants, so one hopes that the computational method also preserves these
+properties.  Of course, a convergent method will satisfy these properties
+approximately, but some methods have the advantage of mimicking the physical
+structure of solutions to Navier-Stokes (<A HREF="node4.html#NSopr">3.2</A>,<A HREF="node4.html#NSexact">3.3</A>) 
+by capturing certain integral invariants exactly.
+Unfortunately, ECCSVM does not have the property of exactly preserving first
+or second integral moments.  Since merging and refinement (see
+&#167;<A HREF="node9.html#secrefine">4</A>) preserve all first
+and second moments, only the dynamics of ECCSVM will affect the integral
+invariants of the approximation.
+<P>
+Satisfying the first moment of vorticity is a problem for vortex methods
+using blobs of dissimilar width [<A HREF="node16.html#leonardreview1">13</A>] though for corrected
+core spreading methods these discrepancies are controlled automatically by
+the parameter  <IMG WIDTH=10 HEIGHT=7 ALIGN=BOTTOM ALT="tex2html_wrap_inline2329" SRC="img13.gif"  >  because it both restricts the variation in  <IMG WIDTH=13 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline2403" SRC="img50.gif"  > 
+and bounds  <IMG WIDTH=12 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline2471" SRC="img79.gif"  >  close to unity.  Solutions of Navier-Stokes also satisfy 
+satisfies the relation
+<P> <IMG WIDTH=500 HEIGHT=39 ALIGN=BOTTOM ALT="equation465" SRC="img126.gif"  > <P>
+for the second moment of vorticity.  For an elliptical Gaussian blob of unit
+circulation, the second moment is given by  <IMG WIDTH=95 HEIGHT=29 ALIGN=MIDDLE ALT="tex2html_wrap_inline2601" SRC="img127.gif"  > .
+Here, indices are not necessary because this only concerns one blob.  The
+evolution of the second moment is derived from the system (<A HREF="node5.html#systemodes">3.12</A>).
+<P><A NAME="moment2approx">&#160;</A> <IMG WIDTH=530 HEIGHT=33 ALIGN=BOTTOM ALT="equation469" SRC="img128.gif"  > <P>
+Of course, the first term is the exact physical integral invariant.  The
+second term is  <IMG WIDTH=35 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2335" SRC="img15.gif"  >  because  <IMG WIDTH=102 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2605" SRC="img129.gif"  > 
+and 
+<P> <IMG WIDTH=500 HEIGHT=19 ALIGN=BOTTOM ALT="equation477" SRC="img130.gif"  > <P>
+The remaining term involves the flow derivatives which are assumed to be
+bounded.
+<P>
+<BR> <HR>
+<P><ADDRESS>
+<I>Louis F. Rossi <BR>
+Thu Nov  4 15:02:00 EST 1999</I>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,471 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="solnguide1">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="solnguide1.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<DIV ALIGN="CENTER">
+<B><FONT SIZE="+2">Problem Set #1
+</FONT></B></DIV>
+<P>
+<DL COMPACT>
+<DD><P>
+<DT>1.
+<DD>A rocket ship blasts off at <I>t</I>-0 and accelerates upward at a rate of 
+
+<!-- MATH: $5 {\rm m/sec^2}$ -->
+<IMG
+ WIDTH="71" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$5 {\rm m/sec^2}$">.
+A mile away, a news cameraman films the event
+using a tripod that tilts so that he can keep the rocket in the center
+of the field of view.  What is the rate of change of the camera's
+angle with the horizon (
+<!-- MATH: $\frac{d \theta}{dt}$ -->
+<IMG
+ WIDTH="22" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\frac{d \theta}{dt}$">)? What are the units of
+your solution?  Justify your answer.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>The rocket ship problem is a classic one, but there is seldom much
+effort placed on the units in the solution.  Using elementary
+calculus, one quickly finds that the height of the rocket is
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+y(t) = \frac{5}{2} t^2 {\rm\ (meters)}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="162" HEIGHT="45"
+ SRC="img3.gif"
+ ALT="\begin{displaymath}y(t) = \frac{5}{2} t^2 {\rm\ (meters)}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+The horizontal distance remains the same, and if we do a little
+checking, we find that a mile is about 1609 meters.  From this
+information, we can find camera angle
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\theta(t) = \arctan\left(\frac{5}{2} \cdot \frac{t^2}{1609}\right).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="211" HEIGHT="54"
+ SRC="img4.gif"
+ ALT="\begin{displaymath}\theta(t) = \arctan\left(\frac{5}{2} \cdot \frac{t^2}{1609}\right).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+What are the units on </EM><IMG
+ WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\theta$"><EM>?  Most would say radians, but why?
+Does it really matter?  When you are computing the arctangent, it does
+not really matter what units are used.  Most students are used to
+setting the mode on their calculator output whatever units are
+desired.  <EM>However, when you change modes from say, radians to
+degrees, you are changing functions!</EM>  Essentially, your calculator
+has several different versions of arctangent from which you can choose
+by selecting the right mode.  Another way to think about this is that
+the relation
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{d}{d\theta}\tan (\theta) = \sec^2\theta
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="143" HEIGHT="46"
+ SRC="img6.gif"
+ ALT="\begin{displaymath}\frac{d}{d\theta}\tan (\theta) = \sec^2\theta
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+is only valid for radians.  Mathematically, changing units is changing
+</EM>
+<!-- MATH: $\tan(\theta)$ -->
+<IMG
+ WIDTH="56" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\tan(\theta)$"><EM> to </EM>
+<!-- MATH: $\tan(c\theta)$ -->
+<IMG
+ WIDTH="64" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\tan(c\theta)$"><EM> where </EM><I>c</I><EM> is some conversion factor
+for the new units.  If you differentiate the latter function, you will
+not have exactly the same relation as shown above.
+</EM>
+<P>
+<EM>Differentiating, we find that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{d\theta}{dt} = \frac{5t}{1609+\frac{25}{4}\frac{t^4}{1609}}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="162" HEIGHT="54"
+ SRC="img9.gif"
+ ALT="\begin{displaymath}\frac{d\theta}{dt} = \frac{5t}{1609+\frac{25}{4}\frac{t^4}{1609}}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+The units are </EM>
+<!-- MATH: $\rm\frac{rad}{sec}$ -->
+<IMG
+ WIDTH="28" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$\rm\frac{rad}{sec}$"><EM>, of course.
+</EM>
+
+<P>
+<DT>2.
+<DD>Suppose one wishes to characterize the terminal velocity of a
+water droplet falling in the atmosphere.  The relevant variables
+would be the characteristic size of the droplet, the acceleration due
+to gravity, the viscosity of the atmosphere (with units M L<SUP>-1</SUP>T<SUP>-1</SUP>) and the density of the liquid.  How many dimensionless
+combinations of the relevant quanitities are there?  Find all
+dimensionless products of these variables. 
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>To compute all the dimensionless quantities associated with a falling
+raindrop, one simply follows the procedure discussed in class.
+</EM>
+<P><TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">Feature</TD>
+<TD ALIGN="LEFT">variable</TD>
+<TD ALIGN="LEFT">units</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Characteristic length</TD>
+<TD ALIGN="LEFT"><I>l</I></TD>
+<TD ALIGN="LEFT">L</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Gravity</TD>
+<TD ALIGN="LEFT"><I>g</I></TD>
+<TD ALIGN="LEFT">L T<SUP>-2</SUP></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Viscosity</TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="16" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\mu$"></TD>
+<TD ALIGN="LEFT">M L<SUP>-1</SUP> T<SUP>-1</SUP></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Density</TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="14" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\rho$"></TD>
+<TD ALIGN="LEFT">M L<SUP>-3</SUP></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Velocity</TD>
+<TD ALIGN="LEFT"><I>v</I></TD>
+<TD ALIGN="LEFT">L T<SUP>-1</SUP></TD>
+</TR>
+</TABLE>
+<P>
+<EM>Next, one checks to see for which combinations of exponents
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+l^a g^b \mu^c \rho^d v^e = 1.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="120" HEIGHT="32"
+ SRC="img13.gif"
+ ALT="\begin{displaymath}l^a g^b \mu^c \rho^d v^e = 1.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+If you do it right, you will find that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left(\frac{l^3 g \rho^2}{\mu^2}\right)^{d/2}
+\left(\frac{v^2}{l g}\right)^{e/2} = 1.
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="197" HEIGHT="59"
+ SRC="img14.gif"
+ ALT="\begin{displaymath}\left(\frac{l^3 g \rho^2}{\mu^2}\right)^{d/2}
+\left(\frac{v^2}{l g}\right)^{e/2} = 1.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Thus, there are two dimensionless constants.  Specifically, they are
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{l^3 g \rho^2}{\mu^2} \ \ \ \ {\rm and}\ \ \ \
+\frac{v^2}{l g}
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="142" HEIGHT="52"
+ SRC="img15.gif"
+ ALT="\begin{displaymath}\frac{l^3 g \rho^2}{\mu^2} \ \ \ \ {\rm and}\ \ \ \
+\frac{v^2}{l g}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Notice that the second one is the reciprocal of the Froude number
+which you read about in the dinosaur article!  Thus, the ratio of
+kinetic to potential energy is important in this problem.
+</EM>
+
+<P>
+<DT>3.
+<DD>A rule of thumb for cooking turkeys is that one should allow 20
+minutes of cooking time per pound of turkey in a 400<SUP><I>o</I></SUP> oven.  Using
+dimensional analysis, determine whether or not this is a good idea.
+If you think it is a bad idea, propose a better one.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>To understand the turkey problem, we follow the same
+nondimensionalizing procedure as discussed in class.  We assume that
+the heat capacity and the density turkeys does not change with size.
+There is more than one way to do this problem. For instance, you could
+use the turkey's total volume or weight rather than the turkey's
+characteristic size.  Assuming constant density, both alternatives
+would have units L</EM><SUP>3</SUP><EM>.  The important thing to understand is that
+turkeys are self-similar.  That is, if a turkey is twice as tall as
+normal, it is probably twice as wide as well.
+</EM>
+<P><TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">Feature</TD>
+<TD ALIGN="LEFT">variable</TD>
+<TD ALIGN="LEFT">units</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Raw temperature</TD>
+<TD ALIGN="LEFT">
+<!-- MATH: $\Delta T_a$ -->
+<IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.gif"
+ ALT="$\Delta T_a$"></TD>
+<TD ALIGN="LEFT">M T<SUP>-1</SUP> L<SUP>-2</SUP></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Cooked temperature</TD>
+<TD ALIGN="LEFT">
+<!-- MATH: $\Delta T_b$ -->
+<IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\Delta T_b$"></TD>
+<TD ALIGN="LEFT">M T<SUP>-1</SUP> L<SUP>-2</SUP></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Thermal conductivity</TD>
+<TD ALIGN="LEFT"><I>k</I></TD>
+<TD ALIGN="LEFT">L T<SUP>-2</SUP></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Turkey characteristic size</TD>
+<TD ALIGN="LEFT"><I>l</I></TD>
+<TD ALIGN="LEFT">L</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Cooking time</TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.gif"
+ ALT="$\tau$"></TD>
+<TD ALIGN="LEFT">T</TD>
+</TR>
+</TABLE>
+<P>
+<EM>After doing the algebra, you should find that the only nondimensional combinations in this problem are
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{\Delta T_a}{\Delta T_b} \ \ \ \ {\rm and} \ \ \ \
+\frac{k \tau}{l^2}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="145" HEIGHT="49"
+ SRC="img19.gif"
+ ALT="\begin{displaymath}\frac{\Delta T_a}{\Delta T_b} \ \ \ \ {\rm and} \ \ \ \
+\frac{k \tau}{l^2}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+I am no cook, but I would say that the rule of thumb is no good
+because weight is proportional to </EM><I>l</I><SUP>3</SUP><EM>, not </EM><I>l</I><SUP>2</SUP><EM>.  Thus, if </EM>
+<!-- MATH: $w = \rho
+l^3$ -->
+<IMG
+ WIDTH="67" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$w = \rho
+l^3$"><EM> where </EM><IMG
+ WIDTH="14" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\rho$"><EM> is the density of a turkey, see that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{k \tau \rho^{2/3}}{w^{2/3}}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="52" HEIGHT="49"
+ SRC="img21.gif"
+ ALT="\begin{displaymath}\frac{k \tau \rho^{2/3}}{w^{2/3}}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+is a dimensionless constant, and the cooking time should not grow
+linearly with weight.  Rather, the cooking time should grow <EM>sublinearly</EM> with w to the </EM>2/3<EM> power.
+</EM>
+
+<P>
+<DT>4.
+<DD>Read the Scientific American article ``How Dinosaurs Ran'' by R.
+M. Alexander.  Express the principle results of the first half of the
+article (summarized in the graph on page 132) in terms of Buckingham's 
+<IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.gif"
+ ALT="$\Pi$">
+Theorem.  Suppose you did not have access to the data in this
+graph, but you hypothesize that the only relevant variables for
+quadrupedal animals are speed
+<I>v</I>, stride length <I>s</I>, hip height <I>l</I> and gravity <I>g</I>.  Use whatever
+resources you can to determine the functional relationship between the 
+dimensionless parameters.  (In other words, find animals representing
+data points with different dimensionless values.  Otherwise, your
+graph will collapse to a point!)
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>Buckingham's </EM><IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.gif"
+ ALT="$\Pi$"><EM> Theorem rounds up all the dimensionless
+combinations pretty quickly to reproduce the Froude number and the
+ratio of stride length to hip height as the author suggests.
+Furthermore, Buckingham's </EM><IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.gif"
+ ALT="$\Pi$"><EM> Theorem also asserts that this is an
+exhaustive list.
+I was a little disappointed (and incredulous) that no one was able to
+acquire much data for this problem.  I am still curious whether or not
+one can reproduce the functional relationship demonstrated in the problem.
+</EM>
+
+<P>
+</DL>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2001-09-07</I>
+</ADDRESS>
+</BODY>
+</HTML>

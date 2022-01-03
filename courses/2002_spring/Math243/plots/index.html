@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="plots">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="plots.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<DIV ALIGN="CENTER">
+<B>Math243: Maple Handout #2
+</B>
+<P>
+<B>A few items about some of the <TT>plots</TT> functions.</B>
+
+<P>
+L. F. Rossi
+</DIV>
+<P>
+In addition to the features described in your ``Maple Tutorial'' for
+this class, there are two functions of special interest to you in the
+<TT>plots</TT> package.
+
+<P>
+<UL>
+<P>
+<LI><B><TT>cylinderplot</TT></B>
+
+<P>
+The <TT>cylinderplot</TT> function will plot surfaces in cylindrical
+coordinates.  If you provide a single function, it is assumed that the
+function represents the distance from the <I>z</I>-axis, <I>r</I>, as a function
+of <IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\theta$">
+and <I>z</I>.  Thus,
+<PRE>
+cylinderplot(3,theta=0..2*Pi,z=-6..6);
+</PRE>will render a cylinder of radius 3, and
+<PRE>
+cylinderplot(3+cos(4*theta),theta=0..2*Pi,z=-6..6);
+</PRE>will render a bumpy cylinder.
+
+<P>
+However, if you provide a list of three functions, it will treat them
+as a parametric surface, similar to <TT>plot3d</TT> parametric
+capabilities.
+
+<P>
+<LI>
+<B><TT>sphereplot</TT></B>
+
+<P>
+The <TT>sphereplot</TT> function will plot surfaces in spherical
+coordinates.  If you provide a single function, it is assumed that the 
+function represents the distance from the origin <IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\rho$">
+as a function of <IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\theta$">
+and <IMG
+ WIDTH="15" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\phi$">.
+Thus,
+<PRE>
+sphereplot(3,theta=0..2*Pi,phi=0..Pi);
+</PRE>will render a sphere of radius 3, and
+<PRE>
+sphereplot(3+cos(theta)*sin(6*phi),theta=0..2*Pi,phi=0..Pi);
+</PRE>will render a spiny sphere, but you may have to increase <TT>numpoints</TT>.
+
+<P>
+However, if you provide a list of three functions, it will treat them
+as a parametric surface, similar to <TT>plot3d</TT> parametric
+capabilities.
+
+<P>
+</UL>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2002-02-27</I>
+</ADDRESS>
+</BODY>
+</HTML>

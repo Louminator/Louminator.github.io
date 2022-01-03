@@ -1,0 +1,633 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="hw5soln">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="hw5soln.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<DIV ALIGN="CENTER">
+<B>Math428: Problem Set #5 solution notes</B>
+</DIV>
+<P>
+<DL COMPACT>
+<DD><P>
+<DT>1.
+<DD>On the same graph, generate the stability regions for the following
+two method Adams-Bashforth-Moulton methods.
+
+<P>
+<DL COMPACT>
+<DD><P>
+<DT>(a)
+<DD>Fourth order Adams-Moulton using a third order Adams-Bashforth predictor.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>First, we recall that AB3 is
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u_{k+1} = u_{k} + \frac{h}{12}
+\left(23 f_k -16 f_{k-1} + 5 f_{k-2} \right),
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="330" HEIGHT="46"
+ SRC="img1.gif"
+ ALT="\begin{displaymath}u_{k+1} = u_{k} + \frac{h}{12}
+\left(23 f_k -16 f_{k-1} + 5 f_{k-2} \right),
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+and AM4 is
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u_{k+1} = u_{k} + \frac{h}{24}
+\left(9 f_{k+1} + 19 f_k -5 f_{k-1} + f_{k-2} \right).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="378" HEIGHT="46"
+ SRC="img2.gif"
+ ALT="\begin{displaymath}u_{k+1} = u_{k} + \frac{h}{24}
+\left(9 f_{k+1} + 19 f_k -5 f_{k-1} + f_{k-2} \right).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+If we solve the scalar test equation, and use AB3 as a predictor for
+AM4, we see that the </EM><IMG
+ WIDTH="27" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.gif"
+ ALT="$h\lambda$"><EM> satisfies,
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(h\lambda)^2 a(r) + (h\lambda) b(r) + c(r) = 0,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="259" HEIGHT="33"
+ SRC="img4.gif"
+ ALT="\begin{displaymath}(h\lambda)^2 a(r) + (h\lambda) b(r) + c(r) = 0,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+where
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="254" HEIGHT="117"
+ SRC="img5.gif"
+ ALT="\begin{eqnarray*}a(r) & = & \frac{1}{32} \left(23r^2-16r+5\right), \\
+b(r) & = & -\frac{1}{24}\left(28r^3-5r+1\right), \\
+c(r) & = & r^2 - r^3.
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><EM>If you plot the real and imaginary parts of the solutions for
+</EM><IMG
+ WIDTH="27" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.gif"
+ ALT="$h\lambda$"><EM>, you generate the following stability plot.
+</EM>
+<DIV ALIGN="CENTER">
+<!-- MATH: $\resizebox{3in}{!}{\includegraphics{ab3am4.eps}}$ -->
+<IMG
+ WIDTH="345" HEIGHT="282" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="\resizebox{3in}{!}{\includegraphics{ab3am4.eps}}"></DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>(b)
+<DD>Fourth order Adams-Moulton using a fourth 
+order Adams-Bashforth predictor.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>This problem is very similar to the previous one.
+We recall that AB4 is
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u_{k+1} = u_{k} + \frac{h}{24}
+\left(55 f_k -59 f_{k-1} + 37 f_{k-2} -9 f_{k-3}\right).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="407" HEIGHT="46"
+ SRC="img7.gif"
+ ALT="\begin{displaymath}u_{k+1} = u_{k} + \frac{h}{24}
+\left(55 f_k -59 f_{k-1} + 37 f_{k-2} -9 f_{k-3}\right).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+With this predictor, we find that
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="308" HEIGHT="117"
+ SRC="img8.gif"
+ ALT="\begin{eqnarray*}a(r) & = & \frac{1}{64} \left(55r^3-59r^2+37r-9\right), \\
+b(r...
+...\frac{1}{24}\left(28r^3-5r^2+r\right), \\
+c(r) & = & r^3 - r^4.
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL">With these coefficients, we find the stability region to be
+<DIV ALIGN="CENTER">
+
+<!-- MATH: $\resizebox{3in}{!}{\includegraphics{ab4am4.eps}}$ -->
+<IMG
+ WIDTH="345" HEIGHT="282" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="\resizebox{3in}{!}{\includegraphics{ab4am4.eps}}"></DIV>
+<P>
+
+<P><P>
+<BR>
+
+<P>
+</DL>
+<P>
+<DT>2.
+<DD>[KC 8.3:5]
+Derive the third-order Runge-Kutta formulas
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u_{k+1} = u_k + \frac{1}{9} (2F_1 + 3F_2 + 4F_3)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="261" HEIGHT="45"
+ SRC="img10.gif"
+ ALT="\begin{displaymath}u_{k+1} = u_k + \frac{1}{9} (2F_1 + 3F_2 + 4F_3)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="248" HEIGHT="125"
+ SRC="img11.gif"
+ ALT="\begin{eqnarray*}F_1 & = & h f(u_n,t) \\
+F_2 & = & h f\left(u_n+\frac{1}{2}F_1,...
+... \\
+F_3 & = & h f\left(u_n+\frac{3}{4}F_2,t+\frac{3}{4}h\right)
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL">Show that it agrees with the Taylor-series method of order 3 for the
+differential equation
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+y' = y+t.
+\end{displaymath} -->
+
+
+<I>y</I>' = <I>y</I>+<I>t</I>.
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>This problem is just a matter of substituting </EM>
+<!-- MATH: $f(y,t) = y+t$ -->
+<I>f</I>(<I>y</I>,<I>t</I>) = <I>y</I>+<I>t</I><EM> into the
+expressions for </EM><I>F</I><SUB>1</SUB><EM>, </EM><I>F</I><SUB>2</SUB><EM> and </EM><I>F</I><SUB>3</SUB><EM>, and simplifying. 
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>3.
+<DD>[KC 8.3:6]
+Prove that the when the fourth order Runge-Kutta method is applied to
+the problem
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+y' = - \lambda y,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="79" HEIGHT="32"
+ SRC="img12.gif"
+ ALT="\begin{displaymath}y' = - \lambda y,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+the formula for advancing this solution will be
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u_{k+1} =
+\left[1 - h\lambda + \frac{1}{2} (h\lambda)^2 -
+\frac{1}{6} (h\lambda)^3 + \frac{1}{24} (h \lambda)^4 \right]u_k.
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="408" HEIGHT="46"
+ SRC="img13.gif"
+ ALT="\begin{displaymath}u_{k+1} =
+\left[1 - h\lambda + \frac{1}{2} (h\lambda)^2 -
+\frac{1}{6} (h\lambda)^3 + \frac{1}{24} (h \lambda)^4 \right]u_k.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>Again, this is just a matter of substituting </EM>
+<!-- MATH: $f(y,t) = -\lambda y$ -->
+<IMG
+ WIDTH="116" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$f(y,t) = -\lambda y$"><EM>into RK4.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>4.
+<DD>[KC 8.3:7]
+
+<P>
+Prove that the local truncation truncation error in the previous
+problem is <I>O</I>(<I>h</I><SUP>5</SUP>).
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>To find the local truncation here, just look at the next term in the
+Taylor series of </EM>
+<!-- MATH: $e^{-lambda h}$ -->
+<I>e</I><SUP>-<I>lambda h</I></SUP><EM>.  This is the first term where RK4
+and the exact solution disagree, so the local truncation error is
+</EM>
+<!-- MATH: $\frac{1}{5!} (h \lambda)^5$ -->
+<IMG
+ WIDTH="63" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\frac{1}{5!} (h \lambda)^5$"><EM> which is </EM><I>O</I>(<I>h</I><SUP>5</SUP>)<EM>.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>5.
+<DD>[Mini project - double credit]
+
+<P>
+An idealized aircraft wing can be modeled as a point vortex in free
+space which
+induces a flow field
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\v u(x,y;\Gamma,x_0,y_0) = \frac{\Gamma}{2 \pi} \frac{1}{(x-x_0)^2 + (y-y_0)^2}
+\left[\begin{array}{l}
+-(y-y_0) \\
+(x-x_0)
+\end{array}
+\right]
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="461" HEIGHT="54"
+ SRC="img16.gif"
+ ALT="\begin{displaymath}\v u(x,y;\Gamma,x_0,y_0) = \frac{\Gamma}{2 \pi} \frac{1}{(x-x...
+...\left[\begin{array}{l}
+-(y-y_0) \\
+(x-x_0)
+\end{array}\right]
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(1)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+where (<I>x</I><SUB>0</SUB>,<I>y</I><SUB>0</SUB>) is the position of the wing, and <IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\Gamma$">
+is the
+circulation which is proportional to aerodynamic lift.<A NAME="tex2html1"
+ HREF="footnode.html#foot92"><SUP>1</SUP></A>  In steady
+flight wherein the aircraft experiences no accelerations, 
+the aerodynamic lift balances the weight of
+the aircraft, and the thrust produced by the engine balances
+aerodynamic drag.
+
+<P>
+Suppose the winds are calm, and an aircraft is on final approach to a
+runway.  The aircraft is trimmed so that it is descending at a rate of 
+50 feet per minute (fpm) and moving forward at 4000 fpm.  With the
+current trim settings (flaps, elevator, pitch, etc), 
+<!-- MATH: $\Gamma = 10^5$ -->
+<IMG
+ WIDTH="68" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.gif"
+ ALT="$\Gamma = 10^5$">.
+The landing gear is located 6 feet below the wing.
+
+<P>
+At <I>t</I>=0 minutes, the wing is 56 feet above ground and 4000 feet from the
+touchdown zone.  The pilot, oblivious to ``ground effect'', thinks the 
+aircraft will land in the touchdown zone at <I>t</I>=1 minutes.  The pilot
+is right about the time but wrong about where the plane will land!
+
+<P>
+The free space flow field (1) is not applicable at low altitude because 
+air cannot move in or out of the ground.  To satisfy this boundary
+condition, we must add a virtual image wing that appears to fly
+underground and cancels the vertical component of the velocity field
+at ground level.  Thus, the true flow field, <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\v v$">
+is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\v v(x,y) = \v u(x,y;\Gamma,x_0,y_0) + \v u(x,y;-\Gamma,x_0,-y_0),
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="386" HEIGHT="33"
+ SRC="img20.gif"
+ ALT="\begin{displaymath}\v v(x,y) = \v u(x,y;\Gamma,x_0,y_0) + \v u(x,y;-\Gamma,x_0,-y_0),
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P>
+and the aircraft will be pushed forward by the flow field induced by 
+the virtual wing.
+
+<P>
+<DL COMPACT>
+<DD><P>
+<DT>(a)
+<DD>You do not need numerical analysis to compute the position of the
+aircraft as a function of time.  Plot the trajectory of the aircraft
+for 
+<!-- MATH: $0 \leq t \leq 1$ -->
+<IMG
+ WIDTH="81" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$0 \leq t \leq 1$">.
+How far beyond the touchdown zone does the aircraft land?
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>We know that the vertical position of the wing is
+going to be
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+y_0 = 56 - t.
+\end{displaymath} -->
+
+
+<I>y</I><SUB>0</SUB> = 56 - <I>t</I>.
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+First, we must solve the ODE corresponding to the affect of the image
+vortex on the wing.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+x_0' = 4000 + \frac{10^5}{2 \pi} \frac{1}{2(56-50t)}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="227" HEIGHT="53"
+ SRC="img22.gif"
+ ALT="\begin{displaymath}x_0' = 4000 + \frac{10^5}{2 \pi} \frac{1}{2(56-50t)}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+If we integrate this function assuming that </EM>
+<!-- MATH: $x_0(0) = -4000$ -->
+<I>x</I><SUB>0</SUB>(0) = -4000<EM>, we find
+that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+x_0 = 4000t - \frac{10^5}{200 \pi} \ln\left(\frac{56-50t}{56}\right) -4000.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="335" HEIGHT="49"
+ SRC="img23.gif"
+ ALT="\begin{displaymath}x_0 = 4000t - \frac{10^5}{200 \pi} \ln\left(\frac{56-50t}{56}\right) -4000.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+To answer the question, we find that 
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+x_0(1) = \frac{500}{\pi} \ln\left(\frac{28}{3}\right) \approx 355 {\rm
+ft}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="237" HEIGHT="46"
+ SRC="img24.gif"
+ ALT="\begin{displaymath}x_0(1) = \frac{500}{\pi} \ln\left(\frac{28}{3}\right) \approx 355 {\rm
+ft}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>(b)
+<DD>Eli is crouching in the touchdown zone smoking a cigarette.  How 
+low must he crouch to avoid getting hit by the landing gear?  You may
+assume that the cigarette is 2.5 feet off the ground.  Compute the
+smoke made by his cigarette smoke assuming there is no diffusion.  You
+can do this by releasing a particle of smoke and allowing it to move
+with the flow velocity induced by the aircraft and its image wing.  If
+you release particles every second or fraction of a second, the cloud
+of particles will generate the pattern.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>Eli is safe as long as he ducks.  Looking at </EM><I>x</I><SUB>0</SUB><EM> and </EM><I>y</I><SUB>0</SUB><EM> as
+described above, the landing gear will pass about 3.5 over the
+touchdown zone.  Here is a picture of Eli's smoke pattern. The red
+cross is the wing position at time 0.9 minutes and 1 minute.  
+The green lines are
+the wind velocity vectors.  The blue spots are the puffs of smoke.
+Eli releases one puff of smoke every </EM>
+<!-- MATH: $\frac{1}{100}$ -->
+<IMG
+ WIDTH="29" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.gif"
+ ALT="$\frac{1}{100}$"><EM> of a second.
+</EM>
+<DIV ALIGN="CENTER">
+<!-- MATH: $\resizebox{2.5in}{!}{\includegraphics{t0.9.eps}}$ -->
+<IMG
+ WIDTH="288" HEIGHT="232" ALIGN="BOTTOM" BORDER="0"
+ SRC="img26.gif"
+ ALT="\resizebox{2.5in}{!}{\includegraphics{t0.9.eps}}">
+<!-- MATH: $\resizebox{2.5in}{!}{\includegraphics{t1.0.eps}}$ -->
+<IMG
+ WIDTH="288" HEIGHT="232" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="\resizebox{2.5in}{!}{\includegraphics{t1.0.eps}}"></DIV>
+<P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+</DL>
+<P>
+</DL>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html4"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2002-05-01</I>
+</ADDRESS>
+</BODY>
+</HTML>

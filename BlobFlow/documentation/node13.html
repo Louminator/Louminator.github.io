@@ -1,0 +1,302 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The simulation and control files</TITLE>
+<META NAME="description" CONTENT="The simulation and control files">
+<META NAME="keywords" CONTENT="documentation">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="documentation.css">
+<LINK REL="next" HREF="node14.html">
+<LINK REL="previous" HREF="node12.html">
+<LINK REL="up" HREF="node10.html">
+<LINK REL="next" HREF="node14.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html157"
+ HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html155"
+ HREF="node10.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html149"
+ HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html158"
+ HREF="node14.html">Running BlobFlow</A>
+<B> Up:</B> <A NAME="tex2html156"
+ HREF="node10.html">Using BlobFlow</A>
+<B> Previous:</B> <A NAME="tex2html150"
+ HREF="node12.html">Environment variables</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00430000000000000000">
+The simulation and control files</A>
+</H1>
+
+<P>
+There are two groups of parameters for BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+.  The first group is the
+physical description of the problem such as the fluid viscosity and the
+initial conditions.  The information in this file only describes the fluid
+experiment, and has nothing to do with BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+, which is one means of
+approximating the outcome of the experiment.  BlobFlow performs some
+elementary tests to make sure that the essential parameters are set
+properly before the simulation begins, but this is by no means
+bulletproof, and it is not recommended that this feature be used to
+assure that control or simulation parameters are self-consistent.
+This simulation description file has the general basic format
+<PRE>
+&lt;paramname&gt;: &lt;paramvalue&gt;
+</PRE>The required fields in the simulation description file are
+<UL>
+<P>
+<LI>Viscosity - The kinematic viscosity of the fluid.
+
+<P>
+<LI>FrameStep - This is the time interval over which one wishes observe
+the fluid flow.  BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+will write out the state of the system at
+increments of this time interval.
+
+<P>
+<LI>EndTime - The time at which the simulation ends.  BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+always
+assumes that the initial conditions refer to <I>t</I>=0.
+
+<P>
+<LI>VtxInit - A file containing the initial conditions of the system.
+This file should be a list of parameters for elliptical Gaussian basis
+functions that describe the vorticity field when <I>t</I>=0.  Each basis function
+entry consists six numbers: <I>x</I>, <I>y</I>, <IMG
+ WIDTH="16" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$\gamma$">,
+<IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\sigma$">,
+<I>a</I>, <IMG
+ WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.gif"
+ ALT="$\theta$">.
+Together, this list of blobs represents 
+<!-- MATH: $\omega (\v x,t=0)$ -->
+<IMG
+ WIDTH="92" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$\omega (\v x,t=0)$">
+in the form
+described in (<A HREF="node6.html#basis-fn">2.1</A>).
+WARNING: The way
+you express your initial condition may affect the accuracy of your solution.
+</UL>
+<P>
+The control file includes parameters that govern the performance and
+accuracy of the BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+simulation.  It is important to know that the
+accuracy of any fluid simulation depends up the exact solution.  If this
+reasoning sounds circular, it is!  In practice, no one calculates a flow
+once.  Investigators calculate the flow, observe the results, identify
+relevant features, try to recalculate the flow with finer parameters and so
+on.  The control file has the following required fields:
+<UL>
+<P>
+<LI>TimeStep - This is the fundamental time integration interval as the
+vortex blobs move and evolve in the flow.
+
+<P>
+<LI>MaxOrder - This is the maximum order of the Adams-Bashforth time
+integrator for the trajectories of the blobs.  The lowest value is 1
+and the greatest is 4.  The user controls this parameter depending
+upon the stability and accuracy needs in the simulation.
+BlobFlow automatically runs a fourth order
+startup procedure.  However, when elements undergo adaptive refinement
+(refer to the alpha parameter below), they immediately drop to first
+order because the history of each of the children is unknown.  Of
+course, it would be desirable for every particle in the simulation to
+remain at MaxOrder indefinitely, and this issue will be addressed in a 
+later version of BlobFlow.
+
+<P>
+<LI>l2Tol - This is the maximum variable an elliptical Gaussian blob can
+achieve before being split into thinner blobs.  The square root of this
+number is the maximum width a blob can achieve.  This number can be likened
+to the grid width of a finite difference calculation.  Blobs naturally
+become wider through viscous diffusion, and there is no way to
+avoid this process.  Unfortunately, the accuracy of the method is related to
+the maximum blob width which is why core spreading methods were first
+thought to be inconsistent.  However, the term ``corrected'' in ECCSVM
+refers to the fact that wide blobs are replaced with thinner blobs to
+maintain accuracy.
+
+<P>
+<LI>alpha - The parameter <IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\alpha$">
+governs the accuracy with which a blob
+can be expressed as four thinner blobs.  A blob of width <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\sigma$">
+will be
+replaced with two blobs of width 
+<!-- MATH: $\alpha \sigma$ -->
+<IMG
+ WIDTH="28" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\alpha \sigma$">
+such that the new
+configuration will look very much like the original blob.  If you choose a
+value of <IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\alpha$">
+that is close to one, the splitting process will be very
+accurate and will happen frequently.  This also means that the total number
+of vortices, often referred to as the <EM>problem size</EM>, will grow quickly
+and the computation will slow down.
+
+<P>
+<LI>MergeStep - This is the time interval over which the merging
+algorithm should be applied.  If the MERGEDIAG compiler directive is
+set, a file will be written <EM>before</EM> and after the merge
+operation.  The pre-merge configuration will be written to a file
+called <TT>$(ECCSVM_BASENAME)_pm<EM>nnnn</EM>.vtx</TT>
+where <EM>nnnn</EM> is
+the frame number.  MergeStep should be an integral multiple of
+FrameStep and should not be less than FrameStep.
+
+<P>
+<LI>ClusterRadius - The cluster radius is a heuristic technique for
+excluding distant elements from consideration when considering a
+merging event.  Merging should only involve overlapping elements, but
+it is not necessary to waste computational resources on error
+estimates if one knows that the elements under consideration are far
+from one another.  If the base element to be merged is located at the
+origin and the candidate element is located at position (<I>x</I>,<I>y</I>) in a
+local coordinate system aligned with the base element's major and
+minor axes.  The candidate is automatically excluded if
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{x^2}{a^2} + y^2a^2 > C_R \sigma^2
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="145" HEIGHT="48"
+ SRC="img16.gif"
+ ALT="\begin{displaymath}\frac{x^2}{a^2} + y^2a^2 > C_R \sigma^2
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <I>C</I><SUB><I>R</I></SUB> is the cluster radius, <I>a</I><SUP>2</SUP> is the base element's aspect
+ratio, and <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\sigma$">
+is the base element's width.
+
+<P>
+<LI>MergeErrorEstimator - The merging algorithm used by BlobFlow
+requires a means of estimating the impact of merging a cluster of
+elements.  Finding good merge estimates is still a fertile area for
+investigator, and the user can choose from one of two available
+methods.  The first (paramvalue=1) estimates the merger-induced error
+using a weighted average for distributional measurement.  This
+technique is fast and efficient for finding clusters, but the
+distributional error will be insensitive to high frequency error
+components.  The second (paramvalue=2) uses a uniform error estimate,
+but this estimate is by no means strict for large groups of elements.
+Thus, it heavily penalizes most merge events except those involving pairs.
+
+<P>
+<LI>MergeBudget - The problem size is controlled by merging overlapping
+blobs.  When blobs overlap substantially, the program can merge them into a
+single blob if the induced error is sufficiently small.  MergeBudget is an
+error budget density for the simulation.  Typically, this number should be
+small relative to the magnitude of the vorticity field.  Keep in mind
+that this parameter value is an error density (vorticity per area)
+because the ``support'' of the vorticity field changes with time.
+
+<P>
+<LI>Mergea2Tol - This tolerance is not currently used, but used 
+to play a role in the uniform error estimator.
+
+<P>
+<LI>MergeThTol - This tolerance is not currently used, but used 
+to play a role in the uniform error estimator.
+
+<P>
+<LI>MergeMom3Wt - This tolerance is not currently used, but it may
+play some role in future merging estimators if some type of weighted
+sum between 3rd and 4th moments is used.
+
+<P>
+<LI>MergeMom4Wt - This tolerance is not currently used, but it may
+play some role in future merging estimators if some type of weighted
+sum between 3rd and 4th moments is used.
+
+<P>
+</UL>
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html157"
+ HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html155"
+ HREF="node10.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html149"
+ HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html158"
+ HREF="node14.html">Running BlobFlow</A>
+<B> Up:</B> <A NAME="tex2html156"
+ HREF="node10.html">Using BlobFlow</A>
+<B> Previous:</B> <A NAME="tex2html150"
+ HREF="node12.html">Environment variables</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2001-08-01</I>
+</ADDRESS>
+</BODY>
+</HTML>

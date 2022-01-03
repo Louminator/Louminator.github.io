@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>The High Spatial Order Residual</TITLE>
+<META NAME="description" CONTENT="The High Spatial Order Residual">
+<META NAME="keywords" CONTENT="eccsvm">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="eccsvm.css">
+</HEAD>
+<BODY LANG="EN">
+ <A NAME="tex2html96" HREF="node7.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html94" HREF="node3.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html88" HREF="node5.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html97" HREF="node7.html">Integral Invariants</A>
+<B>Up:</B> <A NAME="tex2html95" HREF="node3.html">The Vortex Method</A>
+<B> Previous:</B> <A NAME="tex2html89" HREF="node5.html">The Evolution of Elliptical </A>
+<BR> <P>
+<H2><A NAME="SECTION00033000000000000000">The High Spatial Order Residual</A></H2>
+<P>
+As noted earlier, one can examine the accuracy of a vortex method by
+considering the residual of (<A HREF="node4.html#NSopr">3.2</A>).  This section is not
+intended to be a full convergence proof. A full convergence proof
+would follow the same form as that which was used for CCSVM 
+(described in [<A HREF="node16.html#rossiresurrect">22</A>]), but the
+essential changes which study the deformation terms are contained
+here.  We
+linearize the full vorticity dynamics operator, <I>R</I>, and suppose that
+the velocity field and the deviation tensor is specified.  Though the full
+nonlinear problem is more challenging, the rate of convergence is the
+key issue, and the linear problem
+establishes the rate of convergence as  <IMG WIDTH=38 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2337" SRC="img16.gif"  > , because the
+computed velocity field converges to the true velocity field in this
+same limit.
+<P>
+A new issue that is unique to using elliptical Gaussians is that
+the computed velocity field is, in fact, an approximation of the
+Biot-Savart integral for the approximate vorticity field,  <IMG WIDTH=10 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2387" SRC="img41.gif"  > .  In
+other words, the velocity field and velocity field deviation
+calculation is an approximation based on an approximation.  As will be shown
+in
+&#167;<A HREF="node8.html#secasymptotics">3.5</A>, the approximation to the Biot-Savart integral
+is fourth order in  <IMG WIDTH=39 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline2525" SRC="img95.gif"  > .  Since  <IMG WIDTH=99 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2527" SRC="img96.gif"  >  and 
+ <IMG WIDTH=169 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2529" SRC="img97.gif"  > , the approximation to the velocity field
+and its derivatives converges with a  <IMG WIDTH=35 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2531" SRC="img98.gif"  >  which far exceeds the
+overall spatial accuracy of the method.
+<P>
+The total residual of a computational element 
+under the dynamics of (<A HREF="node5.html#systemodes">3.12</A>) is
+<P><A NAME="gresidual">&#160;</A> <IMG WIDTH=505 HEIGHT=155 ALIGN=BOTTOM ALT="eqnarray348" SRC="img99.gif"  > <P>
+where  <IMG WIDTH=55 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2533" SRC="img100.gif"  >  (the ``Hessian'') is a second order tensor
+or bilinear operator
+of velocity derivatives evaluated at the basis function center,  <IMG WIDTH=13 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2535" SRC="img101.gif"  > .
+Similarly,  <IMG WIDTH=55 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2537" SRC="img102.gif"  >  is a trilinear
+operator of velocity derivatives.  For the last term in the expansion,
+ <IMG WIDTH=11 HEIGHT=34 ALIGN=MIDDLE ALT="tex2html_wrap_inline2539" SRC="img103.gif"  >  is a point on the line segment joining  <IMG WIDTH=10 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2541" SRC="img260.gif"  >  and  <IMG WIDTH=9 HEIGHT=17 ALIGN=BOTTOM ALT="tex2html_wrap_inline2543" SRC="img105.gif"  > .
+From this point on, the tensors (including their constituents)
+are evaluated at  <IMG WIDTH=13 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2535" SRC="img101.gif"  > , and references to  <IMG WIDTH=13 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2535" SRC="img101.gif"  >  will be 
+excluded in the interest of brevity.
+Without loss of
+generality, let us assume that the basis function (<A HREF="node5.html#basisfn">3.9</A>)
+is located at the origin and oriented along
+the coordinate axes so that  <IMG WIDTH=44 HEIGHT=31 ALIGN=MIDDLE ALT="tex2html_wrap_inline2549" SRC="img106.gif"  > ,  <IMG WIDTH=40 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline2551" SRC="img107.gif"  >  and  <IMG WIDTH=41 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline2553" SRC="img108.gif"  > .  Then,
+<P> <IMG WIDTH=500 HEIGHT=49 ALIGN=BOTTOM ALT="equation370" SRC="img109.gif"  > <P>
+Here, it is convenient to use index notation so that  <IMG WIDTH=56 HEIGHT=15 ALIGN=BOTTOM ALT="tex2html_wrap_inline2555" SRC="img110.gif"  >  and
+ <IMG WIDTH=55 HEIGHT=32 ALIGN=MIDDLE ALT="tex2html_wrap_inline2557" SRC="img111.gif"  >  because we will have many repeated indices when
+analyzing the  <IMG WIDTH=31 HEIGHT=14 ALIGN=BOTTOM ALT="tex2html_wrap_inline2559" SRC="img112.gif"  >  term of (<A HREF="node6.html#gresidual">3.26</A>).
+<P>
+In the first combination of terms in (<A HREF="node6.html#gresidual">3.26</A>), one sees that
+<P> <IMG WIDTH=542 HEIGHT=49 ALIGN=BOTTOM ALT="equation382" SRC="img113.gif"  > <P>
+where one sums over repeated indices.  Since 
+the partial derivatives composing the Taylor
+coefficients are evaluated at the center of the basis function and therefore
+remain fixed, any combination of
+<I>i</I>, <I>j</I>, <I>k</I> will involve an odd moment on the elliptical Gaussian.
+Therefore,
+<P> <IMG WIDTH=500 HEIGHT=36 ALIGN=BOTTOM ALT="equation390" SRC="img114.gif"  > <P>
+On the surface, it
+would appear that the second combination of terms 
+has even moments and so will determine the rate
+of convergence for the whole method.  I save this portion for
+last because it is contains a pleasant surprise in this respect.
+Similar to the first combination, 
+the third combination in (<A HREF="node6.html#gresidual">3.26</A>),
+<P> <IMG WIDTH=500 HEIGHT=36 ALIGN=BOTTOM ALT="equation394" SRC="img115.gif"  > <P>
+for the same reason.  The last term actually determines the rate of convergence
+<P> <IMG WIDTH=500 HEIGHT=36 ALIGN=BOTTOM ALT="equation397" SRC="img116.gif"  > <P>
+because  <IMG WIDTH=40 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2563" SRC="img117.gif"  > .
+<P>
+Returning to the second combination, 
+even moments are possible:
+<P> <IMG WIDTH=542 HEIGHT=273 ALIGN=BOTTOM ALT="eqnarray400" SRC="img118.gif"  > <P>
+Applying incompressibility to the two middle expressions in the
+summation yields 
+<P> <IMG WIDTH=550 HEIGHT=207 ALIGN=BOTTOM ALT="eqnarray424" SRC="img119.gif"  > <P>
+Evaluating the integral, one finds
+<P> <IMG WIDTH=500 HEIGHT=74 ALIGN=BOTTOM ALT="eqnarray442" SRC="img120.gif"  > <P>
+The magnitude of  <IMG WIDTH=12 HEIGHT=16 ALIGN=MIDDLE ALT="tex2html_wrap_inline2407" SRC="img53.gif"  >  is relevant as <I>l</I> varies because, presumably,
+the problem size grows as one increases the resolution.  In other words, <I>l</I>
+is a measurement of the support of a basis function.  If one decreases <I>l</I>,
+presumably one is using more basis functions to represent a given
+approximation of the vorticity field.  Thus, one would expect  <IMG WIDTH=12 HEIGHT=16 ALIGN=MIDDLE ALT="tex2html_wrap_inline2407" SRC="img53.gif"  >  to
+scale as least like  <IMG WIDTH=23 HEIGHT=15 ALIGN=BOTTOM ALT="tex2html_wrap_inline2575" SRC="img121.gif"  >  where <I>C</I> is the representative vorticity at
+some point in the domain.  In fact, many investigators force
+ <IMG WIDTH=12 HEIGHT=16 ALIGN=MIDDLE ALT="tex2html_wrap_inline2407" SRC="img53.gif"  >  to scale like  <IMG WIDTH=23 HEIGHT=15 ALIGN=BOTTOM ALT="tex2html_wrap_inline2581" SRC="img122.gif"  >  so that basis functions overlap more as the
+numerical parameters are refined.  For example, Hald used this procedure for
+his first vortex method convergence proof because it balanced two distinct
+terms in one of his error bounds [<A HREF="node16.html#hald2">10</A>].
+Since  <IMG WIDTH=168 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2583" SRC="img123.gif"  >  and if we make the reasonable
+restriction that
+ <IMG WIDTH=71 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2585" SRC="img124.gif"  > , we can see that the contribution from the third
+differential tensor
+is  <IMG WIDTH=35 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2335" SRC="img15.gif"  > , proving the following theorem.
+<P>
+<P> <IMG WIDTH=588 HEIGHT=54 ALIGN=BOTTOM ALT="thm453" SRC="img125.gif"  > <P>
+<P>
+We have established in this section that deforming basis
+functions induce fourth order spatial errors over the entire domain.  
+This error estimate using residuals
+is not restricted to a particular norm, so that even uniform error
+estimates are possible as they were for CCSVM.
+We have
+also eluded to the necessity of a refinement procedure that will be
+discussed in &#167;<A HREF="node9.html#secrefine">4</A> so that basis functions will not spread
+beyond a specified width <I>l</I>.
+<P>
+<HR><A NAME="tex2html96" HREF="node7.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html94" HREF="node3.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html88" HREF="node5.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html97" HREF="node7.html">Integral Invariants</A>
+<B>Up:</B> <A NAME="tex2html95" HREF="node3.html">The Vortex Method</A>
+<B> Previous:</B> <A NAME="tex2html89" HREF="node5.html">The Evolution of Elliptical </A>
+<P><ADDRESS>
+<I>Louis F. Rossi <BR>
+Thu Nov  4 15:02:00 EST 1999</I>
+</ADDRESS>
+</BODY>
+</HTML>

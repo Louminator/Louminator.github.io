@@ -1,0 +1,360 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="hw7soln">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="hw7soln.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<DIV ALIGN="CENTER">
+<B>Math428: Problem Set #7 solution guide</B>
+</DIV>
+<P>
+<DL COMPACT>
+<DD><P>
+<DT>1.
+<DD>Use the trapezoid rule and BDF2 to solve
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="313" HEIGHT="169"
+ SRC="img1.gif"
+ ALT="\begin{eqnarray*}{y^{(1)}}' & = & -\frac{30001}{40} y^{(1)} + \frac{9999}{40} \s...
+...40} y^{(2)}, \\
+y^{(1)}(0) & = & 1, \\
+y^{(2)}(0) & = & 1, \\
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL">for 
+<!-- MATH: $0 \leq t \leq 1$ -->
+<IMG
+ WIDTH="81" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$0 \leq t \leq 1$">
+with a step size of <I>h</I>=0.1.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>If we let
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+A = \left[
+\begin{array}{cc}
+-\frac{30001}{40} & \frac{9999}{40} \sqrt{3} \\
+\frac{9999}{40}\sqrt{3} & - \frac{10003}{40}
+\end{array}
+\right],
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="208" HEIGHT="55"
+ SRC="img3.gif"
+ ALT="\begin{displaymath}A = \left[
+\begin{array}{cc}
+-\frac{30001}{40} & \frac{9999}{...
+...rac{9999}{40}\sqrt{3} & - \frac{10003}{40}
+\end{array}\right],
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+We can think of trapezoid rule as
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\v u_{k+1} = \left(I-\frac{h}{2}A\right)^{-1}\left(I+\frac{h}{2}A\right) \v u_k.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="282" HEIGHT="58"
+ SRC="img4.gif"
+ ALT="\begin{displaymath}\v u_{k+1} = \left(I-\frac{h}{2}A\right)^{-1}\left(I+\frac{h}{2}A\right) \v u_k.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Similarly, we can write BDF2 as
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\v u_{k+1} = \left(I-\frac{h}{2}A\right)^{-1}\left(I+\frac{h}{2}A\right) \v u_k.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="282" HEIGHT="58"
+ SRC="img4.gif"
+ ALT="\begin{displaymath}\v u_{k+1} = \left(I-\frac{h}{2}A\right)^{-1}\left(I+\frac{h}{2}A\right) \v u_k.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Solving the system, we see that trap rule is stable but oscillates
+like crazy while BDF2 does not. Both are second order.  
+</EM>
+<DIV ALIGN="CENTER">
+<!-- MATH: $\resizebox{2.8in}{!}{\includegraphics{prob1a.eps}}$ -->
+<IMG
+ WIDTH="322" HEIGHT="256" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="\resizebox{2.8in}{!}{\includegraphics{prob1a.eps}}">
+<!-- MATH: $\resizebox{2.8in}{!}{\includegraphics{prob1b.eps}}$ -->
+<IMG
+ WIDTH="322" HEIGHT="253" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="\resizebox{2.8in}{!}{\includegraphics{prob1b.eps}}"></DIV>
+<P>
+<EM>As an
+exercize, it is good to check the eigenvalues of </EM><I>A</I><EM>, and if you do,
+you will find
+that the system is stiff.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>2.
+<DD>[Based on KC 8.12:4]
+Consider the multistep method
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u_{k+1} = -\alpha u_k + (1+\alpha) u_{k-1} + \frac{h}{2}
+\left[-\alpha f_{k+1} + (4 + 3 \alpha) f_k \right].
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="454" HEIGHT="46"
+ SRC="img7.gif"
+ ALT="\begin{displaymath}u_{k+1} = -\alpha u_k + (1+\alpha) u_{k-1} + \frac{h}{2}
+\left[-\alpha f_{k+1} + (4 + 3 \alpha) f_k \right].
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+For what value(s) of <IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\alpha$">
+is this method second 
+order?  Generate plots of the region of stability for several
+values of <IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\alpha$">.
+Experimentally determine values of <IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\alpha$">
+so that the method is
+A-stable. 
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>As usual, if you Taylor expand </EM><I>u</I><SUB><I>k</I>+1</SUB><EM>, </EM><I>f</I><SUB><I>k</I>+1</SUB><EM>, associate
+</EM><I>f</I><SUB><I>k</I></SUB><EM>'s with </EM><I>u</I><SUB><I>k</I></SUB>'<EM>'s, and collect the remainder terms at each power of </EM><I>h</I><EM>, you will
+find that at the first three orders, the value of </EM><IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\alpha$"><EM> does not
+matter.  However, for </EM><I>h</I><SUP>3</SUP><EM>, we find that the only way to make the
+coefficient zero is if </EM>
+<!-- MATH: $\alpha = 8/7$ -->
+<IMG
+ WIDTH="70" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\alpha = 8/7$"><EM>.
+</EM>
+<P>
+<EM>If you you fiddle around a bit with the region of absolute stability
+for this method, you find that reason to believe that
+the method is A-stable for all </EM><IMG
+ WIDTH="51" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$\alpha>0$"><EM>.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>3.
+<DD>[Double credit]
+Solve the heat equation
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="274" HEIGHT="33"
+ SRC="img11.gif"
+ ALT="\begin{eqnarray*}v_t = v_{xx} + x(1-x), \ \ \ \ 0 \leq x \leq 1,
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL">with initial conditions <I>v</I>(<I>x</I>,0) =<I>x</I> and boundary conditions 
+<!-- MATH: $v(0,t) =
+0$ -->
+<I>v</I>(0,<I>t</I>) =
+0 and 
+<!-- MATH: $v(1,t) = 1$ -->
+<I>v</I>(1,<I>t</I>) = 1 on the time interval 
+<!-- MATH: $0 \leq t \leq 2$ -->
+<IMG
+ WIDTH="81" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.gif"
+ ALT="$0 \leq t \leq 2$">.
+First,
+use the explicit first order finite difference scheme with
+size 
+<!-- MATH: $h=\frac{1}{10}$ -->
+<IMG
+ WIDTH="58" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$h=\frac{1}{10}$">
+and 
+<!-- MATH: $k=\frac{1}{10}$ -->
+<IMG
+ WIDTH="58" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$k=\frac{1}{10}$">,
+and then 
+<!-- MATH: $h=\frac{1}{10}$ -->
+<IMG
+ WIDTH="58" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$h=\frac{1}{10}$">and
+
+<!-- MATH: $k=\frac{1}{400}$ -->
+<IMG
+ WIDTH="64" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$k=\frac{1}{400}$">.
+Next, use
+Crank-Nicholson with the same parameters, and compare the two methods.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>For a modest problem like this, you do not need to worry much about
+the subtleties of the matrix operations.  However, if the mesh were
+finer, many of the techniques you learned in Math426 would come into
+play for solving the linear system.  Also, different implementations
+of the algorithm will run faster or slower depending upon how do it.
+</EM>
+<P>
+<EM>The first choice of parameters for the explicit method (left) will yield
+unstable oscillations like the following.  Notice that the highest
+frequencies are amplified most, and be sure to look at the scale on
+the vertical axes!  The higher temporal resolution calculation (right)
+satisfies the stability requirements and we obtain a more reasonable answer.
+</EM>
+<DIV ALIGN="CENTER">
+<!-- MATH: $\resizebox{2.8in}{!}{\includegraphics{prob3a.eps}}$ -->
+<IMG
+ WIDTH="322" HEIGHT="262" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.gif"
+ ALT="\resizebox{2.8in}{!}{\includegraphics{prob3a.eps}}">
+<!-- MATH: $\resizebox{2.8in}{!}{\includegraphics{prob3b.eps}}$ -->
+<IMG
+ WIDTH="322" HEIGHT="269" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.gif"
+ ALT="\resizebox{2.8in}{!}{\includegraphics{prob3b.eps}}"></DIV><EM>The implicit method (Crank-Nicholson) fares much better.  While the
+smaller timestep is less accurate, it is nonetheless stable and
+reasonable for this PDE.
+</EM>
+<DIV ALIGN="CENTER">
+<!-- MATH: $\resizebox{2.8in}{!}{\includegraphics{prob3c.eps}}$ -->
+<IMG
+ WIDTH="321" HEIGHT="266" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.gif"
+ ALT="\resizebox{2.8in}{!}{\includegraphics{prob3c.eps}}">
+<!-- MATH: $\resizebox{2.8in}{!}{\includegraphics{prob3d.eps}}$ -->
+<IMG
+ WIDTH="322" HEIGHT="269" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.gif"
+ ALT="\resizebox{2.8in}{!}{\includegraphics{prob3d.eps}}"></DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+</DL>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2002-05-20</I>
+</ADDRESS>
+</BODY>
+</HTML>

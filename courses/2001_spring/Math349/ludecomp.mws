@@ -1,0 +1,45 @@
+{VERSION 4 0 "IBM INTEL LINUX" "4.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "" -1 256 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Title" 0 18 1 
+{CSTYLE "" -1 -1 "" 1 18 0 0 0 0 0 1 1 0 0 0 0 0 0 0 }3 0 0 -1 12 12 
+0 0 0 0 0 0 19 0 }{PSTYLE "Author" 0 19 1 {CSTYLE "" -1 -1 "" 0 1 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 }3 0 0 -1 8 8 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {PARA 18 "" 0 "" {TEXT -1 37 "LU Decomposition with Linear Alg
+ebra." }}{PARA 19 "" 0 "" {TEXT -1 71 "L F Rossi\nDepartment of Mathem
+atical Sciences\nUniversity of Dela-where?" }}{PARA 0 "" 0 "" {TEXT 
+-1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 77 "This worksheet gives a brief ov
+erview of finding LU decompositions using the " }{TEXT 0 13 "LinearAlg
+ebra" }{TEXT -1 162 " package.  Essential Maple performs the same oper
+ations covered in the textbook, except Maple will also swap rows if ne
+cessary to avoid zeroes along the diagonal." }}{PARA 0 "" 0 "" {TEXT 
+-1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 37 "Do not forget to load in the pa
+ckage." }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "with(LinearAlgebra
+):" }}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 21 "Th
+ere is online help." }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "?LUDe
+composition;" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "
+" {TEXT -1 30 "Here is a little test problem." }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 32 "A := <<1,2,3>|<4,3,2>|<-1,0,1>>;" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "LUDecomposition(A);" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 63 "Notice that the Maple returns three matri
+ces: P, L, U.  P is a " }{TEXT 256 18 "permutation matrix" }{TEXT -1 
+148 ", which represents row swaps if they had been necessary.  They we
+re not necessary here because the matrix A has nonzero elements along \+
+the diagonal." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" 
+{TEXT -1 69 "Now, let's see what happens when there are zeroes along t
+he diagonal." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "B := <<0,2,
+3>|<4,3,2>|<-1,1,0>>;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "LU
+Decomposition(B);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 241 "Notice that
+ if you had tried to do this one by hand, you would have had trouble f
+rom the start because the first element on the diagonal is zero.  Mapl
+e solves the problem by swapping rows 1 and 2.  The permutation matrix
+ reflects this swap." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "
+" {TEXT -1 114 "The results of the LU decomposition can be used by Map
+le to solve the linear system.  You can feed the results of " }{TEXT 
+0 15 "LUDecomposition" }{TEXT -1 15 " straight into " }{TEXT 0 11 "Lin
+earSolve" }{TEXT -1 22 " to solve your system." }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 30 "(P,L,U) := LUDecomposition(B);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "LinearSolve([P,L,U],<1,2,3>);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "6 0 0" 20 }
+{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

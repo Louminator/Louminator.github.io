@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE> Vortex Monopole Decay Page</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (X11; I; OSF1 V4.0 alpha) [Netscape]">
+</HEAD>
+<BODY>
+
+<H1>The viscous decay of a high Reynolds number vortex monopole.</H1>
+
+<H3>...with <A HREF="http://sherlock.math.uml.edu/~rossi">Lou Rossi</A>,
+Joe Lingevitch and <A HREF="http://www.esam.nwu.edu/ajb/ajb.html"> Andy
+Bernoff</A>.</H3>
+
+<H3><I>Last modified: Aug 15, 1995</I></H3>
+
+<H2><A NAME="monopole"></A>This is a vortex monopole...<BR>
+<IMG SRC="gifs/monounp.gif" HEIGHT=300 WIDTH=500></H2>
+
+<H2>This is a perturbed vortex monopole...<BR>
+<IMG SRC="gifs/mono0.gif" HEIGHT=300 WIDTH=500></H2>
+
+<H2>This is a perturbed vortex monopole on drugs...<BR>
+<IMG SRC="gifs/mono1.gif" HEIGHT=300 WIDTH=500></H2>
+
+<H2>Any questions???</H2>
+
+<P>
+<HR></P>
+
+<H2>This page describes an ongoing research program at Northwestern University's
+<A HREF="http://www.esam.nwu.edu">Applied Mathematics Department</A>. </H2>
+
+<H2>Perturbed Lamb monopoles.</H2>
+
+<P>We are studying the long time decay of a Lamb vortex monopole in a two-dimensional,
+incompressible flow when perturbed by small to moderate disturbances. A
+Lamb monopole is an axisymmetric vortex with a Gaussian radial profile.
+The very <A HREF="#monopole">first image on this page</A> is a Lamb monopole.
+The equation describing this vorticity field in polar coordinates is <IMG SRC="xbms/base_m.xbm" HEIGHT=54 WIDTH=398 ALIGN=CENTER>.
+Fundamentally, wc hope to understand the evolution and morphology of generic
+vortex monopoles. Right now, our research program focuses on Gaussian monopoles
+because in the lack of external flows, all monopoles relax to Gaussian
+monopoles. The questions we are trying to answer are:</P>
+
+<OL>
+<LI>How quickly do they relax?</LI>
+
+<LI>What are the critical relaxation mechanisms?</LI>
+
+<LI>What is the morphology of relaxing monopoles?</LI>
+</OL>
+
+<P>Using high-Reynolds number asymptotics, we have some intuition about
+the decay of perturbed, Gaussian monopoles. Under the assumption that the
+perturbations are so small that the perturbations do not interact with
+themselves but only with the unperturbed Gaussian monopole, we have found
+that perturbations are supposed to decay much more quickly than one might
+expect.</P>
+
+<H2>Rapid relaxation.</H2>
+
+<P>This linear analysis predicts that the perturbation will relax very
+quickly when the perturbation is very small. For infinitesimal perturbations,
+vorticity is similar to a passive scalar. In monopole structures with shear
+(like the Gaussian monopole) nonaxisymmetric perturbations are sheared
+out, creating sharp gradients, and homogenized through viscous diffusion.
+This is called the <U>shear-diffusion mechanism</U>.</P>
+
+<H2>Using the Corrected Core Spreading Vortex Method, we have been performing
+full nonlinear simulations of a perturbed monopole. </H2>
+
+<P>When studying very small perturbations, the simulation agrees with the
+linear theory. But, for strong perturbations, we see very different behavior.
+Initially, the perturbation is azimuthal two-periodic and exponentially
+decaying. Green-yellow represents positive vorticity, and blue-purple represents
+negative vorticity. <BR>
+<BR>
+<IMG SRC="gifs/decay0000.gif" HEIGHT=200 WIDTH=200 ALIGN=CENTER> Perturbation
+initial conditions at T=0.0. <BR>
+<BR>
+The mathematical expression for the initial conditions is <IMG SRC="gifs/joefunc.gif" HEIGHT=49 WIDTH=415 ALIGN=CENTER>.<BR>
+We tried different amplitude perturbations of d = 0.02, 0.1 and 0.25. We
+already know that really small perturbations decay quickly, so we are more
+interested in where the small perturbation theory breaks down.</P>
+
+<P>To perform these experiments, we simulate the Navier-Stokes equations
+at a high Reynolds number:<BR>
+<IMG SRC="gifs/vorteqn.gif" HEIGHT=42 WIDTH=350 ALIGN=CENTER><BR>
+In this case, Re=10,000. But, the perturbed field might be very small compared
+to the Lamb monopole base state, so only model the evolution of the perturbed
+state:<BR>
+<IMG SRC="gifs/perteqn.gif" HEIGHT=42 WIDTH=406 ALIGN=CENTER><BR>
+</P>
+
+<H2>Linear vs. nonlinear behavior.</H2>
+
+<P>Over time, this radially homogeneous distribution is sheared out by
+the base flow as we would expect. In fact, regardless of the amplitude
+of the initial perturbation, the relaxation rate remains approximately
+the same. We measure the relaxation toward an axisymmetric object by computing
+its <I> nonaxisymmetric enstrophy </I>. This is definited to be the square
+of the nonaxisymmetric part of the vorticity field integrated over the
+entire domain. Here is what we found: <BR>
+<IMG SRC="gifs/nonaxienstrophy.gif" HEIGHT=491 WIDTH=570 ALIGN=CENTER><BR>
+Though the relaxation rates are the same, the strongest perturbation, d=0.25,
+relaxes into something other than an axisymmetric state (E_N &gt; 0). The
+other perturbations relax back into axisymmetric states. </P>
+
+<P>In the following images, the pictures on the left correspond to computations
+of the linearized vorticity dynamics equations. (That is, the perturbation
+does not interact with itself.) On the right, the images are taken from
+a simulation of the full nonlinear vorticity dynamics equations when d=0.25.<BR>
+<BR>
+<IMG SRC="gifs/linear0000.gif" HEIGHT=200 WIDTH=200 ALIGN=CENTER> <IMG SRC="gifs/decay0000.gif" HEIGHT=200 WIDTH=200 ALIGN=CENTER>
+T=0<BR>
+<BR>
+<IMG SRC="gifs/linear0200.gif" HEIGHT=200 WIDTH=200 ALIGN=CENTER> <IMG SRC="gifs/decay0200.gif" HEIGHT=200 WIDTH=200 ALIGN=CENTER>
+T=200<BR>
+<BR>
+<IMG SRC="gifs/linear0400.gif" HEIGHT=200 WIDTH=200 ALIGN=CENTER> <IMG SRC="gifs/decay0400.gif" HEIGHT=200 WIDTH=200 ALIGN=CENTER>
+T=400<BR>
+<BR>
+<IMG SRC="gifs/linear0600.gif" HEIGHT=200 WIDTH=200 ALIGN=CENTER> <IMG SRC="gifs/decay0600.gif" HEIGHT=200 WIDTH=200 ALIGN=CENTER>
+T=600<BR>
+<BR>
+We have also created a <A HREF="mpegs/decayKc.mpeg">movie</A> of the evolution
+of the perturbation if you have an MPEG player. You probably notice that
+during the later stages of the simulation, the disturbance near the center
+stabilizes and stops getting sheared in the nonlinear simulation in sharp
+contrast to the linearized evolution. This surprised us at first because
+the linear theory did such a good job of predicting nonlinear behavior
+for a moderate amount of time. Now, we believe it is a good example how
+how the shear/diffusion mechanism can be negated through nonlinear effects.</P>
+
+<H2>The entire tripole structure.</H2>
+
+<P>Of course, the image above only shows the perturbation without the base
+vorticity from the stronger monopole which drives the flow. The total initial
+vorticity field really looks like this:<BR>
+<BR>
+<A HREF="mpegs/decayKc.total.mpeg"><IMG SRC="gifs/totalanchor.gif" HEIGHT=300 WIDTH=500 ALIGN=CENTER></A><BR>
+<BR>
+Click on the picture to watch a movie of the total vorticity field evolution.
+Again you will see that the disturbed monopole rapidly relaxes. However,
+the final state does not look like a Guassian monopole. It is a steadily
+rotating, asymmetric object called a <U>tripole</U>. Presently, we are
+revising our understanding of monopole decay. We know that weak perturbations
+to Gaussian monopoles relax rapidly to Gaussian monopoles. Now, we have
+found that moderate perturbations to Gaussian monopoles will rapidly relax
+through the shear diffusion mechanism, <I>but not necessarily to a Gaussian
+monopole.</I> We have found at least one new intermediate state. Now, we
+must try to characterize these other states and understand where and how
+shear/diffusion is negated.</P>
+
+<H2>Would you like a preprint?</H2>
+
+<P>We have submitted these results to the letter section of the Physics
+of Fluids. If you would like a gnu-zipped postscript copy, feel free to
+download it or request a copy. </P>
+
+<P><A HREF="ftp://columbo.mech.nwu.edu/dist/rossi/tripole3.ps.gz">L. F.
+Rossi, J. F. Lingevitch and A. J. Bernoff. Quasi-steady monopole and tripole
+attractors for relaxing vortices. Submitted to <I> Physics of Phluids</I>,
+1995. </A> </P>
+
+<P>We would like to thank the <B>National Science Foundation</B> for supporting
+this research project and the <B>Pittsburgh Supercomputing Center</B> for
+supplying the computational resources necessary for these computations.</P>
+
+<ADDRESS><IMG SRC="../Vortie/vortex2.gif" HEIGHT=155 WIDTH=98 ALIGN=BOTTOM><A HREF="mailto:LF-Rossi@nwu.edu">LF-Rossi@nwu.edu</A></ADDRESS>
+
+</BODY>
+</HTML>

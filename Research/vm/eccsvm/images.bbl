@@ -1,0 +1,138 @@
+\begin{thebibliography}{10}
+
+\bibitem{anderson-corrections}
+{\sc C.~Anderson}, {\em A method of local corrections for computing the
+  velocity field due to a distribution of vortex blobs}, J. Comp. Phys., 62
+  (1986), pp.~111--123.
+
+\bibitem{anderson-1a}
+{\sc C.~R. Anderson}, {\em An implementation of the fast multipole method
+  without multipoles}, Tech. Report CAM 90-14, University of California, Los
+  Angeles, July 1990.
+
+\bibitem{beale-majda}
+{\sc J.~T. Beale and A.~Majda}, {\em Vortex methods. {II}: Higher order
+  accuracy in two and three dimensions}, Mathematics of Computation, 39 (1982),
+  pp.~29--52.
+
+\bibitem{buntine-pullen}
+{\sc J.~D. Buntine and D.~I. Pullen}, {\em Merger and cancellation of strained
+  vortices}, J. Fluid Mech., 205 (1989), pp.~263--295.
+
+\bibitem{draghicescu-2}
+{\sc C.~I. Draghicescu}, {\em An efficient implementation of particle methods
+  for the incompressible {E}uler equations.}, SIAM J. Num. Anal., 31 (1994),
+  pp.~1090--1108.
+
+\bibitem{draghicescu-1}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em A fast algorithm for
+  vortex blob interactions.}, Journal of Computational Physics, 116 (1995),
+  pp.~69--78.
+
+\bibitem{feller}
+{\sc W.~Feller}, {\em An Introduction to Probability Theory and Its
+  Applications}, John Wiley \& Sons, Inc., 1957, ch.~7, pp.~168--173.
+
+\bibitem{goodman-hou-lowengrub}
+{\sc J.~Goodman, T.~Y. Hou, and J.~Lowengrub}, {\em Convergence of the point
+  vortex method for the {2D} {E}uler equations}, Communications on Pure and
+  Applied Mathematics, XLIII (1990), pp.~415--430.
+
+\bibitem{greengard-rokhlin}
+{\sc L.~Greengard and V.~Rokhlin}, {\em A fast algorithm for particle
+  simulations}, J. Comp. Phys., 73 (1987), pp.~325--348.
+
+\bibitem{hald-2}
+{\sc O.~H. Hald}, {\em Convergence of vortex methods for {E}uler's equations.
+  {II}}, SIAM J. Num. Anal., 16 (1979), pp.~726--755.
+
+\bibitem{kida}
+{\sc S.~Kida}, {\em Motion of an elliptic vortex in a uniform shear flow}, J.
+  Phys. Soc. Japan, 50 (1981), pp.~3517--3520.
+
+\bibitem{lamb-elliptical-patch}
+{\sc H.~Lamb}, {\em Hydrodynamics}, Cambridge University Press, 1993, ch.~IV,
+  VII, pp.~84--86, 232--233.
+
+\bibitem{leonard-review-1}
+{\sc A.~Leonard}, {\em Vortex methods for flow simulation}, J. Comp. Phys., 37
+  (1980), pp.~289--335.
+
+\bibitem{lingevitch-bernoff}
+{\sc J.~F. Lingevitch and A.~J. Bernoff}, {\em Advection of a passive scalar by
+  a vortex couple in the small-diffusion limit.}, J. Fluid Mech., 270 (1994),
+  pp.~219--249.
+
+\bibitem{lowengrub-shelley}
+{\sc J.~S. Lowengrub and M.~J. Shelley}, {\em Smooth grid methods for the
+  vorticity formulation of the {E}uler equations}, in Lectures in applied
+  mathematics, vol.~28, American Mathematical Society, 1991, pp.~423--432.
+
+\bibitem{lowengrub-shelley-merriman}
+{\sc J.~S. Lowengrub, M.~J. Shelley, and B.~Merriman}, {\em High-order and
+  efficient methods for the vorticity formulation of the {E}uler equations.},
+  SIAM J. Sci. Comp., 14 (1993), pp.~1107--1142.
+
+\bibitem{marshall-grant-1}
+{\sc J.~S. Marshall and J.~R. Grant}, {\em A method for determining the
+  velocity induced by highly anisotropic vorticity blobs}, J. Comp. Phys., 126
+  (1996), pp.~286--298.
+
+\bibitem{meiburg}
+{\sc E.~Meiburg}, {\em Incorporation and test of diffusion and strain effects
+  in the two-dimensional vortex blob technique}, J. Comp. Phys., 82 (1989),
+  pp.~85--93.
+
+\bibitem{peyret-taylor}
+{\sc R.~Peyret and T.~D. Taylor}, {\em Computational methods for fluid flow},
+  Springer Series in Computational Physics, Springer-Verlag, 1985.
+
+\bibitem{rhines-young}
+{\sc P.~B. Rhines and W.~R. Young}, {\em How rapidly is a passive scalar mixed
+  within closed streamlines?}, J. Fluid Mech., 133 (1983), pp.~133--145.
+
+\bibitem{rosenhead}
+{\sc L.~Rosenhead}, {\em The point vortex approximation of a vortex sheet},
+  Proceedings of the Royal Society of London Series A, 134 (1932),
+  pp.~170--192.
+
+\bibitem{rossi-resurrect}
+{\sc L.~F. Rossi}, {\em Resurrecting core spreading methods: A new scheme that
+  is both deterministic and convergent}, SIAM J. Sci. Comp., 17 (1996),
+  pp.~370--397.
+
+\bibitem{rossi-merge}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em Merging
+  computational elements in {L}agrangian simulations}, SIAM J. Sci. Comp., 18
+  (1997), pp.~1014--1027.
+
+\bibitem{rossi-lingevitch-bernoff}
+{\sc L.~F. Rossi, J.~F. Lingevitch, and A.~J. Bernoff}, {\em Quasi-steady
+  monopole and tripole attractors for relaxing vortices}, Physics of Fluids, 9
+  (1997), pp.~2329--2339.
+
+\bibitem{sethian-1}
+{\sc J.~A. Sethian}, {\em A brief overview of vortex methods}, in Vortex
+  Methods and Vortex Motion, K.~Gustafson and J.~A. Sethian, eds., SIAM
+  Frontiers in Applied Mathematics, 1990.
+
+\bibitem{teng-1}
+{\sc Z.-H. Teng}, {\em Elliptic-vortex method for incompressible flow at high
+  {R}eynolds number.}, J. Comp. Phys., 46 (1982), pp.~54--68.
+
+\bibitem{teng-2}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em
+  Variable-elliptical-vortex method for incompressible flow simulation.}, J.
+  Comp. Math., 4 (1986), pp.~255--262.
+
+\bibitem{teng-3}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em Convergence of the
+  variable-elliptic-vortex method for {E}uler equations}, SIAM J. Num. Anal.,
+  32 (1995), pp.~754--774.
+
+\bibitem{vandommelen-rundensteiner}
+{\sc L.~van Dommelen and E.~A. Rundensteiner}, {\em Fast, adaptive summation of
+  point forces in the two-dimensional poisson equation}, Journal of
+  Computational Physics, 83 (1989), pp.~126--147.
+
+\end{thebibliography}

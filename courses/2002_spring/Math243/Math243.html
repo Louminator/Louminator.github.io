@@ -1,0 +1,311 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.76 [en] (X11; U; SunOS 5.8 sun4u) [Netscape]">
+   <meta name="AUTHOR" content="L. F. Rossi">
+   <meta name="CREATED" content="20010202;11114500">
+   <meta name="CHANGEDBY" content="Louis Rossi">
+   <meta name="CHANGED" content="20010202;11370200">
+   <title>Math 243: Calculus and Analytic Geometric C</title>
+</head>
+<body text="#000000" bgcolor="#66FFFF" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+&nbsp;
+<center><table BORDER=0 COLS=3 WIDTH="100%" NOSAVE >
+<tr NOSAVE>
+<td WIDTH="110" NOSAVE></td>
+
+<td NOSAVE>
+<center>
+<h1>
+Math 243</h1></center>
+
+<center>
+<h1>
+Calculus and Analytic Geometric C</h1></center>
+
+<center>
+<h1>
+Section 010</h1></center>
+</td>
+
+<td WIDTH="110" NOSAVE><img SRC="udmath.gif" height=89 width=108 align=CENTER></td>
+</tr>
+</table></center>
+
+<h2>
+
+<hr WIDTH="100%"><a NAME="Contents:"></a>Contents:</h2>
+
+<ul>
+<li>
+<b><font color="#330000"><font size=+1><a href="#Contact information.">Course
+contact information.</a></font></font></b></li>
+
+<li>
+<b><font color="#330000"><font size=+1><a href="#Special information about Ewing 205 & 207.">Special
+information about Ewing 205 &amp; 207.</a></font></font></b></li>
+
+<li>
+<b><font color="#330000"><font size=+1><a href="#Course materials.">Course
+materials.</a></font></font></b></li>
+
+<li>
+<b><font color="#330000"><font size=+1><a href="#Links">Related links.</a></font></font></b></li>
+</ul>
+
+<h2>
+
+<hr WIDTH="100%"><a NAME="Contact information."></a><b>Contact information.</b></h2>
+
+<blockquote><b>Instructor: </b>Prof. L. F. Rossi
+<br><b>Meetings:</b>&nbsp; Monday, Wednesday, Thursday and Friday 0800-0900
+in Ewg 205.&nbsp; Also, there is a discussion meeting on Tuesdays 0800-0900
+in SHL 105.
+<br><b>Office Hours: </b>M R 0900-1000, F 1030-1130.
+<br><b>Email: </b><a href="mailto:rossi@math.udel.edu">rossi@math.udel.edu</a></blockquote>
+
+<ul><b>Voice: </b>(302) 831-1880 (UDel x1880)
+<br><b>Snail mail:</b>
+<blockquote>Department of Mathematical Sciences
+<br>University of Delaware
+<br>Newark, DE 19711
+<br>USA</blockquote>
+</ul>
+<a href="#Contents:">Back to the top.</a>
+<h2>
+
+<hr WIDTH="100%"><a NAME="Special information about Ewing 205 & 207."></a>Special
+information about Ewing 205 &amp; 207.</h2>
+
+<h3>
+Moving files on and off the math server.</h3>
+When you save files on the workstations in Ewing 205 or 207, they are stored
+on the math department server, not the UDel composer systems (strauss,
+copeland, etc).&nbsp; Thus, you may wish to move files on and off the math
+server from other machines.&nbsp; I present two ways to do this.
+<ol>
+<li>
+<b>Using the File Transfer Program (ftp) from another networked computer
+like strauss.</b></li>
+
+<br>FTP is a powerful little program for moving files from one machine
+to another.&nbsp; If you are on strauss for instance, you might type
+<br><b>ftp ws1.math.udel.edu</b>
+<br>You can use any workstation in Ewing 205/207 for a system name.&nbsp;
+For instance, ws5.math.udel.edu will work just the same.&nbsp; Once you
+enter this command, you will be prompted for your username and password.&nbsp;
+Once you have done this, ftp will print some stuff, and you will arrive
+at a prompt "ftp>".&nbsp; If you type
+<br><b>ls</b>
+<br>it will list all the files available in your account on the math server.&nbsp;
+You can download a file to strauss by typing
+<br><b>get &lt;myfile.mws></b>
+<br>where &lt;myfile.mws> is the file you want.&nbsp; Similarly, you can
+move a maple file from strauss to the math server by typing
+<br><b>put &lt;myfile.mws></b>
+<br>When you are all done, simple type
+<br><b>quit</b>
+<br>and you will return to the command line.
+<li>
+<b>Save to a DOS formatted floppy disk.</b></li>
+
+<br>This may well be the most direct way to do it.&nbsp; Put your disk
+into the drive on the workstation.&nbsp; On your workstation, open an XTERM
+using the right button menu.&nbsp; Type into the command line in the XTERM:
+<br><b>mcopy &lt;myfile.mws> a:</b>
+<br>The file &lt;myfile.mws> refers to the specific filename you chose
+when you saved your work.&nbsp; The disk drive should clunk a bit and then
+you can remove your disk.&nbsp; If you want to copy a file from your floppy
+onto the workstation, you would execute a command like
+<br><b>mcopy a:&lt;myfile.mws> myfile.mws</b>
+<br>Again, the drive should clunk a bit and then the file will be copied
+on the math server.</ol>
+
+<h2>
+
+<hr WIDTH="100%"><a NAME="Course materials."></a>Course materials.</h2>
+
+<h3>
+Some quick comments on file formats.</h3>
+When I distribute materials, I will distribute them in an appropriate format.&nbsp;
+If more than one format is possible, I will distribute more than one format
+within reason.&nbsp; Generally, <b>HTML</b> looks the worst when printed
+but can be viewed by a browser.&nbsp; <b>Postscript (PS)</b> looks the
+best when printed, but postscript files tend to be larger than others,
+and not everyone has a Postscript viewer for their screen.&nbsp; (There
+are free viewers available.&nbsp; A popular one is called ghostview which
+works with ghostscript, a wonderful little utility.)&nbsp; Finally, <b>PDF</b>
+is compact way to print or view files.&nbsp; The acrobat viewer is slow,
+but free.&nbsp; Printer output is readable, but not great.
+<h3>
+Good things to have.</h3>
+
+<ul>
+<li>
+<b>Revised </b>course syllabus [<a href="syllabus/syllabus.html">HTML</a><a href="syllabus/syllabus.ps">PS</a>
+or <a href="syllabus/syllabus.pdf">PDF</a>]&nbsp; This has crucial information
+like exam dates, course objectives and a tentative schedule for lectures.&nbsp;
+Revisions include a <b>new due date for report problem 3 </b>and <b>updates
+for assignments 9-13</b>.</li>
+
+<li>
+<a href="http://www.adobe.com/support/downloads/main.html">Download a free
+Acrobat reader</a> so that you can read PDF files.</li>
+
+<li>
+Maple Handout #1 on the <b>LinearAlgebra</b> package [<a href="handout/handout.html">HTML</a>,
+<a href="handout/handout.ps">PS</a>
+or <a href="handout/handout.pdf">PDF</a>].</li>
+
+<li>
+Maple Handout #2 on the <b>plots</b> package [<a href="plots/plots.html">HTML</a>,
+<a href="plots/plots.ps">PS</a>
+or <a href="plots/plots.pdf">PDF</a>].</li>
+
+<li>
+Solution guide for the second in-class quiz [<a href="quizBsoln/quizBsoln.html">HTML</a>,
+<a href="quizBsoln/quizBsoln.ps">PS</a>
+or <a href="quizBsoln/quizBsoln.pdf">PDF</a>].</li>
+</ul>
+
+<h3>
+Maple problem sets.</h3>
+
+<ul>
+<li>
+Maple Problem Set #1 is available for download [<a href="maple1/maple1.html">HTML</a>,
+<a href="maple1/maple1.ps">PS</a>
+or <a href="maple1/maple1.pdf">PDF</a>].</li>
+
+<li>
+Maple Problem Set #1 <a href="maple1/soln1.mws">solution worksheet</a>.</li>
+
+<li>
+Maple Problem Set #2 is available for download [<a href="maple2/maple2.html">HTML</a>,
+<a href="maple2/maple2.ps">PS</a>
+or <a href="maple2/maple2.pdf">PDF</a>].</li>
+
+<li>
+Maple Problem Set #2 is available for download [<a href="maple4/maple4.html">HTML</a>,
+<a href="maple4/maple4.ps">PS</a>
+or <a href="maple4/maple4.pdf">PDF</a>].</li>
+</ul>
+
+<h3>
+The report problems.</h3>
+
+<ul>
+<li>
+Report Problem #1 is available for download [<a href="report1/report1.html">HTML</a>,
+<a href="report1/report1.ps">PS</a>
+or <a href="report1/report1.pdf">PDF</a>].</li>
+
+<li>
+Report Problem #2 is available for download [<a href="report2/report2.html">HTML</a>,
+<a href="report2/report2.ps">PS</a>
+or <a href="report2/report2.pdf">PDF</a>].</li>
+
+<li>
+Report Problem #3 is available for download [<a href="report3/report3.html">HTML</a>,
+<a href="report3/report3.ps">PS</a>
+or <a href="report3/report3.pdf">PDF</a>].</li>
+</ul>
+
+<h3>
+Exams.</h3>
+
+<ul>
+<li>
+Exam 1 solution guide [<a href="exam1soln/exam1soln.html">HTML</a>, <a href="exam1soln/exam1soln.ps">PS</a>
+or <a href="exam1soln/exam1soln.pdf">PDF</a>].</li>
+
+<li>
+Exam 1 performance <a href="exam1perf.jpg">histogram</a>.</li>
+
+<li>
+Exam 2 solution guide [<a href="exam2soln/exam2soln.html">HTML</a>, <a href="exam2soln/exam2soln.ps">PS</a>
+or <a href="exam2soln/exam2soln.pdf">PDF</a>].</li>
+
+<li>
+Exam 2 performance <a href="exam2perf.jpg">histogram</a>.</li>
+
+<li>
+Exam 3 solution guide [<a href="exam3soln/exam3soln.html">HTML</a>, <a href="exam3soln/exam3soln.ps">PS</a>
+or <a href="exam3soln/exam3soln.pdf">PDF</a>].</li>
+
+<li>
+Exam 3 performance <a href="exam3perf.jpg">histogram</a>.</li>
+</ul>
+
+<h3>
+Old exams.</h3>
+<i>Note: Make no inferences about the content of new exams from these old
+exams.&nbsp; It was given at a different university under different circumstances.</i>
+<ul>
+<li>
+A copy of the first vector calculus exam from an old vector calculus course
+[<a href="old_exam1/examA/examA.html">HTML</a>,
+<a href="old_exam1/examA/examA.ps">PS</a>
+or <a href="old_exam1/examA/examA.pdf">PDF</a>].&nbsp;&nbsp; Solution guide
+[<a href="old_exam1/examAsoln/examAsoln.html">HTML</a>, <a href="old_exam1/examAsoln/examAsoln.ps">PS</a>
+or <a href="old_exam1/examAsoln/examAsoln.pdf">PDF</a>].</li>
+
+<li>
+A copy of the second vector calculus exam from an old vector calculus course
+[<a href="old_exam2/examA/examA.html">HTML</a>,
+<a href="old_exam2/examA/examA.ps">PS</a>
+or <a href="old_exam2/examA/examA.pdf">PDF</a>].&nbsp;&nbsp; Solution guide
+[<a href="old_exam2/examA_soln/examA_soln.html">HTML</a>, <a href="old_exam2/examA_soln/examA_soln.ps">PS</a>
+or <a href="old_exam2/examA_soln/examA_soln.pdf">PDF</a>].</li>
+
+<li>
+A copy of the third vector calculus exam from an old vector calculus course
+[<a href="old_exam3/examA/examA.html">HTML</a>,
+<a href="old_exam3/examA/examA.ps">PS</a>
+or <a href="old_exam3/examA/examA.pdf">PDF</a>].&nbsp;&nbsp; Solution guide
+[<a href="old_exam3/examA_soln/examA_soln.html">HTML</a>, <a href="old_exam3/examA_soln/examA_soln.ps">PS</a>
+or <a href="old_exam3/examA_soln/examA_soln.pdf">PDF</a>].</li>
+
+<li>
+A copy of a final exam question master list.&nbsp; These were candidates
+for final exam questions from an old vector calculus course.&nbsp; Final
+exam questions were chosen from this list [<a href="old_final/final.html">HTML</a>,
+<a href="old_final/final.ps">PS</a>
+or <a href="old_final/final.pdf">PDF</a>].&nbsp; There is no solution guide.</li>
+</ul>
+
+<p><br><a href="#Contents:">Back to the top.</a>
+<h1>
+
+<hr WIDTH="100%"><a NAME="Links"></a>Links.</h1>
+
+<ul>
+<li>
+A virtual encyclopedia of mathematics: <a href="http://mathworld.wolfram.com/">Eric
+Weisstein's World of Mathematics</a>.</li>
+
+<li>
+The Consortium on Mathematics and its Applications (COMAP) <a href="http://www.comap.com">home
+page</a>.</li>
+
+<li>
+Prof. Rossi's <a href="http://www.math.udel.edu/~rossi">home page</a>.</li>
+
+<li>
+The Department of Mathematical Sciences <a href="http://www.math.udel.edu">home
+page</a>.</li>
+
+<li>
+The University of Delaware <a href="http://www.udel.edu">home page</a>.</li>
+</ul>
+&nbsp;<a href="#Contents:">Back to the top.</a>
+
+<p STYLE="margin-bottom: 0in"><img SRC="vortex2.gif" NAME="Graphic7" BORDER=0 height=155 width=98 align=BOTTOM><i>Last
+modified: 8 May 2002</i>
+<address>
+<a href="mailto:rossi@math.udel.edu">rossi@math.udel.edu</a></address>
+
+</body>
+</html>

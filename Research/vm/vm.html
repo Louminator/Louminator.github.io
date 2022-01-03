@@ -1,0 +1,108 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+    
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+    
+  <meta name="GENERATOR"
+ content="Mozilla/4.76 [en] (X11; U; SunOS 5.8 sun4u) [Netscape]">
+  <title>Lou's Vortex Method Page</title>
+</head>
+  <body>
+  
+<h1> Vortex Methods</h1>
+  
+<hr> 
+<h2> Acknowledgments.</h2>
+ <img src="nsf.gif" height="50" width="45" align="left">
+The author (LFR) gratefully acknowledges the support of the <a
+ href="http://www.nsf.gov">National Science Foundation</a>, Division of Mathematical
+Sciences for their support of this research. <br>
+Grant DMS-9971800. <br>
+ 
+<hr width="100%"> 
+<h2> <img src="construction.gif" nosave="" height="40" width="40">
+</h2>
+ <i>WARNING: </i>Some of this page will seem technical to people who do not
+study fluid dynamics. However, even those who do not study fluid dynamics 
+may enjoy parts of this page. 
+<hr width="100%"> 
+<h2> What is a Vortex Method?</h2>
+ A vortex method is a computation technique for simulation fluid flows. "Fluid
+flow" most generally refers the motion of either gasses or liquids. To simulate
+the fluid flow, vortex methods attempt to simulate only the evolution of
+the vorticity field which is the curl of the velocity field. The reason why
+some people are only interested in the vorticity of a flow is that there
+are many interesting flows where the vorticity is confined to a very small
+region of space even though the whole flow occupies are larger or even unbounded
+area. For instance, a tornado is a very localized region of vorticity that
+affects the weather all around it. A vortex method represents the vorticity
+as a linear combination of localized, basis functions that freely convect
+in the flow. This can be thought of as solving a problem on a moving grid.
+Various properties of the vorticity equations make this an advantageous way
+to solve this problem. <br>
+ 
+<hr width="100%"> 
+<center> 
+<h2> <a href="http://www.math.udel.edu/%7Erossi/BlobFlow"><img
+ src="BlobFlow_logo.jpg" nosave="" height="150" width="242">
+</a></h2>
+</center>
+  
+<h2> The BlobFlow Project... It's free!</h2>
+ The <a href="http://www.math.udel.edu/%7Erossi/BlobFlow">BlobFlow project</a> 
+is aimed at developing a solid vortex code as open source for the scientific 
+community.&nbsp; The project page includes source code, some documentation, 
+and some examples. 
+<center> 
+<hr width="100%"></center>
+  
+<h2> My main interests:</h2>
+ Many people both use and study vortex methods. This page is dedicated to 
+my research interests because this is my way of sharing what I am working 
+on. Perhaps one day, there will be a Vortex Method Page which can point to
+this one and others. Until then, this is a nice way for me to share information
+with other researchers. Here is where I am concentrating my effort right
+now. 
+<ol>
+ <li> <b>Corrected core spreading methods.</b> Core spreading died a fast
+death in the late 70's because it was shown to be inconsistant. I corrected
+the method as part of my PhD thesis. Essentially, the method uses Gaussian 
+basis functions that spread at a rate governed by the viscosity of the fluid.
+When blobs grow too wide, they must split so that the method remains accurate.
+When one element splits into several the new configuration approximates the
+field induced by the original element.</li>
+  <li> <b>Boundary conditions.</b> Unlike methods that work in primitive
+variables such as velocity or pressure, the boundary conditions for vorticity
+are nonlocal and much more complicated.</li>
+  <li> <b>Convergence properties.</b> Whenever one develops new methods,
+one must prove (or at least demonstrate over a wide range of problems) that
+they will converge to an exact solution. I have done some work in developing 
+alternative convergence formulations so that vortex methods are easier to
+analyze.</li>
+  <li> <b>Higher order methods.</b> Once one can describe the convergence
+properties of a method, it is interesting to see if one can boost its accuracy.
+I have found that this can be done to the Corrected Core Spreading Method 
+by using elliptical Gaussian basis functions. Again, when elements grow too
+elongated or too wide, they must split into several elements.</li>
+ 
+</ol>
+  
+<h2> References.</h2>
+ Here are some more detailed references for those interested in my work.&nbsp; 
+<p>L. F. Rossi.&nbsp; High Order Vortex Methods with Deforming Elliptical 
+Gaussian Blobs 1: Derivation and Validation.&nbsp; Submitted to <i>SIAM J.
+Sci. Comput.</i>&nbsp; Lost by <i>SIAM J Sci. Comput.</i>&nbsp; until 2001.
+<br>
+&nbsp; <br>
+L. F. Rossi. Resurrecting Core Spreading Methods: A New Scheme That Is Both
+Deterministic and Convergent. <i>SIAM J. Sci. Comp. </i>17-2. 1996. </p>
+<p>L. F. Rossi. Merging Computational Elements in Vortex Simulations. &nbsp;<i>SIAM
+J. Sci. Comp. </i>18-4. 1997. <br>
+&nbsp; </p>
+<p>Last modified: 24 April 2002. </p>
+<address> <a href="mailto:rossi@math.udel.edu">rossi@math.udel.edu</a></address>
+  <br>
+</body>
+</html>

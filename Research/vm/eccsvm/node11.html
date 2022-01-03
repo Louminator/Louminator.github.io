@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>A Simple Spreading Gaussian as a Diagnostic</TITLE>
+<META NAME="description" CONTENT="A Simple Spreading Gaussian as a Diagnostic">
+<META NAME="keywords" CONTENT="eccsvm">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="eccsvm.css">
+</HEAD>
+<BODY LANG="EN">
+ <A NAME="tex2html146" HREF="node12.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html144" HREF="node10.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html138" HREF="node10.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html147" HREF="node12.html">High Reynolds Number Vortex </A>
+<B>Up:</B> <A NAME="tex2html145" HREF="node10.html">Sample Calculations</A>
+<B> Previous:</B> <A NAME="tex2html139" HREF="node10.html">Sample Calculations</A>
+<BR> <P>
+<H2><A NAME="SECTION00051000000000000000">A Simple Spreading Gaussian as a Diagnostic</A></H2>
+<P>
+Though the Lamb-Oseen vortex (a Gaussian patch of vorticity) appears to be a
+trivial example for a vortex computation, the truth is the opposite.  The
+first advantage for testing a method on this flow is that an exact analytic
+solution is available.  Since vortex calculations have no built-in
+symmetries as would an azimuthal spectral method, the circular symmetry of
+the problem lends no advantage.  In fact, since
+<P> <IMG WIDTH=500 HEIGHT=16 ALIGN=BOTTOM ALT="equation1027" SRC="img243.gif"  > <P>
+for this flow, one would more accurately approximate the solution with
+immobile, nondeforming Gaussians.  Better still, one large Gaussian basis
+function would constitute an exact solution!
+In solving the equations of motion for
+small moving basis functions, one is going to induce errors associated with the
+temporal integration.  Also, for the higher order method, one will induce
+errors near the center of the Gaussian vortex caused by the high radius of
+curvature of the streamlines and therefore large variations in  <IMG WIDTH=10 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2385" SRC="img40.gif"  >  and
+ <IMG WIDTH=23 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2383" SRC="img39.gif"  > .
+<P>
+Toward this end, 
+the numerical simulation of the simple spreading Gaussian has the following
+characteristics.
+The vortex has circulation  <IMG WIDTH=39 HEIGHT=16 ALIGN=MIDDLE ALT="tex2html_wrap_inline3063" SRC="img244.gif"  >  and fluid has viscosity
+ <IMG WIDTH=61 HEIGHT=15 ALIGN=BOTTOM ALT="tex2html_wrap_inline3065" SRC="img245.gif"  >  to achieve a moderate Reynolds number of approximately 314.
+A moderate Reynolds number is used so that both convection and diffusion is
+important in the flow.  The initial vortex ``width'' is  <IMG WIDTH=40 HEIGHT=29 ALIGN=MIDDLE ALT="tex2html_wrap_inline3067" SRC="img246.gif"  > .
+The flow is simulated for time <I>T</I>=4.0 which is
+slightly longer than one turnover time.
+<P>
+<P><A NAME="1334">&#160;</A><A NAME="figconvgaussian">&#160;</A> <IMG WIDTH=557 HEIGHT=249 ALIGN=BOTTOM ALT="figure1034" SRC="img248.gif"  > <BR>
+<STRONG>Figure 5.2:</STRONG> Normalized uniform error measurements
+for ECCSVM approximation of a Gaussian
+vortex (left) and a typical snapshot an error field
+ <IMG WIDTH=82 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline3071" SRC="img12.gif"  > 
+(right).  For larger values of <I>l</I> at 0.4 and 0.35, one can see that method
+performs better than predicted.  This is attributable to the fact that
+relatively few refinements occur for such large values of <I>l</I> and
+correspondingly small
+values of  <IMG WIDTH=10 HEIGHT=7 ALIGN=BOTTOM ALT="tex2html_wrap_inline2329" SRC="img13.gif"  > .
+In the asymptotic regime, 
+the computed intercept is roughly  <IMG WIDTH=83 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2331" SRC="img14.gif"  > .
+Merger induced errors are set to be small so that they
+will not interfere with <I>l</I> dependence.
+Thus, the figure shows  <IMG WIDTH=35 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2335" SRC="img15.gif"  >  convergence is achieved as
+ <IMG WIDTH=38 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2337" SRC="img16.gif"  > .  At right, one can see that the difference between the
+exact solution and the ECCSVM approximation is greatest at the center of
+the vortex as one would expect.<BR>
+<P>
+ECCSVM approximated solutions to this flow
+in a series of experiments with the parameters
+shown in Table (<A HREF="node10.html#tabconvgaussian">5.1</A>) and the results shown in
+Fig. (<A HREF="node11.html#figconvgaussian">5.2</A>).  Fig. (<A HREF="node11.html#figconvgaussian">5.2</A>) clearly
+displays the  <IMG WIDTH=35 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2335" SRC="img15.gif"  > 
+convergence properties of ECCSVM.  Though a merging
+algorithm is used to keep the problem size small, the merger-induced
+error tolerances are
+set so that they are small relative to the spatial errors being
+measured.
+<P>
+<HR><A NAME="tex2html146" HREF="node12.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html144" HREF="node10.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html138" HREF="node10.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html147" HREF="node12.html">High Reynolds Number Vortex </A>
+<B>Up:</B> <A NAME="tex2html145" HREF="node10.html">Sample Calculations</A>
+<B> Previous:</B> <A NAME="tex2html139" HREF="node10.html">Sample Calculations</A>
+<P><ADDRESS>
+<I>Louis F. Rossi <BR>
+Thu Nov  4 15:02:00 EST 1999</I>
+</ADDRESS>
+</BODY>
+</HTML>

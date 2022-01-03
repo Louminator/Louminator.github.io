@@ -1,0 +1,278 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+                    
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+                    
+  <meta http-equiv="CONTENT-TYPE"
+ content="text/html; charset=iso-8859-1">
+                    
+  <meta name="generator" content="Bluefish 1.0.5">
+                    
+  <meta name="author" content="Louis Rossi">
+                    
+  <meta name="CREATED" content="20010202;11114500">
+                    
+  <meta name="CHANGEDBY" content="Louis Rossi">
+                    
+  <meta name="CHANGED" content="20010202;11370200">
+  <title>Math 241: Calculus and Analytic Geometric A</title>
+</head>
+  <body text="#000000" bgcolor="#2DCD67" link="#0000ee" vlink="#551a8b"
+ alink="#ff0000">
+     &nbsp;     
+<center>    
+<table border="0" cols="5" width="100%" nosave="">
+     <tbody>
+        <tr nosave="">
+     <td width="150" nosave=""><img src="egg.png" height="120" border="0" alt="">
+          </td>
+      <td nosave="">                             
+      <center>                             
+      <h2> Math 241</h2>
+          </center>
+                                  
+      <center>                             
+      <h2> Calculus and Analytic Geometric A</h2>
+          </center>
+                                  
+      <center>                             
+      <h2> Lecture 010.  Discussions 020D 021D 022D.</h2>
+          </center>
+     </td>
+      <td width="160" nosave=""><img src="udmath_nobackground_sm.png" 
+      align="middle">
+          </td>
+     </tr>
+                 
+  </tbody>    
+</table>
+    </center>
+          
+<h2>      
+<hr width="100%"><a name="Contents:"></a>Contents:</h2>
+          
+<ul>
+     <li> <b><font color="#330000"><font size="+1"><a
+ href="#Contact%20information.">Course contact information.</a></font></font></b></li>
+      <li> <b><font color="#330000"><font size="+1"><a
+ href="#Course%20materials.">Course materials.</a></font></font></b></li>
+ <li> <b><font color="#330000"><font size="+1"><a
+ href="#exams">Exam results.</a></font></font></b></li>
+     <li> <b><font color="#330000"><font size="+1"><a
+ href="#MapleTA">MapleTA information.</a></font></font></b></li>
+       <li> <b><font color="#330000"><font size="+1"><a href="#archives">Exam archives.</a></font></font></b></li>
+        <li> <b><font color="#330000"><font size="+1"><a href="#Links">Related
+  links.</a></font></font></b></li> 
+</ul>
+          
+<h2>      
+<hr width="100%"><a name="Contact information."></a><b>Contact information.</b></h2>
+          
+<blockquote><b>Instructor: </b>Prof. L. F. Rossi <br>
+      <b>Teaching Assistants:</b> 
+      <a href="mailto:goodpast@math.udel.edu">Sarah Goodpaster</a> (020D 022D) Ph: x3175, Office: Ewg 332 and 
+      <a href="mailto:zorach@math.udel.edu">Alex Zorach</a> (021D) Ph: x4455. Off: Ewg 407.       
+  <p><b>Meetings:</b> </p>
+               
+  <blockquote>Lecture:MWF 0800-0850 in KRB 004. <br>
+    Section 020D recitation: T R 0800-0850 in EWG 203. <br>
+    Section 021D recitation: T R 1400-1450 in EWG 203. <br>
+    Section 022D recitation: T R 1100-1150 in EWG 203.</blockquote>
+     <b>Office Hours: </b>Monday 1100-1200, Wednesday 1000-1100, Thursday 1000-1100 
+  or by 
+    appointment.             
+  <p><b>Email: </b><a href="mailto:rossi@math.udel.edu">rossi@math.udel.edu</a></p>
+    </blockquote>
+    
+    <blockquote><b>Maple TA links:</b>   <a href="http://maple-ta.nss.udel.edu:8080/classes/Math241-020D-07S/" target="Section 020D"> Section 020D</a>, 
+  <a href="http://maple-ta.nss.udel.edu:8080/classes/Math241-021D-07S/" target="Section 021D"> Section 021D</a> and
+  <a href="http://maple-ta.nss.udel.edu:8080/classes/Math241-022D-07S/" target="Section 022D"> Section 022D</a>.</blockquote>
+    
+    <blockquote><b>Your <a href="https://groups.us.udel.edu/portal/site/88630a04-d372-4363-0003-31c7020579c0">Calculus Wiki</a></b> 
+    (Requires UD authentication).</blockquote>
+    
+    <blockquote><b>Final exam:</b> TBA.</blockquote>
+          
+<ul>
+      <b>Voice: </b>(302) 831-1880 (UDel x1880) <br>
+      
+      <b>Snail mail:</b>             
+  <blockquote>Department of Mathematical Sciences <br>
+    University of Delaware <br>
+    Newark, DE 19711 <br>
+    USA</blockquote>
+         
+</ul>
+     <a href="#Contents:">Back to the top.</a>     
+<ol>
+    &nbsp;    
+</ol>
+          
+<h2>      
+<hr width="100%"><a name="Course materials."></a>Course materials.</h2>
+          
+<ul>
+     <li> The <a href="syllabus.pdf">course syllabus</a> has crucial information
+  like exam dates, course objectives and a tentative schedule for lectures.</li>
+      <li> <a href="http://www.adobe.com/support/downloads/main.html">Download
+  a free Acrobat reader.</a></li>
+  <li>A <a href="http://www.google.com/calendar/embed?src=i2j1n57pthdvau2bucakf5fvk0%40group.calendar.google.com">calendar</a> of events for this semester.</li>
+  <li>Problem set #1 supplement on <a href="periodic_drug_delivery.pdf">periodic drug delivery</a>. </li>
+  <li>Report problem on <a href="report.pdf">"Osmosis through a decalcified chicken egg"</a>, along with the data in either the standard <a href="egg_data.ods">open document format</a> or <a href="egg_data.xls">Micro$oft Excel format</a>.</li>
+  <li>The <b>Math Tutorial Site</b> 
+  (Room 106 Ewing) provides tutoring help for most freshman-level math courses including Math 241.  The hours of operation are
+Monday through Thursday 11 am to 8 pm and Fridays 11 am to 5 pm.  </li>
+<li>The <b>Academic Enrichment Center</b>, located at the intersection of Amstel and South College, offers free tutoring
+sessions.  Spring hours and contact information will be posted when it is announced.
+</li>
+</ul>
+          
+
+      <p><br>
+<a href="#Contents:">Back to the top.</a> </p>
+
+<hr width="100%">
+<h2><a name="exams">Exam results.</a></h2>
+          
+<ul>
+<li><a href="exam1perf.pdf">Exam 1 performance</a>.</li>
+
+</ul>
+
+<p><br>
+<a href="#Contents:">Back to the top.</a> </p>
+
+
+<h2>
+<hr width="100%"><a name="MapleTA"></a>MapleTA information.</h2>
+
+<ul>
+<li>If you are little computer shy, you might try having a look at this <a href="tutorial.pdf">MapleTA tutorial</a>.  This is an evolving document.  Please send me your feedback.</li>
+<li>Proctored MapleTA exams can be taken during computer lab drop-in hours: MW 1500-1630 in Ewing 207.  <i>On exam weeks, there will be additional hours Tues 1430-1530 and ThF 1530-1700 in Ewg 205.</i>    The supervisor will be Mr. Moulton, and he is authorized as a MapleTA proctor.  You should review the <a href="lab_policies.pdf">lab policies</a> and <b>bring your ID</b> when you use the drop-in labs.</li>
+<li>Links to the course Maple TA sites: 
+  <a href="http://maple-ta.nss.udel.edu:8080/classes/Math241-020D-07S/" target="Section 020D"> Section 020D</a>, 
+  <a href="http://maple-ta.nss.udel.edu:8080/classes/Math241-021D-07S/" target="Section 021D"> Section 021D</a> and
+  <a href="http://maple-ta.nss.udel.edu:8080/classes/Math241-022D-07S/" target="Section 022D"> Section 022D</a>. </li>
+  <li>Maple TA credit guide for Mastery Exercises.  
+  The maximum possible credit earned is 5% of your final grade (see syllabus for details).
+  <table cellpadding="4" cellspacing="0" border="1">
+  <tr>
+  <td>Number of exercises completed:</td>
+  <td>0</td>
+  <td>1</td>
+  <td>2</td>
+  <td>3</td>
+  <td>4</td>
+  <td>5</td>
+  <td>6</td>
+  <td>7</td>
+  <td>8</td>
+  <td>9</td>
+  <td>10</td>
+  </tr>
+  <tr>
+  <td>Credit (% of final grade):</td>
+  <td>0</td>
+  <td>1.97</td>
+  <td>3.16</td>
+  <td>3.88</td>
+  <td>4.32</td>
+  <td>4.59</td>
+  <td>4.75</td>
+  <td>4.84</td>
+  <td>4.91</td>
+  <td>4.94</td>
+  <td>4.97</td>
+  </tr>
+  </table>
+  </li>
+<li>Deadlines for MapleTA Mastery Exercises are posted on the course calendar.
+</li>  
+  
+</ul>
+
+<a href="#Contents:">Back to the top.</a> </p>
+       
+<h1>      
+<hr width="100%"><a name="archives"></a>Exam archives.</h1>
+          
+<table cellpadding="1" cellspacing="1" border="1">
+<tr>
+<td>2002 Fall</td>
+<td><a href="2002_fall/exam1.pdf">Exam 1</a>  
+<a href="2002_fall/exam1soln.pdf">solutions</a></td>
+<td><a href="2002_fall/exam2.pdf">Exam 2</a>  
+<a href="2002_fall/exam2soln.pdf">solutions</a></td>
+<td><a href="2002_fall/exam3.pdf">Exam 3</a>  
+<a href="2002_fall/exam3soln.pdf">solutions</a></td>
+<td><a href="2002_fall/final.pdf">Final exam</a> solutions N/A.</td>
+</tr>
+<tr><td>2005 Fall</td>
+<td><a href="2005_fall/exam1.pdf">Exam 1</a> 
+<a href="2005_fall/exam1soln.pdf">solutions</a></td>
+<td><a href="2005_fall/exam2.pdf">Exam 2</a> 
+<a href="2005_fall/exam2soln.pdf">solutions</a></td>
+<td><a href="2005_fall/exam3.pdf">Exam 3</a> 
+<a href="2005_fall/exam3soln.pdf">solutions</a></td>
+<td><a href="2005_fall/final.pdf">Final exam</a> solutions N/A.</td>
+</tr>
+<tr><td>2006 Spring</td>
+<td><a href="2006_spring/exam1.pdf">Exam 1</a> 
+<a href="2006_spring/exam1soln.pdf">solutions</a></td>
+<td><a href="2006_spring/exam2.pdf">Exam 2</a> 
+<a href="2006_spring/exam2soln.pdf">solutions</a></td>
+<td><a href="2006_spring/exam3.pdf">Exam 3</a> 
+<a href="2006_spring/exam3soln.pdf">solutions</a></td>
+<td><a href="2006_spring/final.pdf">Final exam</a> solutions N/A.</td></tr>
+<tr><td>2007 Spring</td>
+<td><a href="2007_spring/exam1.pdf">Exam 1</a> 
+<a href="2007_spring/exam1soln.pdf">solutions</a></td>
+<td></td>
+<td></td>
+<td></td></tr>
+</table>
+    
+<p><br>
+    <a href="#Contents:">Back to the top.</a> </p>
+       
+<h1>      
+<hr width="100%"><a name="Links"></a>Links.</h1>
+          
+<ul>
+<li>
+<a href="http://www.greenpit.ch/blogwordpress/?p=201">Characteristics of a wiki.</a>
+</li>
+<li>
+<a href="http://www.ratemyprofessor.com">Ratemyprofessor.com.</a>  A selectively sampled survey of student opinions of faculty.  But, at least it's public and easily accessible.
+</li>
+      <li> <a href="http://archives.math.utk.edu/visual.calculus/">The visual
+  calculus project.</a></li>
+      <li> The Walters Art Gallery: Home of the <a
+ href="http://www.thewalters.org/archimedes/">Archimedes Plimpsest.</a></li>
+      <li> A virtual encyclopedia of mathematics: <a
+ href="http://mathworld.wolfram.com/">Eric Weisstein's World of Mathematics</a>.</li>
+      <li> The Consortium on Mathematics and its Applications (COMAP) <a
+ href="http://www.comap.com">home page</a>.</li>
+      <li> Prof. Rossi's <a href="http://www.math.udel.edu/%7Erossi">home 
+page</a>.</li>
+      <li> The Department of Mathematical Sciences <a
+ href="http://www.math.udel.edu">home page</a>.</li>
+      <li> The University of Delaware <a href="http://www.udel.edu">home
+page</a>.</li>
+         
+</ul>
+     &nbsp;<a href="#Contents:">Back to the top.</a>      
+<p style="margin-bottom: 0in;"><img src="vortex2.gif" name="Graphic7"
+ border="0" height="155" width="98" align="bottom">
+    <i>Last modified: 21 Mar 2007 </i> </p>
+       
+<address> <a href="mailto:rossi@math.udel.edu">rossi@math.udel.edu</a></address>
+      <br>
+    <br>
+   <br>
+  <br>
+ <br>
+</body>
+</html>

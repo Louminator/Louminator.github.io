@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>The Continuous Formulation of Convergence</TITLE>
+<META NAME="description" CONTENT="The Continuous Formulation of Convergence">
+<META NAME="keywords" CONTENT="eccsvm">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="eccsvm.css">
+</HEAD>
+<BODY LANG="EN">
+ <A NAME="tex2html76" HREF="node5.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html74" HREF="node3.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html68" HREF="node3.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html77" HREF="node5.html">The Evolution of Elliptical </A>
+<B>Up:</B> <A NAME="tex2html75" HREF="node3.html">The Vortex Method</A>
+<B> Previous:</B> <A NAME="tex2html69" HREF="node3.html">The Vortex Method</A>
+<BR> <P>
+<H2><A NAME="SECTION00031000000000000000">The Continuous Formulation of Convergence</A></H2>
+<P>
+The governing equations are
+the two-dimensional, incompressible
+Navier-Stokes
+equations which can be written in terms of vorticity,  <IMG WIDTH=59 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2351" SRC="img23.gif"  > :
+<P><A NAME="NS">&#160;</A> <IMG WIDTH=500 HEIGHT=43 ALIGN=BOTTOM ALT="eqnarray109" SRC="img24.gif"  > <P>
+where  <IMG WIDTH=58 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2353" SRC="img25.gif"  >  is the fluid velocity and
+ <IMG WIDTH=107 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2355" SRC="img26.gif"  > .  Since the flow is
+two-dimensional, the vorticity is directly exclusively in the vertical
+direction and is treated as a scalar quantity.
+<P>
+In previous work on core spreading vortex methods, an alternative
+formulation of convergence is proposed wherein the spatial accuracy is
+measured in terms of the ability of the semi-discrete vortex method to
+approximate solutions of the Navier-Stokes equations 
+[<A HREF="node16.html#leonardreview1">13</A>, <A HREF="node16.html#rossiresurrect">22</A>].  To quantify the spatial accuracy
+for any Lagrangian method for solving (<A HREF="node4.html#NS">3.1</A>), Leonard proposed examining
+the continuous residual of the approximate scheme.
+This residual can be defined in terms of an operator
+<P><A NAME="NSopr">&#160;</A> <IMG WIDTH=500 HEIGHT=19 ALIGN=BOTTOM ALT="equation114" SRC="img27.gif"  > <P>
+where <I>f</I>(<I>x</I>,<I>y</I>,<I>t</I>) is any sufficiently differentiable function and 
+ <IMG WIDTH=62 HEIGHT=13 ALIGN=BOTTOM ALT="tex2html_wrap_inline2359" SRC="img28.gif"  > . For the fully nonlinear Navier-Stokes operator. 
+ <IMG WIDTH=72 HEIGHT=26 ALIGN=MIDDLE ALT="tex2html_wrap_inline2361" SRC="img29.gif"  > . To estimate the spatial accuracy of the high order
+method, we consider the linearized operator where  <IMG WIDTH=10 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2363" SRC="img40.gif"  >  is a known
+function, not determined by <I>f</I>. Thus, the exact velocity field  <IMG WIDTH=10 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2363" SRC="img40.gif"  >  and
+its derivatives are known fixed quantities in this analysis. Within this
+framework, <I>f</I> is any function including an exact solution or an approximate
+solution obtained using a numerical method, and we refer to <I>R f</I> as the
+<EM>residual</EM> or error associated with <I>f</I> at each point in space and time.
+If  <IMG WIDTH=10 HEIGHT=7 ALIGN=BOTTOM ALT="tex2html_wrap_inline2375" SRC="img31.gif"  >  designates an exact solution to (<A HREF="node4.html#NS">3.1</A>), then
+<P><A NAME="NSexact">&#160;</A> <IMG WIDTH=500 HEIGHT=16 ALIGN=BOTTOM ALT="equation121" SRC="img32.gif"  > <P>
+If we let  <IMG WIDTH=101 HEIGHT=35 ALIGN=MIDDLE ALT="tex2html_wrap_inline2377" SRC="img33.gif"  >  designate an approximation using some numerical
+scheme, in general we do not expect the residual,  <IMG WIDTH=66 HEIGHT=35 ALIGN=MIDDLE ALT="tex2html_wrap_inline2379" SRC="img34.gif"  > , to be zero.
+<P>
+For a core spreading vortex method where the vorticity field
+is discretized into blobs that move and spread as usual
+<P> <IMG WIDTH=500 HEIGHT=94 ALIGN=BOTTOM ALT="eqnarray124" SRC="img35.gif"  > <P>
+one finds that
+<P> <IMG WIDTH=500 HEIGHT=47 ALIGN=BOTTOM ALT="equation133" SRC="img36.gif"  > <P>
+suggesting that this residual quantity is bounded by differences
+between the exact and approximate
+velocity across the support of each basis function [<A HREF="node16.html#rossiresurrect">22</A>].  
+That is to say,
+each basis function satisfies the local equation
+<P> <IMG WIDTH=500 HEIGHT=19 ALIGN=BOTTOM ALT="equation144" SRC="img37.gif"  > <P>
+If a basis function, <I>g</I>, satisfied the local equation
+<P><A NAME="pde">&#160;</A> <IMG WIDTH=500 HEIGHT=19 ALIGN=BOTTOM ALT="equation146" SRC="img38.gif"  > <P>
+where  <IMG WIDTH=23 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2383" SRC="img39.gif"  >  is the matrix of partial derivatives of  <IMG WIDTH=10 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2385" SRC="img40.gif"  > ,
+the residual for  <IMG WIDTH=10 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2387" SRC="img41.gif"  >  would be
+<P><A NAME="betterbasis">&#160;</A> <IMG WIDTH=500 HEIGHT=47 ALIGN=BOTTOM ALT="equation149" SRC="img42.gif"  > <P>
+Once can see that (<A HREF="node4.html#pde">3.7</A>) is a closer approximation to (<A HREF="node4.html#NSopr">3.2</A>) and
+so (<A HREF="node4.html#betterbasis">3.8</A>) should be of higher order.
+A Gaussian will not satisfy (<A HREF="node4.html#pde">3.7</A>), but an elliptical
+Gaussian will, and this is the basis of the high spatial order vortex method.
+<P>
+<HR><A NAME="tex2html76" HREF="node5.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html74" HREF="node3.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html68" HREF="node3.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html77" HREF="node5.html">The Evolution of Elliptical </A>
+<B>Up:</B> <A NAME="tex2html75" HREF="node3.html">The Vortex Method</A>
+<B> Previous:</B> <A NAME="tex2html69" HREF="node3.html">The Vortex Method</A>
+<P><ADDRESS>
+<I>Louis F. Rossi <BR>
+Thu Nov  4 15:02:00 EST 1999</I>
+</ADDRESS>
+</BODY>
+</HTML>

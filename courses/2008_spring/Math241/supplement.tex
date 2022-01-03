@@ -1,0 +1,107 @@
+\documentclass{article}
+
+\usepackage{fullpage,amsmath}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+{\bf Calculus supplement: Periodic drug delivery}
+\end{center}
+
+In problem 10 in section 2.2 of Stewart, we consider a patient
+receiving an injection of a drug at regular intervals.  Let's simplify
+the problem to receiving a unit dose at intervals of 1 time unit.
+One model for the delivery function is
+\[
+f(t) = \begin{cases}
+e^{-t}, & 0 \leq t < 1 \\
+e^{-(t-1)}, & 1 \leq t < 2 \\
+e^{-(t-2)}, & 2 \leq t < 3 \\
+\text{and so forth} \ldots 
+\end{cases}
+\]
+where $e \approx 2.718\ldots$  Notice that it is
+represented as a piecewise function where we ``glue'' together
+segments of continuous curves.
+
+\begin{enumerate}
+\item Using a graphing
+calculator as an aid, sketch this function.
+
+\item One great mathematical achievement of the 19th century was the
+  discovery that all periodic functions can be written as an \textit{infinite}
+sum of
+  sine and cosine functions.  These series are known as Fourier
+  series.  The following are truncated (\textit{finite}) Fourier series for
+$f(t)$.
+\[
+f_1(t) = \left(1-e^{-2}\right) \left(\frac{1}{2}
++ \frac{1}{1 + \pi^2}\cos(2 \pi t)  + 
+\frac{\pi}{1 + \pi^2}\sin(2 \pi t)\right),
+\]
+\[
+f_2(t) = \left(1-e^{-2}\right) \left(
+\frac{1}{2} 
++ \frac{1}{1 + \pi^2}\cos(2 \pi t)  + 
+\frac{\pi }{1 + \pi^2}\sin(2 \pi t) 
++ \frac{1}{1 + 4 \pi^2}\cos(4 \pi t)  + 
+\frac{2 \pi}{1 + 4 \pi^2}\sin(4 \pi t)\right),
+\]
+\begin{multline*}
+f_3(t) = \left(1-e^{-2}\right) \times \\
+\left(
+\frac{1}{2} 
++ \frac{1}{1 + \pi^2}\cos(2 \pi t)  + 
+\frac{\pi }{1 + \pi^2}\sin(2 \pi t) 
++ \frac{1}{1 + 4 \pi^2}\cos(4 \pi t)  + 
+\frac{2 \pi}{1 + 4 \pi^2}\sin(4 \pi t) \right. \\
+\left. + \frac{1}{1 + 9 \pi^2}\cos(6 \pi t)  + 
+\frac{3 \pi}{1 + 9 \pi^2}\sin(6 \pi t)\right),
+\end{multline*}
+\begin{multline*}
+f_4(t) = \left(1-e^{-2}\right) \times \\
+\left(
+\frac{1}{2} 
++ \frac{1}{1 + \pi^2}\cos(2 \pi t)  + 
+\frac{\pi }{1 + \pi^2}\sin(2 \pi t) 
++ \frac{1}{1 + 4 \pi^2}\cos(4 \pi t)  + 
+\frac{2 \pi}{1 + 4 \pi^2}\sin(4 \pi t) \right. \\
+\left. + \frac{1}{1 + 9 \pi^2}\cos(6 \pi t)  + 
+\frac{3 \pi}{1 + 9 \pi^2}\sin(6 \pi t)
++ \frac{1}{1 + 16 \pi^2}\cos(8 \pi t)  + 
+\frac{4 \pi}{1 + 16 \pi^2}\sin(8 \pi t)\right).
+\end{multline*}
+Using a graphing calculator as an aid, sketch $f(t)$, $f_1(t)$,
+$f_2(t)$, $f_3(t)$, $f_4(t)$ on the same graph with the
+domain $0 \leq t \leq 2$.  Are all the $f_n(t)$'s periodic?  What is
+the period for each one?
+
+\item Describe the relationship between $f(t)$ and the
+$f_n(t)$'s.
+
+\item Do you see a pattern in the Fourier series?  Write down an
+  expression for $f_5(t)$.  
+
+\item Determine the following quantities:
+\begin{enumerate}
+
+\item $\lim_{t \rightarrow 1^+} f(t)$.
+
+\item $\lim_{t \rightarrow 1^-} f(t)$.
+
+\item $\lim_{t \rightarrow 1^-} f_1(t)$.
+
+\item $\lim_{t \rightarrow 1^+} f_1(t)$.
+
+\item Generalize the left and right limits above to $f_n(t)$ for any $n$.
+
+\end{enumerate}
+
+\item Are the $f_n(t)$'s continuous?  Justify your answer using the limit
+laws and the definition of continuity.  Is $f(t)$ continuous? Reconcile
+  your answer with your answer to question 3.
+
+\end{enumerate}
+\end{document}

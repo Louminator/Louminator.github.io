@@ -1,0 +1,6 @@
+x = 0:0.01:1;
+b = buildb(x);
+A = buildsys(x);
+y = A\b;
+plot(x,y);
+diary off

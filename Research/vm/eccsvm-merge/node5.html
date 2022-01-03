@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>Error estimates</TITLE>
+<META NAME="description" CONTENT="Error estimates">
+<META NAME="keywords" CONTENT="eccsvm-merge">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="eccsvm-merge.css">
+</HEAD>
+<BODY LANG="EN">
+ <A NAME="tex2html67" HREF="node6.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html65" HREF="node3.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html61" HREF="node4.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html68" HREF="node6.html">A Greedy Cluster Merging </A>
+<B>Up:</B> <A NAME="tex2html66" HREF="node3.html">Merging elliptical Gaussian basis </A>
+<B> Previous:</B> <A NAME="tex2html62" HREF="node4.html">Equating moments to determine </A>
+<BR> <P>
+<H2><A NAME="SECTION00032000000000000000">Error estimates</A></H2>
+<P>
+Without loss of generality, we can rotate the reference frame
+so that  <IMG WIDTH=44 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline1520" SRC="img53.gif"  > .  Furthermore, we can assume that basis
+functions that are ``close'' to one another
+have similar or complementary alignment.  (This is a reasonable assumption
+at large Reynolds numbers and is shown to be the case in the nontrivial
+example of &#167;<A HREF="node7.html#secexample">5</A>.)  The term ``close'' means that
+ <IMG WIDTH=93 HEIGHT=35 ALIGN=MIDDLE ALT="tex2html_wrap_inline1522" SRC="img54.gif"  >  where  <IMG WIDTH=17 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline1524" SRC="img55.gif"  > 
+is the displacement between nearby basis functions and <I>i</I>, <I>j</I> denote
+indices for the cardinal directions.  In other words, nearby elements have
+similar flow deviations  <IMG WIDTH=23 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline1530" SRC="img56.gif"  > .  If this were not the case, the flow would
+be poorly resolved by a simulation.
+<P>
+Given that we have a procedure for replacing a collection of computational
+elements with a single element with a single uniquely determined element,
+one then must determine a means of gauging the error induced by such an
+operation.  A bound on this error will reveal a means for determining
+collections that will induce small errors and ultimately reveal a practical
+algorithm for merging elements together. Referring to (<A HREF="node2.html#basisfn">2.5</A>), we
+shall replace a collection of <I>n</I> elements,
+<P> <IMG WIDTH=349 HEIGHT=43 ALIGN=BOTTOM ALT="displaymath1500" SRC="img57.gif"  > <P>
+with a single <EM>coarsened</EM> element
+<P> <IMG WIDTH=339 HEIGHT=16 ALIGN=BOTTOM ALT="displaymath1501" SRC="img58.gif"  > <P>
+We refer to this element as coarsened because the number of degrees of freedom
+in the simulation has been reduced in this region of the flow.
+Given a collection of overlapping elements, the parameters for the coarsened element is
+completely determined, and without loss of generality, we can translate and
+rotate our coordinate system so that  <IMG WIDTH=53 HEIGHT=32 ALIGN=MIDDLE ALT="tex2html_wrap_inline1534" SRC="img59.gif"  >  and  <IMG WIDTH=51 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline1536" SRC="img60.gif"  > .
+From this point on, the <I>k</I>'s shall be dropped and the subindices shall
+be used exclusively.
+The difference,  <IMG WIDTH=39 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline1540" SRC="img61.gif"  > , between the vorticity field described by the
+originating collection of elements and that of the
+coarsened element is
+<P> <IMG WIDTH=500 HEIGHT=96 ALIGN=BOTTOM ALT="eqnarray272" SRC="img62.gif"  > <P>
+where
+<P> <IMG WIDTH=572 HEIGHT=127 ALIGN=BOTTOM ALT="multline282" SRC="img63.gif"  > <P>
+If we restrict collections of elements to those whose circulations have the
+same sign, we observe that  <IMG WIDTH=18 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline1542" SRC="img64.gif"  >  is merely an 0 mean of functions
+ <IMG WIDTH=26 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline1544" SRC="img65.gif"  > .  Understanding and bounding the merging process can be reduced to
+understanding and bounding  <IMG WIDTH=26 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline1544" SRC="img65.gif"  >  which represents a simple pairwise
+comparison.
+<P>
+The function  <IMG WIDTH=26 HEIGHT=14 ALIGN=MIDDLE ALT="tex2html_wrap_inline1544" SRC="img65.gif"  >  can be written as the sum of three functions that can be
+conveniently analyzed:
+<P> <IMG WIDTH=500 HEIGHT=23 ALIGN=BOTTOM ALT="equation295" SRC="img66.gif"  > <P>
+where
+<P> <IMG WIDTH=372 HEIGHT=159 ALIGN=BOTTOM ALT="gather300" SRC="img67.gif"  > <P>
+<P> <IMG WIDTH=553 HEIGHT=192 ALIGN=BOTTOM ALT="multline318" SRC="img68.gif"  > <P>
+The three components of the error term can be attributed individually to
+distortion from circular to elliptical, displacement and misalignment,
+respectively.
+<P>
+The first function,  <IMG WIDTH=26 HEIGHT=34 ALIGN=MIDDLE ALT="tex2html_wrap_inline1550" SRC="img69.gif"  > , is merely the difference between a circular and
+elliptical Gaussian.  By inspection, extreme values must occur along
+the coordinate axes.
+The independent variables and parameters
+can be rescaled without altering the magnitudes of
+the extreme values of  <IMG WIDTH=26 HEIGHT=34 ALIGN=MIDDLE ALT="tex2html_wrap_inline1550" SRC="img69.gif"  > :
+<P><P>
+So that,
+<P><A NAME="em1">&#160;</A><P>
+<P><A NAME="746">&#160;</A><A NAME="figminmax">&#160;</A> <IMG WIDTH=471 HEIGHT=282 ALIGN=BOTTOM ALT="figure349" SRC="img72.gif"  > <BR>
+<STRONG>Figure:</STRONG> Extreme values of (<A HREF="node5.html#em1">3.13</A>) must occur on the coordinate axes.
+A representation of the contours of the constituent functions is displayed
+above with the axisymmetric Gaussian contours shown as solid lines and the
+elliptical Gaussian contours shown as dotted lines.  If a ``local minimum''
+denoted by <B>x</B>
+were not on the <I>x</I>-axis, one could follow the path described by the
+intersecting elliptical Gaussian toward <B>m</B> to decrease this minimum.
+Following this path reduces the magnitude of the first term of (<A HREF="node5.html#em1">3.13</A>)
+while keeping the second term constant.
+Similarly, if <B>x</B> were a maximum, one could increase it by traveling
+along the arc of the circle toward point <B>M</B> on the <I>y</I>-axis.  
+Thus, any extreme value
+must lie on either the x or y axis.<BR>
+<P>
+The exponential decay of the constituent functions guarantees that relative
+extrema will be global extrema.  Though one can determine the relative
+extrema by setting the gradient equal to zero and eliminating various
+possibilities, it is simpler to examine the function first at which time one
+sees that the extreme values must occur on the coordinate axes (see
+Fig. (<A HREF="node5.html#figminmax">3.1</A>)).
+<P>
+The first
+relative extrema of interest is at (0,0).  In this case,
+<P><A NAME="extreme1">&#160;</A><P>
+<P>
+Relative extreme values along the  <IMG WIDTH=10 HEIGHT=26 ALIGN=MIDDLE ALT="tex2html_wrap_inline1560" SRC="img74.gif"  > -axis occur when
+<P><A NAME="eibderiv">&#160;</A><P>
+The solution to this equation is
+<P><A NAME="yeqn">&#160;</A><P>
+If  <IMG WIDTH=84 HEIGHT=35 ALIGN=MIDDLE ALT="tex2html_wrap_inline1562" SRC="img77.gif"  > , any value of  <IMG WIDTH=14 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline1564" SRC="img78.gif"  >  will yield a real solution to
+this equation.  However, if  <IMG WIDTH=84 HEIGHT=35 ALIGN=MIDDLE ALT="tex2html_wrap_inline1566" SRC="img79.gif"  > , solutions only exist when
+<P> <IMG WIDTH=363 HEIGHT=28 ALIGN=BOTTOM ALT="displaymath1502" SRC="img80.gif"  > <P>
+in order for the right hand side of (<A HREF="node5.html#yeqn">3.16</A>) to be negative.
+<P>
+Substituting this back into  <IMG WIDTH=26 HEIGHT=34 ALIGN=MIDDLE ALT="tex2html_wrap_inline1550" SRC="img69.gif"  >  and observing that
+<P><P>
+one finds a second relative extreme value of  <IMG WIDTH=26 HEIGHT=34 ALIGN=MIDDLE ALT="tex2html_wrap_inline1550" SRC="img69.gif"  >  to be
+<P><A NAME="extreme2">&#160;</A><P>
+<P>
+For the other extrema, we seek values of 
+such that
+<P><A NAME="eiaderiv">&#160;</A><P>
+Avoiding the solution at the origin, 
+we find that the relative extrema occurs when
+<P><A NAME="xeqn">&#160;</A><P>
+Similar to the previous case, real solutions exist for all  <IMG WIDTH=14 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline1564" SRC="img78.gif"  >  if 
+ <IMG WIDTH=84 HEIGHT=35 ALIGN=MIDDLE ALT="tex2html_wrap_inline1566" SRC="img79.gif"  > .
+If  <IMG WIDTH=84 HEIGHT=35 ALIGN=MIDDLE ALT="tex2html_wrap_inline1562" SRC="img77.gif"  > , solutions are restricted to the
+parameter space
+<P><P>
+Substituting this back into  <IMG WIDTH=26 HEIGHT=34 ALIGN=MIDDLE ALT="tex2html_wrap_inline1550" SRC="img69.gif"  >  and observing that
+<P><P>
+one finds a third candidate for a global extrema:
+<P><A NAME="extreme3">&#160;</A><P>
+Thus, we have the following uniform bound on  <IMG WIDTH=26 HEIGHT=34 ALIGN=MIDDLE ALT="tex2html_wrap_inline1550" SRC="img69.gif"  > ,
+<P><P>
+<P>
+Again, we seek a fast and simple way of bounding the merger induced error by
+inspecting a collection of elements.  The upper bound plays a role in making
+a decision whether or not the replace the collection with a single element.
+By limiting the range of values of  and  <IMG WIDTH=14 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline1564" SRC="img78.gif"  >  in the
+collection, we can bootstrap an a priori upper bound on the merger error for
+the collection.
+<P>
+The two extrema candidates, (<A HREF="node5.html#extreme2">3.17</A>) and (<A HREF="node5.html#extreme3">3.20</A>), can be
+reduced further through the following observation: Both expressions have the
+form
+<P><P>
+where  for
+(<A HREF="node5.html#extreme2">3.17</A>) and  for
+(<A HREF="node5.html#extreme3">3.20</A>), and  for either extrema.
+To understand the behavior of <I>f</I> as the variables  vary, 
+we note that
+<P><P>
+To apply these results, we anticipate bounding both  and  in some
+neighborhood of unity. Observing that both  and  must be
+positive, we find that the second term in the gradient is monotonically directed
+toward increasing , thus one would expect extreme values of <I>f</I> to
+occur when  is either at its upper or lower allowable value.
+The first term is more complex.  Relative extrema could be when
+, and presumably this can occur in the interior of the region
+of allowable values for .  However, if  then 
+ which reduces to the first extreme value
+(<A HREF="node5.html#extreme1">3.14</A>).  This establishes our first theorem.
+<P>
+<P><P>
+<P>
+In the case of , one can rescale the independent variables again,
+<P><P>
+so that
+<P><P>
+Now, we can rotate the coordinate system by  so that
+<P><P>
+where
+<P><P>
+We can expand the  in the above form as a power series in  to
+obtain
+<P><P>
+where  is the  Hermite polynomial.  Observing that
+<P><P>
+where  (see [<A HREF="node9.html#abramowitzstegun">1</A>]),
+we can see that this bound diminishes for , and for ,
+this series converges absolutely.
+Taking the first term as an approximation and observing that
+<P><P>
+we obtain the
+following bound on :
+<P><P>
+<P>
+The third and last component, , is dependent upon the unknown
+orientation of the computational elements.  The orientations of
+elements is driven by the flow, so it is difficult to analyze these quantities
+locally.  If we translate the origin to  and rescale
+<P><P>
+we find that
+<P><P>
+By inspection, a worst case occurs when  and
+.  That is to say, the two elliptical elements are arranged
+orthogonally to one another. 
+This
+worst case is bounded by
+<P><P>
+The inspection, the extreme values of the function on the right will occur
+when  or .  By symmetry, it does not matter which axis
+one chooses.  Without loss of generality, we choose .  Seeking
+local extrema again as in for  <IMG WIDTH=26 HEIGHT=34 ALIGN=MIDDLE ALT="tex2html_wrap_inline1550" SRC="img69.gif"  > , we find that
+<P><P>
+It should be observed however that for high Reynolds number flows, the
+contribution from
+ will be very small because basis functions will align themselves with
+the local flow deviations.  Thus, in a small area, one observes that nearby
+elements are aligned with one another.  We have just established a uniform
+upper bound which is stated in unscaled variables as follows
+<P><P>
+<P>
+The two theorems presented in this section provide the foundation for an
+effective merging algorithm, but there is a fundamental weakness because the
+error depends implicitly on the zeroth, first and second moments of the the
+configuration of elements.  Thus, one must calculate the parameters for the
+post-merger element before one can know whether or not the error is
+acceptable. In the forthcoming merging algorithm, this issue is addressed
+two different ways yielding minor variations on the same general technique.
+<P>
+<HR><A NAME="tex2html67" HREF="node6.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html65" HREF="node3.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html61" HREF="node4.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html68" HREF="node6.html">A Greedy Cluster Merging </A>
+<B>Up:</B> <A NAME="tex2html66" HREF="node3.html">Merging elliptical Gaussian basis </A>
+<B> Previous:</B> <A NAME="tex2html62" HREF="node4.html">Equating moments to determine </A>
+<P><ADDRESS>
+<I>Louis F. Rossi <BR>
+Thu Nov  4 15:01:50 EST 1999</I>
+</ADDRESS>
+</BODY>
+</HTML>

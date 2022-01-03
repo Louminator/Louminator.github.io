@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>Mixed passive scalar</title>
+</head>
+<body>
+<div style="text-align: center;"><big style="font-weight: bold;"><big>A
+mixed passive scalar in a differentially rotating flow field.<br>
+</big></big><big><big><small>L. F. Rossi<br>
+Associate Professor<br>
+</small></big></big>
+<hr style="width: 100%; height: 2px;"></div>
+<div style="text-align: center;"><a href="test0000.jpg"><img
+ style="border: 0px solid ; width: 400px; height: 300px;" alt="T=0"
+ src="test0000.jpg"></a><a href="test0090.jpg"><img
+ style="border: 0px solid ; width: 400px; height: 300px;" alt="T = 90"
+ src="test0090.jpg"></a><br>
+</div>
+<hr style="width: 100%; height: 2px;">The image at left is the initial
+conditions of a passive scalar
+quantity.&nbsp; A passive scalar quantity is a field that is convective
+by a fluid flow and diffuses as well.&nbsp; The figure at right is the
+same field after it has been stirred up a bit by a differentially
+rotating flow field.&nbsp; A colloquial example might be stirring cream
+into your coffee.&nbsp; If you have a high speed connection, you can
+download and view a <a href="recruitmovieDd.avi">video
+(84 MB)</a> I have prepared of this calculation.&nbsp; <br>
+<br>
+As you can guess, some of my interests include the mathematical
+properties of fluid flows, and novel methods for simulating fluid
+flows.&nbsp; There is a natural synergy between the mathematical
+properties of any process (including fluids) and the computation
+techniques used to approximate solutions to a process.&nbsp; In one
+direction, understanding the properties of equations that govern the
+motion of fluids can lead to better ways to approximate and simulate
+fluids on computers.&nbsp; From the other point of view, careful
+computational experiments can inspire a deeper understanding of fluid
+properties.<br>
+<br>
+Going back to the images above, A partial differential equation that
+describes this process is given below:<br>
+<br>
+<div style="text-align: center;"><img src="eqn.png" alt="equation"
+ style="width: 173px; height: 46px;"><br>
+</div>
+<br>
+The concentration of passive scalar c(x,y,t) is the function that must
+be calculated given some initial distribution and a flow field
+u(x,y,t).&nbsp; The initial conditions are the stripe-like pattern that
+you can see in the figure above at left.&nbsp; The domain is unbounded,
+so the only boundary conditions are that the scalar quantity decays to
+zero as one moves away from the origin.&nbsp; In this example, u(x,y,t)
+is a differentially rotating velocity field.&nbsp; If you were to drop
+a marker in the fluid, it would travel in a circle.&nbsp; However, the
+period varies with radius, so the passive field gets sheared apart
+since scalars at nearby radii are moving at different speeds.&nbsp; The
+differential rotation which is more pronounced at the limbs enhances
+mixing and diffusion.<br>
+<br>
+Calculating these solutions challenging because the field of interest
+is concentrated in a small region of the flow field, and there the
+gradients are large.&nbsp; The beauty of particle methods is that they
+represent the field (c, in
+this case) as a linear combination of moving basis functions.&nbsp;
+Instead of calculating the solution on a fixed grid, the basis
+functions move and deform with the flow field. Unlike more traditional
+methods like finite difference or finite
+element, they are naturally adaptive because computational effort is
+expended only where c is nontrivial.&nbsp; Here is a picture of the <span
+ style="font-style: italic;">computational domain</span> for the image
+at the top right.&nbsp; The computational domain is the spatial
+representation of the problem on the computer.<br>
+<br>
+<br>
+<div style="text-align: center;"><a href="test0090_pos.jpg"><img
+ style="border: 0px solid ; width: 400px; height: 300px;" alt="pos T=90"
+ src="test0090_pos.jpg"></a><a href="test0090_pos_zoom.jpg"><img
+ style="border: 0px solid ; width: 400px; height: 300px;"
+ alt="pos zoom T=90" src="test0090_pos_zoom.jpg"></a><br>
+</div>
+<br>
+<br>
+The left image is the entire computational domain showing all 4431
+particles used in the calculation on the [-1,1]X[-1,1] domain.&nbsp;
+Notice that computational effort is only expended where c(x,y,t) is
+significant and nowhere else.&nbsp; The computer spends no time
+computing in the white regions.&nbsp; At right, you can see the
+particles in the red inset.&nbsp; I performed this calculation to test
+a new method that I have developed which uses deforming basis
+function.&nbsp; Each particle is a little deformable elliptical
+Gaussian function, so each particle is represented as a little cross
+with the same aspect ratio and orientation as the basis function.&nbsp;
+<br>
+<br>
+Is 4431 a lot of particles?&nbsp; Not really.&nbsp; Consider that this
+would correspond to solving this problem on a 67X67 fixed mesh with a
+finite difference method.&nbsp; With this mesh, one would not be able
+to resolve the slender limbs on the stripe as it is twisted.&nbsp;
+Unfortunately, these fine length scales are crucial in calculating the
+decay rate of c because the gradients are greatest there.&nbsp;
+Naturally adaptive methods are particularly strong here.&nbsp; I add
+that nothing was done to tweak the method for this calculation.&nbsp;
+Once the initial data is laid down, particles move and evolve with the
+fluid flow.<br>
+<br>
+If you have a high speed connection, you can download and view a <a
+ href="recruitmovieDd.avi">video
+(84 MB)</a> I have prepared of this
+calculation.&nbsp; This will show you the full evolution of c(x,y,t),
+along with the computational domain and an inset showing the
+deformation of the particles.<br>
+<br>
+If you would like to read more about these methods please visit our <a
+ href="http://www.math.udel.edu/php/deptapps/techrept.php?year=2003">Technical
+Reports Series</a>.&nbsp; Reports 2003_6 and 2003_9 are relevant to
+this work.&nbsp; A revised versions of these reports will appear in <span
+ style="font-style: italic;">SIAM Journal on Scientific Computing</span>.<br>
+<br>
+Graduate student Robert Ronkese has begun a research project with me
+related to these computational methods.<br>
+<br>
+<address>Louis Rossi (<a href="mailto:rossi@math.udel.edu">rossi@math.udel.edu</a>)</address>
+<br>
+<br>
+</body>
+</html>

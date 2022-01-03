@@ -1,0 +1,2240 @@
+\batchmode
+\documentclass{siamltex}
+\makeatletter
+
+\usepackage{epsf}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+\def\v#1{\vec{#1}}
+
+\def\h#1{\widehat{#1}}
+
+\def\o#1{\bar{#1}}
+
+\def\C#1{{\cal{#1}}}
+
+\newcommand {\vx}{\vec{x}}
+
+\newcommand {\vu}{\vec{u}}
+
+\newcommand {\vz}{\vec{0}}
+
+\newcommand {\dt}{\partial_t}
+
+\newcommand {\ddt}{{d \over dt}}
+
+\newcommand {\ai}{a_i}
+
+\newcommand {\ox}{\bar{x}}
+
+\newcommand {\oy}{\bar{y}}
+
+\newcommand {\Rblob}{R_{\cal E}}
+
+\newcommand {\TR}[1]{{\o T^{#1} \over \o R^{#1}}}
+
+\newcommand {\ww}{\widehat{\omega}}
+
+\newcommand {\di}[1]{d_{#1,i}}
+
+\newcommand {\eqn}[1]{equation (\ref{#1})}
+
+\newcommand {\eqnn}[1]{(\ref{#1})}
+
+\newcommand {\eqnns}[2]{(\ref{#1},\ref{#2})}
+
+\newcommand {\eqns}[1]{equations (\ref{#1})}
+
+\newcommand {\fig}[1]{Fig. (\ref{#1})}
+
+\newcommand {\tabl}[1]{Table (\ref{#1})}
+
+\newcommand {\sect}[1]{\S\ref{#1}}
+
+\newtheorem {thm}{Theorem}
+
+\newcommand {\OneFigure}[1]{\begin{center}
+\ \epsfysize=2.5in \epsfbox{#1}\ 
+\end{center}}
+
+\newcommand {\TwoFigures}[2]{\begin{center}
+\ \parbox{2.5in}{\epsfxsize=2.5in \epsfbox{#1}}
+\parbox{2.5in}{\epsfxsize=2.5in \epsfbox{#2}}\ 
+\end{center}}
+
+\newcommand {\ThreeFigures}[3]{\begin{center}
+\ \parbox{1.65in}{\epsfxsize=1.65in \epsfbox{#1}}
+\parbox{1.65in}{\epsfxsize=1.65in \epsfbox{#2}}
+\parbox{1.65in}{\epsfxsize=1.65in \epsfbox{#3}}\ 
+\end{center}}
+
+\makeatother
+\newenvironment{tex2html_wrap}{}{}
+\newwrite\lthtmlwrite
+\def\lthtmltypeout#1{{\let\protect\string\immediate\write\lthtmlwrite{#1}}}%
+\newbox\sizebox
+\begin{document}
+\pagestyle{empty}
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$d_{11,i}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2299: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{${\begingroup d_{12,i}+d_{21,i}\endgroup \over 2}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2301: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\lambda _i$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2303: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\Psi _1$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2305: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\epsilon =0.4$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2307: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\mathaccent "7016\relax {x}=1$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2309: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\mathaccent "7016\relax {y}=1$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2311: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\mathaccent "7016\relax {x} = {1 \over 2}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2313: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\epsilon =0.2$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2317: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$l^2$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2319: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\alpha ^2 l^2$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2321: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\mathaccent "0362\relax {\omega }(\mathaccent "017E\relax {x})-\omega (\mathaccent "017E\relax {x})$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2323: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\alpha $}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2329: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$-9.3 \times 10^{-4}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2331: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$O(l^4)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2335: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$l \rightarrow 0$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2337: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$l^2=3.5 \times 10^{-2}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2339: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\sigma _i a_i$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2341: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\theta _i$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2345: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{keywords}vortex methods, vorticity dynamics, computational fluid dynamics,
+convergence theory
+\end{keywords}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{AMS}35Q30, 41A25, 41A30, 65D99, 65M12, 65M50, 65M60, 76D05
+\end{AMS}
+}
+
+\stepcounter{section}
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$O(l^2 \log l)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2347: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+\stepcounter{section}
+\stepcounter{section}
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\omega (x,y,t)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2351: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}\partial_t \omega + (\v u \cdot \nabla) \omega & = & \nu \nabla^2 \omega \nonumber \\ 
+\nabla \cdot \v u & = & 0 \label{NS}
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\v u(x,y,t)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2353: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\omega = (\nabla \times \v u) \cdot \widehat{z}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2355: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}R f = \partial_t f + \vec{u}\cdot\nabla f - \nu \nabla^2 f
+\label{NS-opr}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\nabla \cdot \vec{u} = 0$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2359: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$f = \nabla \times \v u$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2361: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\v u$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2363: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\omega$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2375: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}R \omega = 0.
+\label{NS-exact}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\widehat{\}omega(x,y,t)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2377: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$R\widehat{\}omega$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2379: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}\widehat{\omega} & = & \sum_{i=0}^N
+f(\gamma_i,\vec{x}-\vec{x}_i,\sigma_i) \nonumber \\ 
+f(\gamma,\vec{x},\sigma) & = &{\gamma \over 4 \pi \sigma^2}
+\exp\left({|\vec{x}|^2 \over 4 \sigma^2}\right),
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}R \widehat{\omega} = \sum_{i=0}^N \nabla_{\vec{x}} 
+f(\gamma_i,\vec{x}-\vec{x}_i,\sigma_i) \cdot 
+[\vec{u}(\vec{x}_i) - \vec{u}(\vec{x})],
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\partial_t f + \vec{u}(\vx_i) \cdot \nabla f - \nu \nabla^2 f = 0.
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\partial_t g + [\vec{u}(\vx_i) + D\vec{u}(\vx_i)(\vec{x} - \vx_i)] \cdot \nabla g - \nu
+\nabla^2 g
+= 0,
+\label{pde}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$D \vec{u}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2383: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\vec{u}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2385: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\widehat{\omega}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2387: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}R \widehat{\omega} = \sum_{i=0}^N \nabla_{\vec{x}} 
+g \cdot 
+[\vec{u}(\vec{x}_i) + D\vec{u}(\vx_i)(\vec{x} - \vx_i) - \vec{u}(\vec{x})].
+\label{better-basis}
+\end{equation}
+}
+
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\vx_i(t)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2391: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\theta_i(t)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2393: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$a_i(t)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2395: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\sigma_i(t)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2397: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}&& g(\vec{x};\gamma_i,\vx_i,\sigma_i,a_i,\theta_i) = \hfill \nonumber \\ 
+&& {\gamma_i \over 4 \pi \sigma_i^2}
+\exp\left\{
+-{[c_i (x-x_i)+s_i (y-y_i)]^2/a_i^2 +
+[-s_i (x-x_i)+c_i (y-y_i)]^2 a_i^2
+\over
+4 \sigma_i^2}
+\right\}
+\label{basis-fn}
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$c_i = \cos(\theta_i)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2399: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$s_i = \sin(\theta_i)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2401: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\sigma_i$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2403: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$a_i^2$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2405: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\widehat{\omega}(\vec x,t) = \sum_{i=0}^N g(\vec{x};\gamma_i,\vx_i,\sigma_i,a_i,\theta_i)
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\gamma_i$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2407: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}&& \partial_t g(\vec{x};\gamma_i,\vx_i,\sigma_i,a_i,\theta_i) + 
+[\vec{u}(\vx_i) + D\vec{u}(\vx_i)(\vec{x} - \vx_i)] \cdot 
+\nabla_{\vec{x}} g(\vec{x};\gamma_i,\vx_i,\sigma_i,a_i,\theta_i) = \nonumber \\ 
+&& \hspace{1in} \nu \nabla^2 g(\vec{x};\gamma_i,\vx_i,\sigma_i,a_i,\theta_i).
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\vec{u}(\vec{x})$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2409: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$D\vec{u}(\vec{x})$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2411: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}{d \over dt} \vx_i & = & {u_i \brack v_i} \nonumber \\ 
+{d \over dt} (\sigma_i^2) & = & {\nu \over 2} (a_i^2 + a_i^{-2}) \nonumber \\ 
+{d \over dt} (a_i^2) & = & 
+2[d_{11,i} (c_i^2 - s_i^2) + (d_{12,i} + d_{21,i}) c_i s_i] a_i^2
++ {\nu \over 2 \sigma_i^2}(1- a_i^{4}) \nonumber \\ 
+{d \over dt} \theta_i & = &
+{d_{21,i} - d_{12,i} \over 2} +
+\left[{d_{21,i} + d_{12,i} \over 2} (s_i^2 - c_i^2) + 
+2 d_{11,i}s_i c_i\right]
+{(a_i^{-2} + a_i^2) \over (a_i^{-2} - a_i^2)}
+\label{system-odes}
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\vec{u}(\vx_i) = {u_i \brack v_i}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2413: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$D\vec{u}(\vx_i)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2415: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$d_{11,i} = {du \over dx} (\vx_i)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2417: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$d_{12,i} = {du \over dy} (\vx_i)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2419: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$R(\theta)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2425: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\theta$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2427: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}& & R(\theta_i) D\v u(\vx_i) R(\theta_i)^T = \nonumber \\ 
+& & \left[\begin{array}{cc}
+d_{11,i} (c_i^2 - s_i^2) + (d_{12,i} + d_{21,i}) c_i s_i &
+-2 s_i c_i d_{11,i} + c_i^2 d_{12} - s_i^2 d_{21} 
+\\ 
+-2 s_i c_i d_{11,i} - s_i^2 d_{12} + c_i^2 d_{21} &
+d_{11,i} (s_i^2 - c_i^2) - (d_{12,i} + d_{21,i}) c_i s_i
+\end{array}\right]
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}& & R(\theta_i) D\v u(\vx_i) R(\theta_i)^T = \nonumber \\ 
+& & \frac{1}{2}
+\left[\begin{array}{cc}
+2 [d_{11,i} (c_i^2 - s_i^2) + (d_{12,i} + d_{21,i}) c_i s_i] &
+-4 s_i c_i d_{11,i} + (c_i^2 - s_i^2) (d_{12} + d_{21}) 
+\\ 
+-4 s_i c_i d_{11,i} + (c_i^2 - s_i^2) (d_{12} + d_{21}) &
+2[d_{11,i} (s_i^2 - c_i^2) - (d_{12,i} + d_{21,i}) c_i s_i]
+\end{array}\right]
++ \nonumber \\ 
+& & \frac{1}{2}
+\left[\begin{array}{cc}
+0 &
+d_{12} - d_{21} 
+\\ 
+d_{21} - d_{12} &
+0
+\end{array}\right]
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$D\v u$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2429: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\sigma_i < l$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2437: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}a_i^2 \leq e^{2 \lambda_M t}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\lambda_M$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2441: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\lambda_i = d_{11,i} (c_i^2 - s_i^2) + (d_{12,i} + d_{21,i}) c_i s_i
+\label{lambda}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\nu \neq 0$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2453: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$a_i^2 \leq a_M^2$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2455: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}a_M^2 = {2 \lambda_M l^2 \over \nu} + 
+\sqrt{{4 \lambda_M^2 l^4 \over \nu^2} + 1} = 
+R_{\cal E} + \sqrt{\Rblob^2 + 1}.
+\label{aspect-bound}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}R_{\cal E} = {2 \lambda_M l^2 \over \nu}
+\label{rblob}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$O(l^2 (a^2-1))$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2457: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$a^2-1$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2461: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}a_M^2 \approx 1 + R_{\cal E} + \frac{1}{2} \Rblob^2 + \ldots = 1 + O(l^2)
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$a^2-1 = O(l^2)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2465: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$a_i$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2471: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$a_i \rightarrow 1$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2473: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}{d_{21,i} + d_{12,i} \over 2} (s_i^2 - c_i^2) + 
+2 d_{11,i}s_i c_i = 0.
+\label{realign}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}\theta_i & = & \tan^{-1}\left(
+\frac{-k \pm \sqrt{k^2 + 4}}{2}\right) \nonumber \\ 
+k & = & {4 d_{11,i} \over d_{12,i} + d_{21,i}}
+\label{rapid-reorient}
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}\tan(\theta^+_i) & = & \frac{-k + \sqrt{k^2 + 4}}{2} \nonumber \\ 
+\tan(\theta^-_i) & = & \frac{-k - \sqrt{k^2 + 4}}{2},
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\tan(\theta_i^+-\theta_i^-) = 
+\frac{\tan(\theta^+_i) - \tan(\theta^-_i)}
+{1-\tan(\theta^+_i)\tan(\theta^1_i)},
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\theta^+_i$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2479: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\theta^-_i$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2481: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$s_i c_i$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2489: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}\lambda_i = s_i c_i \left({4 d_{11,i} \over d_{12,i} + d_{21,i}} + 
+d_{12,i} + d_{21,i} \right).
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$c_i s_i$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2491: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\lambda_i = d_{11,i} 
+\frac{\left(k + \frac{4}{k}\right)
+\left(-\frac{k}{2} + \sqrt{\frac{k^2}{4} +1}\right)}
+{\left(-\frac{k}{2} + \sqrt{\frac{k^2}{2} +1}\right)^2+1}.
+\label{max-stretch}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\theta_i^+$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2493: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\tan^{-1}\left(
+{-k + \sqrt{k^2 + 4} \over 2}\right),
+\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\frac{d_{12,i}+d_{21,i}}{2}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2505: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}[t]
+\begin{center}
+\ \epsfysize=2.5in \epsfbox{figs/lambda.eps}\ 
+\end{center}
+
+\label{fig.lambda}
+\end{figure}
+}
+
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$1-a_i$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2525: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$1-a_i^2 = O(l^2)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2527: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$1-a_i^2 = (1-a_i)(1+a_i)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2529: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$O(l^8)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2531: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}\int^\infty_{-\infty} \int^\infty_{-\infty} R \left[g(\vec{x})\right] d\vec{x} & = &  
+\int \int \nabla g \cdot 
+[-\frac{1}{2} D^2\vec{u}(\vx_i)(\vec{x}-\vx_i, \vec{x}-\vx_i) \nonumber \\ 
+& & -\frac{1}{3!}D^3\vec{u}(\vx_i)(\vec{x}-\vx_i, \vec{x}-\vx_i, \vec{x}-\vx_i) \nonumber \\ 
+& & -\frac{1}{4!}D^4\vec{u}(\vx_i)(\vec{x}-\vx_i, \ldots, \vec{x}-\vx_i)  \nonumber \\ 
+& & -\frac{1}{5!}D^5\vec{u}(\vec{\xi}_i)(\vec{x}-\vx_i, \ldots, \vec{x}-\vx_i)]
+d\vec{x},
+\label{g-residual}
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$D^2\vec{u}(\vx_i)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2533: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\vx_i$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2535: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$D^3\vec{u}(\vx_i)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2537: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\vec{\xi}_i$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2539: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\vec{x}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2541: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\vec{0}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2543: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\vx_i = \vec{0}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2549: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$c_i=1$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2551: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$s_i=0$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2553: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\nabla g = {\gamma_i \over 8 \pi \sigma^4}
+\exp\left[
+-{\left(x^{(1)}\right)^2 \over 4 \sigma^2_i a^2_i}-
+{\left(x^{(2)}\right)^2 a^2_i \over 4 \sigma^2_i}
+\right]
+{\left(x^{(1)}\right) a^{-2}_i \brack
+{\left(x^{(2)}\right) a^2_i}}.
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$x^{(1)}=x$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2555: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$x^{(2)} = y$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2557: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$D^3\vec{u}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2559: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\nabla g \cdot
+D^2\vec{u}(\vec{0})(\vec{x}, \vec{x}) = 
+{\gamma_i \over 8 \pi \sigma^4}
+\exp\left[
+-{\left(x^{(1)}\right)^2 \over 4 \sigma^2_i a^2_i}-
+{\left(x^{(2)}\right)^2 a^2_i \over 4 \sigma^2_i}
+\right]
+{\partial^2 u^j \over \partial_{x^k}\partial_{x^m}}
+x^j x^k x^m,
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\int\int\nabla g \cdot
+D^2\vec{u}(\vec{0})(\vec{x}, \vec{x}) d\vec{x} = 0.
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\int\int\nabla g \cdot
+D^4\vec{u}(\vec{0})(\vec{x}, \vec{x}, \vec{x}, \vec{x}) d\vec{x} = 0
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\int\int\nabla g \cdot
+D^5\vec{u}(\xi_i)(\vec{x}, \ldots, \vec{x}) d\vec{x} = O(l^4)
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\sigma_i\leq l$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2563: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}\int \int \nabla g \cdot
+D^3\vec{u}(\vec{0})(\vec{x}, \vec{x}, \vec{x}) d\vec{x} & = &
+\int \int {\gamma_i \over 8 \pi \sigma^4}
+\exp(\ldots) 
+{\partial^3 u^j \over \partial_{x^k}\partial_{x^m}\partial_{x^n}} 
+x^j x^k x^m x^n. \nonumber \\ 
+& = & 
+\int \int {\gamma_i \over 8 \pi \sigma^4}
+\exp(\ldots)\left[
+{\partial^3 u^{(1)} \over \partial_{\left(x^{(1)}\right)^3}}
+\left(x^{(1)}\right)^4 + \right. \nonumber \\ 
+& & 3{\partial^3 u^{(1)} \over \partial_{x^{(1)}}\partial_{\left(x^{(2)}\right)^2}}
+\left(x^{(1)}\right)^2 \left(x^{(2)}\right)^2 + 
+\nonumber \\ 
+& & 
+3{\partial^3 u^{(2)} \over \partial_{\left(x^{(1)}\right)^2}\partial_{x^{(2)}}}
+\left(x^{(1)}\right)^2 \left(x^{(2)}\right)^2 + 
+\nonumber \\ 
+& & \left.{\partial^3 u^{(2)} \over \partial_{\left(x^{(2)}\right)^3}}
+\left(x^{(2)}\right)^4
+\right] d\v x.
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}\int \int \nabla g \cdot
+D^3\vec{u}(\vec{0})(\vec{x}, \vec{x}, \vec{x}) d\v x & = &
+\int \int {\gamma_i \over 8 \pi \sigma^4}
+{\partial^3 u^j \over \partial_{x^k}\partial_{x^m}\partial_{x^n}}
+\exp(\ldots) x^j x^k x^m x^n d\v x \nonumber \\ 
+& = & 
+\int \int {\gamma_i \over 8 \pi \sigma^4}
+\exp(\ldots)\times \nonumber \\ 
+& & \left\{
+{\partial^3 u^{(1)} \over \partial_{\left(x^{(1)}\right)^3}}
+\left[\left(x^{(1)}\right)^4 -
+3\left(x^{(1)}\right)^2 \left(x^{(2)}\right)^2\right] \right. +\nonumber \\ 
+& & \left.{\partial^3 u^{(2)} \over \partial_{\left(x^{(2)}\right)^3}}
+\left[\left(x^{(2)}\right)^4-
+3\left(x^{(1)}\right)^2 \left(x^{(2)}\right)^2\right]
+\right\} d\v x.
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}\int\int\nabla g \cdot
+D^3\vec{u}(\vec{0})(\vec{x}, \vec{x}, \vec{x}) d\vec{x} & = &
+{\gamma_i \over 8 \pi \sigma^4}
+12 \sigma_i^4(a^{-4}_i + a^4_i -2) \nonumber \\ 
+& = & \frac{3\gamma_i}{2 \pi} (a^{-1}-a)^2 (a^{-1}+a)^2.
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$C l^2$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2575: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$C l^4$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2581: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$|a^{-1}-a| \leq 2R_{\cal E} = O(l^2)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2583: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\gamma_i = O(l^2)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2585: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{thm}% latex2html id marker 453
+If $\vec{u}$ and its derivatives are specified and bounded, 
+the residual
+from the vorticity dynamics operator, (\ref{NS-opr}), 
+induced by an elliptical Gaussian basis function acting
+under system (\ref{system-odes}) is $O(l^4)$.
+\end{thm}
+}
+
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{equation}{d \over dt}\left(\int\int |\vx|^2 \omega d\vec{x}\right) = 4 \nu \int\int\omega d\vec{x}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$2 \sigma_i^2 (a_i^2 + a_i^{-2})$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2601: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}{d \over dt}[2 \sigma^2 (a^2 + a^{-2})] =
+4 \nu -
+\sigma^2 (a^{-2}-a^2)
+\left[d_{11}(c^2 - s^2) + cs (d_{12} + d_{21})\right]
+\label{moment2-approx}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\sigma^2 \in [\alpha^2\sigma^2,\sigma^2]$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2605: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}|a^{-2}-a^2| \leq 2 R_{\cal E} = O(l^2).
+\end{equation}
+}
+
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{equation}\epsilon = {a-1 \over a+1},
+\label{epsilon}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\ai^2-1 = (a_i-1)(\ai+1)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2615: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\theta = 0$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2617: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}f(R;\gamma,\sigma,a) & = &
+{\gamma \over 4 \pi \sigma^2} e^{-R^2/4\sigma^2}, \label{blob}\\ 
+R^2 & = & x^2/a^2 + y^2 a^2.
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$l_1$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2621: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$l_2$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2623: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}\psi & = & \left\{\begin{array}{ll}
+{1 \over 2 \pi (l_1 + l_2)} \left({x^2 \over l_1} + {y^2 \over
+l_2}\right), & (x,y) \in {\cal{E}} (l_1,l_2) \\ 
+{1 \over 2 \pi}\left[\ln\left({\alpha+\beta \over l_1 + l_2}\right)
++{ {x^2 \over \alpha} + {y^2 \over \beta} \over \alpha + \beta}\right], &
+(x,y) \notin {\cal{E}} (l_1,l_2)
+\end{array}\right. \\ 
+\alpha & = & \sqrt{l_1^2 + \xi} \\ 
+\beta & = & \sqrt{l_2^2 + \xi} \\ 
+1 & = & 
+\left({x^2 \over l_1^2 + \xi}\right) + 
+\left({y^2 \over l_2^2 + \xi}\right) \label{xi}
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{${\cal{E}} (l_1,l_2)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2625: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}\v u = {u \brack v} =
+{-{\partial \psi \over \partial y} \brack {\partial \psi \over
+\partial x}}
+\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\pi R^2 (-\partial_R f) dR$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2629: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$l_1 = Ra$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2631: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$l_2 = R/a$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2633: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$(\bar{x},\bar{y})$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2635: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}\psi(\bar{x},\bar{y}) & = & - \int_0^{{\o R}} \psi_1 \partial_R f R^2 dR -
+\int_{{\o R}}^{\infty} \psi_2 \partial_R f dR \label{streamfunction}\\ 
+\psi_1 & = & {1 \over 2} 
+\left[{\left({\o x^2 \over \alpha} + {\o y^2 \over \beta} \right) \over
+\alpha + \beta} + \ln\left({\alpha + \beta \over Ra +
+R/a}\right)\right] \nonumber \\ 
+\psi_2 & = & {1 \over 2} {{\o x^2 \over a^2} + \o y^2 a^2 \over a + 1/a} 
+\nonumber \\ 
+\alpha & = & \sqrt{R^2 a^2 + \xi} \nonumber \\ 
+\beta & = & \sqrt{{R^2 \over a^2} + \xi} \label{strfn-system}
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\xi = {1 \over 2} 
+\left\{
+{\o \rho}^2 - R^2 \left(a^2 + {1 \over a^2}\right)
++ \sqrt{\left[R^2\left(a^2 + {1 \over a^2}\right)-{\o \rho}^2\right]^2 +
+4 R^2 ({\o R}^2-R^2)}
+\right\} \label{xi2}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{${\o \rho}^2 = \o x^2 + \o y^2$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2637: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{${\o R}^2 = {\o x^2 \over a^2} + \o y^2 a^2$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2639: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\xi \rightarrow {\o \rho}^2$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2641: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$R \rightarrow 0$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2643: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\xi \rightarrow 0$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2645: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$R \rightarrow {\o R}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2647: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\psi_2$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2649: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\psi_1$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2653: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\epsilon$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2659: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\sigma$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2669: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\o R$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2677: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\o x$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2679: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\o y$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2681: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\o T$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2683: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\o T^2 = {{\o x}^2 \over a^2} - {{\o y}^2 a^2}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2685: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{${\o x}^2 + {\o y}^2$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2691: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{${\o x}^2 - {\o y}^2$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2693: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}a = {1+\epsilon \over 1-\epsilon},
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}{\o \rho}^2 = {\o R}^2 + 4 \epsilon {\o S}^2 - 8 \epsilon^2
+{\o R}^2 + -20 \epsilon^3 \o S^2 + 48 \epsilon^4 \o R^2 + O(\epsilon^5),
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\o S^2 = \o x^2 - \o y^2$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2699: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\o S^2 = \o T^2 + 4 \epsilon \o R^2 + 8 \epsilon^2 \o T^2 + 12
+\epsilon^3 \o R^2 + 16 \epsilon^4 \o T^2 + O(\epsilon^5),
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\o \rho^2 = \o R^2 + 4 \epsilon \o T^2 + 8 \epsilon^2 \o R^2 + 12
+\epsilon^3 \o T^2 + 16 \epsilon^4 \o R^4 + O(\epsilon^5).
+\label{rho-expand}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}\psi_1 & = & 
+{1 \over 4} \left[1 + \ln\left({{\o R}^2 \over R^2}\right)\right]
++ \epsilon 
+\left({\o T^2 \over {\o R}^2} - {1 \over 2} {\o T^2 R^2 \over \o R^4}\right) +
+\nonumber \\ 
+& & \epsilon^2 \left[
+1 - 2 {\o T^4 \over \o R^4} + \left(-2 + 4 {\o T^4 \over \o
+R^4}\right) {R^2 \over \o R^2} + \left(1-2{\o T^4 \over \o
+R^4}\right)\frac{R^4}{\o R^4}\right] +
+\nonumber \\ 
+& & \epsilon^3 \left[
+{16 \over 3} {\o T^6 \over \o R^6} - 5 {\o T^2 \over \o R^2}
++ \left( {37 \over 2} {\o T^2 \over \o R^2} - 24 {\o T^6 \over \o R^6}\right)
+{R^2 \over \o R^2} + 
+\left(-24 {\o T^2 \over \o R^2} + 32 {\o T^6 \over \o R^6}\right) 
+{R^4 \over \o R^4}\right. + \nonumber \\ 
+& & \left.
+\left(10 {\o T^2 \over \o R^2} - {40 \over 3} {\o T^6 \over \o R^6} \right)
+{R^6 \over \o R^6}\right] +
+\nonumber \\ 
+& & \epsilon^4 \left[
+-4 + 20 {\o T^4 \over \o R^4} - 16 {\o T^8 \over \o R^8} +
+\left(20 - 136 {\o T^4 \over \o R^4} + 128 {\o T^8 \over \o R^8} \right)
+{R^2 \over \o R^2} + \right. \nonumber \\ 
+& & \left.\left(-42 + 324 {\o T^4 \over \o R^4} - 320 {\o T^8 \over \o R^8}\right)
+{R^4 \over \o R^4} +
+\left(40 - 320 {\o T^4 \over \o R^4} + 320 {\o T^8 \over \o R^8}\right)
+{R^6 \over \o R^6} + \right. \nonumber \\ 
+& & \left.\left(-14 +112 {\o T^4 \over \o R^4} - 112 {\o T^8 \over \o R^8}\right)
+{R^8 \over \o R^8}
+\right] + O(\epsilon^5)
+\nonumber \\ 
+\psi_2 & = & {1 \over 2} \left[
+{1 \over 2} {\o R}^2 + \epsilon \o T^2 - \epsilon^3 {\o T}^2
+\right] + O(\epsilon^5).
+\label{psi-approx}
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\o x=1$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2707: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\o y=1$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2709: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\o x = {1 \over 2}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2711: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}[t]
+\begin{center}
+\ \parbox{2.5in}{\epsfxsize=2.5in \epsfbox{figs/psi1a.eps}}
+\parbox{2.5in}{\epsfxsize=2.5in \epsfbox{figs/psi1b.eps}}\ 
+\end{center}
+
+\label{fig.psi1}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$R \in [0, \o R]$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2721: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\psi$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2731: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$R=\o R$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2733: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\partial_R f$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2735: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$u = -\partial_y \psi$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2737: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$v = \partial_x \psi$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2739: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\partial_xu = -\partial_{xy} \psi$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2741: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}I & = & - \int_0^{{\o R}} R^2 (C_0 + C_1 R^2 + C_2 R^4 + C_3 R^6 + C_4 R^8) 
+\partial_R f dR - C_5 f({\o R})
+\nonumber \\ 
+& = & {\gamma \over 2 \pi} \left\{
+2 C_0 + 16 C_1 \sigma^2 + 192 C_2 \sigma^4 + 3072 C_3 \sigma^6 + 61440 C_4
+\sigma^8 \right.
+\nonumber \\ 
+& & - \left[
+C_0 \left({{\o R}^2 \over 2 \sigma^2} + 2\right) +
+C_1 \left({{\o R}^4 \over 2 \sigma^2} + 4 {\o R}^2 + 16 \sigma^2 \right)
+\right. \nonumber \\ 
+& & + C_2 \left({{\o R}^6 \over 2 \sigma^2} + 6 {\o R}^4 + 
+48 {\o R}^2 \sigma^2 +
+192 \sigma^4 \right) \nonumber  \\ 
+& & + C_3 \left({\o R^8 \over 2 \sigma^2} + 8 \o R^6 + 96 \sigma^2 \o R^4 +
+768 \sigma^4 \o R^2 + 3072 \sigma^6 \right) \nonumber \\ 
+& & \left. + C_4 \left({\o R^{10} \over 2 \sigma^2} + 10 \o R^8 + 
+160 \sigma^2 \o R^6 + 1920 \sigma^4 \o R^4 + 15360 \sigma^6 \o R^2 +
+61440 \sigma^8\right) \right.\nonumber \\ 
+& & \left. \left. - {C_5 \over 2 \sigma^2} \right] 
+\exp\left(-{{\o R}^2 \over 4 \sigma^2}\right)
+\right\}.
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$C_i$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2743: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$c_i^{\rm Even}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2749: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$c_i^{\rm Odd}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2751: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}C_i = -{\o y \over 2} \left(c_i^{\rm Even} - c_i^{\rm Odd}\right),
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}C_i = {\o x \over 2} \left(c_i^{\rm Even} + c_i^{\rm Odd}\right).
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{table}\begin{tabular}{|l|l|}
+\hline Function & \\  \hline \hline
+$c_0^{\rm Even}$  & 
+$
+\begin{array}{r}
+{1 \over \o R^2} 
+\left[
+1-4 \epsilon {\o T^2 \over \o R^2} + 
+\epsilon^2 \left(-8 + 16 {\o T^{4} \over \o R^{4}}\right) +
+\epsilon^3 \left(52 {\o T^2 \over \o R^2} - 64 {\o T^6 \over \o R^6}\right) +
+\right. \\ 
+\left. \epsilon^4 \left(48 -288 {\o T^4 \over \o R^4} + 256 {\o T^8 \over \o
+R^8} \right)
+\right] 
+\end{array}$ \\  \hline
+$c_0^{\rm Odd}$ & $0$ \\  \hline
+$c_1^{\rm Even}$ & $
+\begin{array}{r}
+{\epsilon \over \o R^4}
+\left[
+4 {\o T^2 \over \o R^2} +
+\epsilon \left(16 - 48 {\o T^4 \over \o R^4}\right) +
+\epsilon^2 \left(-244{\o T^2 \over \o R^2} + 384 {\o T^6 \over \o R^6}
+\right) + \right. \\ 
+\left.\epsilon^3 \left(-288+2400{\o T^4 \over \o R^4} -2560{\o T^8 \over \o
+R^8}\right)
+\right]
+\end{array}$ \\  \hline
+$c_1^{\rm Odd}$ & ${\epsilon \over \o R^4}
+\left[
+-2 +
+\epsilon 16 {\o T^2 \over \o R^2} +
+\epsilon^2 \left(26-96{\o T^4 \over \o R^4}\right) +
+\epsilon^3 \left(-288{\o T^2 \over \o R^2}+512{\o T^6 \over \o R^6}\right)
+\right] $\\  \hline
+$c_2^{\rm Even}$ & 
+$
+\begin{array}{r}
+{\epsilon^2 \over \o R^6}
+\left[
+-8 + 32 {\o T^{4} \over \o R^{4}} + \epsilon \left(352 {\o T^{2} \over \o R^{2}} -640 {\o T^{6} \over \o R^{6}} \right) + \right.\\ 
+\left.\epsilon^2 \left(656 -6464 {\o T^{4} \over \o R^{4}} +7680 {\o T^{8} \over \o R^{8}} \right)
+\right]
+\end{array} $\\  \hline
+$c_2^{\rm Odd}$ & 
+$
+\begin{array}{r}
+{\epsilon^2 \over \o R^6}
+\left[
+-16 {\o T^{2} \over \o R^{2}} + \epsilon \left(-64 + 256 {\o T^{4} \over \o R^{4}} \right) +
+\epsilon^2 \left(1312 {\o T^{2} \over \o R^{2}} -2560 {\o T^{6} \over \o R^{6}}  \right)
+\right]
+\end{array} $\\  \hline
+$c_3^{\rm Even}$ & 
+$
+\begin{array}{r}
+{\epsilon^3 \over \o R^8}
+\left[
+\left(-160 {\o T^{2} \over \o R^{2}} +320 {\o T^{6} \over \o R^{6}}
+\right) +
+\epsilon \left( -640 +7040 {\o T^{4} \over \o R^{4}} - 8960 {\o T^{8} \over \o R^{8}}\right)
+\right]
+\end{array} $\\  \hline
+$c_3^{\rm Odd}$ & 
+$
+\begin{array}{r}
+{\epsilon^3 \over \o R^8}
+\left[
+\left(40 - 160 {\o T^{4} \over \o R^{4}}
+\right) +
+\epsilon \left( -1920 {\o T^{2} \over \o R^{2}} +3840 {\o T^{6} \over \o R^{6}} \right)
+\right]
+\end{array} $\\  \hline
+$c_4^{\rm Even}$ & 
+$
+\begin{array}{r}
+{\epsilon^4 \over \o R^{10}}
+\left(
+224 - 2688 {\o T^{4} \over \o R^{4}} + 3584 {\o T^{8} \over \o R^{8}}
+\right)
+\end{array} $\\  \hline
+$c_4^{\rm Odd}$ & 
+$
+\begin{array}{r}
+{\epsilon^4 \over \o R^{10}}
+\left(
+896 {\o T^{2} \over \o R^{2}} - 1792 {\o T^{6} \over \o R^{6}}
+\right)
+\end{array} $\\  \hline
+$c_5^{\rm Even}$ & 
+$ 1 $\\  \hline
+$c_5^{\rm Odd}$ & 
+$-2 \epsilon + 2 \epsilon^3 $\\  \hline
+\end{tabular}
+
+
+\label{tab.vel.coefficients}
+\end{table}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\partial_y u = -\partial_{yy} \psi$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2807: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}C_i = -{1 \over 2} \left(c_i^{\rm Even} - c_i^{\rm Odd}\right) - 
+{\o y^2 \over \o R^2} \left(d_i^{\rm Even} - d_i^{\rm Odd}\right),
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\partial_x v = \partial_{xx} \psi$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2809: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}C_i = {1 \over 2} \left(c_i^{\rm Even} + c_i^{\rm Odd}\right) +
+{\o x^2 \over \o R^2} \left(d_i^{\rm Even} + d_i^{\rm Odd}\right).
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\partial_y v = -\partial_x u = \partial_{xy} \psi$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2811: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}C_0 & = & {\o x \o y \over \o R^2} d_0^{\rm Even} \nonumber \\ 
+C_1 & = & {\o x \o y \over \o R^2} d_1^{\rm Even} \nonumber \\ 
+C_2 & = & {\o x \o y \over \o R^2} e_2 \nonumber \\ 
+C_3 & = & {\o x \o y \over \o R^2} e_3 \nonumber \\ 
+C_4 & = & {\o x \o y \over \o R^2} e_4 \nonumber \\ 
+C_5 & = & 0
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{table}\begin{tabular}{|l|l|}
+\hline Function & \\  \hline \hline
+$d_0^{\rm Even}$  & 
+$
+\begin{array}{r}
+{1 \over \o R^2} 
+\left[
+-1+ 8 \epsilon {\o T^2 \over \o R^2} + 
+\epsilon^2 \left(16 - 48 {\o T^{4} \over \o R^{4}}\right) +
+\epsilon^3 \left(-168 {\o T^2 \over \o R^2} +256 {\o T^6 \over \o R^6}\right) +
+\right. \\ 
+\left. \epsilon^4 \left(-160 + 1248 {\o T^4 \over \o R^4} - 1280 
+{\o T^8 \over \o R^8} \right)
+\right] 
+\end{array}$ \\  \hline
+$d_0^{\rm Odd}$ & $0$ \\  \hline
+$d_1^{\rm Even}$ & $
+\begin{array}{r}
+{\epsilon \over \o R^4}
+\left[
+-12 {\o T^2 \over \o R^2} +
+\epsilon \left(-48 + 192 {\o T^4 \over \o R^4}\right) +
+\epsilon^2 \left(1020{\o T^2 \over \o R^2} -1920 {\o T^6 \over \o R^6}
+\right) + \right. \\ 
+\left.\epsilon^3 \left(1248 - 12672{\o T^4 \over \o R^4} + 15360
+{\o T^8 \over \o
+R^8}\right)
+\right]
+\end{array}$ \\  \hline
+$d_1^{\rm Odd}$ & ${\epsilon \over \o R^4}
+\left[
+8 -
+\epsilon 96 {\o T^2 \over \o R^2} +
+\epsilon^2 \left(-168 + 768{\o T^4 \over \o R^4}\right) +
+\epsilon^3 \left(2496{\o T^2 \over \o R^2}-5120{\o T^6 \over \o R^6}\right)
+\right] $\\  \hline
+$d_2^{\rm Even}$ & 
+$
+\begin{array}{r}
+{\epsilon^2 \over \o R^6}
+\left[
+8 - 160 {\o T^{4} \over \o R^{4}} + \epsilon \left(-1408 {\o T^{2} \over \o R^{2}} +3840 {\o T^{6} \over \o R^{6}} \right) + \right.\\ 
+\left.\epsilon^2 \left(-2768 + 36160 {\o T^{4} \over \o R^{4}} - 53760 {\o T^{8} \over \o R^{8}} \right)
+\right]
+\end{array} $\\  \hline
+$d_2^{\rm Odd}$ & 
+$
+\begin{array}{r}
+{\epsilon^2 \over \o R^6}
+\left[
+128 {\o T^{2} \over \o R^{2}} + \epsilon \left(512 -2560 {\o T^{4} \over \o R^{4}} \right) +
+\epsilon^2 \left(-13568 {\o T^{2} \over \o R^{2}} + 30720 {\o T^{6} \over \o R^{6}}  \right)
+\right]
+\end{array} $\\  \hline
+$d_3^{\rm Even}$ & 
+$
+\begin{array}{r}
+{\epsilon^3 \over \o R^8}
+\left[
+\left(480 {\o T^{2} \over \o R^{2}} + -2240 {\o T^{6} \over \o R^{6}}
+\right) +
+\epsilon \left(1920 - 38400 {\o T^{4} \over \o R^{4}} + 71680 {\o T^{8} \over \o R^{8}}\right)
+\right]
+\end{array} $\\  \hline
+$d_3^{\rm Odd}$ & 
+$
+\begin{array}{r}
+{\epsilon^3 \over \o R^8}
+\left[
+\left(-320 + 1920 {\o T^{4} \over \o R^{4}}
+\right) +
+\epsilon \left( 21760 {\o T^{2} \over \o R^{2}} -53760 {\o T^{6} \over \o R^{6}} \right)
+\right]
+\end{array} $\\  \hline
+$d_4^{\rm Even}$ & 
+$
+\begin{array}{r}
+{\epsilon^4 \over \o R^{10}}
+\left(
+-224 + 13440 {\o T^{4} \over \o R^{4}} -32256 {\o T^{8} \over \o R^{8}}
+\right)
+\end{array} $\\  \hline
+$d_4^{\rm Odd}$ & 
+$
+\begin{array}{r}
+{\epsilon^4 \over \o R^{10}}
+\left(
+-10752 {\o T^{2} \over \o R^{2}} + 28672 {\o T^{6} \over \o R^{6}}
+\right)
+\end{array} $\\  \hline
+$d_5^{\rm Even}$ & $ 0 $\\  \hline
+$d_5^{\rm Odd}$ & $ 0 $\\  \hline
+$e_2$ & 
+$
+\begin{array}{r}
+{\epsilon^2 \over \o R^6}
+\left[
+40 - 160 {\o T^{4} \over \o R^{4}} + \epsilon \left(-1920 {\o T^{2} \over \o R^{2}} +3840 {\o T^{6} \over \o R^{6}} \right) + \right.\\ 
+\left.\epsilon^2 \left(-3600 + 41280 {\o T^{4} \over \o R^{4}} - 53760 {\o T^{8} \over \o R^{8}} \right)
+\right]
+\end{array} $\\  \hline
+$e_3$ & 
+$
+\begin{array}{r}
+{\epsilon^3 \over \o R^8}
+\left[
+\left(1120 {\o T^{2} \over \o R^{2}} -2240 {\o T^{6} \over \o R^{6}}
+\right) +
+\epsilon \left(4480 - 53760 {\o T^{4} \over \o R^{4}} + 71680 {\o T^{8} \over \o R^{8}}\right)
+\right]
+\end{array} $\\  \hline
+$e_4$ & 
+$
+\begin{array}{r}
+{\epsilon^4 \over \o R^{10}}
+\left(
+-2016 + 24192 {\o T^{4} \over \o R^{4}} -32256 {\o T^{8} \over \o R^{8}}
+\right)
+\end{array} $\\  \hline
+\end{tabular}
+
+\label{tab.veldev.coefficients}
+\end{table}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}[t]
+\begin{center}
+\ \parbox{2.5in}{\epsfxsize=2.5in \epsfbox{figs/vel.eps}}
+\parbox{2.5in}{\epsfxsize=2.5in \epsfbox{figs/veldev.eps}}\ 
+\end{center}
+
+\label{fig.vel}
+\end{figure}
+}
+
+\stepcounter{section}
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\int \int (x^2 + y^2) f(x,y) dx dy$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2885: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\theta_0 = 0, \gamma_0 = 1, a_0 > 1$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2889: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}g_0(\v x) = {\gamma_0 \over 4 \pi \sigma_0^2} 
+\exp\left(-{x^2/a_0^2 + y^2 a_0^2 \over 4 \sigma_0^2}\right)
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}g_1(\v x) = {\gamma_0 \over 8 \pi \sigma_1^2} 
+\exp\left(-{(x+r)^2/a_1^2 + y^2 a_1^2 \over 4 \sigma_1^2}\right) +
+{\gamma_0 \over 8 \pi \sigma_1^2} 
+\exp\left(-{(x-r)^2/a_1^2 + y^2 a_1^2 \over 4 \sigma_1^2}\right).
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\alpha \in (0,1)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2891: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\sigma_1 = \alpha \sigma_0$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2893: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}r & = &\sigma_0 a_0 \sqrt{2 (1 - \alpha^4)}, \label{split-r} \\ 
+a_1 & = & \alpha a_0. \label{split-a}
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\alpha \rightarrow 1$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2895: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$t \in [0,T]$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2897: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}{d \over dt}\sigma_i^2 & \leq & {\nu \over 2} \left(a_M^2 + a_M^{-2}\right). 
+\nonumber \\ 
+& \leq & \nu \left[1 + O\left(l^2\right)\right].
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\sigma \alpha$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2899: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}n = {\nu \left[1 + O\left(l^2\right)\right] T \over l^2 (1-\alpha^2)}
+\label{n}
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$g_0 - g_1$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2905: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}|g_0 - g_1| \leq
+{\gamma_0 \over 4 \pi l^2} 
+\left[1-\alpha^{-2}\exp\left(-{2(1-\alpha^4) \over 4 \alpha^4}\right)\right]
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}{\gamma_0 \over 4 \pi l^2} 
+\left[1-\alpha^{-2}\exp\left(-{2(1-\alpha^4) \over 4 \alpha^4}\right)\right]
+= {1 \over 4 \pi l^2} \left\{(1-\alpha^2)^2 + O\left[ (1-\alpha^2)^3\right]
+\right\}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}|g_0(\vec{x}) - g_1(\vec{x})| \leq C (1-\alpha^2)^2 
+{\gamma_0 \over 4 \pi \sigma_0^2} 
+\exp\left(-{x^2/a_0^2 + y^2 a_0^2 \over 4 \sigma_0^2}\right)
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\frac{d x(t)}{dt} = - \lambda x(t),
+\label{scalar-test-eqn}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\lambda$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2909: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\vec{u} = \vec{0}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2915: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$d_{11} = 1$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2919: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$d_{12} = d_{21} = 0$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2921: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\sigma =
+\alpha l$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2923: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\sigma = l$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2925: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$a = \alpha a_0$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2931: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$a=a_0$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2935: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$a
+\in [1,a_M]$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2939: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$a_0$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2941: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$x_i = 2 r (i-n/2)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2947: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$x_i$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2953: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\gamma(x_i) = {\gamma_0 \over 2^n} 
+\left( 
+\begin{array}{l}
+{n \over 2} \\  \ \\ 
+i
+\end{array}
+\right)
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}\gamma(x_i) &=& {\gamma_0 \over \sqrt{\pi {n \over 2}}}
+\exp\left[-{\left(i-{n\over 2}\right) \over {n\over 2}}\right] +
+O\left({1\over n}\right) \nonumber \\ 
+& = &
+{\gamma_0 \over \sqrt{4 \pi \nu T a_0^2 (1+\alpha^2)}} (2 r)
+\exp\left[-{x_i^2 \over  4 \nu T a_0^2 (1+\alpha^2)}\right] +
+O\left[l^2 \left(1-\alpha^2\right)\right].
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\alpha \rightarrow 0$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2959: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$a_0 \rightarrow 1$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2961: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}e & = & \sum_{i=0}^{n/2}
+\left\{
+{\gamma_0 \over \sqrt{4 \pi \nu T a_0^2 (1+\alpha^2)}} (2 r)
+\exp\left[-{x_i^2 \over  4 \nu T a_0^2 (1+\alpha^2)}\right] 
+ +
+O\left[l^2 \left(1-\alpha^2\right)\right]
+\right\}
+\times
+\nonumber \\ 
+& & C (1-\alpha^2)^2 
+{1 \over 4 \pi l^2} 
+\exp\left[-{(x-x_i)^2/a_0^2 + y^2 a_0^2 \over 4 l^2}\right]. 
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}\nonumber \\ 
+e & = & C (1-\alpha^2)^2 
+{\gamma_0 \over \sqrt{4 \pi \nu T a_0^2 (1+\alpha^2)}} 
+{1 \over 4 \pi l^2} \times \nonumber \\ 
+& & 
+\int_{-\infty}^{\infty}
+\left\{\exp\left[-{s^2 \over  4 \nu T a_0^2 (1+\alpha^2)}\right] 
++
+O\left[l^2 \left(1-\alpha^2\right)\right]
+\right\} \times \nonumber \\ 
+& & 
+\exp\left[-{(x-s)^2/a_0^2 + y^2 a_0^2 \over 4 l^2}\right] ds 
+\nonumber \\ 
+& = & 
+C (1-\alpha^2)^2 {\gamma_0 \over l^2}
+\left\{O(l) + 
+O\left[l^3 (1-\alpha^2)\right]\right\}.
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\gamma_0/l^2$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2965: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$A \sim
+l^{2p}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2967: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\gamma_0/l^2 = O\left[l^{2(p-1)}\right]$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2969: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$A \sim r^2 = O[l^2 (1-\alpha^2)]$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2973: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{thm}A computational element undergoing refinement induces a total
+uniform error of $O\left[l \right(1-\alpha^2\left)^3\right]$.
+\end{thm}
+}
+
+\stepcounter{section}
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$O(N^2)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2981: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$O(N \log N)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2983: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\|\omega - \hat{\omega}\|_\infty \leq O(l^4) + 
+O\left[l \left(1-\alpha^2\right)^3\right].
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$|1-a_M^2| \sim l^2$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2993: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$1-\alpha^2$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline2997: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{table}[t]
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline $l^2$ & $\alpha$ & $\alpha^2 l^2$ \\  \hline \hline
+$4.0 \times 10^{-2}$ & $0.8$ & $2.56100 \times 10^{-2}$ \\  \hline
+$3.5 \times 10^{-2}$ & $0.81440$ & $2.32138 \times 10^{-2}$ \\  \hline
+$3.0 \times 10^{-2}$ & $0.82960$ & $2.06470 \times 10^{-2}$ \\  \hline
+$2.5 \times 10^{-2}$ & $0.84581$ & $1.78849 \times 10^{-2}$ \\  \hline
+$2.0 \times 10^{-2}$ & $0.86339$ & $1.49089 \times 10^{-2}$ \\  \hline
+$1.5 \times 10^{-2}$ & $0.88292$ & $1.16932 \times 10^{-2}$ \\  \hline
+$1.0 \times 10^{-2}$ & $0.90554$ & $8.20000 \times 10^{-3}$ \\  \hline
+\end{tabular}
+\end{center}
+
+\label{tab.conv-gaussian}
+\end{table}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\sigma_i = \alpha l$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline3053: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}[t]
+\begin{center}
+\ \epsfysize=2.5in \epsfbox{figs/size104b.eps}\ 
+\end{center}
+
+\label{fig.merge}
+\end{figure}
+}
+
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{equation}\vec{u} \cdot \nabla \omega = 0
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\gamma = \pi$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline3063: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\nu = 10^{-2}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline3065: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\sigma = {1 \over 4}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline3067: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\widehat{\omega}(\vec{x})-\omega(\vec{x})$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline3071: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}[t]
+\begin{center}
+\ \parbox{2.5in}{\epsfxsize=2.5in \epsfbox{figs/abserr4.eps}}
+\parbox{2.5in}{\epsfxsize=2.5in \epsfbox{figs/err-test81d.eps}}\ 
+\end{center}
+
+\label{fig.conv-gaussian}
+\end{figure}
+}
+
+\stepcounter{subsection}
+{\newpage
+\clearpage
+\samepage \begin{figure}[t]
+\begin{center}
+\ \parbox{1.65in}{\epsfxsize=1.65in \epsfbox{figs/dipole103d0000.eps}}
+\parbox{1.65in}{\epsfxsize=1.65in \epsfbox{figs/dipole103d0010.eps}}
+\parbox{1.65in}{\epsfxsize=1.65in \epsfbox{figs/dipole103d0020.eps}}\ 
+\end{center}
+
+\label{fig.dipole-evolve}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}\widehat{\omega}(\vec{x},0) = {1 \over 0.3^2}
+\left\{
+\exp\left[-{x^2 + (y+0.25)^2 \over 4\cdot0.3^2}\right]-
+\exp\left[-{x^2 + (y-0.25)^2 \over 4\cdot0.3^2}\right]
+\right\}.
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\gamma = 4\pi$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline3093: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\sigma=0.3$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline3095: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}[t]
+\begin{center}
+\ \parbox{2.5in}{\epsfxsize=2.5in \epsfbox{figs/dipole104b0020.eps}}
+\parbox{2.5in}{\epsfxsize=2.5in \epsfbox{figs/dipole104b0020-zoom.eps}}\ 
+\end{center}
+
+\label{fig.dipole-positions}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{figure}[t]
+\begin{center}
+\ \epsfysize=2.5in \epsfbox{figs/conv-dipole.eps}\ 
+\end{center}
+
+\label{fig.conv-dipole}
+\end{figure}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$l^2 = 6.4 \times 10^{-3}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline3107: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+\stepcounter{section}
+\stepcounter{section}
+\appendix
+\stepcounter{section}
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$u^{(1)}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline3125: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$u^{(2)}$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline3127: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$(x-x_i)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline3129: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$(y-y_i)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline3131: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$\v x$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline3133: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}O(1): & & -\frac{1}{\sigma^2} {d \over dt}(\sigma^2) + 
+\nu \frac{\left(a^{-2} + a^2\right)}{2\sigma^2} = 0 
+\label{mom0}\\ 
+O(x-x_i): & & 
+(c^2 a^{-2}+s^2 a^2) {d \over dt} x_o + cs (a^{-2} - a^2) {d \over dt} y_0 - \nonumber \\ 
+& & (c^2 a^{-2}+s^2 a^2) u^{(1)} - cs (a^{-2} - a^2) u^{(2)} = 0 
+\label{momx} \\ 
+O(y-y_i): & & 
+(s^2 a^{-2}+c^2 a^2) {d \over dt} y_o + cs (a^{-2} - a^2) {d \over dt} x_0 - \nonumber \\ 
+& & (s^2 a^{-2}+c^2 a^2) u^{(2)} - cs (a^{-2} - a^2) u^{(1)} = 0 
+\label{momy} \\ 
+O[(x-x_i)^2]: & &
+{d \over dt} (\sigma^2) (c^2 a^{-2} + s^2 a^2) -
+\sigma^2 [{d \over dt}(c^2 a^{-2}) + {d \over dt}(s^2 a^2)] - \nonumber \\ 
+& & 2 \sigma^2
+[d_{11} (c^2 a^{-2} + s^2 a^2) + d_{21} c s (a^{-2} - a^2)] - \nonumber \\ 
+& & \nu [(c^2 a^{-2} + s^2 a^2)^2 + c^2 s^2 (a^{-2} - a^2)^2] = 0 
+\label{momx2} \\ 
+O[(y-y_i)^2]: & &
+{d \over dt} (\sigma^2) (s^2 a^{-2} - c^2 a^2) -
+\sigma^2 [{d \over dt}(s^2 a^{-2}) + {d \over dt}(c^2 a^2)] - \nonumber \\ 
+& & 2 \sigma^2
+[-d_{11} (s^2 a^{-2} + c^2 a^2) + d_{12} c s (a^{-2} - a^2)] - \nonumber \\ 
+& & \nu [(s^2 a^{-2} + c^2 a^2)^2 + c^2 s^2 (a^{-2} - a^2)^2] = 0 
+\label{momy2} \\ 
+O[(x-x_i)(y-y_i)]: &&
+{d \over dt} (\sigma^2) cs (a^{-2} - a^2) - \nonumber \\ 
+& & 
+\sigma^2 [{d \over dt}(cs)(a^{-2} - a^2) + cs {d \over dt}(a^{-2} - a^2)] - \nonumber \\ 
+& &
+\sigma^2
+[d_{12} (c^2 a^{-2} + s^2 a^2) + d_{21} (s^2 a^{-2} + c^2 a^2)] - \nonumber \\ 
+& & \nu [(c^2 a^{-2} + s^2 a^2)+
+(s^2 a^{-2} + c^2 a^2)]cs(a^{-2} - a^2) = 0
+\label{momxy}
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{displaymath}cs(a^{-2} - a^2) 
+[(c^2 a^{-2} + s^2 a^2)+
+(s^2 a^{-2} + c^2 a^2)] =
+c s (a^{-4} - a^4)
+\end{displaymath}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}O[(x-x_i)^2]: & &
+2 c s (a^2 - a^{-2}) {d \over dt} \theta + c^2 {d \over dt}(a^{-2}) + s^2 {d \over dt}(a^2)
+= \nonumber \\ 
+& & -2 \left[
+d_{11} (c^2 a^{-2} + s^2 a^2) + d_{21} cs (a^{-2}-a^2)\right] \nonumber \\ 
+& & -\frac{\nu}{2 \sigma^2}(a^{-2}-a^2)(c^2a^{-2}-s^2 a^2)
+\label{momx22} \\ 
+O[(y-y_i)^2]: & &
+2 c s (a^{-2} - a^2) {d \over dt} \theta + s^2 {d \over dt}(a^{-2}) + c^2 {d \over dt}(a^2)
+= \nonumber \\ 
+& & -2 \left[
+-d_{11} (s^2 a^{-2} + c^2 a^2) + d_{12} cs (a^{-2}-a^2)\right] \nonumber \\ 
+& & -\frac{\nu}{2 \sigma^2}(a^{-2}-a^2)(s^2a^{-2}-c^2 a^2)
+\label{momy22} \\ 
+O[(x-x_0)(y-y_i)]: & &
+(c^2-s^2) (a^{-2} - a^2) {d \over dt} \theta + cs [{d \over dt}(a^{-2}) - {d \over dt}(a^2)]
+= \nonumber \\ 
+& & -\left[
+d_{12} (s^2 a^{-2} + c^2 a^2) + d_{21} (s^2 a^{-2}+c^2 a^2)\right] \nonumber \\ 
+& & -\frac{\nu}{2 \sigma^2}cs(a^{-4}-a^4)
+\label{momxy2}
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}{d \over dt}(a^2+a^{-2}) =
+(a^2 - a^{-2})
+\left\{
+2 \left[ d_{11}(c^2-s^2)+(d_{12}+d_{21})cs\right]+
+\frac{\nu}{2\sigma^2}(a^{-2}-a^2)
+\right\}.
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{${d \over dt}(a^2+a^{-2}) = a^{-2}(a^2-a^{-2}){d \over dt}(a^2)$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline3139: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}{d \over dt}(a^2) =
+\left\{
+2 a^2 \left[ d_{11}(c^2-s^2)+(d_{12}+d_{21})cs\right]+
+\frac{\nu}{2 \sigma^2}(1-a^4)
+\right\}.
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \setbox\sizebox=\hbox{$s^2-c^2$}\lthtmltypeout{latex2htmlSize :tex2html_wrap_inline3141: \the\ht\sizebox::\the\dp\sizebox.}\box\sizebox
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}(a^{-2}-a^2) {d \over dt} \theta =
+d_{12}(-c^2a^{-2}+s^2a^2)+d_{21}(s^2a^{-2}-c^2a^2)+
+2d_{11}cs(a^2+a^{-2}).
+\label{ddttheta}
+\end{equation}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{eqnarray}(a^{-2}-a^2) {d \over dt} \theta & = &
+\left[
+\frac{1}{2}(d_{21}+d_{12})(s^2-c^2)(a^2+a^{-2})+
+\frac{1}{2}(d_{21}-d_{12})(a^{-2}-a^2)
+\right] + \nonumber \\ 
+& &  2d_{11}cs(a^2+a^{-2}),
+\end{eqnarray}
+}
+
+{\newpage
+\clearpage
+\samepage \begin{equation}{d \over dt} \theta  = {d_{21} - d_{12} \over 2} +
+\left[{d_{21} + d_{12} \over 2} (s^2 - c^2) + 
+2 d_{11}cs\right]
+{(a^{-2} + a^2) \over (a^{-2} - a^2)}.
+\end{equation}
+}
+
+\stepcounter{section}
+
+\end{document}

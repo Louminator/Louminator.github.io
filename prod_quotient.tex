@@ -1,0 +1,435 @@
+\documentclass[12pt]{article}
+
+\usepackage{ed}
+\usepackage{amsmath}
+
+\setImageBase{../classes/myclass/images}
+
+\begin{document}
+
+\begin{topic}{Differentiation conceptual}
+
+  \begin{question}{Multiple Choice}
+    \name{Visual recognition 1}
+
+    \qutext{Consider a function $f(x)$ sketched below.
+
+      \graph[12]{(-1)^$n*(x-$a1)*(x-$a2)*(x-$a3)/10}{-6}{6}{-6}{6}
+
+      Which curve best resembles $f'(x)$?}
+
+    \choice*{\graph[12]{(-1)^$n*((x-$a1)*(x-$a2)+(x-$a1)*(x-$a3)+(x-$a2)*(x-$a3))/10}{-6}{6}{-6}{6}}
+
+    \choice{\graph[12]{-(-1)^$n((x-$a1)*(x-$a2)+(x-$a1)*(x-$a3)+(x-$a2)*(x-$a3))/10}{-6}{6}{-6}{6}}
+
+    \choice{\graph[12]{(x-$a1)*(x-$a3)/10}{-6}{6}{-6}{6}}
+
+    \choice{\graph[12]{-(x-$a1)*(x-$a3)/10}{-6}{6}{-6}{6}}
+
+    \code{
+      $a1 = range(-5,-2);
+      $a2 = range(-1,1);
+      $a3 = range(2,5);
+      $n = range(1,2);
+    }
+
+  \end{question}
+
+\end{topic}
+
+\begin{topic}{Product rule - elementary}
+
+  %% Only basic product rule questions involving polynomials and powers.
+
+  \begin{question}{Formula}
+    \qutext{Differentiate $f(x)$ where
+      \[
+      f(x) = (\var{a1} x^{\var{n1}} + \var{b1}) ( \var{a2} x^{\var{n2}} + \var{b2}).
+      \]}
+
+    \answer{\var{tmp1} x^{\var{\var{n1}-1}} ( \var{a2} x^{\var{n2}} +
+      \var{b2}) +
+      \var{tmp2} x^{\var{\var{n2}-1}}(\var{a1} x^{\var{n1}} + \var{b1})}
+
+    \code{
+      $a1 = range(2,6);
+      $a2 = range(2,6);
+      $n1 = range(3,6);
+      $n2 = range(3,6);
+      $b1 = range(1,5);
+      $b2 = range(1,5);
+      $tmp1 = $a1*$n1;
+      $tmp2 = $a2*$n2;
+    }
+
+  \end{question}
+
+  \begin{question}{Formula}
+    \qutext{Differentiate $f(x)$ where
+      \[
+      f(x) = (\frac{\var{a1}}{x^{\var{n1}}} + \var{b1}) ( \var{a2} x^{\var{n2}} + \var{b2}).
+      \]}
+
+    \answer{-\var{tmp1} x^{\var{-\var{n1}-1}} ( \var{a2} x^{\var{n2}} +
+      \var{b2}) +
+      \var{tmp2} x^{\var{\var{n2}-1}}(\var{a1} x^{\var{-\var{n1}}} + \var{b1})}
+
+    \code{
+      $a1 = range(2,6);
+      $a2 = range(2,6);
+      $n1 = range(3,6);
+      $n2 = range(3,6);
+      $b1 = range(1,5);
+      $b2 = range(1,5);
+      $tmp1 = $a1*$n1;
+      $tmp2 = $a2*$n2;
+    }
+
+  \end{question}
+
+  \begin{question}{Formula}
+    \qutext{Differentiate $f(x)$ where
+      \[
+      f(x) = (\frac{\var{a1}}{x^{\var{n1}}} + \var{b1}) 
+      ( \frac{\var{a2}}{x^{\var{n2}}} + \var{b2}).
+      \]}
+
+    \answer{-\var{tmp1} x^{\var{-\var{n1}-1}} ( \var{a2} x^{\var{-\var{n2}}} +
+      \var{b2}) -
+      \var{tmp2} x^{\var{-\var{n2}-1}}(\var{a1} x^{\var{-\var{n1}}} + \var{b1})}
+
+    \code{
+      $a1 = range(2,6);
+      $a2 = range(2,6);
+      $n1 = range(3,6);
+      $n2 = range(3,6);
+      $b1 = range(1,5);
+      $b2 = range(1,5);
+      $tmp1 = $a1*$n1;
+      $tmp2 = $a2*$n2;
+    }
+
+  \end{question}
+
+  \begin{question}{Formula}
+    \qutext{Differentiate $f(x)$ where
+      \[
+      f(x) = (\var{a1} x^{\var{n1}} + \var{b1}) 
+      (\sqrt[\var{n2}]{x} + \var{b2}).
+      \]}
+
+    \answer{\var{tmp1} x^{\var{\var{n1}-1}} (x^{(\var{n3})} + \var{b2})
+      + \var{n3} x^{-(\var{n4})} (\var{a1} x^{\var{n1}} + \var{b1})}
+
+    \code{
+      $a1 = range(2,6);
+      $a2 = range(2,6);
+      $n1 = range(3,6);
+      $n2 = range(3,5);
+      $b1 = range(1,5);
+      $b2 = range(1,5);
+      $tmp1 = $a1*$n1;
+      $n3 = frac(1,$n2);
+      $n4 = frac($n2-1,$n2);
+    }
+
+  \end{question}
+
+\end{topic}
+
+\begin{topic}{Quotient rule - elementary}
+
+  %% Only simple quotient rule questions here involving polynomials and
+  %% powers. 
+
+  \begin{question}{Formula}
+    \qutext{Differentiate $f(x)$ where
+      \[
+      f(x) = \frac{\var{a1} x + \var{b1}}
+      {\var{a2} x + \var{b3}}.
+      \]}
+
+    \answer{\var{tmp2} (\var{a2} x + \var{b3})^(-2)}
+
+    %% Watch out for the determinant being zero.
+    \code{
+      $a1 = range(1,6);
+      $a2 = range(1,6);
+      $b1 = range(1,6);
+      $b2 = range(1,6);
+      $tmp1 = int($a1*$b2 - $b1*$a2);
+      $b3 = $b2 + eq($tmp1,0);
+      $tmp2 = int($b3*$a1 - $b1*$a2);
+    }
+
+  \end{question}
+
+  \begin{question}{Formula}
+    \qutext{Differentiate $f(x)$ where
+      \[
+      f(x) = \frac{\var{a1} x^2 + \var{b1}}
+      {\var{a2} x + \var{b2}}.
+      \]}
+
+    \answer{(\var{\var{a1}*\var{a2}} x^2 + \var{2*\var{a1}*\var{b2}} x -
+      \var{\var{b1}*\var{a2}})
+      (\var{a2} x + \var{b2})^(-2)}
+
+    \code{
+      $a1 = range(1,6);
+      $a2 = range(1,6);
+      $b1 = range(1,6);
+      $b2 = range(1,6);
+    }
+
+  \end{question}
+
+  \begin{question}{Formula}
+    \qutext{Differentiate $f(x)$ where
+      \[
+      f(x) = \frac{\var{a1} x + \var{b1}}
+      {\var{a2} x^2 + \var{b2}}.
+      \]}
+
+    \answer{(-\var{\var{a1}*\var{a2}} x^2 - \var{2*\var{a2}*\var{b1}} x +
+      \var{\var{a1}*\var{b2}})
+      (\var{a2} x^2 + \var{b2})^(-2)}
+
+    \code{
+      $a1 = range(1,6);
+      $a2 = range(1,6);
+      $b1 = range(1,6);
+      $b2 = range(1,6);
+    }
+
+  \end{question}
+
+  \begin{question}{Formula}
+    \qutext{Differentiate $f(x)$ where
+      \[
+      f(x) = \frac{\var{a1} x^2 + \var{b1}x}
+      {\var{a2} x + \var{b2}}.
+      \]}
+
+    \answer{(\var{\var{a1}*\var{a2}} x^2 + \var{2*\var{a1}*\var{b2}} x +
+      \var{\var{b1}*\var{b2}})
+      (\var{a2} x + \var{b2})^(-2)}
+
+    \code{
+      $a1 = range(1,6);
+      $a2 = range(1,6);
+      $b1 = range(1,6);
+      $b2 = range(1,6);
+    }
+
+  \end{question}
+
+  \begin{question}{Formula}
+    \qutext{Differentiate $f(x)$ where
+      \[
+      f(x) = \frac{\var{a1} x + \var{b1}}
+      {\var{a2} x^2 + \var{b2}x}.
+      \]}
+
+    \answer{(-\var{\var{a1}*\var{a2}} x^2 - \var{2*\var{a2}*\var{b1}} x -
+      \var{\var{b1}*\var{b2}})
+      (\var{a2} x^2 + \var{b2}x)^(-2)}
+
+    \code{
+      $a1 = range(1,6);
+      $a2 = range(1,6);
+      $b1 = range(1,6);
+      $b2 = range(1,6);
+    }
+
+  \end{question}
+
+\end{topic}
+
+\begin{topic}{Trigonometric functions}
+
+  %% Only basic trig questions here.
+
+  \begin{question}{Formula}
+
+    \qutext{What is the derivative of $\sin x$?}
+
+    \answer{cos x}
+
+  \end{question}
+
+  \begin{question}{Formula}
+
+    \qutext{What is the derivative of $\cos x$?}
+
+    \answer{-sin x}
+
+  \end{question}
+
+  \begin{question}{Formula}
+
+    \qutext{What is the derivative of $\tan x$?}
+
+    \answer{(sec x)^2}
+
+  \end{question}
+
+  \begin{question}{Formula}
+
+    \qutext{What is the derivative of $\cot x$?}
+
+    \answer{-(csc x)^2}
+
+  \end{question}
+
+  \begin{question}{Formula}
+
+    \qutext{What is the derivative of $\sec x$?}
+
+    \answer{(sec x) (tan x)}
+
+  \end{question}
+
+  \begin{question}{Formula}
+
+    \qutext{What is the derivative of $\csc x$?}
+
+    \answer{-(csc x) (cot x)}
+
+  \end{question}
+
+\end{topic}
+
+\begin{topic}{Product rule - trig}
+
+  \begin{question}{Formula}
+
+    \qutext{What is the derivative of $x^{\var{n}} \sin(x)$?}
+
+    \answer{\var{n} x^{\var{nm1}} sin(x) + x^{\var{n}} cos(x)}
+
+    \code{
+      $n = range(3,6);
+      $nm1 = $n-1;
+    }
+
+  \end{question}
+
+  \begin{question}{Formula}
+
+    \qutext{What is the derivative of $(x^{\var{n}}+x) \tan(x)$?}
+
+    \answer{(\var{n} x^{\var{nm1}}+1) tan(x) + (x^{\var{n}}+x) (sec(x))^2}
+
+    \code{
+      $n = range(3,6);
+      $nm1 = $n-1;
+    }
+
+  \end{question}
+
+  \begin{question}{Formula}
+
+    \qutext{What is the derivative of $(x^{\var{n}}+\sqrt{x}) \csc(x)$?}
+
+    \answer{(\var{n} x^{\var{nm1}}+(1/2) x^(-1/2)) csc(x) - 
+      (x^{\var{n}}+sqrt(x)) csc(x) cot(x)}
+
+    \code{
+      $n = range(3,6);
+      $nm1 = $n-1;
+    }
+
+  \end{question}
+
+  \begin{question}{Formula}
+
+    \qutext{What is the derivative of $\sin(x) \cos(x)$?}
+
+    \answer{(cos(x))^2 - (sin(x))^2}
+
+  \end{question}
+
+  \begin{question}{Formula}
+
+    \qutext{What is the derivative of $\sin^2(x) \var{pmsw} \cos^2(x)$?}
+
+    \comment{One can use angle sum formulas to simplify this problem
+    before differentiating.}
+
+    \answer{$answ}
+
+    \code{
+      $sw = range(0,1);
+      $pmsw = switch($sw,"+","-");
+      $answ = switch($sw,0,"4 sin(x) cos(x)");
+    }
+  \end{question}
+
+\end{topic}
+
+\begin{topic}{Quotient rule - trig}
+
+  \begin{question}{Formula}
+
+    \qutext{What is the derivative of $\frac{\sin x}{x^{\var{n}}}$?}
+    
+    \answer{(x^\var{n} cos(x) - \var{n} x^\var{nm1} sin(x))/x^{\var{nt2}}}
+
+    \code{
+      $n = range(3,6);
+      $nm1 = $n-1;
+      $nt2 = 2*$n;
+    }
+  \end{question}
+  
+  \begin{question}{Formula}
+
+    \qutext{What is the derivative of $\frac{x^{\var{n}}+x}{\tan x}$?}
+    
+    \comment{You can use the quotient rule or the product rule here.}
+    
+    \answer{(\var{n} x^\var{nm1}+1) cot(x) - (x^{\var{n}}+x) (csc(x))^2}
+
+    \code{
+      $n = range(3,6);
+      $nm1 = $n-1;
+      $nt2 = 2*$n;
+    }
+  \end{question}
+  
+  \begin{question}{Formula}
+
+    \qutext{What is the derivative of $\frac{\cos x}{x^{\var{n}}+1}$?}
+    
+    \answer{(-(x^\var{n}+1) sin(x) + \var{n} x^\var{nm1} cos(x))/(x^{\var{n}}+1)^2}
+
+    \code{
+      $n = range(3,6);
+      $nm1 = $n-1;
+      $nt2 = 2*$n;
+    }
+  \end{question}
+  
+  \begin{question}{Formula}
+
+    \qutext{What is the derivative of $\frac{\tan x}{\cos (x) +1}$?}
+    
+    \answer{((sec(x))^2 (cos(x)+1) - tan(x) sin(x))/(cos(x)+1)^2 }
+  
+  \end{question}
+  
+  \begin{question}{Formula}
+
+    \qutext{What is the derivative of $\frac{\cos x+1}{\sin x}$?}
+
+    \comment{If you simplify first, you need not use the quotient rule
+    at all.}
+    
+    \answer{-(csc(x))^2 - csc(x) cot(x) }
+  
+  \end{question}
+  
+\end{topic}
+
+\end{document}

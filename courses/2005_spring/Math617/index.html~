@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>Math 617 Home Page</title>
+  <meta content="L F Rossi" name="author">
+</head>
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 204, 102);"
+ alink="#000099" link="#000099" vlink="#990099">
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2"
+ cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">
+      <center>
+      <table style="width: 100%;" nosave="" border="0" cellpadding="0"
+ cellspacing="0" cols="3">
+        <tbody>
+          <tr nosave="">
+            <td
+ style="width: 110px; background-color: rgb(255, 204, 102);" nosave=""><a
+ href="waves.jpg"><img alt="Membrane" src="waves_sm.jpg"
+ style="border: 0px solid ; width: 108px; height: 100px;"></a> </td>
+            <td style="background-color: rgb(255, 204, 102);" nosave=""><small>
+            </small>
+            <center><small> </small>
+            <h1><small><small>&nbsp;Math 617<br>
+            </small></small></h1>
+            <small><small> </small></small></center>
+            <small><small> </small></small>
+            <center><small><small> </small></small>
+            <h1><small><small>Introduction to Applied Mathematics II<br>
+            </small></small></h1>
+            <small> </small></center>
+            <small> </small></td>
+            <td
+ style="width: 110px; background-color: rgb(255, 204, 102);" nosave=""><img
+ alt="UD Math Logo" src="udmath.gif" style="width: 108px; height: 89px;"
+ align="middle"> </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table style="text-align: left; width: 100%; height: 100%;" border="1"
+ cellpadding="5" cellspacing="0">
+  <tbody>
+    <tr>
+      <td
+ style="vertical-align: top; background-color: rgb(255, 204, 102);"><big
+ style="font-weight: bold;"><big>Contents.</big></big><br>
+      <ol id="mozToc">
+<!--mozToc h2 1--><li><a href="#mozTocId857247">Contact
+information.</a></li>
+        <li><a href="#mozTocId436148">Course
+resources.</a></li>
+        <li><a href="#mozTocId909031">Problem sets.</a></li>
+      </ol>
+      <br>
+      <h2><a class="mozTocH2" name="mozTocId857247"></a><b>Contact
+information.</b></h2>
+      <blockquote><span style="font-weight: bold;"></span>
+        <table style="width: 425px; height: 82px;" border="1"
+ cellpadding="2" cellspacing="2">
+          <tbody>
+            <tr>
+              <td style="vertical-align: top;"><b>Instructor:</b><br>
+              </td>
+              <td style="vertical-align: top;">Prof. L. F. Rossi.</td>
+            </tr>
+            <tr>
+              <td valign="top"><b>Email:</b><br>
+              </td>
+              <td valign="top"><a href="mailto:rossi@math.udel.edu">rossi@math.udel.edu</a><br>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;"><b>Phone:</b><br>
+              </td>
+              <td style="vertical-align: top;">(302) 831-1880&nbsp;
+or&nbsp;
+UDel x1880<br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <br>
+        <b>Meetings: </b>Monday, Wednesday and Friday, 1010-1100 in
+MEM 107.<br>
+        <br>
+        <span style="font-weight: bold;">Office hours:&nbsp; </span>Tuesday,
+Thursday 1000-1100, Friday 1115-1215 or by<br>
+&nbsp; appointment.<br>
+        <br>
+        <br>
+      </blockquote>
+      <h2><a class="mozTocH2" name="mozTocId436148"></a><b><b>Course
+resources.</b></b></h2>
+      <ul>
+        <li>Download a <a href="syllabus.pdf">syllabus.</a></li>
+        <li><a href="http://www.adobe.com/support/downloads/main.html">Download
+a free Acrobat reader</a> so that you can read PDF files.</li>
+<li>A list of potential <a href="projects.pdf">projects</a>.</li>
+<li>A <a href="exam1soln.pdf">solution guide</a> for exam 1.</li>
+<li>A <a href="exam2soln.pdf">solution guide</a> for exam 2.</li>
+<li>Some notes on the <a href="geodesic.pdf">geodesic problem</a>.</li>
+      </ul>
+      <h2><a class="mozTocH2" name="mozTocId909031"></a>Problem sets.</h2>
+      <ol>
+      <li>Due Mon Feb 21: Ch. 5, 1.1: 1-4, 11, 13.</li>
+      <li>Due Wed Mar 2: Ch. 5, 2.5 (Just ignore questions a and b and solve the problem) 
+      3.1-3.3, 3.6-8, 3.10; plus this <a href="hw2.pdf">supplement</a>.</li>
+      <li>Due Wed Mar 9: Ch 5, 4.2-4.4, 4.6; plus <a href="hw3.pdf">this supplement</a>.  </li>
+ <li>Due Wed Mar 23: Ch 4, 5.1-5.6, 5.8, 5.11, 5.16; plus this <a href="hw4.pdf">supplement</a>.</li>
+ <li>Due Fri Apr 8: Ch 3: 1.1, 1.2, 2.5, 2.8, 2.12, 3.1, 3.2; plus this <a href="hw5.pdf">supplement</a>.</li>
+<li>Due Apr 27: Ch 1: 2.1, 2.5, 2.8; plus this <a href="hw6.pdf">supplement</a>.</li>
+ <li>Due May 6: Ch 1: 3.1, 3.2, 3.3.  Ch 2: 1.1; plus this <a href="hw7.pdf">supplement</a>.</li>
+<li>Due May 16: Ch 2: 1.2, 1.3 g-j, 1.5, 3.2 a, d, 3.4, 3.7 a, plus this <a href="hw8.pdf">supplement</a>.</li>
+      </ol>
+      <br>
+      <br>
+      <img alt="vortie" src="vortex2.gif" name="Graphic7"
+ style="border: 0px solid ; width: 98px; height: 155px;"><i>Last
+modified: 2 May 2005.</i>
+      <address> <a href="mailto:rossi@math.udel.edu">rossi@math.udel.edu</a></address>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+</body>
+</html>

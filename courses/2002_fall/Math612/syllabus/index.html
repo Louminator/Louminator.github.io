@@ -1,0 +1,532 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="syllabus">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="syllabus.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<B>Introduction to Numerical Methods for Partial Differential Equations 
+
+Fall 2002</B> <BR>
+SHL 123 - Tuesday, Thursday 1400-1515 <BR>
+&#169;2002 L. F. Rossi   All rights reserved.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+Prof. L. F. Rossi <BR>
+Office: Ewing 524 <BR>
+Telephone: x1880 <BR>
+Email: <TT>rossi@math.udel.edu</TT> <BR>
+WWW: <TT>http://math.udel.edu/</TT><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\sim$"><TT>rossi</TT>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Course description:</B> This course explores a variety of numerical
+techniques for approximating solution to partial differential
+equations. All techniques to a greater or lesser extent are
+problem dependent.  This course will include on a menu of classic
+partial differential equations including diffusion equations, wave
+equations, Burger's equation and convection-diffusion equations.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Prerequisites:</B> MATH503 or MEEG863 or PHYS207.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Your objectives:</B>
+
+<P>
+By the end of this course, every passing student should ...
+<UL>
+<P>
+<LI>... have a thorough understanding of the accuracy and stability
+of multistep and Runge-Kutta
+methods for ordinary differential equations.
+
+<P>
+<LI>... understand how to use finite differences to implement the
+method of lines for partial differential equations.
+
+<P>
+<LI>... understand how to analyze the consistency and stability of
+finite difference methods for simple linear partial differential
+equations such as the heat equation.
+
+<P>
+<LI>... have a thorough understanding of explicit, implicit,
+Crank-Nicholson, leap-frog and ADI methods for diffusion problems.
+
+<P>
+<LI>... be able to use energy estimates and Fourier stability
+analysis to study finite difference methods.
+
+<P>
+<LI>... understand the CFL condition for numerical schemes and its
+import in choosing numerical parameters.
+
+<P>
+<LI>... know the Lax Equivalence Theorem and be able to apply it to
+finite difference schemes.
+
+<P>
+<LI>... understand boundary value problems for ordinary differential
+equations.
+
+<P>
+<LI>... understand and be able to implement fast Poisson solvers.
+
+<P>
+<LI>... be familiar with vortex methods for incompressible flows.
+
+<P>
+<LI>... be familiar with multigrid methods for dissipative problems.
+
+<P>
+<LI>... be familiar with spectral schemes for periodic problems.
+
+<P>
+<LI>... be able to implement any of the methods discussed in this
+course.
+
+<P>
+</UL>
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Your resources:</B> All of the following will help you achieve your
+objectives:
+<DL COMPACT>
+
+<P>
+<DT><IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\bullet$"><DD>Time: The best way to learn mathematics is to spend time with it.
+It is your responsibility to come to class each day, and it is
+unlikely that you will pass if you miss more than a day or two,
+regardless of the reason.  Attendance is crucial to success in this course.
+
+<P>
+<DT><IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\bullet$"><DD>Textbook: <EM>Numerical Analysis: Mathematics of Scientific
+Computing (3rd ed.)</EM> by D. Kincaid and W. Cheney.
+
+<P>
+<DT><IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\bullet$"><DD>Office hours:  
+Monday 1000-1100, Thursday 1530-1630, Friday 0900-1000  or by
+appointment.  This is time that I have set aside especially for you.
+Office hours are one of the most valuable and least used resources at
+the University, and I hope you will take advantage of them.  I want to
+help you learn this material, so do not be shy about seeing me outside
+of class.  Your exams will only be distributed during office hours.
+If you need to see me at a time other than an office hour, feel free
+to ``drop in'' or make an appointment.
+
+<P>
+<DT><IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\bullet$"><DD>Your classmates: Math is not a competitive sport.  There are
+many obvious reasons to work together.  Even if you end up helping
+others most of the time, teaching is one of the best ways to gain a
+deeper understanding of a subject.
+
+<P>
+</DL>
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Grading policy:</B>  Your grade is determined solely by your
+understanding of mathematics and your ability to communicate this
+knowledge to me on exams and other assignments. <BR>
+ <TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">Homework</TD>
+<TD ALIGN="LEFT">10%</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Computing assignments</TD>
+<TD ALIGN="LEFT">40%</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Midterm exam</TD>
+<TD ALIGN="LEFT">20%</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Final exam</TD>
+<TD ALIGN="LEFT">30%</TD>
+</TR>
+</TABLE> <BR>
+Final letter grades will be assigned strictly based on the following
+percentages of your total point score: <BR> <FONT SIZE="-1">100 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> A
+</FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 93 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> A- </FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 90 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> B+
+</FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 87 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> B </FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 83 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> B-
+</FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 80 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> C+ </FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 77 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> C <BR>
+C </FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 73 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> C- </FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 70 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> D+
+</FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 67 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> D </FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 63 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> D-
+</FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 60 </FONT>
+<!-- MATH: $\leftarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\leftarrow$"><FONT SIZE="-1"> F </FONT>
+<!-- MATH: $\rightarrow$ -->
+<IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\rightarrow$"><FONT SIZE="-1"> 0 <BR> <BR>
+<BR>
+<BR></FONT> 
+I reserve the right to
+adjust this scale to improve grades if the course material proves to be
+unreasonably demanding.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Exams:</B>  The midterm exam will be a timed, take-home exam.  The
+final exam will be administered in class.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Homework: </B> From time to time, homework problems will be
+assigned.  There is no late homework.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Computing projects: </B> Computing assignments play a central role
+in this course.  One must practice mathematics to master it, and
+mathematical computation is no exception.  I expect your projects to
+be presented as well-crafted reports.  
+
+<P>
+<UL>
+<P>
+<LI>Your intended audience is a
+someone with the same level of understanding as yourself or better.
+
+<P>
+<LI>The report should state the problem, the method of solution, the 
+solution and some discussion of its range of applicability.  
+A strong report should make a concise and thorough connection 
+between the problem and the solution.
+
+<P>
+<LI>You should give the reader a convincing reason to believe your
+solution.  Some form of error analysis or refinement study should be a 
+part of your argument.
+
+<P>
+</UL>
+<P>
+
+<P>
+<B>Student conduct:</B> To provide the best learning environment for
+all my students, I expect all my students to conduct all their
+scholarly activities with honesty and integrity. Students should note
+that in certain situations doing nothing can be dishonest.  Though I
+hope there will never be a need to address academic dishonesty, I will
+strongly enforce all provisions noted in the Academic Regulations for
+Undergraduates. See <EM>The University of Delaware Undergraduate and
+Graduate Catalog</EM>
+<DIV ALIGN="CENTER">
+<TT>http://www.udel.edu/catalog/current/ugacadregs.html#acadhonesty</TT>
+</DIV>
+for further discussion on basic
+responsibilities.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Tentative list of topics:</B>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<UL>
+<P>
+<LI>Multistep and Runge-Kutta schemes for ordinary differential
+equations.
+
+<P>
+<LI>Consistency, stability and convergence of numerical methods for
+systems of ordinary differential equations.
+
+<P>
+<LI>Finite differences.
+
+<P>
+<LI>Method of lines.
+
+<P>
+<LI>Explicit, implicit, Crank-Nicholson, leap-frog and alternative
+direction implicit (ADI) schemes for diffusive problems.
+
+<P>
+<LI>Energy estimates.
+
+<P>
+<LI>Fourier stability analysis.
+
+<P>
+<LI>CFL conditions.
+
+<P>
+<LI>Lax Equivalence Theorem.
+
+<P>
+<LI>Boundary value problems.
+
+<P>
+<LI>Fast Poisson solvers.
+
+<P>
+<LI>Spectral methods.  Fast Fourier transforms.
+
+<P>
+<LI>Multigrid methods.
+
+<P>
+<LI>Vortex methods for incompressible flows.
+
+<P>
+</UL>
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<B>Important dates:</B>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">Sep 17</TD>
+<TD ALIGN="LEFT">Last day to drop without record.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Oct 17</TD>
+<TD ALIGN="LEFT"><B> Midterm Exam</B>.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Oct 29</TD>
+<TD ALIGN="LEFT">Last day to drop with a ``W''.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">TBA</TD>
+<TD ALIGN="LEFT"><B> Final exam</B>.</TD>
+</TR>
+</TABLE>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2002-09-04</I>
+</ADDRESS>
+</BODY>
+</HTML>

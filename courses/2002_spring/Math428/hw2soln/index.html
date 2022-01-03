@@ -1,0 +1,426 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="hw2soln">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="hw2soln.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<DIV ALIGN="CENTER">
+<B>Math428: Problem Set #2 solution guide</B>
+</DIV>
+<P>
+<DL COMPACT>
+<DD><P>
+<DT>1.
+<DD>Write the differential equation
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+y'' + (y')^2/y - \sin(y) = 0, \ \ \ \ y(0) = 1, \ \ \ \ y'(0) = 1
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="408" HEIGHT="33"
+ SRC="img1.gif"
+ ALT="\begin{displaymath}y'' + (y')^2/y - \sin(y) = 0, \ \ \ \ y(0) = 1, \ \ \ \ y'(0) = 1
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+as a first order system of equations.  Note: it will not necessarily
+be linear.  Suggest a general class of 
+<!-- MATH: $n^{\rm th}$ -->
+<IMG
+ WIDTH="30" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$n^{\rm th}$">-order 
+nonlinear differential
+equations that can be converted to a first order system.  Try to make
+your class as broad as possible.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>Following the steps laid out in class, we define
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="79" HEIGHT="60"
+ SRC="img3.gif"
+ ALT="\begin{eqnarray*}u_0 & = & y \\
+u_1 & = & y'
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><EM>Therefore, the new system becomes
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left[
+\begin{array}{c}
+u_0 \\u_1
+\end{array}
+\right]' =
+\left[
+\begin{array}{c}
+u_1 \\(u_1)^2/u_0 - \sin(u_0)
+\end{array}
+\right], \ \ \ \ \ \left[
+\begin{array}{c}
+u_0(0) \\u_1(0)
+\end{array}
+\right] =
+\left[
+\begin{array}{c}
+1 \\1
+\end{array}
+\right].
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="455" HEIGHT="57"
+ SRC="img4.gif"
+ ALT="\begin{displaymath}\left[
+\begin{array}{c}
+u_0 \\ u_1
+\end{array}\right]' =
+\lef...
+...y}\right] =
+\left[
+\begin{array}{c}
+1 \\ 1
+\end{array}\right].
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<EM>In generality, we see that it would be easy to perform this procedure
+on any nonlinear system of the form
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+y^{(n)} + f(y^{(n-1)},y^{(n-2)},\ldots,y,t) = 0,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="285" HEIGHT="33"
+ SRC="img5.gif"
+ ALT="\begin{displaymath}y^{(n)} + f(y^{(n-1)},y^{(n-2)},\ldots,y,t) = 0,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+by the same procedure.  However, we can get into trouble if we cannot
+solve explicitly for </EM><I>y</I><SUP>(<I>n</I>)</SUP><EM>.  For instance, consider
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(y^{(n)})^5 + (y^{(n)})^5 +(y^{(n)})^4 +(y^{(n)})^3 +(y^{(n)})^2
+(y^{(n)})  + f(y^{(n-1)},y^{(n-2)},\ldots,y,t) = 0.
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="605" HEIGHT="33"
+ SRC="img6.gif"
+ ALT="\begin{displaymath}(y^{(n)})^5 + (y^{(n)})^5 +(y^{(n)})^4 +(y^{(n)})^3 +(y^{(n)})^2
+(y^{(n)}) + f(y^{(n-1)},y^{(n-2)},\ldots,y,t) = 0.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Since it is impossible to find all the roots of a quintic
+analytically, our little trick will not work nicely here.  Speaking in 
+generalities, if we had a system of the form,
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+g(y^{(n)}) + f(y^{(n-1)},y^{(n-2)},\ldots,y,t) = 0,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="309" HEIGHT="33"
+ SRC="img7.gif"
+ ALT="\begin{displaymath}g(y^{(n)}) + f(y^{(n-1)},y^{(n-2)},\ldots,y,t) = 0,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+we need to be able to invert </EM><I>g</I><EM>, or we might be in trouble.  Of course, I
+look forward to reading about your thoughts.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>2.
+<DD>Using Euler's method, solve
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+y' = -y, \ \ \ \ y(0) = 1
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="164" HEIGHT="33"
+ SRC="img8.gif"
+ ALT="\begin{displaymath}y' = -y, \ \ \ \ y(0) = 1
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+for 
+<!-- MATH: $0 \leq t \leq 10$ -->
+<IMG
+ WIDTH="91" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$0 \leq t \leq 10$">
+with step sizes of 
+<!-- MATH: $h=0.5,0.75,1,1.5,2,2.5$ -->
+<I>h</I>=0.5,0.75,1,1.5,2,2.5.  Plot the
+errors in the numerical computation as a function of time for the 
+different step sizes all on the same graph.  (Make sure your plot has a 
+legend.)
+How does the computed solution compare to the
+exact solution for different values of <I>h</I>?  Would a Taylor series
+method improve this computation at all?
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH: $\resizebox{3in}{!}{\includegraphics{soln2a.eps}}$ -->
+<IMG
+ WIDTH="345" HEIGHT="288" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.gif"
+ ALT="\resizebox{3in}{!}{\includegraphics{soln2a.eps}}">
+<!-- MATH: $\resizebox{3in}{!}{\includegraphics{soln2b.eps}}$ -->
+<IMG
+ WIDTH="345" HEIGHT="280" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.gif"
+ ALT="\resizebox{3in}{!}{\includegraphics{soln2b.eps}}"></DIV><EM>I generated these plots using matlab.  See the course web site for the
+details of this calculation.  Here, </EM>
+<!-- MATH: $e_k = y_k-u_k$ -->
+<I>e</I><SUB><I>k</I></SUB> = <I>y</I><SUB><I>k</I></SUB>-<I>u</I><SUB><I>k</I></SUB><EM>.  I
+plotted the abosolute value of the error, but this was my choice.  On
+the left, I used linear axes which can make it difficult to see the
+errors as the solutions decay.  On the right, I used log-normal axes.
+For exponential data, logarithmic plots reduce the function to lines
+which can make it easy for the eye to follow.  Of course, when the
+error is zero and the logarithm is undefined, the data point is
+excluded.
+Notice that the unstable solutions (</EM><I>h</I> &gt; 1<EM>) stand out as particularly poor.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>3.
+<DD>Repeat problem #2 using the backward Euler's method.  Explain the
+difference in behavior by examining the numerical method as a
+difference equation.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH: $\resizebox{3in}{!}{\includegraphics{soln3a.eps}}$ -->
+<IMG
+ WIDTH="345" HEIGHT="279" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.gif"
+ ALT="\resizebox{3in}{!}{\includegraphics{soln3a.eps}}">
+<!-- MATH: $\resizebox{3in}{!}{\includegraphics{soln3b.eps}}$ -->
+<IMG
+ WIDTH="345" HEIGHT="280" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.gif"
+ ALT="\resizebox{3in}{!}{\includegraphics{soln3b.eps}}"></DIV><EM>Here I used the same procedure as in Problem 2, and you can see
+similar performance.  To do backward Euler, you will need to be able
+to implicitly </EM>
+<!-- MATH: $u_{k+1} - h f(u_{k+1},t_{k+1})$ -->
+<I>u</I><SUB><I>k</I>+1</SUB> - <I>h f</I>(<I>u</I><SUB><I>k</I>+1</SUB>,<I>t</I><SUB><I>k</I>+1</SUB>)<EM>. This is easy for
+the scalar test equation.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>4.
+<DD>Repeat problem #2 for the differential equation
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+y' = -\left[1+\frac{9}{10}\cos(t)\right] y, \ \ \ \ y(0) = 1
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="292" HEIGHT="46"
+ SRC="img14.gif"
+ ALT="\begin{displaymath}y' = -\left[1+\frac{9}{10}\cos(t)\right] y, \ \ \ \ y(0) = 1
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+for 
+<!-- MATH: $0 \leq t \leq 20$ -->
+<IMG
+ WIDTH="91" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$0 \leq t \leq 20$">.
+If you cannot find an exact solution, compute
+a reference solution by setting <I>h</I> to be very, very small.  
+Explain the difference in behavior for
+different values of <I>h</I> by examining the varying decay rate of the
+exact system as a function of time.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH: $\resizebox{3in}{!}{\includegraphics{soln4a.eps}}$ -->
+<IMG
+ WIDTH="344" HEIGHT="283" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.gif"
+ ALT="\resizebox{3in}{!}{\includegraphics{soln4a.eps}}">
+<!-- MATH: $\resizebox{3in}{!}{\includegraphics{soln4b.eps}}$ -->
+<IMG
+ WIDTH="345" HEIGHT="281" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.gif"
+ ALT="\resizebox{3in}{!}{\includegraphics{soln4b.eps}}"></DIV><EM>Here, the solution can be found by solving it for small </EM><I>h</I><EM>, or
+exactly via separation.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+y = \exp \left[-\left(t+\frac{9}{10}\sin t\right)\right].
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="220" HEIGHT="46"
+ SRC="img18.gif"
+ ALT="\begin{displaymath}y = \exp \left[-\left(t+\frac{9}{10}\sin t\right)\right].
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Here, we can think of
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\lambda \approx 1+\frac{9}{10}\cos t
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="129" HEIGHT="45"
+ SRC="img19.gif"
+ ALT="\begin{displaymath}\lambda \approx 1+\frac{9}{10}\cos t
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+as a variable decay constant.  Thus, when </EM>
+<!-- MATH: $(1+\frac{9}{10}\cos t)h >
+1$ -->
+<IMG
+ WIDTH="152" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$(1+\frac{9}{10}\cos t)h >
+1$"><EM>, we can expect some unstable oscillations.
+Notice that, at some times, a larger step size
+works better.  For example, 
+we see that the </EM><I>h</I>=2<EM> works better than </EM><I>h</I>=1.5<EM> most of
+the time.  This is the curse of instabilities.
+</EM>
+</DL>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2002-03-01</I>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,283 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="hw2">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="hw2.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<DIV ALIGN="CENTER">
+<P>
+Math 612 - Problem set #2 
+
+<P>
+</DIV> 
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DL COMPACT>
+<DD><P>
+<DT>1.
+<DD>Determine a finite difference scheme for 
+<!-- MATH: $(\kappa(x) u_x)_x$ -->
+<IMG
+ WIDTH="83" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$(\kappa(x) u_x)_x$">with at least second
+order spatial accuracy with a fixed mesh size.
+
+<P>
+<DT>2.
+<DD>Determine the local truncation error for the basic explicit
+finite difference scheme
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+v^{n+1}_j = v^n_j + \frac{\kappa k}{h^2} (v^n_{j+1} - 2v^n_j + v^n_{j-1})
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="282" HEIGHT="46"
+ SRC="img2.gif"
+ ALT="\begin{displaymath}v^{n+1}_j = v^n_j + \frac{\kappa k}{h^2} (v^n_{j+1} - 2v^n_j + v^n_{j-1})
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+for solving the heat equation
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u_t = \kappa u_{xx}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="83" HEIGHT="31"
+ SRC="img3.gif"
+ ALT="\begin{displaymath}u_t = \kappa u_{xx}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<DT>3.
+<DD>Determine the local truncation error for the basic implicit
+finite difference scheme
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+v^{n+1}_j = v^n_j + \frac{\kappa k}{h^2} (v^{n+1}_{j+1} - 2v^{n+1}_j +
+v^{n+1}_{j-1})
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="305" HEIGHT="46"
+ SRC="img4.gif"
+ ALT="\begin{displaymath}v^{n+1}_j = v^n_j + \frac{\kappa k}{h^2} (v^{n+1}_{j+1} - 2v^{n+1}_j +
+v^{n+1}_{j-1})
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+for solving the heat equation
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u_t = \kappa u_{xx}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="83" HEIGHT="31"
+ SRC="img3.gif"
+ ALT="\begin{displaymath}u_t = \kappa u_{xx}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<DT>4.
+<DD>Determine the local truncation error of the leapfrog scheme
+finite difference scheme
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+v^{n+1}_j = v^{n-1}_j + \frac{2\kappa k}{h^2} (v^{n}_{j+1} - 2v^{n}_j +
+v^{n}_{j-1})
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="308" HEIGHT="46"
+ SRC="img5.gif"
+ ALT="\begin{displaymath}v^{n+1}_j = v^{n-1}_j + \frac{2\kappa k}{h^2} (v^{n}_{j+1} - 2v^{n}_j +
+v^{n}_{j-1})
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+for solving the heat equation
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u_t = \kappa u_{xx}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="83" HEIGHT="31"
+ SRC="img3.gif"
+ ALT="\begin{displaymath}u_t = \kappa u_{xx}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<DT>5.
+<DD>Using energy estimates, determine stability criteria for the <IMG
+ WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\theta$">
+finite difference scheme
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+v^{n+1}_j = v^{n}_j + \frac{2\kappa k}{h^2}
+\left[
+\theta (v^{n}_{j+1} - 2v^{n}_j + v^{n}_{j-1}) +
+(1-\theta) (v^{n+1}_{j+1} - 2v^{n+1}_j + v^{n+1}_{j-1})
+\right]
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="566" HEIGHT="46"
+ SRC="img7.gif"
+ ALT="\begin{displaymath}v^{n+1}_j = v^{n}_j + \frac{2\kappa k}{h^2}
+\left[
+\theta (v...
+...1-\theta) (v^{n+1}_{j+1} - 2v^{n+1}_j + v^{n+1}_{j-1})
+\right]
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+for solving the heat equation
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u_t = \kappa u_{xx}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="78" HEIGHT="31"
+ SRC="img8.gif"
+ ALT="\begin{displaymath}u_t = \kappa u_{xx}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <IMG
+ WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\theta$">
+is a parameter.  For instance, when <IMG
+ WIDTH="49" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\theta=1$">,
+this
+method is ordinary explicit differencing, and when <IMG
+ WIDTH="49" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.gif"
+ ALT="$\theta=0$">,
+this is 
+ordinary implicit differencing.  Hint: You may need to use 
+the Cauchy-Schwartz inequality
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+|\langle v,w\rangle| \leq \|v\| \|w\|.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="147" HEIGHT="33"
+ SRC="img11.gif"
+ ALT="\begin{displaymath}\vert\langle v,w\rangle\vert \leq \Vert v\Vert \Vert w\Vert.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</DL>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2002-09-26</I>
+</ADDRESS>
+</BODY>
+</HTML>

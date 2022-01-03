@@ -1,0 +1,72 @@
+{VERSION 6 0 "Linux" "6.0" }
+{USTYLETAB {PSTYLE "Warning" -1 7 1 {CSTYLE "" -1 -1 "Courier" 1 12 0 
+0 255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE 
+"Dash Item" -1 16 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 
+0 0 0 1 }1 0 0 -1 3 3 1 0 1 0 2 2 -1 3 }{PSTYLE "Heading 4" -1 20 1 
+{CSTYLE "" -1 -1 "MS Serif" 1 12 0 0 0 0 1 0 0 2 2 2 0 0 0 1 }1 0 0 
+-1 0 0 1 0 1 0 2 2 -1 1 }{PSTYLE "Heading 3" -1 5 1 {CSTYLE "" -1 -1 "
+MS Serif" 1 14 0 0 0 0 1 1 0 2 2 2 0 0 0 1 }1 0 0 -1 0 0 1 0 1 0 2 2 
+-1 1 }{PSTYLE "Error" -1 8 1 {CSTYLE "" -1 -1 "Courier" 1 12 255 0 
+255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "A
+uthor" -1 19 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 0 0 0 0 2 2 2 0 0 
+0 1 }3 0 0 -1 8 8 1 0 1 0 2 2 -1 1 }{PSTYLE "Heading 2" -1 4 1 
+{CSTYLE "" -1 -1 "MS Serif" 1 16 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }1 0 0 
+-1 8 2 1 0 1 0 2 2 -1 1 }{PSTYLE "Text Output" -1 2 1 {CSTYLE "" -1 
+-1 "Courier" 1 12 0 0 255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 
+0 2 2 -1 1 }{PSTYLE "Heading 1" -1 3 1 {CSTYLE "" -1 -1 "MS Serif" 1 
+18 0 0 0 0 0 1 0 2 2 2 0 0 0 1 }1 0 0 -1 8 4 1 0 1 0 2 2 -1 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 0 0 0 1 }1 0 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Maple Plot" -1 13 
+1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }3 0 0 -1 -1 -1 
+1 0 1 0 2 2 -1 1 }{PSTYLE "Line Printed Output" -1 6 1 {CSTYLE "" -1 
+-1 "Courier" 1 12 0 0 255 1 0 0 0 2 2 1 0 0 0 1 }1 0 0 -1 -1 -1 1 0 1 
+0 2 2 -1 1 }{PSTYLE "Title" -1 18 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 
+0 0 0 1 1 2 2 2 0 0 0 1 }3 0 0 -1 12 12 1 0 1 0 2 2 -1 1 }{PSTYLE "Map
+le Output" -1 11 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ }3 3 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }{PSTYLE "List Item" -1 14 1 
+{CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 0 0 -1 3 
+3 1 0 1 0 2 2 -1 5 }{PSTYLE "Bullet Item" -1 15 1 {CSTYLE "" -1 -1 "Ti
+mes" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }1 0 0 -1 3 3 1 0 1 0 2 2 -1 2 }
+{CSTYLE "Text" -1 200 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }
+{CSTYLE "2D Input" -1 19 "Times" 1 12 255 0 0 1 0 0 0 2 1 2 0 0 0 1 }
+{CSTYLE "Hyperlink" -1 17 "MS Serif" 1 12 0 128 128 1 0 0 1 2 2 2 0 0 
+0 1 }{CSTYLE "2D Output" -1 20 "Times" 1 12 0 0 255 1 0 0 0 2 2 1 0 0 
+0 1 }{CSTYLE "Maple Input" -1 0 "Courier" 1 12 255 0 0 1 0 1 0 2 1 2 
+0 0 0 1 }{CSTYLE "Page Number" -1 33 "Times" 1 10 0 0 0 0 0 0 2 2 2 2 
+0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 1 12 0 0 0 1 0 0 0 2 2 2 0 0 
+0 1 }{PSTYLE "_pstyle1" -1 200 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 
+0 0 1 1 2 2 2 1 0 0 1 }3 0 0 0 12 12 2 0 2 0 2 2 -1 1 }{CSTYLE "_cstyl
+e1" -1 201 "Times" 1 18 0 0 0 1 2 1 1 2 2 2 0 0 0 1 }{PSTYLE "_pstyle2
+" -1 201 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 0 0 0 0 2 2 2 1 0 0 1 }
+3 0 0 0 8 8 2 0 2 0 2 2 -1 1 }{CSTYLE "_cstyle2" -1 202 "Times" 1 12 
+0 0 0 1 2 1 1 2 2 2 0 0 0 1 }{PSTYLE "_pstyle3" -1 202 1 {CSTYLE "" 
+-1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 0 0 1 }1 0 0 0 0 0 2 0 2 0 2 
+2 -1 1 }{CSTYLE "_cstyle3" -1 203 "Courier" 1 12 255 0 0 1 0 1 0 2 1 
+2 0 0 0 1 }{CSTYLE "_cstyle4" -1 204 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 
+0 0 0 1 }{PSTYLE "_pstyle4" -1 203 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 
+0 0 0 2 2 2 0 0 0 1 }0 0 0 -1 -1 -1 1 0 1 0 2 2 -1 1 }}
+{SECT 0 {EXCHG {PARA 200 "" 0 "" {TEXT 201 28 "A sample procedure in M
+aple." }}{PARA 201 "" 0 "" {TEXT 202 21 "Math 243: L. F. Rossi" }}
+{PARA 202 "> " 0 "" {MPLTEXT 1 203 20 "with(LinearAlgebra):" }}}
+{EXCHG {PARA 202 "" 0 "" {TEXT 204 189 "Here is a sample subroutine, b
+ut it does not do anything to solve your problem.  A subroutine is a l
+ist of commands.  Your job is to generate a list of commands that will
+ solve the problem." }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 203 34 "
+sample := proc(a,b,c,d,e,r0,v1,v2)" }{MPLTEXT 1 203 27 "\n#Local varia
+bles can here." }{MPLTEXT 1 203 20 "\nlocal p0,v,t0,t1,t;" }{MPLTEXT 
+1 203 1 "\n" }{MPLTEXT 1 203 30 "\n#Here's a sample conditional." }
+{MPLTEXT 1 203 14 "\nif (a=1) then" }{MPLTEXT 1 203 9 "\nv := v1;" }
+{MPLTEXT 1 203 5 "\nelse" }{MPLTEXT 1 203 9 "\nv := v2;" }{MPLTEXT 1 
+203 8 "\nend if;" }{MPLTEXT 1 203 1 "\n" }{MPLTEXT 1 203 10 "\np0 := r
+0;" }{MPLTEXT 1 203 9 "\nt0 := 1;" }{MPLTEXT 1 203 9 "\nt1 := 2;" }
+{MPLTEXT 1 203 1 "\n" }{MPLTEXT 1 203 24 "\nreturn([p0+v*t,t0,t1]);" }
+{MPLTEXT 1 203 10 "\nend proc;" }}}{EXCHG {PARA 202 "" 0 "" {TEXT 204 
+50 "Now to test the subroutine with some input values." }}}{EXCHG 
+{PARA 202 "> " 0 "" {MPLTEXT 1 203 14 "v1 := <1,2,3>;" }}}{EXCHG 
+{PARA 202 "> " 0 "" {MPLTEXT 1 203 14 "v2 := <3,2,1>;" }}}{EXCHG 
+{PARA 202 "> " 0 "" {MPLTEXT 1 203 14 "r0 := <0,1,0>;" }}}{EXCHG 
+{PARA 202 "" 0 "" {TEXT 204 41 "Here are the results in the right form
+at." }}}{EXCHG {PARA 202 "> " 0 "" {MPLTEXT 1 203 27 "sample(1,2,3,4,5
+,r0,v1,v2);" }}}{EXCHG {PARA 202 "> " 0 "" }}{PARA 203 "" 0 "" }{PARA 
+203 "" 0 "" }}{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 
+1 1 }

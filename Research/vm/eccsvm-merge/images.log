@@ -1,0 +1,580 @@
+This is TeX, Version 3.14159 (Web2C 7.3.1) (format=latex 1999.8.11)  4 NOV 1999 15:02
+**images.tex
+(images.tex
+LaTeX2e <1998/12/01> patch level 1
+Babel <v3.6x> and hyphenation patterns for american, french, german, ngerman, n
+ohyphenation, loaded.
+
+(/usr/users/overflow/teTeX/share/texmf/tex/latex/siam/siamltex.cls
+Document Class: siamltex 1996/10/11 v1.2 LaTeX document class
+(/usr/users/overflow/teTeX/share/texmf/tex/latex/base/leqno.clo
+File: leqno.clo 1998/08/17 v1.1c Standard LaTeX option (left equation numbers)
+) (/usr/users/overflow/teTeX/share/texmf/tex/latex/siam/siam10.clo
+File: siam10.clo 1994/10/01 v1.0 SIAM LaTeX file (size option)
+)
+\c@section=\count79
+\c@subsection=\count80
+\c@subsubsection=\count81
+\c@paragraph=\count82
+\c@subparagraph=\count83
+\c@rmnum=\count84
+\c@muni=\count85
+\c@theorem=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/users/overflow/teTeX/share/texmf/tex/plain/dvips/epsf.tex
+This is `epsf.tex' v2.7k <10 July 1997>
+\epsffilein=\read1
+\epsfframemargin=\dimen103
+\epsfframethickness=\dimen104
+\epsfrsize=\dimen105
+\epsftmp=\dimen106
+\epsftsize=\dimen107
+\epsfxsize=\dimen108
+\epsfysize=\dimen109
+\pspoints=\dimen110
+\epsfnoopenhelp=\toks14
+) (/usr/users/overflow/teTeX/share/texmf/tex/latex/amslatex/amsmath.sty
+Package: amsmath 1997/03/20 v1.2d AMS math features
+\@mathmargin=\skip43
+(/usr/users/overflow/teTeX/share/texmf/tex/latex/amslatex/amstext.sty
+Package: amstext 1996/10/28 v1.2b
+(/usr/users/overflow/teTeX/share/texmf/tex/latex/amslatex/amsgen.sty
+File: amsgen 1996/10/29 v1.2b
+\@emptytoks=\toks15
+\ex@=\dimen111
+)) (/usr/users/overflow/teTeX/share/texmf/tex/latex/amslatex/amsbsy.sty
+Package: amsbsy 1996/10/28 v1.2b
+\pmbraise@=\dimen112
+) (/usr/users/overflow/teTeX/share/texmf/tex/latex/amslatex/amsopn.sty
+Package: amsopn 1996/10/28 v1.2b operator names
+)
+LaTeX Info: Redefining \frac on input line 188.
+\uproot@=\count89
+\leftroot@=\count90
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \dots on input line 335.
+LaTeX Info: Redefining \ldots on input line 418.
+LaTeX Info: Redefining \cdots on input line 422.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen113
+LaTeX Font Info:    Redeclaring font encoding OML on input line 500.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 501.
+\skewcharcount@=\count93
+\familycount@=\count94
+\pointcount@=\count95
+\accentdimen@=\dimen114
+\accentmu@=\count96
+\minaw@=\dimen115
+\c@MaxMatrixCols=\count97
+\dotsspace@=\muskip10
+\c@parentequation=\count98
+\dspbrk@lvl=\count99
+\tag@help=\toks16
+\row@=\count100
+\column@=\count101
+\maxfields@=\count102
+\andhelp@=\toks17
+\eqnshift@=\dimen116
+\alignsep@=\dimen117
+\tagshift@=\dimen118
+\tagwidth@=\dimen119
+\totwidth@=\dimen120
+\lineht@=\dimen121
+\@envbody=\toks18
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+)
+\c@thm=\count103
+\lthtmlwrite=\write3
+\sizebox=\box28
+(images.aux)
+\openout1 = `images.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+latex2htmlSize :tex2html_wrap_inline1378: 8.14003pt::0.0pt.
+[1
+
+
+] [2
+
+] [3
+
+] [4
+
+]
+latex2htmlSize :tex2html_wrap_inline1388: 4.30554pt::0.0pt.
+[5
+
+] [6
+
+]
+latex2htmlSize :tex2html_wrap_inline1390: 4.30554pt::1.94444pt.
+[7
+
+]
+latex2htmlSize :tex2html_wrap_inline1392: 14.5001pt::9.50012pt.
+[8
+
+]
+latex2htmlSize :tex2html_wrap_inline1394: 4.30554pt::1.94444pt.
+[9
+
+] [10
+
+] [11
+
+]
+latex2htmlSize :tex2html_wrap_inline1396: 7.5pt::2.5pt.
+[12
+
+]
+latex2htmlSize :tex2html_wrap_inline1398: 7.5pt::2.5pt.
+[13
+
+]
+latex2htmlSize :tex2html_wrap_inline1400: 6.94444pt::1.49998pt.
+[14
+
+]
+latex2htmlSize :tex2html_wrap_inline1402: 8.14003pt::2.60292pt.
+[15
+
+]
+latex2htmlSize :tex2html_wrap_inline1404: 8.14003pt::2.60292pt.
+[16
+
+]
+latex2htmlSize :tex2html_wrap_inline1406: 8.14003pt::2.60292pt.
+[17
+
+]
+latex2htmlSize :tex2html_wrap_inline1408: 6.44444pt::1.49998pt.
+[18
+
+] [19
+
+]
+latex2htmlSize :tex2html_wrap_inline1410: 7.14444pt::1.49998pt.
+[20
+
+] [21
+
+]
+latex2htmlSize :tex2html_wrap_inline1412: 14.5001pt::9.50012pt.
+[22
+
+]
+latex2htmlSize :tex2html_wrap_inline1414: 7.5pt::2.5pt.
+[23
+
+]
+latex2htmlSize :tex2html_wrap_inline1416: 8.79842pt::3.44841pt.
+[24
+
+]
+latex2htmlSize :tex2html_wrap_inline1418: 8.79842pt::4.80951pt.
+[25
+
+]
+latex2htmlSize :tex2html_wrap_inline1420: 4.30554pt::1.49998pt.
+[26
+
+]
+latex2htmlSize :tex2html_wrap_inline1424: 6.94444pt::0.0pt.
+[27
+
+]
+latex2htmlSize :tex2html_wrap_inline1426: 7.5pt::2.5pt.
+[28
+
+]
+latex2htmlSize :tex2html_wrap_inline1428: 6.44444pt::0.0pt.
+[29
+
+]
+latex2htmlSize :tex2html_wrap_inline1430: 6.94444pt::1.49998pt.
+[30
+
+]
+latex2htmlSize :tex2html_wrap_inline1436: 7.5pt::2.5pt.
+[31
+
+]
+latex2htmlSize :tex2html_wrap_inline1438: 8.14003pt::2.5pt.
+[32
+
+]
+latex2htmlSize :tex2html_wrap_inline1444: 7.5pt::2.86108pt.
+[33
+
+]
+latex2htmlSize :tex2html_wrap_inline1454: 4.30554pt::0.0pt.
+[34
+
+]
+latex2htmlSize :tex2html_wrap_inline1456: 4.30554pt::1.49998pt.
+[35
+
+]
+latex2htmlSize :tex2html_wrap_inline1458: 6.94444pt::0.0pt.
+[36
+
+]
+latex2htmlSize :tex2html_wrap_inline1466: 7.14444pt::1.49998pt.
+[37
+
+]
+latex2htmlSize :tex2html_wrap_inline1468: 4.30554pt::1.94444pt.
+[38
+
+]
+latex2htmlSize :tex2html_wrap_inline1470: 4.30554pt::1.49998pt.
+[39
+
+]
+latex2htmlSize :tex2html_wrap_inline1474: 6.94444pt::1.49998pt.
+[40
+
+] [41
+
+]
+latex2htmlSize :tex2html_wrap_inline1478: 8.14003pt::0.0pt.
+[42
+
+]
+latex2htmlSize :tex2html_wrap_inline1482: 8.14003pt::1.94444pt.
+[43
+
+] [44
+
+]
+latex2htmlSize :tex2html_wrap_inline1488: 4.30554pt::1.49998pt.
+[45
+
+] [46
+
+] [47
+
+]
+latex2htmlSize :tex2html_wrap_inline1492: 8.14003pt::2.4821pt.
+[48
+
+] [49
+
+] [50
+
+] [51
+
+]
+latex2htmlSize :tex2html_wrap_inline1496: 8.14003pt::2.4821pt.
+[52
+
+]
+latex2htmlSize :tex2html_wrap_inline1520: 6.94444pt::1.49998pt.
+[53
+
+]
+latex2htmlSize :tex2html_wrap_inline1522: 10.33998pt::6.98666pt.
+[54
+
+]
+latex2htmlSize :tex2html_wrap_inline1524: 7.14444pt::0.0pt.
+[55
+
+]
+latex2htmlSize :tex2html_wrap_inline1530: 7.14444pt::0.0pt.
+[56
+
+] [57
+
+] [58
+
+]
+latex2htmlSize :tex2html_wrap_inline1534: 9.28334pt::2.49998pt.
+[59
+
+]
+latex2htmlSize :tex2html_wrap_inline1536: 6.94444pt::2.49998pt.
+[60
+
+]
+latex2htmlSize :tex2html_wrap_inline1540: 7.5pt::2.5pt.
+[61
+
+] [62
+
+] [63
+
+]
+latex2htmlSize :tex2html_wrap_inline1542: 4.30554pt::1.49998pt.
+[64
+
+]
+latex2htmlSize :tex2html_wrap_inline1544: 4.30554pt::2.86108pt.
+[65
+
+] [66
+
+] [67
+
+] [68
+
+]
+latex2htmlSize :tex2html_wrap_inline1550: 10.44443pt::4.29993pt.
+[69
+
+]
+Runaway argument?
+\widehat {x} & = \frac {x}{2 \sigma _0 a_0}, \nonumber \\ \widehat {y\ETC.
+! Paragraph ended before \align was complete.
+<to be read again> 
+                   \par 
+l.591 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.591 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.591 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+[70
+
+]
+Runaway argument?
+\def \\{\@amsmath@err {\Invalid@@ \\}\@eha }\epsilon _{{\rm M},i}^{(1\ETC.
+! Paragraph ended before \equation was complete.
+<to be read again> 
+                   \par 
+l.600 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.600 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.600 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+[71
+
+] [72]
+Runaway argument?
+\def \\{\@amsmath@err {\Invalid@@ \\}\@eha }\epsilon _{{\rm M},i}^{(1\ETC.
+! Paragraph ended before \equation was complete.
+<to be read again> 
+                   \par 
+l.618 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.618 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.618 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+[73
+
+
+]
+latex2htmlSize :tex2html_wrap_inline1560: 7.22223pt::1.94444pt.
+[74
+
+]
+Runaway argument?
+\def \\{\@amsmath@err {\Invalid@@ \\}\@eha }\frac {d \epsilon _{{\rm \ETC.
+! Paragraph ended before \equation was complete.
+<to be read again> 
+                   \par 
+l.633 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.633 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.633 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+[75
+
+]
+Runaway argument?
+\def \\{\@amsmath@err {\Invalid@@ \\}\@eha }- \widehat {y}^2 = \frac \ETC.
+! Paragraph ended before \equation was complete.
+<to be read again> 
+                   \par 
+l.640 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.640 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.640 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+[76
+
+]
+! Missing } inserted.
+<inserted text> 
+                }
+l.643 ...ox\sizebox=\hbox{$\widehat{\}sigma_i < 1$
+                                                  }\lthtmltypeout{latex2html...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+latex2htmlSize :tex2html_wrap_inline1562: 10.69446pt::2.5pt.
+[77
+
+]
+latex2htmlSize :tex2html_wrap_inline1564: 8.14003pt::2.60292pt.
+[78
+
+]
+! Missing } inserted.
+<inserted text> 
+                }
+l.653 ...ox\sizebox=\hbox{$\widehat{\}sigma_i > 1$
+                                                  }\lthtmltypeout{latex2html...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+latex2htmlSize :tex2html_wrap_inline1566: 10.69446pt::2.5pt.
+[79
+
+]
+! Missing } inserted.
+<inserted text> 
+                }
+l.659 \end{displaymath}
+                       
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.659 \end{displaymath}
+                       
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+[80
+
+])
+Runaway argument?
+{1-\widehat {\}sigma_i^{-2} \widehat {a}_i^2 } + \frac {1}{1-\widehat \ETC.
+! File ended while scanning use of \frac .
+<inserted text> 
+                \par 
+<*> images.tex
+              
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+! Emergency stop.
+<*> images.tex
+              
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 968 strings out of 10901
+ 10165 string characters out of 72185
+ 59508 words of memory out of 263001
+ 3948 multiletter control sequences out of 10000+0
+ 4702 words of font info for 18 fonts, out of 400000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 27i,12n,20p,993b,315s stack positions out of 300i,100n,500p,50000b,4000s
+Output written on images.dvi (80 pages, 20872 bytes).

@@ -1,0 +1,281 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.77 [en] (X11; U; SunOS 5.8 sun4u) [Netscape]">
+   <meta name="AUTHOR" content="L. F. Rossi">
+   <meta name="CREATED" content="20010202;11114500">
+   <meta name="CHANGEDBY" content="Louis Rossi">
+   <meta name="CHANGED" content="20010202;11370200">
+   <title>Math 428: Algorithms and Numerical Solutions to Differential Equations</title>
+</head>
+<body text="#000000" bgcolor="#66FF99" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+&nbsp;
+<center><table BORDER=0 COLS=3 WIDTH="100%" NOSAVE >
+<tr NOSAVE>
+<td WIDTH="110" NOSAVE><img SRC="kapow_big.jpg" height=100 width=133 align=TEXTTOP></td>
+
+<td NOSAVE>
+<center>
+<h1>
+Math 428</h1></center>
+
+<center>
+<h1>
+Algorithms and Numerical Solutions to Differential Equations</h1></center>
+</td>
+
+<td WIDTH="110" NOSAVE><img SRC="udmath.gif" height=89 width=108 align=CENTER></td>
+</tr>
+</table></center>
+
+<h2>
+
+<hr WIDTH="100%"><a NAME="Contents:"></a>Contents:</h2>
+
+<ul>
+<li>
+<b><font color="#330000"><font size=+1><a href="#Contact information.">Course
+contact information.</a></font></font></b></li>
+
+<li>
+<b><font color="#330000"><font size=+1><a href="#Course materials.">Course
+materials.</a></font></font></b></li>
+
+<li>
+<b><font color="#330000"><font size=+1><a href="#Links">Related links.</a></font></font></b></li>
+</ul>
+
+<h2>
+
+<hr WIDTH="100%"><a NAME="Contact information."></a><b>Contact information.</b></h2>
+
+<blockquote><b>Instructor: </b>Prof. L. F. Rossi
+<br><b>Meetings:</b>&nbsp; Tuesday and Thursday, 1530-1645 in Gore 315.
+<br><b>Office Hours: </b>M R 0900-1000, F 1030-1130.
+<br><b>Email: </b><a href="mailto:rossi@math.udel.edu">rossi@math.udel.edu</a></blockquote>
+
+<ul><b>Voice: </b>(302) 831-1880 (UDel x1880)
+<br><b>Snail mail:</b>
+<blockquote>Department of Mathematical Sciences
+<br>University of Delaware
+<br>Newark, DE 19711
+<br>USA</blockquote>
+</ul>
+<a href="#Contents:">Back to the top.</a>
+<h2>
+
+<hr WIDTH="100%"><a NAME="Course materials."></a>Course materials.</h2>
+
+<h3>
+Some quick comments on file formats.</h3>
+When I distribute materials, I will distribute them in an appropriate format.&nbsp;
+If more than one format is possible, I will distribute more than one format
+within reason.&nbsp; Generally, <b>HTML</b> looks the worst when printed
+but can be viewed by a browser.&nbsp; <b>Postscript (PS)</b> looks the
+best when printed, but postscript files tend to be larger than others,
+and not everyone has a Postscript viewer for their screen.&nbsp; (There
+are free viewers available.&nbsp; A popular one is called ghostview which
+works with ghostscript, a wonderful little utility.)&nbsp; Finally, <b>PDF</b>
+is compact way to print or view files.&nbsp; The acrobat viewer is slow,
+but free.&nbsp; Printer output is readable, but not great.
+<h3>
+Good things to have.</h3>
+
+<ul>
+<li>
+Course syllabus [<a href="syllabus/syllabus.html">HTML</a> <a href="syllabus/syllabus.ps">PS</a>
+or <a href="syllabus/syllabus.pdf">PDF</a>]&nbsp; This has crucial information
+like exam dates, course objectives and a tentative schedule for lectures.</li>
+
+<li>
+<a href="http://www.math.udel.edu/~driscoll">Prof. Driscoll's</a> crash
+course on Matlab [<a href="http://www.math.udel.edu/~driscoll/teaching/matlab_adv.pdf">PDF</a>].</li>
+
+<li>
+<a href="http://www.adobe.com/support/downloads/main.html">Download a free
+Acrobat reader</a> so that you can read PDF files.</li>
+
+<li>
+<a href="http://www.octave.org">Octave</a> is a free open source project
+that is matlab-ish.</li>
+
+<li>
+Here is a course outline listing material covered up to exam #1 [<a href="outline/outline.html">HTML</a>,
+<a href="outline/outline.ps">PS</a>
+and <a href="outline/outline.pdf">PDF</a>].</li>
+</ul>
+
+<h3>
+The final exam.</h3>
+The final exam place, date and time has been set!&nbsp; It will be Thursday,&nbsp;
+May 23 from 7 to 9 pm&nbsp; in Ewing 205.
+<h3>
+The lecture notes.</h3>
+The lecture notes are only available in PDF and are intended to be viewed
+rather than printed.&nbsp; Any changes from the class notes beyond fixing
+typos or grammatical errors will be listed in the revision notes.
+<ul>
+<li>
+Lecture notes on quadrature (last revised 11 Feb 2002) [<a href="notes_quad.pdf">PDF</a>
+or <a href="notes_quad.ps">PS</a>].&nbsp; Lecture notes in <b>eight-up</b>
+version to print [<a href="notes_quad_up.pdf">PDF</a> or <a href="notes_quad_up.ps">PS</a>].</li>
+
+<br><b>Revision notes:</b>
+<br><b>(1)</b> I have added transition slides between distinct topics.
+<br><b>(2)</b> I have inserted material on integrating odd functions over
+symmetric intervals into "A naive look at numerical quadrature" Slide Sequence
+7 (starting at page 20) because I was asked about it in class, and I think
+the discussion belongs in the notes.
+<br><b>(3)</b>&nbsp; I have decided to discuss another technique for computing
+error bounds of quadrature methods before going about Lagrange polynomials
+as I had originally intended.&nbsp; On Thursday, we had just begun to discuss
+Lagrange polynomials.&nbsp; Instead of picking up at this point tomorrow,
+I hope to discuss the alternative scheme and then move on to Lagrange polynomials
+and topics related to designing quadratures.</ul>
+
+<h3>
+The projects.</h3>
+
+<ul>
+<li>
+Project 1 is available for download [<a href="project1/project1.html">HTML</a>,
+<a href="project1/project1.ps">PS</a>
+or <a href="project1/project1.pdf">PDF</a>].&nbsp; Draft due March 12.
+<blink><font color="#FF0000">Due March 21.</font></blink></li>
+
+<li>
+Project 2 is available for download [<a href="project2/project2.html">HTML</a>,
+<a href="project2/project2.ps">PS</a>
+or <a href="project2/project2.pdf">PDF</a>].</li>
+</ul>
+
+<h3>
+The problem sets.</h3>
+
+<ul>
+<li>
+Problem set #1 solution guide.&nbsp; [<a href="hw1soln/hw1soln.html">HTML</a>,
+<a href="hw1soln/hw1soln.ps">PS</a>
+or <a href="hw1soln/hw1soln.pdf">PDF</a>].</li>
+
+<li>
+Problem set #2 (due Tuesday Feb 25) [<a href="hw2/hw2.html">HTML</a>, <a href="hw2/hw2.ps">PS</a>
+or <a href="hw2/hw2.pdf">PDF</a>].</li>
+
+<li>
+Problem set #2 solution guide [<a href="hw2soln/hw2soln.html">HTML</a>,
+<a href="hw2soln/hw2soln.ps">PS</a>
+or <a href="hw2soln/hw2soln.pdf">PDF</a>].&nbsp;&nbsp;&nbsp; Supporting
+materials:&nbsp; Matlab <a href="prob2.diary">diary</a> for problem 2,
+<a href="fce.m">fce.m</a>
+and <a href="bce.m">bce.m</a>.</li>
+
+<li>
+Problem set #3 solution guide [<a href="hw3soln/hw3soln.html">HTML</a>,
+<a href="hw3soln/hw3soln.ps">PS</a>
+or <a href="hw3soln/hw3soln.pdf">PDF</a>].&nbsp; Supporting materials:
+Matlab <a href="hw3soln/diary.prob1">diary</a> for problem 1, <a href="hw3soln/fce.m">fce.m,</a><a href="hw3soln/taylor2.m">taylor2.m</a><a href="hw3soln/taylor3.m">taylor3.m
+</a>and
+<a href="hw3soln/mdpt.m">mdpt.m</a>.</li>
+
+<li>
+Problem set #4 [<a href="hw4/hw4.html">HTML</a>, <a href="hw4/hw4.ps">PS</a>
+or <a href="hw4/hw4.pdf">PDF</a>].</li>
+
+<li>
+Problem set #4 solution guide [<a href="hw4soln/hw4soln.html">HTML</a>,
+<a href="hw4soln/hw4soln.ps">PS</a>
+or <a href="hw4soln/hw4soln.pdf">PDF</a>].&nbsp; Supporting materials:
+Matlab <a href="hw4soln/diary">diary</a> for problem 3,&nbsp; <a href="hw4soln/fce.m">fce.m</a>,
+<a href="hw4soln/bce.m">bce.m</a>,
+<a href="hw4soln/ab3.m">ab3.m</a>,
+<a href="hw4soln/abm3.m">abm3.m</a>.</li>
+
+<li>
+Problem set #4 supplemental materials: Matlab scripts for generating stability
+regions, <a href="hw4soln/hl1a.m">hl1a.m</a>, <a href="hw4soln/hl1b.m">hl1b.m</a>,
+<a href="hw4soln/hl2.m">hl2.m
+</a>and
+a <a href="hw4soln/stab.diary">diary</a>.</li>
+
+<li>
+Problem set #5 question 5 movies.&nbsp; A <a href="coarse.avi">coarse</a>
+run over a long time.&nbsp; A <a href="fine.avi">finer</a> run for a short
+time as the wing passes overhead.</li>
+
+<li>
+Problem set #5 solution guide [<a href="hw5soln/hw5soln.html">HTML</a>,
+<a href="hw5soln/hw5soln.ps">PS</a>
+or <a href="hw5soln/hw5soln.pdf">PDF</a>].</li>
+
+<li>
+Problem set #6 solution guide [<a href="hw6soln/hw6soln.html">HTML</a>,
+<a href="hw6soln/hw6soln.ps">PS</a>
+or <a href="hw6soln/hw6soln.pdf">PDF</a>]. Matlab scripts for BVP computations
+<a href="hw6soln/bvp1.m">bvp1.m</a>,
+<a href="hw6soln/next.m">next.m</a>,
+<a href="hw6soln/next2.m">next2.m</a>,
+<a href="hw6soln/buildb.m">buildb.m</a>
+and <a href="hw6soln/buildsys.m">buildsys.m</a>, plus matlab diaries for
+<a href="hw6soln/prob4.diary">problem
+4</a>, <a href="hw6soln/prob5.diary">problem 5&nbsp;</a> and
+<a href="hw6soln/prob6.diary">problem
+6</a>.</li>
+
+<li>
+Problem set #7 solution guide [<a href="hw7soln/hw7soln.html">HTML</a>,
+<a href="hw7soln/hw7soln.ps">PS</a>
+or <a href="hw7soln/hw7soln.pdf">PDF</a>]. Matlab diaries for <a href="hw7soln/prob1.diary">problem
+1</a> and <a href="hw7soln/prob3.diary">problem 3</a>.</li>
+
+<br>&nbsp;</ul>
+
+<h3>
+Exam materials.</h3>
+
+<ul>
+<li>
+Exam 1 solution guide [<a href="exam1soln/exam1soln.html">HTML</a>, <a href="exam1soln/exam1soln.ps">PS</a>
+or <a href="exam1soln/exam1soln.pdf">PDF</a>] and performance <a href="exam1soln/perf.jpg">histogram</a>.</li>
+
+<li>
+Exam 3 solution guide [<a href="exam3soln/exam3soln.html">HTML</a>, <a href="exam3soln/exam3soln.ps">PS</a>
+or <a href="exam3soln/exam3soln.pdf">PDF</a>] and performance <a href="exam3perf.jpg">histogram</a>.</li>
+</ul>
+
+<ul>&nbsp;</ul>
+
+<h1>
+
+<hr WIDTH="100%"><a NAME="Links"></a>Links.</h1>
+
+<ul>
+<li>
+A virtual encyclopedia of mathematics: <a href="http://mathworld.wolfram.com/">Eric
+Weisstein's World of Mathematics</a>.</li>
+
+<li>
+The Consortium on Mathematics and its Applications (COMAP) <a href="http://www.comap.com">home
+page</a>.</li>
+
+<li>
+Prof. Rossi's <a href="http://www.math.udel.edu/~rossi">home page</a>.</li>
+
+<li>
+The Department of Mathematical Sciences <a href="http://www.math.udel.edu">home
+page</a>.</li>
+
+<li>
+The University of Delaware <a href="http://www.udel.edu">home page</a>.</li>
+</ul>
+&nbsp;<a href="#Contents:">Back to the top.</a>
+
+<p STYLE="margin-bottom: 0in"><img SRC="vortex2.gif" NAME="Graphic7" BORDER=0 height=155 width=98 align=BOTTOM><i>Last
+modified: 8 April 2002</i>
+<address>
+<a href="mailto:rossi@math.udel.edu">rossi@math.udel.edu</a></address>
+
+</body>
+</html>

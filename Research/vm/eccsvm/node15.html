@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>Derivation of Elliptical Gaussian Basis Function Dynamics</TITLE>
+<META NAME="description" CONTENT="Derivation of Elliptical Gaussian Basis Function Dynamics">
+<META NAME="keywords" CONTENT="eccsvm">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="eccsvm.css">
+</HEAD>
+<BODY LANG="EN">
+ <A NAME="tex2html184" HREF="node16.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html182" HREF="eccsvm.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html176" HREF="node14.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html185" HREF="node16.html">References</A>
+<B>Up:</B> <A NAME="tex2html183" HREF="eccsvm.html">High Order Vortex Methods </A>
+<B> Previous:</B> <A NAME="tex2html177" HREF="node14.html">Acknowledgments</A>
+<BR> <P>
+<H1><A NAME="SECTION00080000000000000000">Derivation of Elliptical Gaussian Basis Function Dynamics</A></H1>
+<P>
+We begin with (<A HREF="node5.html#basisfn">3.9</A>) and forcing it to satisfy the local equation
+(<A HREF="node4.html#pde">3.7</A>).  In the interest of brevity, all indices <I>i</I> are dropped and we
+focus on a single basis function.  Also, we denote the horizonal and
+vertical components of  <IMG WIDTH=10 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2363" SRC="img40.gif"  >  as  <IMG WIDTH=25 HEIGHT=15 ALIGN=BOTTOM ALT="tex2html_wrap_inline3125" SRC="img256.gif"  >  and  <IMG WIDTH=25 HEIGHT=15 ALIGN=BOTTOM ALT="tex2html_wrap_inline3127" SRC="img257.gif"  >  respectively.
+Expanding in powers of  <IMG WIDTH=53 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline3129" SRC="img258.gif"  >  and  <IMG WIDTH=51 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline3131" SRC="img259.gif"  > , we can equate
+each coefficient with zero to derive the appropriate dynamical system.  We
+drop all indices except on  <IMG WIDTH=10 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline3133" SRC="img260.gif"  >  and  <IMG WIDTH=13 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2535" SRC="img101.gif"  > , respectively, to distinguish
+between the independent variable and the position of the vortex element.
+<P><A NAME="momxy">&#160;</A><A NAME="momy2">&#160;</A><A NAME="momx2">&#160;</A><A NAME="momy">&#160;</A><A NAME="momx">&#160;</A><A NAME="mom0">&#160;</A> <IMG WIDTH=540 HEIGHT=466 ALIGN=BOTTOM ALT="eqnarray1085" SRC="img261.gif"  > <P>
+Clearly, the evolution of the basis function width in (<A HREF="node5.html#systemodes">3.12</A>)
+arises from (<A HREF="node15.html#mom0">A.1</A>).
+The evolution equations for position,  <IMG WIDTH=13 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2535" SRC="img101.gif"  >  in
+(<A HREF="node5.html#systemodes">3.12</A>), come from (<A HREF="node15.html#momx">A.2</A>) and (<A HREF="node15.html#momy">A.3</A>).
+We use these evolution equations together with the identity
+<P> <IMG WIDTH=463 HEIGHT=19 ALIGN=BOTTOM ALT="displaymath3119" SRC="img262.gif"  > <P>
+to simplify the remaining three expressions as follows.
+<P><A NAME="momxy2">&#160;</A><A NAME="momy22">&#160;</A><A NAME="momx22">&#160;</A> <IMG WIDTH=531 HEIGHT=293 ALIGN=BOTTOM ALT="eqnarray1144" SRC="img263.gif"  > <P>
+<P>
+Adding (<A HREF="node15.html#momx22">A.7</A>) and (<A HREF="node15.html#momy22">A.8</A>) together, one finds
+<P> <IMG WIDTH=568 HEIGHT=33 ALIGN=BOTTOM ALT="equation1180" SRC="img264.gif"  > <P>
+Since  <IMG WIDTH=248 HEIGHT=29 ALIGN=MIDDLE ALT="tex2html_wrap_inline3139" SRC="img265.gif"  > , one can reduce the
+previous equation to an evolution equation for the aspect ratio:
+<P> <IMG WIDTH=507 HEIGHT=33 ALIGN=BOTTOM ALT="equation1193" SRC="img266.gif"  > <P>
+<P>
+Similarly, one can multiply (<A HREF="node15.html#momxy2">A.9</A>) by  <IMG WIDTH=46 HEIGHT=26 ALIGN=MIDDLE ALT="tex2html_wrap_inline3141" SRC="img267.gif"  > , add to this quantity
+<I>sc</I> times the difference of (<A HREF="node15.html#momx22">A.7</A>) and (<A HREF="node15.html#momy22">A.8</A>) to obtain
+<P><A NAME="ddttheta">&#160;</A> <IMG WIDTH=562 HEIGHT=33 ALIGN=BOTTOM ALT="equation1203" SRC="img268.gif"  > <P>
+The right hand side of (<A HREF="node15.html#ddttheta">A.12</A>) can decomposed into
+<P> <IMG WIDTH=567 HEIGHT=63 ALIGN=BOTTOM ALT="eqnarray1214" SRC="img269.gif"  > <P>
+which can be simplified into
+<P> <IMG WIDTH=505 HEIGHT=40 ALIGN=BOTTOM ALT="equation1229" SRC="img270.gif"  > <P>
+This completes the derivation of the dynamical system presented in
+&#167;<A HREF="node3.html#secmethod">3</A>.
+<P>
+<BR> <HR>
+<P><ADDRESS>
+<I>Louis F. Rossi <BR>
+Thu Nov  4 15:02:00 EST 1999</I>
+</ADDRESS>
+</BODY>
+</HTML>

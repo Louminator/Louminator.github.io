@@ -1,0 +1,382 @@
+This is TeX, Version 3.14159 (Web2C 7.3.3.1) (format=latex 2001.9.20)  8 APR 2002 11:53
+**./images.tex
+(./images.tex
+LaTeX2e <2000/06/01>
+Loading CZ hyphenation patterns: Pavel Sevecek, v3, 1995
+Loading SK hyphenation patterns: Jana Chlebikova, 1992
+Babel <v3.7h> and hyphenation patterns for english, dumylang, nohyphenation, cz
+ech, slovak, german, ngerman, danish, spanish, catalan, finnish, french, ukengl
+ish, greek, croatian, hungarian, italian, latin, mongolian, dutch, norwegian, p
+olish, portuguese, russian, ukrainian, serbocroat, swedish, loaded.
+
+(/opt-cassandra/TeXLive6/texmf/tex/latex/base/article.cls
+Document Class: article 2000/05/19 v1.4b Standard LaTeX document class
+(/opt-cassandra/TeXLive6/texmf/tex/latex/base/size12.clo
+File: size12.clo 2000/05/19 v1.4b Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/opt-cassandra/TeXLive6/texmf/tex/generic/dvips/epsf.sty
+This is `epsf.tex' v2.7 <25 October 1996>
+\epsffilein=\read1
+\epsfframemargin=\dimen103
+\epsfframethickness=\dimen104
+\epsfrsize=\dimen105
+\epsftmp=\dimen106
+\epsftsize=\dimen107
+\epsfxsize=\dimen108
+\epsfysize=\dimen109
+\pspoints=\dimen110
+) (/opt-cassandra/TeXLive6/texmf/tex/latex/amslatex/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+For additional information on amsmath, use the `?' option.
+(/opt-cassandra/TeXLive6/texmf/tex/latex/amslatex/amstext.sty
+Package: amstext 2000/06/29 v2.01
+(/opt-cassandra/TeXLive6/texmf/tex/latex/amslatex/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks14
+\ex@=\dimen111
+)) (/opt-cassandra/TeXLive6/texmf/tex/latex/amslatex/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen112
+) (/opt-cassandra/TeXLive6/texmf/tex/latex/amslatex/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen113
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks15
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks16
+\eqnshift@=\dimen114
+\alignsep@=\dimen115
+\tagshift@=\dimen116
+\tagwidth@=\dimen117
+\totwidth@=\dimen118
+\lineht@=\dimen119
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+) (/opt-cassandra/TeXLive6/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(/opt-cassandra/TeXLive6/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks19
+) (/opt-cassandra/TeXLive6/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 1999/02/16 v1.0l Standard LaTeX Graphics (DPC,SPQR)
+(/opt-cassandra/TeXLive6/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+) (/opt-cassandra/TeXLive6/texmf/tex/latex/texlive/graphics.cfg
+File: graphics.cfg 2001/03/31 v1.0 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: dvips.def on input line 80.
+(/opt-cassandra/TeXLive6/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen120
+\Gin@req@width=\dimen121
+) (/opt-cassandra/TeXLive6/texmf/tex/latex/graphics/color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+(/opt-cassandra/TeXLive6/texmf/tex/latex/texlive/color.cfg
+File: color.cfg 2001/03/31 v1.0 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: dvips.def on input line 125.
+(/opt-cassandra/TeXLive6/texmf/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\sizebox=\box28
+\lthtmlwrite=\write3
+(./images.aux)
+\openout1 = `images.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+latex2htmlLength hsize=349.0pt
+latex2htmlLength vsize=681.295pt
+latex2htmlLength hoffset=0.0pt
+latex2htmlLength voffset=0.0pt
+latex2htmlLength topmargin=0.0pt
+latex2htmlLength topskip=0.00003pt
+latex2htmlLength headheight=0.0pt
+latex2htmlLength headsep=0.0pt
+latex2htmlLength parskip=0.0pt plus 1.0pt
+latex2htmlLength oddsidemargin=0.0pt
+latex2htmlLength evensidemargin=0.0pt
+
+LaTeX Warning: Command \v invalid in math mode on input line 102.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.102 \begin{displaymath}\v r
+                              = \langle t \cos t - \sin t, t \sin t + \cos t...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in display math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.102 \begin{displaymath}\v r
+                              = \langle t \cos t - \sin t, t \sin t + \cos t...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no ^^e8 in font cmex10!
+l2hSize :displaymath106:24.0pt::0.0pt::349.0pt.
+[1
+
+
+]
+l2hSize :displaymath107:36.65584pt::0.0pt::349.0pt.
+[2
+
+
+]
+l2hSize :displaymath108:24.0pt::0.0pt::349.0pt.
+[3
+
+
+]
+l2hSize :displaymath110:36.65584pt::0.0pt::349.0pt.
+[4
+
+
+]
+
+LaTeX Warning: Command \v invalid in math mode on input line 130.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.130 \begin{displaymath}\v r
+                              = \langle e^t \cos t, e^t \sin t, t \rangle
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in display math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.130 \begin{displaymath}\v r
+                              = \langle e^t \cos t, e^t \sin t, t \rangle
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no ^^e8 in font cmex10!
+l2hSize :displaymath111:24.0pt::0.0pt::349.0pt.
+[5
+
+
+]
+l2hSize :tex2html_wrap_inline150:7.75pt::0.0pt::6.76382pt.
+[6
+
+
+]
+l2hSize :displaymath112:35.8495pt::0.0pt::349.0pt.
+[7
+
+
+]
+l2hSize :eqnarraystar24:35.0pt::0.0pt::349.0pt.
+[8
+
+
+]
+l2hSize :displaymath113:40.27092pt::0.0pt::349.0pt.
+[9
+
+
+]
+l2hSize :displaymath114:32.2pt::0.0pt::349.0pt.
+[10
+
+
+]
+l2hSize :tex2html_wrap_inline162:9.5pt::9.5pt::159.13824pt.
+[11
+
+
+]
+l2hSize :eqnarraystar36:35.0pt::0.0pt::349.0pt.
+[12
+
+
+]
+l2hSize :tex2html_wrap_inline164:9.5pt::9.5pt::93.34674pt.
+[13
+
+
+]
+l2hSize :tex2html_wrap_inline166:10.38034pt::10.38034pt::94.12186pt.
+[14
+
+
+]
+l2hSize :displaymath116:36.30028pt::0.0pt::349.0pt.
+[15
+
+
+]
+l2hSize :tex2html_wrap_inline170:9.5pt::9.5pt::56.15253pt.
+[16
+
+
+]
+l2hSize :tex2html_wrap_inline172:10.01027pt::10.01027pt::58.68372pt.
+[17
+
+
+]
+l2hSize :displaymath119:24.0pt::0.0pt::349.0pt.
+[18
+
+
+]
+l2hSize :displaymath121:23.33331pt::0.0pt::349.0pt.
+[19
+
+
+]
+l2hSize :tex2html_wrap_inline176:11.38661pt::11.38661pt::87.27713pt.
+[20
+
+
+]
+l2hSize :tex2html_wrap_inline178:11.38661pt::11.38661pt::105.94385pt.
+[21
+
+
+]
+l2hSize :tex2html_wrap_inline180:11.38661pt::11.38661pt::47.97183pt.
+[22
+
+
+]
+l2hSize :tex2html_wrap_inline182:11.38661pt::11.38661pt::48.1664pt.
+[23
+
+
+]
+l2hSize :displaymath122:24.0pt::0.0pt::349.0pt.
+[24
+
+
+]
+l2hSize :tex2html_wrap_inline184:8.25pt::8.25pt::105.59996pt.
+[25
+
+
+]
+l2hSize :displaymath123:24.0pt::0.0pt::349.0pt.
+[26
+
+
+]
+l2hSize :tex2html_wrap_inline192:10.38034pt::10.38034pt::29.13245pt.
+[27
+
+
+]
+l2hSize :tex2html_wrap_inline194:10.38034pt::10.38034pt::29.13245pt.
+[28
+
+
+]
+l2hSize :tex2html_wrap_inline210:10.38034pt::10.38034pt::6.65005pt.
+[29
+
+
+]
+l2hSize :tex2html_wrap_inline212:10.38034pt::10.38034pt::6.65005pt.
+[30
+
+
+]
+l2hSize :tex2html_wrap_inline220:10.70006pt::10.70006pt::29.564pt.
+[31
+
+
+]
+l2hSize :tex2html_wrap_inline222:10.70006pt::10.70006pt::29.564pt.
+[32
+
+
+]
+l2hSize :tex2html_wrap_inline224:10.70006pt::10.70006pt::29.564pt.
+[33
+
+
+]
+l2hSize :tex2html_wrap_inline226:10.70006pt::10.70006pt::29.564pt.
+[34
+
+
+]
+l2hSize :tex2html_wrap_inline228:9.5pt::9.5pt::26.1525pt.
+[35
+
+
+]
+File: sketch.eps Graphic file (type eps)
+<sketch.eps>
+l2hSize :tex2html_wrap336:222.67639pt::0.0pt::349.0pt.
+[36
+
+
+] (./images.aux) ) 
+Here is how much of TeX's memory you used:
+ 1415 strings out of 60985
+ 17415 string characters out of 4939378
+ 65437 words of memory out of 8000001
+ 4399 multiletter control sequences out of 10000+65535
+ 7813 words of font info for 27 fonts, out of 1000000 for 1000
+ 276 hyphenation exceptions out of 1000
+ 27i,7n,20p,204b,232s stack positions out of 15000i,4000n,6000p,200000b,40000s
+
+Output written on images.dvi (36 pages, 10276 bytes).

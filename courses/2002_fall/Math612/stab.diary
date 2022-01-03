@@ -1,0 +1,9 @@
+t = 0:pi/100:2*pi;
+y_mdpt = stab_mdpt(t);
+y_ab2 = stab_ab2(t);
+y_ab4 = stab_ab4(t);
+y_am4 = stab_am4(t);
+[y_abm4a, y_abm4b] = stab_abm4(t);
+plot(real(y_ab2),imag(y_ab2),'b',real(y_ab4),imag(y_ab4),'g',real(y_am4),imag(y_am4),'c',real(y_abm4a),imag(y_abm4a),'r',real(y_abm4b),imag(y_abm4b),'r');
+legend('ab2','ab4','am4','abm4');
+diary off

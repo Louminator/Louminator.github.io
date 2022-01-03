@@ -1,0 +1,416 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="solnguide3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="solnguide3.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<DIV ALIGN="CENTER">
+<FONT SIZE="+2"><B>Solution Notes on Problem set #3
+</B></FONT></DIV>
+<P>
+<DL COMPACT>
+<DD><P>
+<DT>1.
+<DD>In 1926, the <EM>Lotka-Volterra</EM> predator-prey model was proposed as a
+means of modeling the populations of two co-existed species where one
+feeds upon the other.
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="155" HEIGHT="92"
+ SRC="img1.gif"
+ ALT="\begin{eqnarray*}\frac{d p}{dt} & = & (a- b r) p \\
+\frac{d r}{dt} & = & (-c + d p) r
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL">where <I>a</I>, <I>b</I>, <I>c</I> and <I>d</I> are positive, and <I>p</I> and <I>r</I>are functions of time representing populations.  Which function
+represents the predator and which the prey?  Why?  
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>This is a standard problem that can be found is almost all ODE
+textbooks.  Examining the equations, we see that the </EM><I>p</I><EM> population
+grows if the </EM><I>r</I><EM> population is not present.  The presence of </EM><I>r</I><EM>retards growth in the </EM><I>p</I><EM> population.  Clearly, this is a description
+of a prey population.  Similarly, </EM><I>r</I><EM> is a predator population.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>2.
+<DD>Under what
+conditions (in terms of the model coefficients) if any can both species
+co-exist forever?  
+
+<P>
+
+<P><P>
+<BR>
+<EM>While the trivial solution </EM><I>p</I>=0<EM> and </EM><I>r</I>=0<EM> is an equilibrium
+point, it does not describe any kind of co-existence.  However, the
+other solution </EM><I>p</I>=<I>c</I>/<I>d</I><EM> and </EM><I>r</I>=<I>a</I>/<I>b</I><EM> describes a nontrivial co-existence.</EM>
+
+<P><P>
+<BR>
+
+<P>
+<DT>3.
+<DD>Study the local behavior near
+any equilibrium points?  Sketch the phase
+portrait of the system for each type of stability.  Bonus: Use Maple
+or Matlab to generate a phase portrait for specific examples of these
+cases.
+
+<P>
+
+<P><P>
+<BR>
+<EM>If you linearize the system as demonstrated in class 
+near the trivial solution, you
+obtain
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left[
+\begin{array}{c}
+\frac{dp^{(1)}}{dt} \\
+\frac{dr^{(1)}}{dt}
+\end{array}
+\right]
+=
+\left[
+\begin{array}{cc}
+a & 0 \\
+0 & -c
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+p^{(1)} \\
+r^{(1)}
+\end{array}
+\right]
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="233" HEIGHT="60"
+ SRC="img2.gif"
+ ALT="\begin{displaymath}\left[
+\begin{array}{c}
+\frac{dp^{(1)}}{dt} \\
+\frac{dr^{(1)...
+...\left[
+\begin{array}{c}
+p^{(1)} \\
+r^{(1)}
+\end{array}\right]
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+The eigenvalues are </EM><I>a</I><EM> and </EM>-<I>c</I><EM>, and the corresponding eigenvectors
+would be </EM>
+<!-- MATH: $\left[ \begin{array}{c} 1 \\0 \end{array} \right]$ -->
+<IMG
+ WIDTH="49" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\left[ \begin{array}{c} 1 \\ 0 \end{array} \right]$"><EM> and
+</EM>
+<!-- MATH: $\left[ \begin{array}{c} 0 \\1 \end{array} \right]$ -->
+<IMG
+ WIDTH="49" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\left[ \begin{array}{c} 0 \\ 1 \end{array} \right]$"><EM>.  Thus, we have a
+saddle point with growth along the </EM><I>p</I><EM> axis and decay along the </EM><I>r</I><EM>axis.
+</EM>
+<P>
+<EM>For the nontrivial equilibrium point, the local behavior near this
+point is described by
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left[
+\begin{array}{c}
+\frac{dp^{(1)}}{dt} \\
+\frac{dr^{(1)}}{dt}
+\end{array}
+\right]
+=
+\left[
+\begin{array}{cc}
+0 & -bc/d \\
+da/b & 0
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+p^{(1)} \\
+r^{(1)}
+\end{array}
+\right]
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="287" HEIGHT="60"
+ SRC="img5.gif"
+ ALT="\begin{displaymath}\left[
+\begin{array}{c}
+\frac{dp^{(1)}}{dt} \\
+\frac{dr^{(1)...
+...\left[
+\begin{array}{c}
+p^{(1)} \\
+r^{(1)}
+\end{array}\right]
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+The eigenvalues are purely imaginary, </EM>
+<!-- MATH: $\pm \sqrt{ac} i$ -->
+<IMG
+ WIDTH="60" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\pm \sqrt{ac} i$"><EM>, and the local
+behavior is a center.  Note: This does not mean that the equilibrium
+point is necessarily surround by closed orbits (why?), even though it is the
+case for
+this particular problem.
+</EM>
+<P>
+<EM>For the bonus, I set all the parameters to be one and let Maple do the
+work for me.
+</EM>
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH: $\resizebox{4in}{!}{\includegraphics{phase.eps}}$ -->
+<IMG
+ WIDTH="464" HEIGHT="630" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="\resizebox{4in}{!}{\includegraphics{phase.eps}}"></DIV>
+
+<P><P>
+<BR>
+
+<P>
+<DT>4.
+<DD>A person saves $200 per week into a retirement account
+beginning at age 25.  She plans to retire at age 60.  If the
+retirement account earns 5.125% interest quarterly, develop a
+mathematical model for the balance in her account.  How much money
+will she have saved when she retires?  (Hint: Review geometric series
+and partial sums of geometric series.)
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>This problem is similar to a compound interest problem except for the
+sound term.  If we denote the balance in quarter </EM><I>n</I><EM> as </EM><I>B</I><SUB><I>n</I></SUB><EM>, then we
+can describe the evolution of the balance as
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+B_{n+1} = (1+r)B_n + q
+\end{displaymath} -->
+
+
+<I>B</I><SUB><I>n</I>+1</SUB> = (1+<I>r</I>)<I>B</I><SUB><I>n</I></SUB> + <I>q</I>
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+where </EM><I>r</I><EM> is the <EM>quarterly</EM> interest rate of </EM>0.05125/4<EM> and </EM><I>q</I><EM>is the quarterly deposit rate.  (By the way, there are 52 weeks in a
+year and 13 weeks in a quarter.  Remember, a month has more than four
+weeks.)
+If we expand the recurrence relation above assuming that the employee
+makes one last deposit at the moment she retires, we can write the balance
+at the end of n quarters as a finite geometric sum
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+B_n = q\sum^n_{i=0} (1+r)^i = q\frac{1-r^{n+1}}{1-r}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="248" HEIGHT="55"
+ SRC="img8.gif"
+ ALT="\begin{displaymath}B_n = q\sum^n_{i=0} (1+r)^i = q\frac{1-r^{n+1}}{1-r}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+If </EM><IMG
+ WIDTH="86" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$q=\$2600$"><EM>, </EM>
+<!-- MATH: $r=0.05125/4$ -->
+<I>r</I>=0.05125/4<EM> and </EM>
+<!-- MATH: $n=4 \cdot 35$ -->
+<IMG
+ WIDTH="83" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.gif"
+ ALT="$n=4 \cdot 35$"><EM>, we see that she will
+have saved </EM>
+<!-- MATH: $\$ 1,003,239$ -->
+<IMG
+ WIDTH="96" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\$ 1,003,239$"><EM> by the time she retires.
+</EM>
+<P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>5.
+<DD>Referring back to the previous problem, 
+suppose her account earns 5% compounded continuously. Develop a
+mathematical model for the balance in her account.  How is this
+model different from your previous model with quarterly interest?
+What is the connection between the two?  How much money will she have
+saved when she retires?
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>Here, we replace the discrete problem with a continuous problem.  The
+methodology is exactly the same.  All discrete quantities are replaced
+with annual rates.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{dB}{dt} = r B + q
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="108" HEIGHT="46"
+ SRC="img12.gif"
+ ALT="\begin{displaymath}\frac{dB}{dt} = r B + q
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+where </EM><I>r</I><EM> is the annual interest rate and </EM><I>q</I><EM> is the annual deposit
+rate.  Essentially, the continuous formulation assumes that the
+employee is constantly earning interest on the balance and constantly
+depositing small amounts of money into the retirement account.  In
+this case, </EM>
+<!-- MATH: $q = \$10,400$ -->
+<IMG
+ WIDTH="103" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$q = \$10,400$"><EM> per year and </EM><I>r</I> = 0.05<EM>.  Solving the ODE,
+one obtains
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+P = 208000 (e^{0.05 t}-1).
+\end{displaymath} -->
+
+
+<I>P</I> = 208000 (<I>e</I><SUP>0.05 <I>t</I></SUP>-1).
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+After 35 years, she will have saved </EM><IMG
+ WIDTH="79" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$\$988,957$"><EM> which is almost the
+same as what she would have earned with the higher quarterly rate.
+This is why financial institutions are required to provide consumers
+with the annualized percentage rate (APR).  The APR is the aggregate
+rate over one year's time, and it removes ambiguity about when
+interest is compounded.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+</DL> 
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2001-10-18</I>
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,1016 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="hw1soln">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="hw1soln.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<DIV ALIGN="CENTER">
+<B>Math428: Problem Set #1</B>
+</DIV>
+<P>
+<DL COMPACT>
+<DD><P>
+<DT>1.
+<DD>Consider a refinement study where the exact solution, <I>I</I>, is not
+known.  Suppose one suspects that an approximation <I>I</I><SUB><I>n</I></SUB> that uses <I>n</I>panels has an error bound of the form
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+|I - I_n| \leq \frac{C}{n^p}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="106" HEIGHT="56"
+ SRC="img1.gif"
+ ALT="\begin{displaymath}\vert I - I_n\vert \leq \frac{C}{n^p}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+for some integer <I>p</I>.  Prove that one can perform a refinement study
+without knowing <I>I</I> by using successive terms.  That is, prove that
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+|I_n - I_{n/2}| \leq \frac{D}{n^p}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="132" HEIGHT="56"
+ SRC="img2.gif"
+ ALT="\begin{displaymath}\vert I_n - I_{n/2}\vert \leq \frac{D}{n^p}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+How are <I>C</I> and <I>D</I> related to one another?
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>This problem highlights a basic theme in bounding errors: You begin
+with the term to be bounded and use the given information.
+</EM>
+<P>
+<EM>
+<BR>
+<IMG
+ WIDTH="548" HEIGHT="141" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.gif"
+ ALT="\begin{align*}\vert I_n - I_{n/2}\vert & = \vert I_n \textcolor{blue}{- I + I} -...
+...2^p)}&
+\text{\textcolor{blue}{So we see that $D = C(1+2^p)$ .}} \\
+\end{align*}">
+<BR></EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>2.
+<DD>Use midpoint rule estimate
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\int_{\frac{1}{10}}^1 \frac{\cos\left(\frac{\ln(x)}{x}\right)}{x} dx
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="136" HEIGHT="81"
+ SRC="img4.gif"
+ ALT="\begin{displaymath}\int_{\frac{1}{10}}^1 \frac{\cos\left(\frac{\ln(x)}{x}\right)}{x} dx
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+with 100, 200, 400 and 800 panels.  Verify through this refinement
+that you are achieving the correct convergence rate.  
+(This problem is related to the
+first ``Hundred Digit Challenge'' problems, but <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\epsilon$">
+is fixed at
+0.1.) Estimate the number of panels required to compute the first
+eight digits accurately.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>See the solution to problem 3.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>3.
+<DD>Repeat problem 2 using Simpson's Rule.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>This is just a question of computing things.  To compute Simpson's
+rule, I took the intermediate step of using the trapezoid rule because 
+it is conceptually simpler to do this.  All but the last line of 
+the table was posted in the lecture notes, so I complete the table here.
+</EM>
+<P><TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">N</TD>
+<TD ALIGN="LEFT"><I>M</I><SUB><I>N</I></SUB></TD>
+<TD ALIGN="LEFT">
+<!-- MATH: $M_{2N}-M_N$ -->
+<I>M</I><SUB>2<I>N</I></SUB>-<I>M</I><SUB><I>N</I></SUB></TD>
+<TD ALIGN="LEFT"><I>T</I><SUB><I>N</I></SUB></TD>
+<TD ALIGN="LEFT">
+<!-- MATH: $T_{2N}-T_N$ -->
+<I>T</I><SUB>2<I>N</I></SUB>-<I>T</I><SUB><I>N</I></SUB></TD>
+<TD ALIGN="LEFT"><I>S</I><SUB><I>N</I></SUB></TD>
+<TD ALIGN="LEFT">
+<!-- MATH: $S_{2N}-S_N$ -->
+<I>S</I><SUB>2<I>N</I></SUB>-<I>S</I><SUB><I>N</I></SUB></TD>
+</TR>
+<TR><TD ALIGN="LEFT">100</TD>
+<TD ALIGN="LEFT">2.8664e-01</TD>
+<TD ALIGN="LEFT">8.8986e-03</TD>
+<TD ALIGN="LEFT">3.1909e-01</TD>
+<TD ALIGN="LEFT">-1.6223e-03</TD>
+<TD ALIGN="LEFT">2.9746e-01</TD>
+<TD ALIGN="LEFT">5.2458e-04</TD>
+</TR>
+<TR><TD ALIGN="LEFT">200</TD>
+<TD ALIGN="LEFT">2.9554e-01</TD>
+<TD ALIGN="LEFT">1.8820e-03</TD>
+<TD ALIGN="LEFT">3.0286e-01</TD>
+<TD ALIGN="LEFT">-3.6624e-03</TD>
+<TD ALIGN="LEFT">2.9798e-01</TD>
+<TD ALIGN="LEFT">3.3855e-05</TD>
+</TR>
+<TR><TD ALIGN="LEFT">400</TD>
+<TD ALIGN="LEFT">2.9742e-01</TD>
+<TD ALIGN="LEFT">4.4824e-04</TD>
+<TD ALIGN="LEFT">2.9920e-01</TD>
+<TD ALIGN="LEFT">-8.9022e-04</TD>
+<TD ALIGN="LEFT">2.9801e-01</TD>
+<TD ALIGN="LEFT">2.0871e-06</TD>
+</TR>
+<TR><TD ALIGN="LEFT">800</TD>
+<TD ALIGN="LEFT">2.9787e-01</TD>
+<TD ALIGN="LEFT">1.1069e-04</TD>
+<TD ALIGN="LEFT">2.9832e-01</TD>
+<TD ALIGN="LEFT">-2.2099e-04</TD>
+<TD ALIGN="LEFT">2.9802e-01</TD>
+<TD ALIGN="LEFT">1.2988e-07</TD>
+</TR>
+</TABLE>
+<P>
+<EM>Here, we see that Simpson's rule picks up more than a digit of
+accuracy at every refinement while the other require more than two
+refinements to capture one more digit of accuracy.
+</EM>
+<P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>4.
+<DD>Prove that the Trapezoid Rule
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+I \approx I_n = \frac{1}{2} f(x_1) h + \sum_{i=2}^{n} f(x_i) h +
+\frac{1}{2} f(x_{n+1}) h
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="361" HEIGHT="73"
+ SRC="img6.gif"
+ ALT="\begin{displaymath}I \approx I_n = \frac{1}{2} f(x_1) h + \sum_{i=2}^{n} f(x_i) h +
+\frac{1}{2} f(x_{n+1}) h
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+has an error bound
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+|I - I_n| \leq \frac{M(b-a)^3}{12 n^2}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="170" HEIGHT="58"
+ SRC="img7.gif"
+ ALT="\begin{displaymath}\vert I - I_n\vert \leq \frac{M(b-a)^3}{12 n^2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where 
+<!-- MATH: $|f''(x)| \leq M$ -->
+<IMG
+ WIDTH="105" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\vert f''(x)\vert \leq M$">
+for all <I>x</I> on the domain of integration.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>There are many ways to do this problem.  In class, we discussed either
+using Taylor series or polynomial test functions.  
+</EM>
+<P><UL>
+<P>
+<LI>
+<B>Taylor series.</B>
+
+<P>
+We expand the general integral in a Taylor series so that we
+acquire a trapezoid rule plus error terms.  There are several ways to
+set up this integral, and I present one of them here.
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\int_{x_i}^{x_{i+1}} f(x) dx =
+\int_{x_i}^{x_{i+1}} \left[ \frac{1}{2}f(x)+ \frac{1}{2}f(x) \right] dx 
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="348" HEIGHT="64"
+ SRC="img9.gif"
+ ALT="\begin{displaymath}\int_{x_i}^{x_{i+1}} f(x) dx =
+\int_{x_i}^{x_{i+1}} \left[ \frac{1}{2}f(x)+ \frac{1}{2}f(x) \right] dx
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The <I>f</I>(<I>x</I>) in the first term on the left will be expanded about <I>x</I><SUB><I>i</I></SUB>and the second term will be expanded about <I>x</I><SUB><I>i</I>+1</SUB>.
+<BR>
+<IMG
+ WIDTH="709" HEIGHT="99" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.gif"
+ ALT="\begin{align*}\frac{1}{2}f(x) & =
+\frac{1}{2} \left[
+f(x_i) + f'(x_i)(x-x_i) + \...
+...})(x-x_{i+1})^2 +
+\frac{1}{3!} f'''(\xi_1)(x-x_{i+1})^3
+\right] \\
+\end{align*}">
+<BR>
+Now, here are some integrals we will need.
+
+<P>
+<BR>
+<IMG
+ WIDTH="480" HEIGHT="150" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.gif"
+ ALT="\begin{align*}\int_{x_i}^{x_{i+1}} (x-x_i) dx, & = \frac{1}{2} h^2, &
+\int_{x_i...
+...h^4, &
+\int_{x_i}^{x_{i+1}} (x-x_{i+1})^3 dx, & = -\frac{1}{4} h^4.
+\end{align*}">
+<BR>
+<P>
+Thus,
+<BR>
+<IMG
+ WIDTH="533" HEIGHT="143" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.gif"
+ ALT="\begin{multline}\int_{x_i}^{x_{i+1}} \frac{1}{2}f(x)+ \frac{1}{2}f(x) dx =
+\fra...
+...{x_{i+1}}
+[f'''(\xi_1)(x-x_i)^3 +
+f'''(\xi_2)(x-x_{i+1})^3]dx.
+\end{multline}">
+<BR>
+<P>
+On the first line, we see that we have successfully acquired the
+trapezoid rule.  The remaining terms describe the error in this quadrature.
+
+<P>
+Now, we need to expand in a Taylor series again.
+<BR>
+<IMG
+ WIDTH="442" HEIGHT="66" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.gif"
+ ALT="\begin{align}f'(x_{i+1}) & = f'(x_i) + h f''(x_i) + \frac{1}{2} h^2 f'''(\xi_3), \\
+f''(x_{i+1}) & = f''(x_i) + h f'''(\xi_4).
+\end{align}">
+<BR>
+<P>
+Substituting (2-3) into (1), we have
+<BR>
+<IMG
+ WIDTH="518" HEIGHT="143" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.gif"
+ ALT="\begin{multline*}\int_{x_i}^{x_{i+1}} \frac{1}{2}f(x)+ \frac{1}{2}f(x) dx =
+\fr...
+...x_{i+1}}
+[f'''(\xi_1)(x-x_i)^3 +
+f'''(\xi_2)(x-x_{i+1})^3]dx.
+\end{multline*}">
+<BR>
+And so,
+<BR>
+<IMG
+ WIDTH="518" HEIGHT="143" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.gif"
+ ALT="\begin{multline*}\int_{x_i}^{x_{i+1}} \frac{1}{2}f(x)+ \frac{1}{2}f(x) dx =
+\fr...
+...x_{i+1}}
+[f'''(\xi_1)(x-x_i)^3 +
+f'''(\xi_2)(x-x_{i+1})^3]dx.
+\end{multline*}">
+<BR>
+We can use the triangle inequality to bound the remaining integrals,
+and we see that all the extra terms are at a higher order <I>O</I>(<I>h</I><SUP>4</SUP>).
+
+<P>
+Thus,
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\int_{x_i}^{x_{i+1}} f(x) dx  = \frac{1}{2} h \left[f(x_i) + f(x_{i+1})
+\right] +
+-\frac{1}{12} h^3 f''(x_i) + O(h^4).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="496" HEIGHT="52"
+ SRC="img15.gif"
+ ALT="\begin{displaymath}\int_{x_i}^{x_{i+1}} f(x) dx = \frac{1}{2} h \left[f(x_i) + f(x_{i+1})
+\right] +
+-\frac{1}{12} h^3 f''(x_i) + O(h^4).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Therefore,
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left|\int_{x_i}^{x_{i+1}} f(x) dx  -
+\frac{1}{2} h \left[f(x_i) + f(x_{i+1})
+\right]\right|  \leq
+\frac{1}{12} h^3 |f''(x_i)| + O(h^4),
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="503" HEIGHT="54"
+ SRC="img16.gif"
+ ALT="\begin{displaymath}\left\vert\int_{x_i}^{x_{i+1}} f(x) dx -
+\frac{1}{2} h \left...
+...right\vert \leq
+\frac{1}{12} h^3 \vert f''(x_i)\vert + O(h^4),
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+establishing the result that we need.
+
+<P>
+<LI>
+<B>Polynomial test function.</B>
+
+<P>
+We anticipate a second order method, so we set up a second order
+polynomial test function.
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+p(x) = c_0 + c_1 x + \frac{c_2}{2} x^2.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="191" HEIGHT="52"
+ SRC="img17.gif"
+ ALT="\begin{displaymath}p(x) = c_0 + c_1 x + \frac{c_2}{2} x^2.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+We seek the difference between the exact integral,
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+I = \int_0^L p(x) dx = c_0 L + c_1 \frac{L^2}{2} + c_2 \frac{L^3}{6},
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="304" HEIGHT="64"
+ SRC="img18.gif"
+ ALT="\begin{displaymath}I = \int_0^L p(x) dx = c_0 L + c_1 \frac{L^2}{2} + c_2 \frac{L^3}{6},
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and the trapezoid quadrature,
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+T_N = \frac{h}{2} \left[p(0) + p(L)\right] + h \sum_{i=2}^{N} p(x_i).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="282" HEIGHT="76"
+ SRC="img19.gif"
+ ALT="\begin{displaymath}T_N = \frac{h}{2} \left[p(0) + p(L)\right] + h \sum_{i=2}^{N} p(x_i).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Changing the indices on the sum, and substituting 
+<!-- MATH: $h = \frac{L}{N}$ -->
+<IMG
+ WIDTH="57" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$h = \frac{L}{N}$">and 
+<!-- MATH: $x_i= h(i-1)$ -->
+<I>x</I><SUB><I>i</I></SUB>= <I>h</I>(<I>i</I>-1),
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+T_N = \frac{L}{2N} \left[p(0) + p(L)\right] +
+\frac{L}{N} \sum_{i=1}^{N-1} p\left(\frac{iL}{N}\right).
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="336" HEIGHT="76"
+ SRC="img21.gif"
+ ALT="\begin{displaymath}T_N = \frac{L}{2N} \left[p(0) + p(L)\right] +
+\frac{L}{N} \sum_{i=1}^{N-1} p\left(\frac{iL}{N}\right).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Now, we evaluate the polynomial and see what happens.
+<BR>
+<IMG
+ WIDTH="612" HEIGHT="228" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.gif"
+ ALT="\begin{align*}T_N & = \frac{L}{2N}
+\left[c_0 + c_0 + c_1 L + \frac{1}{2} c_2 L^...
+...ac{L^2}{2} +
+c_2 \left[ \frac{L^3}{6} + \frac{L^3}{12 N^2}
+\right]
+\end{align*}">
+<BR>
+<P>
+Thus, we see that
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+I - T_N = -\frac{c_2 L^3}{12 N^2}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="142" HEIGHT="58"
+ SRC="img23.gif"
+ ALT="\begin{displaymath}I - T_N = -\frac{c_2 L^3}{12 N^2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+which is the desired result because we interpret <I>L</I> as <I>b</I>-<I>a</I> and
+<I>c</I><SUB>2</SUB> as <I>M</I>, the upper bound on the second derivative.  Cool, eh?
+
+<P>
+</UL>
+<P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>5.
+<DD>[related to KC 6.1:5] Derive a procedure for determining a
+polynomial of degree at most 2 for which <I>p</I>(0), <I>p</I>(1) and <IMG
+ WIDTH="42" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.gif"
+ ALT="$p'(\xi)$">is prescribed, <IMG
+ WIDTH="14" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.gif"
+ ALT="$\xi$">
+being any preassigned point.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+
+<P>
+<EM>For simplicity, I introduce the following notation:
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+p(0) = p_0, \ \ \ \ p(1) = p_1, \ \ \ \ p'(\xi) = p_\xi'.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="301" HEIGHT="46"
+ SRC="img27.gif"
+ ALT="\begin{displaymath}p(0) = p_0, \ \ \ \ p(1) = p_1, \ \ \ \ p'(\xi) = p_\xi'.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Since we have three pieces of information, we anticipate that we are
+going to be able to fit this with a second order polynomial.  (In
+retrospect, we know that there is something fishy about </EM><IMG
+ WIDTH="21" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$p_\xi'$"><EM>.
+Remember, we lose some information when we differentiate.)  Anyway,
+here we go!
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+p(x) = c_0 + c_1 x + c_2 x^2.
+\end{displaymath} -->
+
+
+<I>p</I>(<I>x</I>) = <I>c</I><SUB>0</SUB> + <I>c</I><SUB>1</SUB> <I>x</I> + <I>c</I><SUB>2</SUB> <I>x</I><SUP>2</SUP>.
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+<BR>
+<IMG
+ WIDTH="138" HEIGHT="71" ALIGN="BOTTOM" BORDER="0"
+ SRC="img29.gif"
+ ALT="\begin{align*}c_0 & = p_0, \\
+c_0 + c_1 + c_2 & = p_1, \\
+c_1 + 2 c_2 \xi & = p_\xi'.
+\end{align*}">
+<BR>
+This can be solved by brute force and substitution, or we can examine
+the corresponding linear system.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left[
+\begin{array}{ccc}
+1 & 0 & 0 \\
+1 & 1 & 1 \\
+0 & 1 & 2 \xi
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+c_0 \\
+c_1 \\
+c_2
+\end{array}
+\right] =
+\left[
+\begin{array}{c}
+p_0 \\
+p_1 \\
+p_\xi'
+\end{array}
+\right]
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="241" HEIGHT="87"
+ SRC="img30.gif"
+ ALT="\begin{displaymath}\left[
+\begin{array}{ccc}
+1 & 0 & 0 \\
+1 & 1 & 1 \\
+0 & 1 &...
+...ft[
+\begin{array}{c}
+p_0 \\
+p_1 \\
+p_\xi'
+\end{array}\right]
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+If we study the matrix, we see that its determinant is </EM><IMG
+ WIDTH="56" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.gif"
+ ALT="$2\xi - 1$"><EM>.
+Thus, the system is not invertible if </EM>
+<!-- MATH: $\xi = \frac{1}{2}$ -->
+<IMG
+ WIDTH="50" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="$\xi = \frac{1}{2}$"><EM>.  If </EM>
+<!-- MATH: $\xi
+\neq \frac{1}{2}$ -->
+<IMG
+ WIDTH="50" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.gif"
+ ALT="$\xi
+\neq \frac{1}{2}$"><EM>, the coefficients are uniquely determined from the
+data about </EM><I>p</I><EM>.
+</EM>
+<P>
+<EM>In the degenerate case, </EM>
+<!-- MATH: $\xi  = \frac{1}{2}$ -->
+<IMG
+ WIDTH="50" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="$\xi = \frac{1}{2}$"><EM>, we must conclude that we 
+must assume that some of the coefficients of the second order
+polynomial are linearly dependent, and we can introduce an extra order 
+to the polynomial.  Thus,
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+p(x) = c_0 + c_1 x + c_2 x^2 + c_3 x^3.
+\end{displaymath} -->
+
+
+<I>p</I>(<I>x</I>) = <I>c</I><SUB>0</SUB> + <I>c</I><SUB>1</SUB> <I>x</I> + <I>c</I><SUB>2</SUB> <I>x</I><SUP>2</SUP> + <I>c</I><SUB>3</SUB> <I>x</I><SUP>3</SUP>.
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+And,
+<BR>
+<IMG
+ WIDTH="177" HEIGHT="88" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.gif"
+ ALT="\begin{align*}c_0 & = p_0, \\
+c_0 + c_1 + c_2 + c_3& = p_1, \\
+c_1 + c_2 + \frac{3}{4} c_3 & = p_\xi'.
+\end{align*}">
+<BR>
+By inspection, we see that </EM><I>c</I><SUB>1</SUB><EM> and </EM><I>c</I><SUB>2</SUB><EM> only appear together as a
+sum.  Thus, we can define a new variable, </EM>
+<!-- MATH: $d = c_1 + c_2$ -->
+<I>d</I> = <I>c</I><SUB>1</SUB> + <I>c</I><SUB>2</SUB><EM>, and we must 
+accept that we have no specific information about </EM><I>c</I><SUB>1</SUB><EM> and </EM><I>c</I><SUB>2</SUB><EM>.  If 
+we know either </EM><I>c</I><SUB>1</SUB><EM> or </EM><I>c</I><SUB>2</SUB><EM>, the other is then determined by 
+</EM><I>d</I><EM>.  The new linear system is
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left[
+\begin{array}{ccc}
+1 & 0 & 0 \\
+1 & 1 & 0 \\
+0 & 1 & \frac{3}{4} \xi
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+c_0 \\
+d \\
+c_3
+\end{array}
+\right] =
+\left[
+\begin{array}{c}
+p_0 \\
+p_1 \\
+p_\xi'
+\end{array}
+\right].
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="256" HEIGHT="87"
+ SRC="img35.gif"
+ ALT="\begin{displaymath}\left[
+\begin{array}{ccc}
+1 & 0 & 0 \\
+1 & 1 & 0 \\
+0 & 1 &...
+...t[
+\begin{array}{c}
+p_0 \\
+p_1 \\
+p_\xi'
+\end{array}\right].
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+The determinant of the corresponding matrix is </EM>
+<!-- MATH: $\frac{3}{4}$ -->
+<IMG
+ WIDTH="15" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.gif"
+ ALT="$\frac{3}{4}$"><EM>, so we
+know that </EM><I>c</I><SUB>0</SUB><EM>, </EM><I>d</I><EM> and </EM><I>c</I><SUB>3</SUB><EM> can always be determined uniquely.
+Again, there is some freedom is choosing the pair </EM><I>c</I><SUB>1</SUB><EM> and </EM><I>c</I><SUB>2</SUB><EM> as
+long as the sum is </EM><I>d</I><EM>.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>6.
+<DD>[KC 7.2: 1] Derive the Newton-Cotes formula for
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\int_0^1 f(x) dx
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="85" HEIGHT="64"
+ SRC="img37.gif"
+ ALT="\begin{displaymath}\int_0^1 f(x) dx
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+based on the nodes 
+<!-- MATH: $0, \frac{1}{3}, \frac{2}{3}, 1$ -->
+<IMG
+ WIDTH="70" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.gif"
+ ALT="$0, \frac{1}{3}, \frac{2}{3}, 1$">.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>Here, since we must integrate the polynomial explicitly, 
+I would recommend using a divided difference table as shown 
+in the class notes.
+</EM>
+<P>
+<DIV ALIGN="CENTER"><TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">0</TD>
+<TD ALIGN="LEFT"><I>f</I>(0)</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">
+<!-- MATH: $3 \left[f\left(\frac{1}{3}\right)-f(0)\right]$ -->
+<IMG
+ WIDTH="134" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.gif"
+ ALT="$3 \left[f\left(\frac{1}{3}\right)-f(0)\right]$"></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">
+<!-- MATH: $\frac{1}{3}$ -->
+<IMG
+ WIDTH="15" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.gif"
+ ALT="$\frac{1}{3}$"></TD>
+<TD ALIGN="LEFT">
+<!-- MATH: $f\left(\frac{1}{3}\right)$ -->
+<IMG
+ WIDTH="47" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.gif"
+ ALT="$f\left(\frac{1}{3}\right)$"></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">
+<!-- MATH: $\frac{9}{2} \left[f\left(\frac{2}{3}\right)-2
+f\left(\frac{1}{3}\right)+
+f(0)\right]$ -->
+<IMG
+ WIDTH="210" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.gif"
+ ALT="$\frac{9}{2} \left[f\left(\frac{2}{3}\right)-2
+f\left(\frac{1}{3}\right)+
+f(0)\right]$"></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">
+<!-- MATH: $3 \left[f\left(\frac{2}{3}\right)-f\left(\frac{1}{3}\right)\right]$ -->
+<IMG
+ WIDTH="142" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.gif"
+ ALT="$3 \left[f\left(\frac{2}{3}\right)-f\left(\frac{1}{3}\right)\right]$"></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">
+<!-- MATH: $\frac{9}{2}\left[f(1)-3 f\left(\frac{2}{3}\right)+
+3 f\left(\frac{1}{3}\right)-f(0)\right]$ -->
+<IMG
+ WIDTH="278" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.gif"
+ ALT="$\frac{9}{2}\left[f(1)-3 f\left(\frac{2}{3}\right)+
+3 f\left(\frac{1}{3}\right)-f(0)\right]$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT">
+<!-- MATH: $\frac{2}{3}$ -->
+<IMG
+ WIDTH="15" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.gif"
+ ALT="$\frac{2}{3}$"></TD>
+<TD ALIGN="LEFT">
+<!-- MATH: $f\left(\frac{2}{3}\right)$ -->
+<IMG
+ WIDTH="47" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.gif"
+ ALT="$f\left(\frac{2}{3}\right)$"></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">
+<!-- MATH: $\frac{9}{2}\left[f(1)-
+2 f\left(\frac{2}{3}\right)+f\left(\frac{1}{3}\right)\right]$ -->
+<IMG
+ WIDTH="210" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.gif"
+ ALT="$\frac{9}{2}\left[f(1)-
+2 f\left(\frac{2}{3}\right)+f\left(\frac{1}{3}\right)\right]$"></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">
+<!-- MATH: $3 \left[f(1)-f\left(\frac{2}{3}\right)\right]$ -->
+<IMG
+ WIDTH="134" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.gif"
+ ALT="$3 \left[f(1)-f\left(\frac{2}{3}\right)\right]$"></TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">1</TD>
+<TD ALIGN="LEFT"><I>f</I>(1)</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+</TABLE></DIV>
+<P>
+<EM>Thus, the correct interpolating polynomial is
+<BR>
+<IMG
+ WIDTH="634" HEIGHT="98" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.gif"
+ ALT="\begin{multline*}p(x) =
+f(0) + 3 \left[f\left(\frac{1}{3}\right)-f(0)\right] x +...
+...right]
+x \left(x-\frac{1}{3}\right) \left(x-\frac{2}{3}\right).
+\end{multline*}">
+<BR></EM>
+<P>
+<EM>To find the quadrature coefficients, we integrate over the panel.
+<BR>
+<IMG
+ WIDTH="580" HEIGHT="99" ALIGN="BOTTOM" BORDER="0"
+ SRC="img50.gif"
+ ALT="\begin{multline*}\int_0^1 p(x) dx =
+f(0) + \frac{3}{2} \left[f\left(\frac{1}{3}\...
+...eft(\frac{2}{3}\right)+
+3 f\left(\frac{1}{3}\right)-f(0)\right].
+\end{multline*}">
+<BR>
+Now, we collect terms for each evaluation of </EM><I>f</I><EM>.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\int_0^1 p(x) dx = \frac{1}{8} f(0) +
+\frac{3}{8} f\left(\frac{1}{3}\right) +
+\frac{3}{8} f\left(\frac{2}{3}\right) +
+\frac{1}{8} f(1).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="417" HEIGHT="64"
+ SRC="img51.gif"
+ ALT="\begin{displaymath}\int_0^1 p(x) dx = \frac{1}{8} f(0) +
+\frac{3}{8} f\left(\fra...
+...t) +
+\frac{3}{8} f\left(\frac{2}{3}\right) +
+\frac{1}{8} f(1).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+This is ``Simpson's </EM>
+<!-- MATH: $\frac{3}{8}$ -->
+<IMG
+ WIDTH="15" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.gif"
+ ALT="$\frac{3}{8}$"><EM> Rule'' which is discussed a little
+bit in class.  See?  Building your own quadrature is not so bad, eh?
+</EM>
+
+<P>
+</DL>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2002-02-20</I>
+</ADDRESS>
+</BODY>
+</HTML>

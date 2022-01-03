@@ -1,0 +1,368 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="hw3soln">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="hw3soln.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<DIV ALIGN="CENTER">
+<B>Math428: Problem Set #3 Solution Guide</B>
+</DIV>
+<P>
+<DL COMPACT>
+<DD><P>
+<DT>1.
+<DD>Use the Taylor series method to solve
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+y' = e^{-t} y + \cos(t), \ \ \ \ y(0) = 1, \ \ \ \ 0 \leq t \leq 4\pi
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="365" HEIGHT="33"
+ SRC="img1.gif"
+ ALT="\begin{displaymath}y' = e^{-t} y + \cos(t), \ \ \ \ y(0) = 1, \ \ \ \ 0 \leq t \leq 4\pi
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+with 
+<!-- MATH: $h=\frac{\pi}{2^4}$ -->
+<IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$h=\frac{\pi}{2^4}$">,
+
+<!-- MATH: $\frac{\pi}{2^5}$ -->
+<IMG
+ WIDTH="22" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\frac{\pi}{2^5}$">
+and 
+<!-- MATH: $\frac{\pi}{2^6}$ -->
+<IMG
+ WIDTH="22" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\frac{\pi}{2^6}$">.
+Use 1,
+2 and 3 terms in the Taylor series.  For each Taylor series method,
+make a plot showing how the error decreases as <I>h</I> decreases.  For each Taylor
+series method, estimate the number of accurate digits in <IMG
+ WIDTH="51" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$f(4\pi)$">when 
+<!-- MATH: $h=\frac{\pi}{2^6}$ -->
+<IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$h=\frac{\pi}{2^6}$">.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>No problem.  Here are graphs.  I will post the maple functions and a
+diary of the commands that generated them.
+</EM>
+<DIV ALIGN="CENTER">
+<!-- MATH: $\resizebox{2in}{!}{\includegraphics{prob1a.eps}}$ -->
+<IMG
+ WIDTH="230" HEIGHT="186" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.gif"
+ ALT="\resizebox{2in}{!}{\includegraphics{prob1a.eps}}">
+<!-- MATH: $\resizebox{2in}{!}{\includegraphics{prob1b.eps}}$ -->
+<IMG
+ WIDTH="230" HEIGHT="184" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.gif"
+ ALT="\resizebox{2in}{!}{\includegraphics{prob1b.eps}}">
+<!-- MATH: $\resizebox{2in}{!}{\includegraphics{prob1c.eps}}$ -->
+<IMG
+ WIDTH="230" HEIGHT="188" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.gif"
+ ALT="\resizebox{2in}{!}{\includegraphics{prob1c.eps}}"></DIV><EM>To determine which digits are credible, one need only examine the errors.
+For the first order method, the error in the most refined run is about 
+</EM>0.037...<EM> so we would only believe the first two digits of the solution,
+maybe.  
+In
+the second order method, the performance is better and we would
+believe the first three digits.
+For the third order method, it would appear that the first five digits
+are correct.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>2.
+<DD>Use Richardson extrapolation on the forward Euler method for the
+differential equation in problem 1 using the same values of <I>h</I>to find <IMG
+ WIDTH="51" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$f(4\pi)$">
+more accurately.
+Compare your values for <IMG
+ WIDTH="51" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$f(4\pi)$">
+with the higher order Taylor series
+methods in problem 1.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>For the first order method, we would apply
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\tilde{u}^h_N = 2 u_{2N}^{h/2} - u_{N}^{h}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="137" HEIGHT="33"
+ SRC="img10.gif"
+ ALT="\begin{displaymath}\tilde{u}^h_N = 2 u_{2N}^{h/2} - u_{N}^{h}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+where </EM><IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.gif"
+ ALT="$\tilde{u}$"><EM> is the solution that has been improved via
+Richardson extrapolation.  The improved solutions come out to be
+</EM>3.4844...<EM> and </EM>3.4811...<EM> which attains about 3 digits of accuracy.
+(If you compute a reference solution to a high precision, you will
+find that </EM>3.48...<EM> is the first three correct digits.)
+</EM>
+<P>
+<EM>Though it is not required, it is worth writing about Richardson
+extrapolation for the other Taylor methods.  For the second order
+method, the asymptotic error would be </EM>
+<!-- MATH: $E(T) h^2 + O(h^3)$ -->
+<I>E</I>(<I>T</I>) <I>h</I><SUP>2</SUP> + <I>O</I>(<I>h</I><SUP>3</SUP>)<EM>.  Thus, to
+cancel the errors with two consecutive runs, we would apply
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\tilde{u}^h_N = \frac{1}{3}\left(4 u_{2N}^{h/2} - u_{N}^{h}\right).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="180" HEIGHT="45"
+ SRC="img12.gif"
+ ALT="\begin{displaymath}\tilde{u}^h_N = \frac{1}{3}\left(4 u_{2N}^{h/2} - u_{N}^{h}\right).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+The improved solutions come out to be
+</EM>
+<!-- MATH: $3.48007...$ -->
+3.48007...<EM> and </EM>
+<!-- MATH: $3.47995...$ -->
+3.47995...<EM>.
+</EM>
+<P>
+<EM>For the third order method, we would apply
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\tilde{u}^h_N = \frac{1}{7}\left(8 u_{2N}^{h/2} - u_{N}^{h}\right)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="171" HEIGHT="45"
+ SRC="img13.gif"
+ ALT="\begin{displaymath}\tilde{u}^h_N = \frac{1}{7}\left(8 u_{2N}^{h/2} - u_{N}^{h}\right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+because the errors occur at </EM><I>O</I>(<I>h</I><SUP>3</SUP>)<EM>.  The improved solutions come out to be
+</EM>
+<!-- MATH: $3.47992...$ -->
+3.47992...<EM> and </EM>
+<!-- MATH: $3.47993...$ -->
+3.47993...<EM>.
+</EM>
+<P>
+<EM>In general, for a </EM>
+<!-- MATH: $p^{\rm th}$ -->
+<IMG
+ WIDTH="28" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$p^{\rm th}$"><EM> order method, the correct way to cancel 
+the leading order error terms is
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\tilde{u}^h_N = \frac{1}{2^p-1}\left(2^p u_{2N}^{h/2} - u_{N}^{h}\right)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="219" HEIGHT="47"
+ SRC="img15.gif"
+ ALT="\begin{displaymath}\tilde{u}^h_N = \frac{1}{2^p-1}\left(2^p u_{2N}^{h/2} - u_{N}^{h}\right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>3.
+<DD>Use the centered difference method with a forward Euler startup
+procedure to solve the differential equation in problem 1 with
+
+<!-- MATH: $h=\frac{\pi}{2^4}$ -->
+<IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$h=\frac{\pi}{2^4}$">,
+
+<!-- MATH: $\frac{\pi}{2^5}$ -->
+<IMG
+ WIDTH="22" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$\frac{\pi}{2^5}$">
+and 
+<!-- MATH: $\frac{\pi}{2^6}$ -->
+<IMG
+ WIDTH="22" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\frac{\pi}{2^6}$">.
+Compare your
+results with the Taylor series method.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH: $\resizebox{2in}{!}{\includegraphics{prob3.eps}}$ -->
+<IMG
+ WIDTH="230" HEIGHT="184" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.gif"
+ ALT="\resizebox{2in}{!}{\includegraphics{prob3.eps}}"></DIV><EM>Here, we see that this method has the same secord order performance as
+the second order Taylor method, but it is twice as accurate.  Also, we can see
+oscillations.  Remember, that parasitic root appears at </EM>-1<EM> when
+</EM><IMG
+ WIDTH="27" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.gif"
+ ALT="$h\lambda$"><EM> is close to zero.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>4.
+<DD>Use Richardson extrapolation on the results in problem 3 to determine
+a more accurate value of <IMG
+ WIDTH="51" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$f(4\pi)$">,
+and compare your results with
+problems 2 and 1.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>Here, we are using a second order method, and the improved results are
+</EM>
+<!-- MATH: $3.47984...$ -->
+3.47984...<EM> and </EM>
+<!-- MATH: $3.47993...$ -->
+3.47993...<EM>.  Because the method is better than the
+second order Taylor method, the Richardson extrapolation performs
+better.
+</EM>
+
+<P>
+</DL>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2002-03-19</I>
+</ADDRESS>
+</BODY>
+</HTML>

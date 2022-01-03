@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>Asymptotic Calculation of Velocity and Velocity Derivatives.</TITLE>
+<META NAME="description" CONTENT="Asymptotic Calculation of Velocity and Velocity Derivatives.">
+<META NAME="keywords" CONTENT="eccsvm">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="eccsvm.css">
+</HEAD>
+<BODY LANG="EN">
+ <A NAME="tex2html114" HREF="node9.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html112" HREF="node3.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html108" HREF="node7.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html115" HREF="node9.html">Adaptive Refinement (Splitting Elements)</A>
+<B>Up:</B> <A NAME="tex2html113" HREF="node3.html">The Vortex Method</A>
+<B> Previous:</B> <A NAME="tex2html109" HREF="node7.html">Integral Invariants</A>
+<BR> <P>
+<H2><A NAME="SECTION00035000000000000000">Asymptotic Calculation of Velocity and Velocity Derivatives.</A></H2>
+<P>
+<A NAME="secasymptotics">&#160;</A>
+<P>
+The evolution equations for the elliptical Gaussian basis functions
+depend upon  <IMG WIDTH=10 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2363" SRC="img40.gif"  >  and  <IMG WIDTH=23 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2429" SRC="img39.gif"  > , but unlike the most other basis
+functions used for vortex methods, there is no known expression for
+these induced fields in terms of simple functions.  However, the
+induced velocity and velocity deviations can be written as a regular
+perturbation in the small parameter
+<P><A NAME="epsilon">&#160;</A> <IMG WIDTH=500 HEIGHT=33 ALIGN=BOTTOM ALT="equation482" SRC="img131.gif"  > <P>
+expanding these field as <I>a</I> deviates from unity.  A fourth order approximation
+produces excellent agreement with the exact solution in the near
+field, and it automatically converges in the far field where the
+aspect ratio is not important.  Since the dynamics of ECCSVM in the 
+appropriate convergent limit also forces  <IMG WIDTH=170 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2615" SRC="img132.gif"  >  
+to converge to
+zero, the asymptotic approximation is guaranteed to converge to the
+exact velocity field in the
+same limit.
+<P>
+Without loss of generality, 
+the elliptical Gaussian element basis
+function is centered at the origin, and its major and minor axes are
+aligned with the coordinate axes ( <IMG WIDTH=37 HEIGHT=13 ALIGN=BOTTOM ALT="tex2html_wrap_inline2617" SRC="img133.gif"  > ):
+<P><A NAME="blob">&#160;</A> <IMG WIDTH=500 HEIGHT=53 ALIGN=BOTTOM ALT="eqnarray486" SRC="img134.gif"  > <P>
+The variable <I>R</I> is a continuous index of level sets of the elliptical
+Gaussian element. Though one could express the velocity fields as a full two
+dimensional Biot-Savart integral, one can also use the fact that the
+streamfunction (and therefore all derivatives) of an elliptical patch of
+vorticity with unit density and semimajor and minor axes of  <IMG WIDTH=10 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline2621" SRC="img135.gif"  >  and  <IMG WIDTH=11 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline2623" SRC="img136.gif"  > 
+can be determined using elliptical coordinates [<A HREF="node16.html#lambellipticalpatch">12</A>]:
+<P><A NAME="xi">&#160;</A> <IMG WIDTH=500 HEIGHT=185 ALIGN=BOTTOM ALT="eqnarray492" SRC="img137.gif"  > <P>
+where  <IMG WIDTH=52 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2625" SRC="img138.gif"  >  is the support of the ellipse and
+<P> <IMG WIDTH=311 HEIGHT=48 ALIGN=BOTTOM ALT="displaymath2607" SRC="img139.gif"  > <P>.
+<P>
+The streamfunction induced by an elliptical blob can be expressed 
+as an infinite sum of uniform elliptical patches.  For each value of
+<I>R</I> in (<A HREF="node8.html#blob">3.39</A>), the constituent patch would have density 
+ <IMG WIDTH=102 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2629" SRC="img140.gif"  >  and axes  <IMG WIDTH=53 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline2631" SRC="img141.gif"  >  and  <IMG WIDTH=61 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2633" SRC="img142.gif"  > .  Adding all
+these patches together to form an elliptical Gaussian blob, 
+one can calculate the value of the
+streamfunction at a point  <IMG WIDTH=35 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2635" SRC="img143.gif"  > 
+<P><A NAME="strfnsystem">&#160;</A><A NAME="streamfunction">&#160;</A> <IMG WIDTH=500 HEIGHT=229 ALIGN=BOTTOM ALT="eqnarray513" SRC="img144.gif"  > <P>
+Rather than using the implicit relation in equation (<A HREF="node8.html#xi">3.44</A>), we can use the
+quadratic solution
+<P><A NAME="xi2">&#160;</A> <IMG WIDTH=550 HEIGHT=57 ALIGN=BOTTOM ALT="equation529" SRC="img145.gif"  > <P>
+where  <IMG WIDTH=87 HEIGHT=30 ALIGN=MIDDLE ALT="tex2html_wrap_inline2637" SRC="img146.gif"  >  and 
+ <IMG WIDTH=107 HEIGHT=35 ALIGN=MIDDLE ALT="tex2html_wrap_inline2639" SRC="img147.gif"  > .
+Important limits to be
+used later are  <IMG WIDTH=47 HEIGHT=30 ALIGN=MIDDLE ALT="tex2html_wrap_inline2641" SRC="img148.gif"  >  as  <IMG WIDTH=45 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2643" SRC="img149.gif"  > 
+and  <IMG WIDTH=40 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2645" SRC="img150.gif"  >  as  <IMG WIDTH=49 HEIGHT=15 ALIGN=BOTTOM ALT="tex2html_wrap_inline2647" SRC="img151.gif"  > .
+<P>
+While  <IMG WIDTH=16 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2649" SRC="img152.gif"  >  is constant with respect to <I>R</I> 
+making the second term on the right side of
+(<A HREF="node8.html#streamfunction">3.45</A>) elementary to integrate,
+ <IMG WIDTH=15 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2653" SRC="img153.gif"  >  is not readily expressed in terms of the variable <I>R</I> making
+the first term problematic.  However, one can approximate  <IMG WIDTH=15 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2653" SRC="img153.gif"  >  in
+powers of the small parameter  <IMG WIDTH=6 HEIGHT=7 ALIGN=BOTTOM ALT="tex2html_wrap_inline2659" SRC="img154.gif"  > .  Expanding in  <IMG WIDTH=6 HEIGHT=7 ALIGN=BOTTOM ALT="tex2html_wrap_inline2659" SRC="img154.gif"  > 
+rather than <I>R</I> has the advantage that  <IMG WIDTH=6 HEIGHT=7 ALIGN=BOTTOM ALT="tex2html_wrap_inline2659" SRC="img154.gif"  >  can be made to be a
+truly small parameter while the parameter <I>R</I> is not guaranteed to be
+small relative to  <IMG WIDTH=9 HEIGHT=7 ALIGN=BOTTOM ALT="tex2html_wrap_inline2669" SRC="img155.gif"  >  since one may wish to use the
+streamfunction virtually anywhere in the domain, so the series may
+converge slowly.  Also, expanding in  <IMG WIDTH=6 HEIGHT=7 ALIGN=BOTTOM ALT="tex2html_wrap_inline2659" SRC="img154.gif"  >  will yield a uniformly
+valid approximation of  <IMG WIDTH=15 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2653" SRC="img153.gif"  >  over the entire domain.  The
+elliptical radius, <I>R</I>, is the natural variable of integration.  At
+the same time,  <IMG WIDTH=12 HEIGHT=15 ALIGN=BOTTOM ALT="tex2html_wrap_inline2677" SRC="img156.gif"  >  is a parameter representing one possible
+combination of  <IMG WIDTH=9 HEIGHT=10 ALIGN=BOTTOM ALT="tex2html_wrap_inline2679" SRC="img157.gif"  >  and  <IMG WIDTH=8 HEIGHT=21 ALIGN=MIDDLE ALT="tex2html_wrap_inline2681" SRC="img158.gif"  > .  One of many possible complements is
+ <IMG WIDTH=11 HEIGHT=14 ALIGN=BOTTOM ALT="tex2html_wrap_inline2683" SRC="img159.gif"  >  where  <IMG WIDTH=106 HEIGHT=35 ALIGN=MIDDLE ALT="tex2html_wrap_inline2685" SRC="img160.gif"  > .  Combined
+with the fact that the streamfunction must retain a twofold symmetry
+about the major and minor axes, the streamfunction can be expressed as
+a function of  <IMG WIDTH=12 HEIGHT=15 ALIGN=BOTTOM ALT="tex2html_wrap_inline2677" SRC="img156.gif"  >  and  <IMG WIDTH=11 HEIGHT=14 ALIGN=BOTTOM ALT="tex2html_wrap_inline2683" SRC="img159.gif"  > .  One could also use coordinates
+radially symmetric coordinates such as  <IMG WIDTH=50 HEIGHT=30 ALIGN=MIDDLE ALT="tex2html_wrap_inline2691" SRC="img161.gif"  >  and 
+ <IMG WIDTH=50 HEIGHT=30 ALIGN=MIDDLE ALT="tex2html_wrap_inline2693" SRC="img162.gif"  > , but it was found that these parameters yields
+less accurate streamfunction approximations because they do not
+explicitly contain information about the elliptical geometry.  For
+instance, a term involving  <IMG WIDTH=50 HEIGHT=30 ALIGN=MIDDLE ALT="tex2html_wrap_inline2691" SRC="img161.gif"  >  must be corrected at
+the next order of  <IMG WIDTH=6 HEIGHT=7 ALIGN=BOTTOM ALT="tex2html_wrap_inline2659" SRC="img154.gif"  >  to express information about the
+elliptical radius.
+<P>
+From
+(<A HREF="node8.html#epsilon">3.38</A>), we can use
+<P> <IMG WIDTH=500 HEIGHT=32 ALIGN=BOTTOM ALT="equation553" SRC="img163.gif"  > <P>
+to find that
+<P> <IMG WIDTH=500 HEIGHT=19 ALIGN=BOTTOM ALT="equation556" SRC="img164.gif"  > <P>
+where  <IMG WIDTH=88 HEIGHT=30 ALIGN=MIDDLE ALT="tex2html_wrap_inline2699" SRC="img165.gif"  > , so that
+<P> <IMG WIDTH=500 HEIGHT=19 ALIGN=BOTTOM ALT="equation562" SRC="img166.gif"  > <P>
+and therefore
+<P><A NAME="rhoexpand">&#160;</A> <IMG WIDTH=500 HEIGHT=19 ALIGN=BOTTOM ALT="equation564" SRC="img167.gif"  > <P>
+Substituting the expression above 
+into the streamfunctions (<A HREF="node8.html#strfnsystem">3.46</A>) and (<A HREF="node8.html#xi2">3.47</A>) 
+and expanding in powers of  <IMG WIDTH=6 HEIGHT=7 ALIGN=BOTTOM ALT="tex2html_wrap_inline2659" SRC="img154.gif"  > , one obtains
+<P><A NAME="psiapprox">&#160;</A> <IMG WIDTH=552 HEIGHT=357 ALIGN=BOTTOM ALT="eqnarray569" SRC="img168.gif"  > <P>
+<P><A NAME="1317">&#160;</A><A NAME="figpsi1">&#160;</A> <IMG WIDTH=548 HEIGHT=226 ALIGN=BOTTOM ALT="figure615" SRC="img172.gif"  > <BR>
+<STRONG>Figure 3.2:</STRONG> A example of the accuracy of the fourth order asymptotic expansion
+of  <IMG WIDTH=16 HEIGHT=22 ALIGN=MIDDLE ALT="tex2html_wrap_inline2305" SRC="img4.gif"  > .  A second-order (squares) and fourth-order (diamonds) expansion are shown together
+with the exact function (circles).  The aspect ratio of 5.44...
+( <IMG WIDTH=48 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2307" SRC="img5.gif"  > ) is chosen intentionally to be large to demonstrate that
+the fourth order approximation is quite robust.  The streamfunction is
+calculated with  <IMG WIDTH=37 HEIGHT=11 ALIGN=BOTTOM ALT="tex2html_wrap_inline2707" SRC="img169.gif"  >  and  <IMG WIDTH=37 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2709" SRC="img170.gif"  >  on the left and  <IMG WIDTH=39 HEIGHT=29 ALIGN=MIDDLE ALT="tex2html_wrap_inline2711" SRC="img171.gif"  > 
+and  <IMG WIDTH=37 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2709" SRC="img170.gif"  >  on the right.<BR>
+<P>
+Since  <IMG WIDTH=16 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2649" SRC="img152.gif"  >  does not vary with <I>R</I>, the main concern is that  <IMG WIDTH=15 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2653" SRC="img153.gif"  > 
+remain accurate over  <IMG WIDTH=66 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2721" SRC="img173.gif"  > .
+In addition to being an excellent approximation to the exact streamfunction
+(see Fig. (<A HREF="node8.html#figpsi1">3.2</A>)), the asymptotic approximation (<A HREF="node8.html#psiapprox">3.52</A>) has
+two important advantages.
+First, the fourth order approximation in  <IMG WIDTH=6 HEIGHT=7 ALIGN=BOTTOM ALT="tex2html_wrap_inline2659" SRC="img154.gif"  >  (<A HREF="node8.html#psiapprox">3.52</A>)
+<EM>can</EM> be integrated exactly in
+equation (<A HREF="node8.html#streamfunction">3.45</A>) 
+because derivatives of (<A HREF="node8.html#psiapprox">3.52</A>) involve only even powers of
+<I>R</I>.  Therefore, calculating velocities and velocity deviations is simply a
+matter of differentiating the exact expression with respect to  <IMG WIDTH=9 HEIGHT=10 ALIGN=BOTTOM ALT="tex2html_wrap_inline2679" SRC="img157.gif"  > 
+and  <IMG WIDTH=8 HEIGHT=21 ALIGN=MIDDLE ALT="tex2html_wrap_inline2681" SRC="img158.gif"  > .  No term from the ``Leibnitz rule'' 
+is retained when differentiating because
+ <IMG WIDTH=10 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2731" SRC="img174.gif"  >  is continuous and continuously differentiable across the
+boundary at  <IMG WIDTH=45 HEIGHT=15 ALIGN=BOTTOM ALT="tex2html_wrap_inline2733" SRC="img175.gif"  > .
+Second,
+incompressibility is exactly preserved both locally and globally using
+the approximate streamfunction as would not be case if one were to
+numerically approximate the Biot-Savart integrals.
+<P>
+Observing that the fourth order approximation for the streamfunction
+involves only zeroth, second, fourth and sixth moments of  <IMG WIDTH=28 HEIGHT=25 ALIGN=MIDDLE ALT="tex2html_wrap_inline2735" SRC="img176.gif"  > , we
+anticipate that all integrals approximating velocities,  <IMG WIDTH=69 HEIGHT=25 ALIGN=MIDDLE ALT="tex2html_wrap_inline2737" SRC="img177.gif"  > ,
+ <IMG WIDTH=56 HEIGHT=25 ALIGN=MIDDLE ALT="tex2html_wrap_inline2739" SRC="img178.gif"  > , as well as velocity deviations 
+ <IMG WIDTH=92 HEIGHT=25 ALIGN=MIDDLE ALT="tex2html_wrap_inline2741" SRC="img179.gif"  > , etc. will involve integrals of the form
+<P> <IMG WIDTH=543 HEIGHT=304 ALIGN=BOTTOM ALT="eqnarray628" SRC="img180.gif"  > <P>
+The coefficients,  <IMG WIDTH=14 HEIGHT=23 ALIGN=MIDDLE ALT="tex2html_wrap_inline2743" SRC="img181.gif"  > , (<I>i</I>=0,1,2,3,4), have been determined after many
+manipulations and reductions.
+One can exploit symmetries in  <IMG WIDTH=10 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2731" SRC="img174.gif"  >  and reduce
+the amount of work by a factor of two by storing intermediate variables
+ <IMG WIDTH=35 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2749" SRC="img182.gif"  >  and  <IMG WIDTH=31 HEIGHT=28 ALIGN=MIDDLE ALT="tex2html_wrap_inline2751" SRC="img183.gif"  > , listed in Table (<A HREF="node8.html#tabvelcoefficients">3.1</A>).
+For  <IMG WIDTH=69 HEIGHT=25 ALIGN=MIDDLE ALT="tex2html_wrap_inline2737" SRC="img177.gif"  > ,
+<P> <IMG WIDTH=500 HEIGHT=32 ALIGN=BOTTOM ALT="equation646" SRC="img184.gif"  > <P>
+and for  <IMG WIDTH=56 HEIGHT=25 ALIGN=MIDDLE ALT="tex2html_wrap_inline2739" SRC="img178.gif"  > ,
+<P> <IMG WIDTH=500 HEIGHT=32 ALIGN=BOTTOM ALT="equation651" SRC="img185.gif"  > <P>
+<P><A NAME="741">&#160;</A><A NAME="tabvelcoefficients">&#160;</A> <IMG WIDTH=519 HEIGHT=432 ALIGN=BOTTOM ALT="table656" SRC="img186.gif"  > <BR>
+<STRONG>Table 3.1:</STRONG> Table of coefficients for velocity calculations<BR>
+<P>
+<P>
+Similarly, one can use the fourth order expand of  <IMG WIDTH=15 HEIGHT=24 ALIGN=MIDDLE ALT="tex2html_wrap_inline2653" SRC="img153.gif"  >  to evaluate
+second spatial derivatives that are necessary to calculate flow deviations.
+The necessary additional intermediate coefficients are tabulated in
+Table (<A HREF="node8.html#tabveldevcoefficients">3.2</A>).
+For  <IMG WIDTH=92 HEIGHT=25 ALIGN=MIDDLE ALT="tex2html_wrap_inline2807" SRC="img187.gif"  > ,
+<P> <IMG WIDTH=500 HEIGHT=36 ALIGN=BOTTOM ALT="equation746" SRC="img188.gif"  > <P>
+and for  <IMG WIDTH=80 HEIGHT=25 ALIGN=MIDDLE ALT="tex2html_wrap_inline2809" SRC="img189.gif"  > ,
+<P> <IMG WIDTH=500 HEIGHT=36 ALIGN=BOTTOM ALT="equation755" SRC="img190.gif"  > <P>
+For  <IMG WIDTH=138 HEIGHT=25 ALIGN=MIDDLE ALT="tex2html_wrap_inline2811" SRC="img191.gif"  > , some
+intermediate variables can be recycled once again.
+<P> <IMG WIDTH=500 HEIGHT=205 ALIGN=BOTTOM ALT="eqnarray764" SRC="img192.gif"  > <P>
+<P><A NAME="881">&#160;</A><A NAME="tabveldevcoefficients">&#160;</A> <IMG WIDTH=545 HEIGHT=550 ALIGN=BOTTOM ALT="table773" SRC="img193.gif"  > <BR>
+<STRONG>Table 3.2:</STRONG> Table of coefficients for velocity deviation calculations<BR>
+<P>
+<P><A NAME="887">&#160;</A><A NAME="figvel">&#160;</A> <IMG WIDTH=555 HEIGHT=226 ALIGN=BOTTOM ALT="figure884" SRC="img194.gif"  > <BR>
+<STRONG>Figure 3.3:</STRONG> Sample velocity (left) and velocity derivative (right) 
+calculations for an
+elliptical Gaussian element.  In this case,  <IMG WIDTH=47 HEIGHT=12 ALIGN=BOTTOM ALT="tex2html_wrap_inline2317" SRC="img9.gif"  >  corresponding to
+an aspect ratio of 2.25.  One can see that corresponding symbols cover one
+another indicating a very accurate match between the asymptotic
+approximation and the ``exact'' quantity that is calculated numerically to 
+machine precision.<BR>
+<P>
+While the second order expansion was not sufficiently close to the 
+streamfunction (see Fig. (<A HREF="node8.html#figpsi1">3.2</A>)) 
+for the calculation of either first or second derivatives,
+Fig. (<A HREF="node8.html#figvel">3.3</A>) demonstrates that
+the fourth order approximation yields very accurate results.
+<P>
+<HR><A NAME="tex2html114" HREF="node9.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html112" HREF="node3.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html108" HREF="node7.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html115" HREF="node9.html">Adaptive Refinement (Splitting Elements)</A>
+<B>Up:</B> <A NAME="tex2html113" HREF="node3.html">The Vortex Method</A>
+<B> Previous:</B> <A NAME="tex2html109" HREF="node7.html">Integral Invariants</A>
+<P><ADDRESS>
+<I>Louis F. Rossi <BR>
+Thu Nov  4 15:02:00 EST 1999</I>
+</ADDRESS>
+</BODY>
+</HTML>

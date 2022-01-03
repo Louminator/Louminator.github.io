@@ -1,0 +1,599 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="exam3soln">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="exam3soln.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+Name: Math 428
+<BR>
+ <B>Exam 3 solution guide</B> <BR>
+7 May 2002 <BR>
+
+<P>
+<BR>
+<BR>
+<BR>
+
+<P>
+<EM>Always the beautiful answer who asks a more beautiful question.</EM> <BR>
+-E. E. Cummings
+
+<P>
+<BR>
+<BR>
+<BR>
+
+<P>
+Instructions: <B>Show all work to receive full or partial credit.</B>
+You may use a scientific calculator, your notes and your textbook on this exam.
+All University rules and guidelines for
+student conduct are applicable.
+
+<P>
+<DL COMPACT>
+<DD><P>
+<DT>1.
+<DD>[20 pts]
+Prove that the backward Euler method is A-stable.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>To prove that backward Euler is A-stable, we must show that the region of
+absolute stability includes the entire right half-plane when
+</EM>
+<!-- MATH: $\Re(\lambda) > 0$ -->
+<IMG
+ WIDTH="78" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\Re(\lambda) > 0$"><EM> for the ODE </EM>
+<!-- MATH: $y' = - \lambda y$ -->
+<IMG
+ WIDTH="80" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$y' = - \lambda y$"><EM>.  We found the
+region of absolute stability for backward Euler in class, and used it
+many times.  I would
+not fault anyone for referring to this, but just the same, we can find it 
+again here.
+</EM>
+<P>
+<EM>Substituting the
+ODE into backward Euler, we find that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u_{k+1} = u_k - \lambda h u_{k+1},
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="165" HEIGHT="43"
+ SRC="img3.gif"
+ ALT="\begin{displaymath}u_{k+1} = u_k - \lambda h u_{k+1},
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+or
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u_{k+1} = \frac{1}{1+\lambda h} u_k
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="137" HEIGHT="57"
+ SRC="img4.gif"
+ ALT="\begin{displaymath}u_{k+1} = \frac{1}{1+\lambda h} u_k
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+If we solve the recurrence relation, we see that </EM>
+<!-- MATH: $u_k = C r^k$ -->
+<I>u</I><SUB><I>k</I></SUB> = <I>C r</I><SUP><I>k</I></SUP><EM> where
+</EM>
+<!-- MATH: $r=\frac{1}{1+\lambda h}$ -->
+<IMG
+ WIDTH="76" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$r=\frac{1}{1+\lambda h}$"><EM>.  If we do a little bit of algebra, we see
+that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\lambda h = r - 1 = e^{i \theta} -1.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="170" HEIGHT="40"
+ SRC="img6.gif"
+ ALT="\begin{displaymath}\lambda h = r - 1 = e^{i \theta} -1.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+where </EM>
+<!-- MATH: $0 \leq \theta \leq 2 \pi$ -->
+<IMG
+ WIDTH="95" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$0 \leq \theta \leq 2 \pi$"><EM>.  Thus, the region of absolute
+stability is everything except a disk of radius one centered at </EM>-1 +
+0 <I>i</I><EM> in the complex plane, so the method is A-stable.</EM>
+
+<P>
+
+<P>
+<DT>2.
+<DD>[20 pts]
+Derive a second order finite difference approximation for
+<I>y</I><SUB><I>k</I></SUB>''', the
+third derivative of <I>y</I> at <I>x</I>=<I>hk</I>.  You may use as values of <I>y</I><SUB><I>i</I></SUB> as
+you need, but you must show that your approximation has second order
+accuracy.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>Here, you could use a lot of things.  I had hoped you would use
+building blocks from your homework.  For instance, we can use the
+second order finite difference for </EM><I>y</I><SUB><I>k</I></SUB>''<EM> for HW6.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+y_k'' - \frac{y_{k+1}-2 y_k+y_{k-1}}{h^2} = O(h^2)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="258" HEIGHT="55"
+ SRC="img8.gif"
+ ALT="\begin{displaymath}y_k'' - \frac{y_{k+1}-2 y_k+y_{k-1}}{h^2} = O(h^2)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+If we substitute </EM><I>y</I>'<EM> for </EM><I>y</I><EM>, we have
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+y_k''' - \frac{y'_{k+1}-2 y'_k+y'_{k-1}}{h^2} = O(h^2).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="268" HEIGHT="58"
+ SRC="img9.gif"
+ ALT="\begin{displaymath}y_k''' - \frac{y'_{k+1}-2 y'_k+y'_{k-1}}{h^2} = O(h^2).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Then, we have to find a way to approximate </EM><I>y</I>'<SUB><I>k</I></SUB><EM>.  The simplest is
+using centered differences:
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+y_k' - \frac{y_{k+1}-y_{k-1}}{2h} = -\frac{1}{6} h^2 y_k''+ O(h^3)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="295" HEIGHT="55"
+ SRC="img10.gif"
+ ALT="\begin{displaymath}y_k' - \frac{y_{k+1}-y_{k-1}}{2h} = -\frac{1}{6} h^2 y_k''+ O(h^3)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+I am including the remainder (from your homework) because they will
+cancel when you perform the second order finite difference.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="710" HEIGHT="173"
+ SRC="img11.gif"
+ ALT="\begin{eqnarray*}y_k''' - \frac{y'_{k+1}-2 y'_k+y'_{k-1}}{h^2} & = &
+O(h^2) \\
+...
+...rac{-\frac{1}{6} h^4 y_{k+1}''''}{h^2} + O(h^2) \\
+& = & O(h^2)
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL">
+
+<P>
+
+<P>
+<DT>3.
+<DD>[15 pts]
+Explicitly design a shooting algorithm using the <EM>secant method</EM> that
+will solve the boundary value problem,
+<BR>
+<IMG
+ WIDTH="134" HEIGHT="76" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.gif"
+ ALT="\begin{gather*}y'' = f(y,y',x), \\
+y(0)+y'(0) = 1, \\
+y(1)-y'(1) = 1.
+\end{gather*}">
+<BR>
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>The secant method had already been discussed in some detail in class.
+The key is to find an initial value problem (IVP) 
+to shoot with, and a function for which has
+a root for the appropriate boundary conditions.
+</EM>
+<P>
+<EM>To find an appropriate IVP, we can set </EM><I>y</I>(0)=<I>z</I><EM> where </EM><I>z</I><EM> is our
+shooting parameter.  Then, we see that we meet the BC on the left by
+setting </EM>
+<!-- MATH: $y'(0) = 1-z$ -->
+<I>y</I>'(0) = 1-<I>z</I><EM>.  That's all you have to do.  So, our IVP is
+<BR>
+<IMG
+ WIDTH="124" HEIGHT="76" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.gif"
+ ALT="\begin{gather*}y_z'' = f(y,y',x), \\
+y_z(0) = z, \\
+y_z'(0) = 1-z.
+\end{gather*}">
+<BR></EM>
+<P>
+<EM>Let </EM><I>u</I><SUB><I>z</I></SUB><EM> be a numerical solution to this problem.  What must we do to 
+satisfy the BC's on the right?  Well, we want </EM>
+<!-- MATH: $y(1)-y'(1)  =  1$ -->
+<I>y</I>(1)-<I>y</I>'(1)  =  1<EM>.  So, 
+our function should be something like
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\phi(z) = u_z(1)-u'_z(1)-1.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="203" HEIGHT="43"
+ SRC="img14.gif"
+ ALT="\begin{displaymath}\phi(z) = u_z(1)-u'_z(1)-1.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+If we use the secant method to find a root of </EM><IMG
+ WIDTH="40" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\phi(z)$"><EM>, we will
+solved the original boundary value problem.
+</EM>
+<P>
+<EM>I have not yet described the secant method.  While it was given in
+class, I'll describe it here.  We begin with two values of </EM><I>z</I><EM> called
+</EM><I>z</I><SUB>1</SUB><EM> and </EM><I>z</I><SUB>1</SUB><EM> such that </EM>
+<!-- MATH: $\phi(z_1) \phi(z_2) < 0$ -->
+<IMG
+ WIDTH="123" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.gif"
+ ALT="$\phi(z_1) \phi(z_2) < 0$"><EM>.
+</EM><DL COMPACT>
+<DT>(a)
+<DD>Compute
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+z_* = z_1 -\phi(z_1) \frac{z_2-z_1}{\phi(z_2) - \phi(z_1)}.
+\end{displaymath} -->
+
+<IMG
+ WIDTH="237" HEIGHT="59"
+ SRC="img17.gif"
+ ALT="\begin{displaymath}z_* = z_1 -\phi(z_1) \frac{z_2-z_1}{\phi(z_2) - \phi(z_1)}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<DT>(b)
+<DD>If 
+<!-- MATH: $\phi(z_*) \phi(z_1) > 0$ -->
+<IMG
+ WIDTH="123" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.gif"
+ ALT="$\phi(z_*) \phi(z_1) > 0$">,
+let <I>z</I><SUB>1</SUB> = <I>z</I><SUB>*</SUB>.  If 
+
+<!-- MATH: $\phi(z_*) \phi(z_2) > 0$ -->
+<IMG
+ WIDTH="123" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\phi(z_*) \phi(z_2) > 0$">,
+let <I>z</I><SUB>2</SUB> = <I>z</I><SUB>*</SUB>.
+
+<P>
+<DT>(c)
+<DD>If <IMG
+ WIDTH="47" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$\phi(z_*)$">
+is close to some tolerance, bail out of the
+algorithm and return <I>z</I>.  Otherwise,
+return to step 1.
+
+<P>
+</DL>
+
+<P>
+
+<P>
+<DT>4.
+<DD>[20 pts]
+Explicitly design a shooting algorithm using the <EM>Newton's method</EM> that
+will solve the boundary value problem,
+<BR>
+<IMG
+ WIDTH="134" HEIGHT="76" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.gif"
+ ALT="\begin{gather*}y'' = f(y,y',x), \\
+y(0)+y'(0) = 1, \\
+y(1)-y'(1) = 1.
+\end{gather*}">
+<BR>
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>Here, we begin with the same IVP as in the previous problem, we need
+an auxiliary IVP so that we can find </EM>
+<!-- MATH: $\frac{d\phi}{dz}(z)$ -->
+<IMG
+ WIDTH="48" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$\frac{d\phi}{dz}(z)$"><EM>.
+<BR>
+<IMG
+ WIDTH="124" HEIGHT="76" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.gif"
+ ALT="\begin{gather*}y_z'' = f(y,y',x), \\
+y_z(0) = z, \\
+y_z'(0) = 1-z.
+\end{gather*}">
+<BR>
+We need to differentiate the whole IVP by </EM><I>z</I><EM> to find </EM>
+<!-- MATH: $\frac{d\phi}{dz}(z)$ -->
+<IMG
+ WIDTH="48" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.gif"
+ ALT="$\frac{d\phi}{dz}(z)$"><EM>, so
+<BR>
+<IMG
+ WIDTH="277" HEIGHT="76" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.gif"
+ ALT="\begin{gather*}w_z'' = f_y(y,y',x)w + f_{y'}(y,y',x)w', \\
+w_z(0) = 1, \\
+w_z'(0) = -1.
+\end{gather*}">
+<BR>
+where </EM>
+<!-- MATH: $w = \frac{dy}{dz}$ -->
+<IMG
+ WIDTH="62" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.gif"
+ ALT="$w = \frac{dy}{dz}$"><EM> based on the solution of </EM><I>y</I><SUB><I>z</I></SUB><EM>.  Let </EM><I>v</I><SUB><I>z</I></SUB><EM>be a numerical solution for </EM><I>w</I><SUB><I>z</I></SUB><EM>.  Now, we can see that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{d\phi}{dz}(z) = v_z(1)-v'_z(1)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="174" HEIGHT="56"
+ SRC="img24.gif"
+ ALT="\begin{displaymath}\frac{d\phi}{dz}(z) = v_z(1)-v'_z(1)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+which comes from the solution of our auxiliary equation.
+</EM>
+<P>
+<EM>Everyone recalls that Newton's method is
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+z_{k+1} = z_k - \frac{\phi(z_k)}{\frac{d \phi}{d z} (z_k)}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="157" HEIGHT="66"
+ SRC="img25.gif"
+ ALT="\begin{displaymath}z_{k+1} = z_k - \frac{\phi(z_k)}{\frac{d \phi}{d z} (z_k)}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P>
+<DT>5.
+<DD>[15 pts]
+Explicitly design a shooting algorithm using the <EM>secant method</EM> that
+will solve the boundary value problem,
+<BR>
+<IMG
+ WIDTH="154" HEIGHT="104" ALIGN="BOTTOM" BORDER="0"
+ SRC="img26.gif"
+ ALT="\begin{gather*}y''' = f(y,y',y'',x), \\
+y(0) = \alpha, \\
+y'(0) = \beta, \\
+y(1) = \gamma.
+\end{gather*}">
+<BR>
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>This is very similar to the example given in class.  In this case, the 
+IVP is
+<BR>
+<IMG
+ WIDTH="154" HEIGHT="104" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.gif"
+ ALT="\begin{gather*}y''' = f(y,y',y'',x), \\
+y(0) = \alpha, \\
+y'(0) = \beta, \\
+y''(0) = z,
+\end{gather*}">
+<BR>
+and the objective function would be </EM>
+<!-- MATH: $\phi(z) = y(1)-\gamma$ -->
+<IMG
+ WIDTH="133" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$\phi(z) = y(1)-\gamma$"><EM>.
+</EM>
+
+<P>
+
+<P>
+<DT>6.
+<DD>[10 pts]
+Explicitly design a shooting algorithm using the <EM>secant method</EM> that
+will solve the boundary value problem,
+<BR>
+<IMG
+ WIDTH="154" HEIGHT="104" ALIGN="BOTTOM" BORDER="0"
+ SRC="img29.gif"
+ ALT="\begin{gather*}y''' = f(y,y',y'',x), \\
+y(0) = \alpha, \\
+y(1) = \beta, \\
+y'(1) = \gamma.
+\end{gather*}">
+<BR>
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>The key to this problem is to realize that one must take advantage of
+the fact that two of the BC's are on the right rather than the left.
+One can reverse the IVP by changing variables, </EM><I>s</I> = 1-<I>x</I><EM>.  Then, an
+appropriate IVP would be 
+<BR>
+<IMG
+ WIDTH="214" HEIGHT="104" ALIGN="BOTTOM" BORDER="0"
+ SRC="img30.gif"
+ ALT="\begin{gather*}y''' = -f(y,-y',y'',1-s), \\
+y(0) = \beta, \\
+y'(0) = \gamma, \\
+y''(0) = z
+\end{gather*}">
+<BR>
+where </EM>
+<!-- MATH: $' = \frac{d}{ds}$ -->
+<IMG
+ WIDTH="51" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.gif"
+ ALT="$' = \frac{d}{ds}$"><EM>.  Not everyone was this rigorous, but I
+accepted reasonable detail about solving the problem in reverse.  The
+objective function would be </EM>
+<!-- MATH: $\phi(1) = y(1) - \alpha$ -->
+<IMG
+ WIDTH="134" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="$\phi(1) = y(1) - \alpha$"><EM>.
+</EM>
+
+<P>
+</DL>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2002-05-17</I>
+</ADDRESS>
+</BODY>
+</HTML>

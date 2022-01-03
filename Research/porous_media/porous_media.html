@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>Interactive Simulation of Contaminant Evolution 
+through Porous Media</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (X11; I; OSF1 V4.0 alpha) [Netscape]">
+</HEAD>
+<BODY>
+
+<H1>Interactive Simulation of Contaminant Evolution through Porous Media.</H1>
+
+<P>
+<HR></P>
+
+<H2>Project Team: <A HREF="mailto::goldman@musetech.com"> Jon Goldma</A><A HREF="http://www.eecs.uic.edu/~jgoldman/">n
+</A> , <A HREF="http://sherlock.math.uml.edu/~rossi"> Louis Rossi</A>,
+George Sohos and <A HREF="http://jaka.eecs.uic.edu/~rsteven">Rob Stevenson</A>.</H2>
+
+<P>
+<HR></P>
+
+<H3>Last modified: February, 6 1996 </H3>
+
+<CENTER><P><A HREF="gifs/cube70t.gif"><IMG SRC="gifs/cube70t.sm.gif" HEIGHT=174 WIDTH=210 ALIGN=TOP></A>
+<BR>
+<A HREF="example.html"><IMG SRC="gifs/porous.oil1.sm.gif" HEIGHT=254 WIDTH=382 ALIGN=TOP></A>
+<BR>
+</P></CENTER>
+
+<P>These are oil saturation isosurfaces for a contaminant leak into a porous
+cube. </P>
+
+<H2>Purpose: </H2>
+
+<P>We hope to demonstrate the capabilities of leading edge parallel computers
+and numerical methods coupled to the fastest network links can benefit
+the scientific community and ultimately science. In particular, we will
+simulate motion of benzene, an environmental contaminant, through a cube
+of soil and water. This simulation requires considerable computational
+resources available at a limited number of sites around the United States.
+However, with high speed computer networks, the data can be relayed to
+remote sites around the country. In this case, the simulation ran at the
+National Center for Supercomputer Applications but was visualized with
+CAVE virtual reality equipment in San Diego at the <A HREF="http://www.sdsc.edu/SC95">
+Supercomputing '95 conference</A>. </P>
+
+<H2>Broad Description: </H2>
+
+<P>When chemical contaminants are accidentally or intentionally poured
+onto the ground, they flow downward and can diffuse into groundwater supplies.
+For obvious reasons, it is not practical to experimentally measure the
+flow of these contaminants through the soil. Thus, there is a desperate
+need for models and simulations of contaminant flow so that scientists
+and policy-makers can accurately assess risks associated with faulty contaminant
+storage and plan effective cleanup strategies when spills do occur. Our
+conference demonstration is an attempt to build a tool that will will guide
+environmental policy and cleanup projects by allowing the user to measure
+contaminant flow through a porous cube. </P>
+
+<P>Our simulation is a finite difference code simulated on a parallel machine.
+We simulated TCE (trichloro-ethylene), water and air. The computer simulates
+the evolution of saturations and pressures through the cube with variable
+porosity. For demonstration purposes we hoped to attain a resolution of
+40^3, but network limitations forced us to restrict ourselves to 20^3.
+</P>
+
+<P>Inside the CAVE, the users passively observe the flow of water and TCE
+through the cube, and interact with the physical model to alter the permeability
+of the cube and add sources and sinks as well as water sources and sinks.
+Also, the user could adjust the visualization parameters such as isosurfaces
+of saturations in the flow. </P>
+
+<H2>The particulars...</H2>
+
+<P>There are three major components to our environmental simulation: the
+numerical engine, the high-speed network connection and the CAVE user interface.</P>
+
+<H3>The numerical engine.</H3>
+
+<P>At the center of our project is the numerical engine. We have taken
+a mathematical model for the motion of multiphase flow (more than one fluid
+or gas the same area) and discretized it onto a grid. The model takes the
+form of several partial differential equations (PDEs). One of them expresses
+conservation of mass. The other relates the mass flux through a given region
+to a velocity and diffusive term. The numerical engine approximates the
+solution to these PDEs at a given moment, and then marches forward in time.
+Doing this fast enough for real-time interaction requires a supercomputer.
+In this case, we used the NCSA Power Challenge Array to drive our simulation.
+</P>
+
+<H3>The high speed network.</H3>
+
+<P>Since the numerical engine is in Illinois and the conference site is
+in San Diego, the information about the state of the porous cube must be
+transmitted along computer network lines. Ordinarily, computer network
+lines are two slow to support real-time animation at a rate of three to
+fifteen frames per second. However, the Global Information Infrastructure
+(GII) Testbed has made available to us special high-speed communication
+lines for use at this conference. Using a message passing protocol known
+as <A HREF="http://www.mcs.anl.gov/mpi/"> Message Passing Interface (MPI)
+</A>, our programs communicated with one another along these fast communication
+lines. </P>
+
+<H3>The CAVE virtual environment.</H3>
+
+<P>The CAVE is a virtual environment consisting of three walls and a floor,
+a pair of goggles and a wand. The goggles allow the user to view stereoscopic
+images projected onto the floor and walls giving the user a three-dimensional
+view of our porous cube. The wand is a three dimensional analog to a mouse.
+Within the CAVE, the user can view the cube of any point of view, adjust
+the oil or water isosurfaces and change simulation parameters. If effect,
+the users had full control over the numerical engine from two thousand
+miles away. In the future, scientists in the CAVE could measure the affects
+of contamination and even attempt different cleanup strategies. </P>
+
+<H2>Results:</H2>
+
+<P>We successfully demonstrated our interactive porous media simulation
+at Supercomputing '95. Visitors could view the evolution of contaminants
+through a variety of porous cubes. Some of the data was precomputed and
+some was computed in real time for novel configurations while visitors
+watched. Since there were a large number of demos, our team used the ImmersaDesk
+rather than the CAVE. Though this hindered the visualization experience
+slightly, the visitors did a good feel for what happens as contaminants
+leak into the ground. Click <A HREF="example.html">here</A> for an example
+of our work. </P>
+
+<P>For most of the demo period, the special high speed IWAY network was
+not working, forcing us to improvise. Fortunately, we thought this might
+happen and MPI is flexible enough to allow us to change platforms and networks
+without major modifications. When the IWAY network was not functioning,
+we simply ran our simulation locally on the less powerful machines at the
+conference site and passed messages over the Internet. When the IWAY came
+back up, we ran our simulation on the faster NCSA machines over the vBNS
+and ATM links. The speedup was remarkable. </P>
+
+<H2>Lessons learned:</H2>
+
+<P>The project team has answered some of the following questions in the
+hopes that it will help others pursuing similar endeavors. </P>
+
+<H3>Was the GII Testbed successful?</H3>
+
+<P>Short answer: Yes and no. Some things went well. Others did not. Read
+on to learn about the specifics. </P>
+
+<P><B>Yes, it was a success.</B> At the end of the day, many teams, including
+this one, took advantage of vBNS and ATM networks to link high speed computing
+with state-of-the-art virtual reality visualization systems. The user interface
+was friendly. Naive visitors could get a feel for the science. Experts
+could use our software as a tool for environmental modeling. </P>
+
+<P><B>No, it was a failure.</B> First, there is no denying the fact that
+the IWAY network was down most of the time. When it was up, it was not
+reliable in the sense that when it often went down without warning. Second,
+there were too many projects that had almost nothing to do with networking
+or high performance computing. The purpose of the GII Testbed was to demonstrate
+the prospect of connecting supercomputers and virtual reality visualization
+with high speed networks. Projects that failed to do this, diluted the
+demonstration session and obscured the main point. Either there was not
+enough refereeing at from the onset, or there were not enough checkpoints
+along the way to determine which projects were going to meet the Testbed
+criteria. </P>
+
+<H3>Were we successful?</H3>
+
+<P>Heck yes. We delivered a project that combined supercomputing, visualization
+and high speed networking. </P>
+
+<H3>Will anyone ever use our software again?</H3>
+
+<P>Since CAVEs, Immersadesks and the like are expensive, it would require
+somehow making VR more affordable for modest research facilities. Some
+alternatives include big computer screens with stereo goggles. We were
+approached by some high school teachers at the conference who are considering
+some sort of VR for their classrooms. </P>
+
+<H3>What is the future of VR and GII networking challenges?</H3>
+
+<P>This is hard to say. It will depend in a large part on funding priorities
+in the government and with industry. In the conference program, I (LFR)
+did not see any projects that were producing publishable results. I think
+some funding should go to a long term project with tangible results of
+scientific merit. If successful, it would probably go a long way toward
+interesting research institutions and funding agencies in these sorts of
+projects. </P>
+
+<H3>What else did we learn from all this?</H3>
+
+<P>As you may have noticed, the development of this project was in itself
+an exercise in networking. Only Jon and Rob work in the same geographical
+location. We all learned what to expect from each other and how to work
+with one another through mail, electronic mail, phones and meetings. Maintaining
+deadlines and mileposts was a constant challenge, but in the end, we put
+together the pieces without killing each other. </P>
+
+<ADDRESS><A HREF="mailto:Louis_Rossi@uml.edu">Louis_Rossi@uml.edu</A></ADDRESS>
+
+</BODY>
+</HTML>

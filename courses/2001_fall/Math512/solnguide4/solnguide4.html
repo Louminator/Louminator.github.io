@@ -1,0 +1,605 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="solnguide4">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="solnguide4.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html5"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html6"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+
+<P>
+<DIV ALIGN="CENTER">
+Solution notes
+
+<P>
+Problem Set #4
+
+<P>
+Modeling classroom activity #2
+
+<P>
+One dimensional diffusion models
+</DIV>
+<P>
+<EM>Every one of these problems explores modeling using a
+conservation law, but each problem has a different twist.  Since </EM><I>q</I><EM>,
+the CO</EM><SUB>2</SUB><EM> content, is conserved, the flux is constant across any
+position </EM><I>x</I><EM> when the system is in a steady state
+configuration.<A NAME="tex2html1"
+ HREF="footnode.html#foot12"><SUP>1</SUP></A>
+Thus, for any of these problems, we must correctly determine an
+expression for the flux and extend this information into a full
+solution.  As we discussed in class, we can only hope to find an
+equilibrium if plant absorbs as much CO</EM><SUB>2</SUB><EM> as the astronaut produces.
+We shall call this quantity </EM><I>F</I><SUB>0</SUB><EM>, and we shall use this quantity at
+flux boundary conditions as each end of the domain.</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DL COMPACT>
+<DD><P>
+<DT>1.
+<DD>An astronaut stands at the left end of a long hallway of length <I>L</I>and produces carbon dioxide at a steady rate.  At the other end of a
+hallway, a large houseplant consumes carbon dioxide at the same rate.
+Assuming a ``Fourier law'' diffusion mechanism, develop a
+one-dimensional mathematical
+model for the amount of CO<SUB>2</SUB> as a function of space and time if
+there is a ventilation system that
+circulates air from left to right at a speed <I>U</I>.
+
+<P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: $\resizebox{4in}{!}{\includegraphics{picture3.eps}}$ -->
+<IMG
+ WIDTH="457" HEIGHT="110" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="\resizebox{4in}{!}{\includegraphics{picture3.eps}}"></DIV>
+<P>
+Find a steady state solution.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>This particular problem is just like the example in class except that
+that the CO</EM><SUB>2</SUB><EM> is being blown across the domain.  Thus, one can
+hypothesize that there are two transport terms.  One is diffusive
+transport governed by the usual ``Fickian'' or ``Fourier Law'' term </EM>-<I>k</I>
+<I>q</I><SUB><I>x</I></SUB><EM>.<A NAME="tex2html2"
+ HREF="footnode.html#foot19"><SUP>2</SUP></A>
+The other flux contribution would be due to the ventilation
+system.  One can consider each contribution separately, so to
+understand the affect of the ventilation system, one can set </EM><I>k</I>=0<EM> to remove
+diffusion from the problem.  If the distribution at time </EM><I>t</I>=0<EM> is
+</EM><I>q</I>(<I>x</I>,0)<EM>, the distribution at some later time would be </EM>
+<!-- MATH: $q(x,t) =
+q(x-Ut,0)$ -->
+<I>q</I>(<I>x</I>,<I>t</I>) =
+<I>q</I>(<I>x</I>-<I>Ut</I>,0)<EM>.  In other words, if one wanted to know </EM><I>q</I><EM> at any time,
+one just looks upstream toward the fan.  As usual, we can relate the
+change in </EM><I>q</I><EM> in a control volume with the flux
+as follows:
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: \begin{equation}
+\frac{d}{dt} \int_a^b q(x,t) dx = F(a,t) - F(b,t)
+\end{equation} -->
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="269" HEIGHT="47"
+ SRC="img3.gif"
+ ALT="\begin{displaymath}\frac{d}{dt} \int_a^b q(x,t) dx = F(a,t) - F(b,t)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(1)</TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL"><P></P><EM>where </EM><I>a</I><EM> and </EM><I>b</I><EM> are arbitrary.  Replacing </EM><I>q</I>(<I>x</I>,<I>t</I>)<EM> with </EM><I>q</I>(<I>x</I>-<I>Ut</I>,0)<EM>,
+we see that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{\partial}{\partial t} q(x,t) =
+\frac{\partial}{\partial t} q(x-Ut,0) = 
+-U q_x(x-Ut,0) = 
+-U q_x(x,t).
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="486" HEIGHT="46"
+ SRC="img4.gif"
+ ALT="\begin{displaymath}\frac{\partial}{\partial t} q(x,t) =
+\frac{\partial}{\partial t} q(x-Ut,0) =
+-U q_x(x-Ut,0) =
+-U q_x(x,t).
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Differentiating (1), we find that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="320" HEIGHT="119"
+ SRC="img5.gif"
+ ALT="\begin{eqnarray*}\frac{d}{dt} \int_a^b q(x,t) dx & = & F(a,t) - F(b,t) \\
+-U \i...
+... & F(a,t) - F(b,t) \\
+U q(a,t) - U q(b,t) & = & F(a,t) - F(b,t)
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><EM>which tells us that the contribution to the flux from the ventilation is </EM><I>Uq</I><EM>.
+Thus, we see that the total flux is
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+-k q_x + U q.
+\end{displaymath} -->
+
+
+-<I>k q</I><SUB><I>x</I></SUB> + <I>U q</I>.
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<EM>Thus, the dynamic system would be
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+q_t = (kq_x - Uq)_x.
+\end{displaymath} -->
+
+
+<I>q</I><SUB><I>t</I></SUB> = (<I>kq</I><SUB><I>x</I></SUB> - <I>Uq</I>)<SUB><I>x</I></SUB>.
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+The boundary conditions are
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+-k q_x(a,t) + Uq(a,t) = F_0, \ \ \ \
+-k q_x(b,t) + Uq(b,t) = F_0,
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="457" HEIGHT="33"
+ SRC="img6.gif"
+ ALT="\begin{displaymath}-k q_x(a,t) + Uq(a,t) = F_0, \ \ \ \
+-k q_x(b,t) + Uq(b,t) = F_0,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+and we assume there is some initial distribution </EM>
+<!-- MATH: $q(x,0) = q_0(x)$ -->
+<I>q</I>(<I>x</I>,0) = <I>q</I><SUB>0</SUB>(<I>x</I>)<EM>.
+</EM>
+<P>
+<EM>To find a steady state solution, </EM><I>q</I>(<I>x</I>)<EM>, we set </EM><I>q</I><SUB><I>t</I></SUB> =0<EM> and solve
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(kq_x - Uq)_x = 0.
+\end{displaymath} -->
+
+
+(<I>kq</I><SUB><I>x</I></SUB> - <I>Uq</I>)<SUB><I>x</I></SUB> = 0.
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Integrating once, and then solving the resulting first-order inhomogeneous
+equation, we find that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+q(x) = \frac{F_0}{U} + Ce^{\frac{Ux}{k}}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="153" HEIGHT="46"
+ SRC="img7.gif"
+ ALT="\begin{displaymath}q(x) = \frac{F_0}{U} + Ce^{\frac{Ux}{k}}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Notice that the first constant of integration, </EM><I>F</I><SUB>0</SUB><EM>, is the known flux from
+the boundary conditions.
+The constant </EM><I>C</I><EM> is determined by matching the total </EM><I>q</I>(<I>x</I>)<EM> from the
+steady-state solution:
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\int_0^L q(x)dx = \int_0^L q_0(x)dx = Q_0.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="249" HEIGHT="47"
+ SRC="img8.gif"
+ ALT="\begin{displaymath}\int_0^L q(x)dx = \int_0^L q_0(x)dx = Q_0.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Thus,
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+C = \frac{\left(UQ_0 - F_0L\right)}{k\left(e^{\frac{UL}{k}}-1\right)},
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="154" HEIGHT="60"
+ SRC="img9.gif"
+ ALT="\begin{displaymath}C = \frac{\left(UQ_0 - F_0L\right)}{k\left(e^{\frac{UL}{k}}-1\right)},
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+and
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="302" HEIGHT="136"
+ SRC="img10.gif"
+ ALT="\begin{eqnarray*}q(x) & = & \frac{F_0}{U} +
+\frac{\left(UQ_0 -
+F_0L\right)}{k\l...
+...{2 k \sinh\left(\frac{UL}{2k} \right)} e^{\frac{U(x-L/2)}{k}}\\
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL">
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>2.
+<DD>Consider the same problem as above without the fan but with a
+sloping roof in the hallway.
+
+<P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: $\resizebox{4in}{!}{\includegraphics{picture1.eps}}$ -->
+<IMG
+ WIDTH="456" HEIGHT="166" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.gif"
+ ALT="\resizebox{4in}{!}{\includegraphics{picture1.eps}}"></DIV>
+<P>
+Find a steady state solution.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<P>
+<EM>Here, the flux term is </EM>
+<!-- MATH: $-k h(x) q_x$ -->
+-<I>k h</I>(<I>x</I>) <I>q</I><SUB><I>x</I></SUB><EM> as previously discussed.  Thus,
+we must solve
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(kh(x) q_x )_x = 0
+\end{displaymath} -->
+
+
+(<I>kh</I>(<I>x</I>) <I>q</I><SUB><I>x</I></SUB> )<SUB><I>x</I></SUB> = 0
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+where
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+h(x) = \frac{h_2-h_1}{L} x + h_1.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="180" HEIGHT="46"
+ SRC="img12.gif"
+ ALT="\begin{displaymath}h(x) = \frac{h_2-h_1}{L} x + h_1.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Integrating the conservation equation
+once and then solving the differential equation, one finds that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+q(x) = -\frac{F_0L}{k(h_2-h_1)} \ln \left(
+\frac{h_2-h_1}{L}x+h_1\right)+C.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="366" HEIGHT="54"
+ SRC="img13.gif"
+ ALT="\begin{displaymath}q(x) = -\frac{F_0L}{k(h_2-h_1)} \ln \left(
+\frac{h_2-h_1}{L}x+h_1\right)+C.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Again, </EM><I>F</I><SUB>0</SUB><EM> comes from the known flux at the boundaries and </EM><I>C</I><EM> must
+be determined from the total initial amount, </EM><I>Q</I><SUB>0</SUB><EM>.
+Hacking through the integral of the solution,
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+C  = \frac{1}{L} \left\{Q_0 + F_0 \left(\frac{L}{h_2-h_1}\right)^2
+\left[h_2 \left(\ln h_2 -1\right)- h_1 \left(\ln h_1 -1\right) \right]\right\}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="503" HEIGHT="55"
+ SRC="img14.gif"
+ ALT="\begin{displaymath}C = \frac{1}{L} \left\{Q_0 + F_0 \left(\frac{L}{h_2-h_1}\righ...
+...ln h_2 -1\right)- h_1 \left(\ln h_1 -1\right) \right]\right\}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>3.
+<DD>Consider the same problem, but with a stepped hallway as shown.  You
+may assume that the hallway makes the step at <I>x</I>=<I>L</I>/2.
+
+<P>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: $\resizebox{4in}{!}{\includegraphics{picture2.eps}}$ -->
+<IMG
+ WIDTH="456" HEIGHT="166" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.gif"
+ ALT="\resizebox{4in}{!}{\includegraphics{picture2.eps}}"></DIV>
+<P>
+Find a steady state solution.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<P>
+<EM>It is possible to approach this problem a number of ways including
+using a Heaviside step function or using a thin transition region from
+one hallway height to the other and letting the width of the
+transition go to zero.  However, one of the most direct ways to attack
+this problem is to decompose this problem into two domains, and make
+each solution compatible with suitable boundary conditions at the new
+interior boundary at </EM><I>x</I>=<I>L</I>/2<EM>.
+</EM>
+<P>
+<EM>Each domain is a problem just like the one we solved in class, and
+the solution in each half of the hallway is linear.  If we call the
+solution on the left half, </EM><I>q</I><SUB><I>L</I></SUB>(<I>x</I>)<EM>, and the solution on the right,
+</EM><I>q</I><SUB><I>R</I></SUB>(<I>x</I>)<EM>, we see that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+q_L(x) = -\frac{F_0}{k h_1} x + a \ \ \ \
+q_R(x) = -\frac{F_0}{k h_2} x + b.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="346" HEIGHT="49"
+ SRC="img16.gif"
+ ALT="\begin{displaymath}q_L(x) = -\frac{F_0}{k h_1} x + a \ \ \ \
+q_R(x) = -\frac{F_0}{k h_2} x + b.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+But, </EM><I>a</I><EM> and </EM><I>b</I><EM> are not known from the boundary conditions at either
+end.  However, for </EM><I>q</I><EM> to be continuous at </EM><I>x</I>=<I>L</I>/2<EM>, we see that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{F_0 L}{2 k}\left(\frac{1}{h_2}-\frac{1}{h_1}\right)  = b-a.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="198" HEIGHT="49"
+ SRC="img17.gif"
+ ALT="\begin{displaymath}\frac{F_0 L}{2 k}\left(\frac{1}{h_2}-\frac{1}{h_1}\right) = b-a.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Another constraint on the interior boundary would be that the flux
+would be the same from the left and right, but this adds no new
+information because we have already imposed a constant flux
+condition.  However, the initial data will give us one more equation
+with which we can solve this problem.  Integrating the piecewise
+solution and matching it to </EM><I>Q</I><SUB>0</SUB><EM>, we have
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{F_0 L}{2 k}\left(\frac{1}{h_2}+\frac{1}{h_1}\right)
+\frac{L^2}{4}+(a+b)\frac{L}{2} = Q_0.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="302" HEIGHT="51"
+ SRC="img18.gif"
+ ALT="\begin{displaymath}\frac{F_0 L}{2 k}\left(\frac{1}{h_2}+\frac{1}{h_1}\right)
+\frac{L^2}{4}+(a+b)\frac{L}{2} = Q_0.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Solving the two linear equations, we find the solution to be
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="362" HEIGHT="97"
+ SRC="img19.gif"
+ ALT="\begin{eqnarray*}Q_L(x) & = &
+-\frac{F_0}{k h_1} x + \frac{Q_0}{L} + \frac{3L}{8...
+... - \frac{L}{8}\frac{F_0}{k h_1}+
+\frac{5 L}{8}\frac{F_0}{k h_2}.
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL">
+
+<P>
+</DL>
+<P>
+<EM>To conclude, I would like to end with a few comparisons.  Let's
+standardize the problem so that </EM>
+<!-- MATH: $Q_0 = F_0 = L = k = 1$ -->
+<I>Q</I><SUB>0</SUB> = <I>F</I><SUB>0</SUB> = <I>L</I> = <I>k</I> = 1<EM> and vary the
+other parameters.
+</EM>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="124">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>Figure 1:</STRONG>
+Solutions to problem 1 (red) with <I>U</I>=2, and problems 2 (blue)
+and 3 (green) with <I>h</I><SUB>1</SUB> = 1/2 and <I>h</I><SUB>2</SUB>=3/2.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: $\resizebox{4in}{!}{\includegraphics{soln1.eps}}$ -->
+<IMG
+ WIDTH="460" HEIGHT="323" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.gif"
+ ALT="\resizebox{4in}{!}{\includegraphics{soln1.eps}}"></DIV></TD></TR>
+</TABLE>
+</DIV>
+<BR><EM>Notice the similarities in the solutions for problems 2 and 3.  The
+relatively high ventilation velocity forces the CO</EM><SUB>2</SUB><EM> to pile up at
+the right side.
+</EM>
+<BR>
+<DIV ALIGN="CENTER"><A NAME="128">&#160;</A>
+<TABLE WIDTH="50%">
+<CAPTION><STRONG>Figure 2:</STRONG>
+Solutions to problem 1 (red) with <I>U</I>=1/2, and problems 2 (blue)
+and 3 (green) with <I>h</I><SUB>1</SUB> = 3/2 and <I>h</I><SUB>2</SUB>=1/2.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+<!-- MATH: $\resizebox{4in}{!}{\includegraphics{soln2.eps}}$ -->
+<IMG
+ WIDTH="460" HEIGHT="324" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.gif"
+ ALT="\resizebox{4in}{!}{\includegraphics{soln2.eps}}"></DIV></TD></TR>
+</TABLE>
+</DIV>
+<BR><EM>In this set of solutions, I allowed the slant on the roof to run in
+the other direction. The
+relatively lower ventilation velocity means that diffusion is the
+dominant term in the flux and CO</EM><SUB>0</SUB><EM> will accumulate closer to the astronaut.</EM>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html7"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html5"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html6"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2001-10-22</I>
+</ADDRESS>
+</BODY>
+</HTML>

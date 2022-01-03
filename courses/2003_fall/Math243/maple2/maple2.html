@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="maple2">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="maple2.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<DIV ALIGN="CENTER">
+<B>Maple Problem Set #2
+</B></DIV>
+<P>
+Before doing these problems, create clean new worksheet and put your
+name at the top.  These problems require you to use the <TT>plots</TT> library.  You can load in this library with the command:
+<PRE>
+[&gt; with(plots);
+</PRE>
+<P>
+Here are some problems to try.
+
+<P>
+<DL COMPACT>
+<DT>1.
+<DD>Consider the surface
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+x^2 -y + z^2 = 0.
+\end{displaymath} -->
+
+<I>x</I><SUP>2</SUP> -<I>y</I> + <I>z</I><SUP>2</SUP> = 0.
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Before using Maple, try to anticipate what you expect it to look like.
+Use both <TT>implicitplot3d</TT> and <TT>plot3d</TT> to graph the surface.
+
+<P>
+<DT>2.
+<DD>Plot the sphere
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+x^2 + y^2 + z^2 = 1
+\end{displaymath} -->
+
+
+<I>x</I><SUP>2</SUP> + <I>y</I><SUP>2</SUP> + <I>z</I><SUP>2</SUP> = 1
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+using <TT>plot3d</TT> by patching together two surfaces.  Plot the
+surface using <TT>sphereplot</TT>.
+
+<P>
+<DT>3.
+<DD>Consider the curves
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="287" HEIGHT="61"
+ SRC="img1.gif"
+ ALT="\begin{eqnarray*}{\v r_1} (t) & = & \langle \cos(2t) , \sin(2t) , \cos(3t) \rang...
+..._2} (t) & = & \langle \cos(2t) , \sin(2t) , \cos(\pi t) \rangle.
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL">Plot them for parameter ranges 
+<!-- MATH: $0 \leq t \leq \pi$ -->
+<IMG
+ WIDTH="83" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$0 \leq t \leq \pi$">,
+
+<!-- MATH: $0 \leq t \leq 2
+\pi$ -->
+<IMG
+ WIDTH="92" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$0 \leq t \leq 2
+\pi$">
+and 
+<!-- MATH: $0 \leq t \leq 4 \pi$ -->
+<IMG
+ WIDTH="92" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$0 \leq t \leq 4 \pi$">.
+You may have to set the <TT>numpoints=...</TT> option to get a clean rendering of the curve.  Which curve
+repeats itself and which does not?  Feel free to experiment with the
+parameter ranges until you see what is happening.  
+Explain this mathematically by
+studying the periods of each component of each function.
+
+<P>
+<DT>4.
+<DD>Use Maple to find out how many times the helix,
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\v r} (t) = \langle \cos(t) , \sin(t) , t \rangle,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="188" HEIGHT="33"
+ SRC="img5.gif"
+ ALT="\begin{displaymath}{\v r} (t) = \langle \cos(t) , \sin(t) , t \rangle,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+crosses the plane
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+10x + 10y + z = 1.
+\end{displaymath} -->
+
+
+10<I>x</I> + 10<I>y</I> + <I>z</I> = 1.
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<DT>5.
+<DD>Consider the surface
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\frac{1}{4}x^2 + y^2 + z^2 - 5x -10 y + 16 z + 113 = 0.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="346" HEIGHT="45"
+ SRC="img6.gif"
+ ALT="\begin{displaymath}\frac{1}{4}x^2 + y^2 + z^2 - 5x -10 y + 16 z + 113 = 0.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Use <TT>implicitplot3d</TT> to graph it, but before doing so, anticipate
+what it will be and where it will be located so that you can correctly
+choose the domain.  Describe the surface quantitatively (ie ``A sphere 
+centered at ... with radius ...'').
+
+<P>
+</DL>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2002-02-27</I>
+</ADDRESS>
+</BODY>
+</HTML>

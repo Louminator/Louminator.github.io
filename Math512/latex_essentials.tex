@@ -1,0 +1,164 @@
+\documentclass[12pt]{article}
+
+% Anything after the % is a comment and is ignored.
+
+% The odd side margin is 1 inch less than the margin on odd numbered
+% pages.  This is sufficient for articles, but for books, one often
+% sets the odd and even side margins separately.
+ 
+\oddsidemargin0in
+\textwidth6.5in
+
+\textheight9in
+
+\usepackage{amsmath,graphicx}
+
+\title{\LaTeX \ essentials}
+\author{L. F. Rossi}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\label{sec.intro}
+
+\LaTeX \ is a mark-up language for writing mathematics.  Your
+priorities should be
+\begin{enumerate}
+
+\item Write about your research.\footnote{This really has nothing to
+    do with \LaTeX.  You should always be writing because it helps you
+    think.}
+
+\item Write your mathematical ideas clearly.  Use your writing to pose
+  questions and find pathways to solutions.
+
+\item Continually read and revise your work to make it clearer.
+
+\end{enumerate}
+
+\section{Getting going in \LaTeX}
+
+\LaTeX \ (and \TeX \ from which is came) is
+old but very robust.  It's behavior may seem odd at times to users who
+are used to modern computers and modern operating systems.  \LaTeX \ was
+designed to be useful on machines that are
+considerably less capable than what is now available.
+
+\LaTeX \ is free, but there also some commercial packages that provide
+nice front-ends for LaTeX.  If you are a linux user, your distribution
+probably already includes \LaTeX \ and you are ready to go.  If you are
+a Mac user, there is a package called TeXShop that is freely available
+to you.  If you are windows user, there are two packages, one called
+MikTeX and another called TeXLive, that are available to you.
+
+After you install \LaTeX \ on your computer, you have to find a way to
+do things with it.  You will need a plain text editor to create and
+edit your tex files.  (I recommend emacs because it is free, powerful
+and has very nice features for handling \LaTeX \ files.)  Let's say
+your file is called {\tt myfile.tex}.  Typically, this means typing
+{\tt latex myfile} from a command line while in the subdirectory
+containing your file.  You do not need to include the ``.tex''
+extension.  (For instance, on Windows machines, you will need to run
+Accessories $>$ Command Prompt, and then ``cd'' to the right
+directory.)
+
+If all goes well, you will have created a number of files with
+different suffixes like {\tt myfile.aux}, {\tt myfile.log} and {\tt
+  myfile.dvi}.  The latter one is very important because {\em dvi}
+stands for {\em d}e{\em v}ice {\em i}ndependent.  This file can be
+interpreted for any number of devices such as a screen previewer, an
+inkjet printer, a laser printer or a jumbo poster printer.  The
+important thing is that characters and fonts will look beautiful no
+matter what you do with it.  However, you need some tools for viewing
+your dvi file, and the good news is that all distributions come with
+dvi viewers and assorted tools.  You just have to probe around a bit.
+
+If all does not go well and \LaTeX \ encounters an error.  It will
+give you the line number where it encountered problems which is a good
+clue for where the error is, and ask you what you want to do.  There
+are two useful responses.  The first is ``x'' which is to exit and do
+nothing more.  It will not generate any ``dvi'' files for you.  The
+second is ``q'' which tells \LaTeX \ to produce a ``dvi'' as far as it
+can until it encounters the error.
+
+When it comes time to print your work, your package will come
+with some tools for printer dvi files.  A nice way to share documents
+is to create files in Adobe's portable document format (pdf).  There
+are a number of ways to do this, but the most direct is to use the
+command {\tt pdflatex myfile}.
+
+\section{Writing mathematics}
+
+Writing in \LaTeX \ is easy as you can see in Section \ref{sec.intro}.
+Writing mathematics is a little more complicated.  One way to write
+mathematics is to embed your math in your text as in $f(x) =
+\sqrt{1+x+x^2} \neq \sqrt{1} + \sqrt{x} + \sqrt{x^2}$, 
+or $\sum_{n=1}^\infty \frac{1}{n^2} =
+\frac{\pi^2}{6}$.  Be careful about things like sine and cosine which
+really should be set as function: $\sin(x) \neq sin(x)$.  Notice also
+that the summation $\sum_{n=1}^\infty$ is different from the capital
+Greek symbol $\Sigma_{n=1}^\infty$.  Often, equations should be set by
+themselves either numbered
+\begin{equation}
+f(x) = \int_0^x g(t) dt,
+\label{my_equation}
+\end{equation}
+or without a number
+\[
+f'(x) = g(x) dt.
+\]
+(Always, punctuate your equations.)
+Referring to equation numbers should be something handled by \LaTeX.
+Notice that $\int$ and $\sum$ are special symbols because the
+subscripts and superscripts and set in special locations (see
+Equation \ref{my_equation}).  Consider this:
+\begin{equation}
+\sum_{n=1}^\infty \frac{1}{n^2} =
+\frac{\pi^2}{6}.
+\end{equation}
+Notice the difference between the subscripts and superscripts when the
+equation is set by itself and when it is embedded in the text.
+
+\section{Learn it just-in-time}
+
+It is pointless to read a book and learn \LaTeX.  Rather, you should
+sit down and start writing. Use the books, the web, your peers and
+your advisors as references when you get stuck.  \LaTeX\ can do almost
+everything, and it does many things well.  
+It is a free, portable standard
+and the tool of choice for almost all mathematical journals and the
+vast majority of technical journals.
+
+\section{Important things that are not here}
+
+Of course, there are many things are that are not in this document.
+\begin{itemize}
+
+\item Figures, tables and floats.
+
+\item Bibliographical citations.  \LaTeX\ has a nice way of storing
+  and using bibliographical databases called bib\TeX.
+
+\item Equations covering more than one line.  Systems of equations
+  grouped together.  Underbraces.  Overbraces.  Conditional
+  statements.
+
+\item Special environments like subsections, appendices, theorems and
+  definitions.
+
+\end{itemize}
+
+\section{A final word}
+
+\LaTeX\ makes everything look brilliant, even if it is total crud.  You
+should not try to demonstrate your prowess by using every \LaTeX\ 
+feature that you know.   Rather, you should be thoughtful about how
+you write and then use \LaTeX \ to produce your writing.  In other
+words, let
+your ideas guide the tool, not the other way around.
+
+
+\end{document}

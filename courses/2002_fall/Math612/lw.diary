@@ -1,0 +1,27 @@
+T1 = 0:0.01:2;
+x1 = 0:0.04:0.96;
+T2 = 0:0.005:2;
+x2 = 0:0.02:0.98;
+T3 = 0:0.0025:2;
+x3 = 0:0.01:0.99;
+
+u01 = zeros(1,length(x1));
+u01(floor(length(x1)/4):floor(length(x1)/2)-1) = 1;
+u02 = zeros(1,length(x2));
+u02(floor(length(x2)/4):floor(length(x2)/2)-1) = 1;
+u03 = zeros(1,length(x3));
+u03(floor(length(x3)/4):floor(length(x3)/2)-1) = 1;
+u1lw = laxwendroff(x1,T1,1,u01);
+u2lw = laxwendroff(x2,T2,1,u02);
+u3lw = laxwendroff(x3,T3,1,u03);
+u1up = upwind(x1,T1,1,u01);
+u2up = upwind(x2,T2,1,u02);
+u3up = upwind(x3,T3,1,u03);
+
+figure;
+subplot(2,2,1);
+plot(x1,u01,x1,u1lw(end,:),x1,u1up(end,:));
+subplot(2,2,2);
+plot(x2,u02,x2,u2lw(end,:),x2,u2up(end,:));
+subplot(2,2,3);
+plot(x3,u03,x3,u3lw(end,:),x3,u3up(end,:));

@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Build options</TITLE>
+<META NAME="description" CONTENT="Build options">
+<META NAME="keywords" CONTENT="documentation">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="documentation.css">
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="node7.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html111"
+ HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html109"
+ HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html105"
+ HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html112"
+ HREF="node10.html">Using BlobFlow</A>
+<B> Up:</B> <A NAME="tex2html110"
+ HREF="node7.html">Building BlobFlow</A>
+<B> Previous:</B> <A NAME="tex2html106"
+ HREF="node8.html">For the impatient</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00320000000000000000">
+Build options</A>
+</H1>
+
+<P>
+BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+is written entirely in ANSI C.  While it was developed on Unix
+platforms, there are no machine specific functions in the code.  The code is
+distributed with a vanilla Makefile for the Unix <EM>make</EM> utility.
+
+<P>
+BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+uses conditional compilation so that users can customize the
+executable for special situations.  For instance, a user may wish to impose
+symmetries on the problem and reduce the number of computational elements
+accordingly.
+Several conditional features are available.
+<DL COMPACT>
+<DD><P>
+<DT>1.
+<DD>Antisymmetry about the x-axis (-DXANTISYMM): Since I am interested in
+vortex dipole collisions where there is an implicit symmetry about the
+x-axis, I am built this into the code using this compiler switch.  When
+using this feature, the code only requires half of the usual amount of
+information, and there is a savings of a factor of two in CPU time for a
+calculation.
+
+<P>
+<DT>2.
+<DD>Use the Message Passing Interface (MPI) to parallelize across multiple
+processors (-DMULTIPROC): Many aspects of the algorithm are parallelizable, and
+this feature spreads the work among many processors.  To use this
+capability, you must install LAM/MPI (available at <TT>http://www.mpi.nd.edu/lam</TT>) properly on the machines that you wish to use.
+You should also familiarize yourself running programs with MPI calls.  It's
+easy to learn and worth the time.  BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+uses two algorithms under MPI.
+If only two processors are available, it uses a peer based scheme to evenly
+spread the work between the two processors.  If there are more than two
+CPU's available, BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+uses a master-slave algorithm with a receive and
+dispatch scheme to balance the work amongst all available processors.  This
+means that one process is a dedicated that merely oversees activities
+without doing any number crunching.  In principle, a two processor peer-based
+system will run about as fast, and perhaps a little faster, than a three
+processor master-slave system.  However, if one has <I>N</I>+1 processors, the
+total computation time should scale like 1/<I>N</I> for small groups of processors.
+
+<P>
+<DT>3.
+<DD>Cache resorting (-DCACHERESORT): Though CPU speeds have increased
+substantially in recent years, front side bus and memory speeds have not
+kept pace.  In fact, most of the memory is orders of
+magnitude slower than the CPU.  A small reserve, called cache, is fast
+memory.  When instructions and data for calculations are resident in this
+cache, codes will run substantially faster.  Computer architects and
+compiler authors are pretty crafty and optimizing the use of cache, but
+there are also ways to write code to take advantage of cache.  I have
+attempted to do this in BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+but have found that cache awareness has
+little or no impact on the platforms I have used.  However, since cache
+structure is machine dependent, I have left the feature in place.
+
+<P>
+<DT>4.
+<DD>Merging diagnostics (-DMERGEDIAG): Sometimes users wish to collect
+information about when and how many blobs are merged.  With this flag set,
+BlobFlow<IMG
+ WIDTH="28" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.gif"
+ ALT="$^{\rm TM}$">
+will dump merge information to the diagnostic log.  Every merging
+event will be listed as an integer indicating how many elements were
+clustered into a single merging event.
+
+<P>
+<DT>5.
+<DD>Direct summation (-DNOFASTMP):  To accelerate computations, the
+program uses fast multipole summation for the velocity and velocity
+derivative calculations.  While this is accepted practice, it can induce
+small but quantifiable errors.  This can be disabled with the NOFASTMP flag.
+
+<P>
+</DL>
+<P>
+To use these options either together or separately, under the GNU make
+utility, you just set the switches on the command line. For instance,
+<PRE>
+make mpi=on xantisymm=on
+</PRE>will build an executable with both options.
+
+<P>
+If you do not have the GNU make utility on your system, you must edit the
+vanilla Makefile.  It is easy to do.  Just follow the instructions and
+comment/uncomment the appropriate sections of flags.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html111"
+ HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<A NAME="tex2html109"
+ HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif.gif"></A> 
+<A NAME="tex2html105"
+ HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif.gif"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html112"
+ HREF="node10.html">Using BlobFlow</A>
+<B> Up:</B> <A NAME="tex2html110"
+ HREF="node7.html">Building BlobFlow</A>
+<B> Previous:</B> <A NAME="tex2html106"
+ HREF="node8.html">For the impatient</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2001-08-01</I>
+</ADDRESS>
+</BODY>
+</HTML>

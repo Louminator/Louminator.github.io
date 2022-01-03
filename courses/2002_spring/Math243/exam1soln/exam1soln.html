@@ -1,0 +1,506 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="exam1soln">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="exam1soln.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+Name: Math 243: Calculus C
+<BR>
+ <B>Exam 1 solution guide</B> <BR>
+28 February 2002 <BR>
+
+<P>
+<BR>
+<BR>
+<BR>
+
+<P>
+<EM>Yes, mathematics has two faces; it is the rigorous science of
+Euclid but it is also something else.  Mathematics presented in the
+Euclidean way appears as a systematic, deductive science; but
+mathematics in the making appears as an experimental, inductive
+science.</EM> <BR>
+- from ``How to Solve It'' by G. Polya
+
+<P>
+<BR>
+<BR>
+<BR>
+
+<P>
+Instructions: <B>Show all work to receive full or partial credit.</B>
+You may use a scientific calculator on this exam.
+All University rules and guidelines for
+student conduct are applicable.
+
+<P>
+<DL COMPACT>
+<DD><P>
+<DT>1.
+<DD>[20 pts] 
+Find the equation of the plane passing through the points (-1,1,2),
+(2,1,3) and (0,3,-1).
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>We must find a normal vector to the plane and a point in the
+plane.  Since we already have three points in the plane, the only work
+we have to do is to find a normal vector.  Subtracting the second
+point from the first, and the third from the first, we obtain two
+vectors lying along the plane: </EM>
+<!-- MATH: $\langle-3,0,1\rangle$ -->
+<IMG
+ WIDTH="79" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$\langle-3,0,1\rangle$"><EM> and 
+</EM>
+<!-- MATH: $\langle-1,-2,3\rangle$ -->
+<IMG
+ WIDTH="94" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.gif"
+ ALT="$\langle-1,-2,3\rangle$"><EM>.  To find a normal vector, we need a vector
+that is perpendicular to both of these vectors.  Thus,
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\v n = \langle-3,0,1\rangle \times \langle-1,-2,3\rangle =
+\langle-2,10,6\rangle 
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="331" HEIGHT="43"
+ SRC="img3.gif"
+ ALT="\begin{displaymath}\v n = \langle-3,0,1\rangle \times \langle-1,-2,3\rangle =
+\langle-2,10,6\rangle
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Now that we have a normal, we can choose any point on the plane to
+find its equation:
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+-2 (x+1) + 10 (y-1) + 6(z-2) = 0,
+\end{displaymath} -->
+
+
+-2 (<I>x</I>+1) + 10 (<I>y</I>-1) + 6(<I>z</I>-2) = 0,
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+or if you want to simplify it,
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+-2x+10y+6z = 24.
+\end{displaymath} -->
+
+
+-2<I>x</I>+10<I>y</I>+6<I>z</I> = 24.
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>2.
+<DD>[15 pts] 
+For what values of parameter <I>s</I> are the vectors 
+
+<!-- MATH: $\langle 1,1,-1 \rangle$ -->
+<IMG
+ WIDTH="79" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\langle 1,1,-1 \rangle$">
+and 
+<!-- MATH: $\langle 2, s^2, 3 \rangle$ -->
+<IMG
+ WIDTH="72" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\langle 2, s^2, 3 \rangle$">
+orthogonal?
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>Two vectors are orthogonal if and only if their dot product is zero.
+So,
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\langle 1,1,-1 \rangle \cdot
+\langle 2,s^2,3 \rangle = s^2 -1.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="231" HEIGHT="43"
+ SRC="img6.gif"
+ ALT="\begin{displaymath}\langle 1,1,-1 \rangle \cdot
+\langle 2,s^2,3 \rangle = s^2 -1.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Therefore, we see that the two vectors are orthogonal when </EM><I>s</I>=1<EM> or
+when </EM><I>s</I>=-1<EM>.
+</EM>
+
+<P>
+
+<P>
+<DT>3.
+<DD>[20 pts] 
+Find the equation of the line tangent to the spacecurve
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\v r}(t) = \langle e^{\cos t}, t^2 -t, \sin t \rangle
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="198" HEIGHT="43"
+ SRC="img7.gif"
+ ALT="\begin{displaymath}{\v r}(t) = \langle e^{\cos t}, t^2 -t, \sin t \rangle
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+at <IMG
+ WIDTH="48" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.gif"
+ ALT="$t = \pi$">.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>To find the equation of a line, we need a point on the line and a
+direction vector.  To find the point on the line, we will use
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\v r}(\pi) =\langle e^{-1},\pi^2-\pi,0 \rangle.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="185" HEIGHT="43"
+ SRC="img9.gif"
+ ALT="\begin{displaymath}{\v r}(\pi) =\langle e^{-1},\pi^2-\pi,0 \rangle.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+To find a direction vector, we must differentiate once
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\v r}'(t) =\langle -\sin t e^{\cos t},2t -1,\cos t  \rangle,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="265" HEIGHT="43"
+ SRC="img10.gif"
+ ALT="\begin{displaymath}{\v r}'(t) =\langle -\sin t e^{\cos t},2t -1,\cos t \rangle,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+and evaluate it at </EM><IMG
+ WIDTH="48" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.gif"
+ ALT="$t = \pi$"><EM>,
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+{\v r}'(\pi) =\langle 0,2\pi -1,-1  \rangle.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="187" HEIGHT="43"
+ SRC="img11.gif"
+ ALT="\begin{displaymath}{\v r}'(\pi) =\langle 0,2\pi -1,-1 \rangle.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Putting all this together, the equation for the tangent line is
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="343" HEIGHT="61"
+ SRC="img12.gif"
+ ALT="\begin{eqnarray*}{\v l}(t) & = & \langle e^{-1},\pi^2-\pi,0 \rangle + \langle 0,...
+...le t \\
+& = & \langle e^{-1},\pi^2-\pi + (2\pi-1) t,-t \rangle.
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL">
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>4.
+<DD>[15 pts] 
+Sketch the surface
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+x^2 - 8x + y^2 + 4y + z^2 + 16z + 80 = 0.
+\end{displaymath} -->
+
+
+<I>x</I><SUP>2</SUP> - 8<I>x</I> + <I>y</I><SUP>2</SUP> + 4<I>y</I> + <I>z</I><SUP>2</SUP> + 16<I>z</I> + 80 = 0.
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Be sure to label your axes.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>Seeing the quadratic equation, we can put this expression into a
+recognizable form by completing the square:
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(x-4)^2 + (y+2)^2 + (z+8)^2 = 4.
+\end{displaymath} -->
+
+
+(<I>x</I>-4)<SUP>2</SUP> + (<I>y</I>+2)<SUP>2</SUP> + (<I>z</I>+8)<SUP>2</SUP> = 4.
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Thus, we see that it is a sphere of radius 2, centered at the point
+</EM>(4,-2,-8)<EM>.  To make the sketch, I used a figure drawing package so
+that I could provide the class with an online solution guide.
+Honestly, a hand sketch would have been quicker, easier and probably
+would have looked better.
+</EM>
+<DIV ALIGN="CENTER">
+<!-- MATH: $\resizebox{2in}{!}{\includegraphics{prob4soln.eps}}$ -->
+<IMG
+ WIDTH="229" HEIGHT="245" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.gif"
+ ALT="\resizebox{2in}{!}{\includegraphics{prob4soln.eps}}"></DIV>
+
+<P>
+
+<P>
+<DT>5.
+<DD>[15 pts] 
+Sketch the surface
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+x^2 + y^2 - 4 z^2 = 0, \ \ \ \ z \geq 0.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="223" HEIGHT="42"
+ SRC="img14.gif"
+ ALT="\begin{displaymath}x^2 + y^2 - 4 z^2 = 0, \ \ \ \ z \geq 0.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Be sure to label your axes.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>This is the top half of a cone, scaled as shown.
+(Again, I used a figure drawing package.)
+</EM>
+<DIV ALIGN="CENTER">
+<!-- MATH: $\resizebox{2in}{!}{\includegraphics{prob5soln.eps}}$ -->
+<IMG
+ WIDTH="228" HEIGHT="155" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.gif"
+ ALT="\resizebox{2in}{!}{\includegraphics{prob5soln.eps}}"></DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>6.
+<DD>[15 pts] 
+Express the surface
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+x^2 + y^2 - 4 z^2 = 0, \ \ \ \ z \geq 0,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="223" HEIGHT="42"
+ SRC="img16.gif"
+ ALT="\begin{displaymath}x^2 + y^2 - 4 z^2 = 0, \ \ \ \ z \geq 0,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+from the previous problem in cylindrical coordinates AND in spherical
+coordinates.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>For cylindrical coordinates, we can substitute </EM><I>r</I><SUP>2</SUP><EM> for </EM><I>x</I><SUP>2</SUP> + <I>y</I><SUP>2</SUP><EM>to obtain the simple relation </EM>
+<!-- MATH: $r^2 = 4z^2$ -->
+<I>r</I><SUP>2</SUP> = 4<I>z</I><SUP>2</SUP><EM>.  Since we know that </EM><I>z</I><EM>must be positive, we can take the square root of both sides to get </EM><I>r</I>
+= 2<I>z</I><EM>, and we know that </EM><IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\theta$"><EM> has no restrictions because the
+surface is symmetric about the </EM><I>z</I><EM> axis.
+</EM>
+<P>
+<EM>For spherical coordinates, we can see by inspection that </EM><IMG
+ WIDTH="14" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.gif"
+ ALT="$\rho$"><EM> and
+</EM><IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\theta$"><EM> are unrestricted.  The cone is generated by fixing an angle
+</EM><IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\phi$"><EM> and then allowing </EM><IMG
+ WIDTH="14" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.gif"
+ ALT="$\rho$"><EM> and </EM><IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\theta$"><EM> to vary over their full
+range.  To find the angle, </EM><IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\phi$"><EM>, we can apply some trigonometry.
+For instance, we know that in the </EM><I>yz</I><EM>-plane, the edge of the cone
+passes through the point </EM>(0,2,1)<EM>.  Thus, 
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\phi = \arctan(2)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="109" HEIGHT="43"
+ SRC="img20.gif"
+ ALT="\begin{displaymath}\phi = \arctan(2)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+is the equation for the surface in spherical coordinates.
+</EM>
+<P>
+
+<P>
+</DL>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2002-03-04</I>
+</ADDRESS>
+</BODY>
+</HTML>

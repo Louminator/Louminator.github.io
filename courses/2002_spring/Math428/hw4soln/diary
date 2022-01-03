@@ -1,0 +1,23 @@
+t1 = 0:pi/20:8*pi;
+t2 = 0:pi/40:8*pi;
+[t1 y_fe_1] = fce(t1,[1;0]);
+[t2 y_fe_2] = fce(t2,[1;0]);
+[t1 y_be_1] = bce(t1,[1;0]);
+[t2 y_be_2] = bce(t2,[1;0]);
+[t1 y_ab3_1] = ab3(t1,[1;0]);
+[t2 y_ab3_2] = ab3(t2,[1;0]);
+[t1 y_abm3_1] = abm3(t1,[1;0]);
+[t2 y_abm3_2] = abm3(t2,[1;0]);
+plot(y_fe_1(1,:),y_fe_1(2,:),'r',y_fe_2(1,:),y_fe_2(2,:),'b');
+title('Forward Euler');
+legend('h=\pi/20','h=\pi/40');
+plot(y_be_1(1,:),y_be_1(2,:),'r',y_be_2(1,:),y_be_2(2,:),'b');
+title('Backward Euler');
+legend('h=\pi/20','h=\pi/40');
+plot(y_ab3_1(1,:),y_ab3_1(2,:),'r',y_ab3_2(1,:),y_ab3_2(2,:),'b');
+title('Adams-Bashforth 3^{rd} order');
+legend('h=\pi/20','h=\pi/40');
+plot(y_abm3_1(1,:),y_abm3_1(2,:),'r',y_abm3_2(1,:),y_abm3_2(2,:),'b');
+title('Adams-Bashforth-Moulton 3^{rd} order');
+legend('h=\pi/20','h=\pi/40');
+diary off

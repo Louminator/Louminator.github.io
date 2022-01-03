@@ -1,0 +1,9 @@
+th = 0:pi/150:2*pi;
+za = hl1a(exp(i*th));
+zb = hl1b(exp(i*th));
+zb = hl1b(exp(i*th));
+z = hl2(exp(i*th));
+plot(real(za),imag(za),'b',real(zb),imag(zb),'r',real(z),imag(z),'g');
+title('Stability regions - AB3 - ABM3');
+legend('ABM3 - neg root','ABM3 - pos root','AB3');
+diary off

@@ -1,0 +1,790 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="exam1soln">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="exam1soln.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+Name: Math 428
+<BR>
+ <B>Exam 1</B> <BR>
+5 March 2002 <BR>
+
+<P>
+<BR>
+<BR>
+<BR>
+
+<P>
+<EM>Yes, mathematics has two faces; it is the rigorous science of
+Euclid but it is also something else.  Mathematics presented in the
+Euclidean way appears as a systematic, deductive science; but
+mathematics in the making appears as an experimental, inductive
+science.</EM> <BR>
+- from ``How to Solve It'' by G. Polya
+
+<P>
+<BR>
+<BR>
+<BR>
+
+<P>
+Instructions: <B>Show all work to receive full or partial credit.</B>
+You may use a scientific calculator on this exam.
+All University rules and guidelines for
+student conduct are applicable.
+
+<P>
+<DL COMPACT>
+<DD><P>
+<DT>1.
+<DD>[15 pts]
+Circle the integrals for which you would expect the midpoint
+quadrature to converge to the exact integral as one increases the
+number of panels.
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\int_0^{\pi^2} \frac{t^3-3e^t}{5-\cos(\sqrt{t})} dt, \ \ \ \ \
+\int_0^{\pi^2} \frac{t^3-3e^t}{5-\cos(t)} dt, \ \ \ \ \ 
+\int_0^{\pi^2} \frac{t^3-3e^t}{1-\cos(\sqrt{t})} dt, \ \ \ \ \ 
+\int_0^{\pi^2} \frac{t^3-3e^t}{1-\sin(t)} dt.
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="669" HEIGHT="58"
+ SRC="img1.gif"
+ ALT="\begin{displaymath}\int_0^{\pi^2} \frac{t^3-3e^t}{5-\cos(\sqrt{t})} dt, \ \ \ \ ...
+...} dt, \ \ \ \ \
+\int_0^{\pi^2} \frac{t^3-3e^t}{1-\sin(t)} dt.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Explain your reasoning.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>All of our convergence analysis of quadratures so far has been based
+on the assumptions that one can expand the functions in a Taylor
+series.  To do so, the functions must be continuous and have the right
+number of derivatives.  In the case of the midpoint rule, we need
+three derivatives.  By inspection, 
+the first two functions, have no problems with
+asymptotes and plenty of derivatives, so we would expect the midpoint
+rule to converge.  The latter two functions have
+asymptotes so they are not even continuous on the domain of
+integration, and we would not expect the midpoint rule to converge to
+the integral, assuming that the integral converges.
+</EM>
+
+<P>
+
+<P>
+<DT>2.
+<DD>[15 pts]
+A student estimates the solution to a differential equation from an
+initial time <I>t</I>=0 out to a final time <IMG
+ WIDTH="57" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="$t=4\pi$">.
+She acquires the following results for three runs.
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">h</TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="50" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.gif"
+ ALT="$y(4\pi)$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT">
+<!-- MATH: $\frac{\pi}{16}$ -->
+<IMG
+ WIDTH="22" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.gif"
+ ALT="$\frac{\pi}{16}$"></TD>
+<TD ALIGN="LEFT">1.07455259139819</TD>
+</TR>
+<TR><TD ALIGN="LEFT">
+<!-- MATH: $\frac{\pi}{32}$ -->
+<IMG
+ WIDTH="22" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.gif"
+ ALT="$\frac{\pi}{32}$"></TD>
+<TD ALIGN="LEFT">1.04051345264161</TD>
+</TR>
+<TR><TD ALIGN="LEFT">
+<!-- MATH: $\frac{\pi}{64}$ -->
+<IMG
+ WIDTH="22" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.gif"
+ ALT="$\frac{\pi}{64}$"></TD>
+<TD ALIGN="LEFT">1.02121990730698</TD>
+</TR>
+</TABLE></DIV>
+A) Use
+Richardson extrapolation once to improve the best run.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>No problem.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+2(1.02121990730698)-1.04051345264161 = 1.001926362
+\end{displaymath} -->
+
+
+2(1.02121990730698)-1.04051345264161 = 1.001926362
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+B) 
+She needs four digits of accuracy.  What step size should she use?
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>To make the relative error smaller than </EM>10<SUP>-3</SUP><EM>, so that the first
+four digits are credible, we expect
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+|I_h-I_{h/2}| = D h + O(h^2).
+\end{displaymath} -->
+
+
+|<I>I</I><SUB><I>h</I></SUB>-<I>I</I><SUB><I>h</I>/2</SUB>| = <I>D h</I> + <I>O</I>(<I>h</I><SUP>2</SUP>).
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+We can measure these quantities.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="240" HEIGHT="64"
+ SRC="img7.gif"
+ ALT="\begin{eqnarray*}\vert I_{\frac{\pi}{16}}-I_{\frac{\pi}{32}}\vert & = & 0.034039...
+...t I_{\frac{\pi}{32}}-I_{\frac{\pi}{64}}\vert & = & 0.0192935453.
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><EM>Using these measurements, we find that </EM><I>D</I><EM> is about </EM>0.1734<EM> or
+</EM>0.1965<EM> depending upon which measurement you use.  Taking the larger
+as the more conservative estimate, we need
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+0.1965 h < 10^-3.
+\end{displaymath} -->
+
+
+0.1965 <I>h</I> &lt; 10<SUP>-</SUP>3.
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+So, we need </EM><I>h</I>&lt;0.005<EM>.  If you like </EM><IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.gif"
+ ALT="$\pi$"><EM> divided by powers of </EM>2<EM>,
+</EM>
+<!-- MATH: $\frac{\pi}{1024}$ -->
+<IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.gif"
+ ALT="$\frac{\pi}{1024}$"><EM> will do it.
+</EM>
+
+<P>
+
+<P>
+<DT>3.
+<DD>[20 pts]
+Find a quadrature to estimate 
+<!-- MATH: $\int_0^1 f(x) dx$ -->
+<IMG
+ WIDTH="85" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$\int_0^1 f(x) dx$">
+knowing <I>f</I>(0),
+
+<!-- MATH: $f'\left(\frac{1}{4}\right)$ -->
+<IMG
+ WIDTH="52" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$f'\left(\frac{1}{4}\right)$">
+and <I>f</I>(1).  In other words, determine
+nonzero constants
+<I>A</I><SUB>1</SUB>, <I>A</I><SUB>2</SUB> and <I>A</I><SUB>3</SUB> where
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\int_0^1 f(x) dx \approx A_1 f(0) + A_2 f'\left(\frac{1}{4}\right)+
+A_3 f(1). \ \
+\footnote{While it is not relevant to this exam, 
+if you were using this over a general panel, it would have
+the form
+\begin{displaymath}
+\int_{x_i}^{x_{i+1}} f(x) dx \approx h \left[A_1 f(x_i) + 
+h A_2 f'\left(x_{i+\frac{1}{4}}\right)+
+A_3 f(x_{i+1})\right].
+\end{displaymath}
+}
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="375" HEIGHT="64"
+ SRC="img12.gif"
+ ALT="\begin{displaymath}\int_0^1 f(x) dx \approx A_1 f(0) + A_2 f'\left(\frac{1}{4}\r...
+...\frac{1}{4}}\right)+
+A_3 f(x_{i+1})\right].
+\end{displaymath}}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+What is the order of accuracy for this quadrature?  
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>This is taken from your homework (Set #1, question 5).  We expect the
+quadrature to have third order accuracy because it involves three
+pieces of information about the function.  We found in the homework
+and subsequent discussions in class that the method is a third order
+method if </EM><IMG
+ WIDTH="67" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$\xi = 1/2$"><EM>, but this is not the case in this exam question.
+</EM>
+<P>
+<EM>Many students made the mistake of trying to use divided differences or
+Lagrange polynomials for this problem.  Remember, that these are
+interpolation techniques, but this problem involves mixed data about
+</EM><I>f</I><EM> and </EM><I>f</I>'<EM> so these methods are not applicable.  You must proceed
+with undetermined coefficients:  Try
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+p(x) = c_0 + c_1 x + c_2 x^2.
+\end{displaymath} -->
+
+
+<I>p</I>(<I>x</I>) = <I>c</I><SUB>0</SUB> + <I>c</I><SUB>1</SUB> <I>x</I> + <I>c</I><SUB>2</SUB> <I>x</I><SUP>2</SUP>.
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<EM>If you fit the polynomial through the given data, you find by solving
+the resulting linear system that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="273" HEIGHT="137"
+ SRC="img14.gif"
+ ALT="\begin{eqnarray*}c_0 & = & f(0), \\
+c_1 & = & f(0)-f(1) + 2 f'\left(\frac{1}{4}...
+...), \\
+c_2 & = & 2 f(1) - 2 f(0) - 2 f'\left(\frac{1}{4}\right).
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><EM>Now, if we plug this into
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\int_0^1 p(x) dx = A_1 f(0) + A_2 f'\left(\frac{1}{4}\right) + A_3 f(1),
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="354" HEIGHT="64"
+ SRC="img15.gif"
+ ALT="\begin{displaymath}\int_0^1 p(x) dx = A_1 f(0) + A_2 f'\left(\frac{1}{4}\right) + A_3 f(1),
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+we find that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="84" HEIGHT="135"
+ SRC="img16.gif"
+ ALT="\begin{eqnarray*}A_1 & = & \frac{5}{6}, \\
+A_2 & = & \frac{1}{3}, \\
+A_3 & = & \frac{1}{6}.
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL">
+<P>
+<EM>Thus, we find that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\int_0^1 f(x) dx =
+\frac{5}{6} f(0) + \frac{1}{3} f'\left(\frac{1}{4}\right)+
+\frac{1}{6} f(1) + O(h^3).
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="401" HEIGHT="64"
+ SRC="img17.gif"
+ ALT="\begin{displaymath}\int_0^1 f(x) dx =
+\frac{5}{6} f(0) + \frac{1}{3} f'\left(\frac{1}{4}\right)+
+\frac{1}{6} f(1) + O(h^3).\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P>
+<DT>4.
+<DD>[15 pts]
+Consider the differential equation
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+y' = f(y,t), \ \ \ \ y(0) = y_0.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="203" HEIGHT="43"
+ SRC="img18.gif"
+ ALT="\begin{displaymath}y' = f(y,t), \ \ \ \ y(0) = y_0.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Suppose computing <I>f</I>(<I>y</I>,<I>t</I>) is expensive, so
+one chooses to modify Euler's Method
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u_{k+1} = u_k + h f(u_k,t_k), \ \ \ \ u_0 = y_0.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="279" HEIGHT="43"
+ SRC="img19.gif"
+ ALT="\begin{displaymath}u_{k+1} = u_k + h f(u_k,t_k), \ \ \ \ u_0 = y_0.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Instead, one chooses to approximate 
+<!-- MATH: $f(u_k,t_k)$ -->
+<I>f</I>(<I>u</I><SUB><I>k</I></SUB>,<I>t</I><SUB><I>k</I></SUB>) with the finite
+difference quotient,
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+y'(t_k) = f(u_k,t_k) \approx \frac{u_k - u_{k-1}}{h}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="243" HEIGHT="54"
+ SRC="img20.gif"
+ ALT="\begin{displaymath}y'(t_k) = f(u_k,t_k) \approx \frac{u_k - u_{k-1}}{h}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+from the previous timestep to create the new method:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u_{k+1} = u_k + h \left( \frac{u_k - u_{k-1}}{h}\right), \ \ \ \ u_0 = y_0.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="328" HEIGHT="63"
+ SRC="img21.gif"
+ ALT="\begin{displaymath}u_{k+1} = u_k + h \left( \frac{u_k - u_{k-1}}{h}\right), \ \ \ \ u_0 = y_0.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+What is the local truncation error for
+this new method?
+
+<P>
+<EM>Recall: local truncation error is the error in one time step assuming
+that you have exact initial data.  That is, we assume that </EM><I>u</I><SUB><I>k</I></SUB> = <I>y</I><SUB><I>k</I></SUB><EM>and </EM>
+<!-- MATH: $u_{k-1} = y_{k-1}$ -->
+<I>u</I><SUB><I>k</I>-1</SUB> = <I>y</I><SUB><I>k</I>-1</SUB><EM>.  We need to try to estimate the difference
+between </EM><I>y</I><SUB><I>k</I>+1</SUB><EM> and </EM><I>u</I><SUB><I>k</I>+1</SUB><EM>.  After some simplication, 
+the numerical method is
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u_{k+1} = 2 u_k - u_{k-1}.
+\end{displaymath} -->
+
+
+<I>u</I><SUB><I>k</I>+1</SUB> = 2 <I>u</I><SUB><I>k</I></SUB> - <I>u</I><SUB><I>k</I>-1</SUB>.
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Inspecting the method, we see that we need to Taylor expand near </EM><I>u</I><SUB><I>k</I></SUB><EM>and </EM><I>u</I><SUB><I>k</I>-1</SUB><EM>.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="454" HEIGHT="90"
+ SRC="img22.gif"
+ ALT="\begin{eqnarray*}y_{k+1} & = & y_k + y'_k h + \frac{1}{2} y''_k h^2 + \frac{1}{3...
+...+ \frac{1}{2} y''_{k-1} (2h)^2 +
+\frac{1}{3!} y'''(\xi_2) (2h)^3
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><EM>So
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="741" HEIGHT="329"
+ SRC="img23.gif"
+ ALT="\begin{eqnarray*}y_{k+1}-u_{k+1} & = & y_{k+1}-2 u_k + u_{k-1} \\
+& = & y_{k+1}...
+...+ y'''(\xi_3) h^3 + \frac{1}{2}
+y'''(\xi_4) h^3 \\
+& = & O(h^2)
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL">
+
+<P>
+
+<P>
+<DT>5.
+<DD>[15 pts]
+Prove that the backward Euler method converges to the exact solution
+of
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+y' = f(y,t), \ \ \ \ y(0) = y_0.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="203" HEIGHT="43"
+ SRC="img18.gif"
+ ALT="\begin{displaymath}y' = f(y,t), \ \ \ \ y(0) = y_0.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+What is the order of convergence?
+
+<P>
+<EM>This problem follows the same steps as forward Euler which was done in
+class.
+</EM>
+<P>
+<EM>First, we find the local truncation error. Using a Taylor expansion,
+we seen that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+y_{k+1} - u_{k+1} = \frac{1}{2} f''(\xi) h^2 = h\tau_k = O(h^2)
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="317" HEIGHT="55"
+ SRC="img24.gif"
+ ALT="\begin{displaymath}y_{k+1} - u_{k+1} = \frac{1}{2} f''(\xi) h^2 = h\tau_k = O(h^2)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<EM>Second, we have to bound the error globally.  If we let </EM>
+<!-- MATH: $e_k = y_k -
+u_k$ -->
+<I>e</I><SUB><I>k</I></SUB> = <I>y</I><SUB><I>k</I></SUB> -
+<I>u</I><SUB><I>k</I></SUB><EM>, we can find out how the errors grow globally.  It works
+similarly to
+the same way it did in class except for the first line.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+e_{n+1} = e_n + h[f(y_{n+1},t_{n+1})-f(u_{n+1},t_{n+1})] \\
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="348" HEIGHT="43"
+ SRC="img25.gif"
+ ALT="\begin{displaymath}e_{n+1} = e_n + h[f(y_{n+1},t_{n+1})-f(u_{n+1},t_{n+1})] \\
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Notice that the derivative is evaluated at step </EM><I>n</I>+1<EM> rather than </EM><I>n</I><EM>for forward Euler.  But, you Taylor expand exactly the same way we did
+in class about this step.  Applying Lipschitz continuity, we get
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="375" HEIGHT="79"
+ SRC="img26.gif"
+ ALT="\begin{eqnarray*}(1-hK) \vert e_{N+1}\vert & \leq & \vert e_N\vert + h \tau \\
+...
+...rt & \leq & \frac{1}{1-hK}\vert e_N\vert + \frac{1}{1-hK} h \tau
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><EM>Now, if we work backward in time toward </EM><I>e</I><SUB>0</SUB><EM>, we get
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="404" HEIGHT="101"
+ SRC="img27.gif"
+ ALT="\begin{eqnarray*}\vert e_{N+1}\vert & \leq & \frac{1}{(1-hK)^{T/h}} \vert e_0\ve...
+...au \\
+& \leq & e^{KT} \vert e_0\vert +
+\frac{e^{KT}-1}{K} \tau.
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><EM>This is the same result as for forward Euler... more or less.
+</EM>
+
+<P>
+
+<P>
+<DT>6.
+<DD>[20 pts]
+Consider the numerical method
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u_{k+1} = u_k + h\left[\frac{2}{3} f(u_k,t) + \frac{1}{3} f(u_{k+1},t)\right].
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="330" HEIGHT="63"
+ SRC="img28.gif"
+ ALT="\begin{displaymath}u_{k+1} = u_k + h\left[\frac{2}{3} f(u_k,t) + \frac{1}{3} f(u_{k+1},t)\right].
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Using the scalar test equation, 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+y' = -\lambda y,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="79" HEIGHT="42"
+ SRC="img29.gif"
+ ALT="\begin{displaymath}y' = -\lambda y,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+determine the stability of the
+method when <IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.gif"
+ ALT="$\lambda>0$">.
+For what values of <IMG
+ WIDTH="27" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img31.gif"
+ ALT="$h\lambda$">
+does the
+numerical solution oscillate?  For what values of <IMG
+ WIDTH="27" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img31.gif"
+ ALT="$h\lambda$">
+is the method unstable?
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>This is direct application of the scalar test equation.  If we
+substitute </EM>
+<!-- MATH: $y' = -\lambda y$ -->
+<IMG
+ WIDTH="80" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.gif"
+ ALT="$y' = -\lambda y$"><EM> into our numerical method, we obtain the
+recurrence relation
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u_{k+1} = u_k - \frac{2}{3} h \lambda u_k - \frac{1}{3} h \lambda u_{k+1}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="250" HEIGHT="55"
+ SRC="img33.gif"
+ ALT="\begin{displaymath}u_{k+1} = u_k - \frac{2}{3} h \lambda u_k - \frac{1}{3} h \lambda u_{k+1}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Simplifying, we get
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u_{k+1} = \left(\frac{1-\frac{2}{3}h\lambda}{1+\frac{1}{3}h\lambda}\right)u_k.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="184" HEIGHT="67"
+ SRC="img34.gif"
+ ALT="\begin{displaymath}u_{k+1} = \left(\frac{1-\frac{2}{3}h\lambda}{1+\frac{1}{3}h\lambda}\right)u_k.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+The solution to the recurrence relation (when </EM><I>u</I><SUB>0</SUB>=1<EM>) is
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u_k = \left(\frac{1-\frac{2}{3}h\lambda}{1+\frac{1}{3}h\lambda}\right)^k,
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="156" HEIGHT="71"
+ SRC="img35.gif"
+ ALT="\begin{displaymath}u_k = \left(\frac{1-\frac{2}{3}h\lambda}{1+\frac{1}{3}h\lambda}\right)^k,
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+so it is just a matter of figuring out when the quantity in
+parentheses is less than zero or has modulus greater than one.
+Routine analysis shows that it is negative when </EM>
+<!-- MATH: $h\lambda>3/2$ -->
+<IMG
+ WIDTH="80" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.gif"
+ ALT="$h\lambda>3/2$"><EM>, so we
+expect these solutions to oscillate.  Similarly, the modulus is
+greater than 1 when </EM>
+<!-- MATH: $h \lambda > 6$ -->
+<IMG
+ WIDTH="61" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.gif"
+ ALT="$h \lambda > 6$"><EM>.  At this point, solutions will be
+unstable.
+</EM>
+<P>
+
+<P>
+</DL>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2002-03-12</I>
+</ADDRESS>
+</BODY>
+</HTML>

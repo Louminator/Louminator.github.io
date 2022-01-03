@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>Natural Adaptivity and the Need for Refinement and Merging</TITLE>
+<META NAME="description" CONTENT="Natural Adaptivity and the Need for Refinement and Merging">
+<META NAME="keywords" CONTENT="eccsvm">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="eccsvm.css">
+</HEAD>
+<BODY LANG="EN">
+ <A NAME="tex2html51" HREF="node3.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html49" HREF="eccsvm.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html43" HREF="node1.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html52" HREF="node3.html">The Vortex Method</A>
+<B>Up:</B> <A NAME="tex2html50" HREF="eccsvm.html">High Order Vortex Methods </A>
+<B> Previous:</B> <A NAME="tex2html44" HREF="node1.html">Introduction</A>
+<BR> <P>
+<H1><A NAME="SECTION00020000000000000000">Natural Adaptivity and the Need for Refinement and Merging</A></H1>
+<P>
+<A NAME="secneed">&#160;</A>
+<P>
+Though the principle advantage of Lagrangian methods is their natural
+adaptivity, Lagrangian schemes also have some significant shortcoming,
+particularly growth in the number of computational elements.  When
+simulation flows near boundaries, vorticity is created through the no-slip
+boundary condition and thus new computational elements must be introduced
+into the flow.  Though redistribution techniques do not appear to suffer
+from this shortcoming, they rely upon computational elements already being
+present near solid boundaries, sometime in the form of ``ghost particles,''
+to exchange vorticity with the wall.  Even in flows without boundaries,
+viscous diffusion will transport vorticity across streamlines requiring new
+elements to be introduced if one wishes to maintain a specified accuracy.
+With core spreading methods, this occurs when the width of a given blob
+grows with time.  To maintain spatial accuracy however, one must replace wide
+elements with thinner elements periodically, and so the problem size grows.
+<P>
+Unfortunately, not all computational elements in a vortex
+simulation are necessary.  For instance, if several elements of the same shape
+overlap exactly, they can be replaced by a single element without
+any change in spatial accuracy.  Likewise, a single element can replace
+overlapping dissimilar elements at the cost of introducing some error into a
+simulation.  A merging algorithm based on this philosophy has been
+analyzed for Gaussian basis functions and has played an important role
+in extended calculations 
+[<A HREF="node16.html#rossimerge">23</A>, <A HREF="node16.html#rossilingevitchbernoff">24</A>].  Thus, a core spreading algorithm will have the following
+general structure.
+<P>
+<OL><LI> Initialize all vortex elements.<LI> <B>The computational elements move and evolve.</B>
+Solve the system of ODEs governing the evolution of the computational
+elements.<LI> <B>New elements are generated as needed.</B> 
+If any elements grow wider than a specified tolerance, replace them
+with a configuration of thinner elements.<LI> <B>Redundant elements are merged with one another if possible.</B>
+If a collection of elements can be replaced by a single element
+while introducing an error beneath a specified threshold, replace the
+collection with a single element.<LI> Return to step 2.
+<P>
+</OL>
+<P>
+This general algorithm can be generalized to other
+vortex methods.  For instance, vorticity
+redistribution strategies must introduce new elements via ``ghost
+particles'' to diffuse vorticity away from compact regions.  In any
+method with solid boundaries, vorticity must be introduced to satisfy
+the no-slip boundary condition.  Naturally, a merging algorithm would
+benefit any method.
+<P>
+The issue of problem size control is different from gridded, spectral or
+finite element methods. For the latter methods, the problem size is
+specified and this resolution together with the qualities of the exact
+solution determine the quality of the approximation. For instance, errors
+enter into any calculation 
+if the computational domain lacks proper coverage for a given
+problem.  On the other hand, core 
+spreading Lagrangian methods will always maintain adequate
+coverage of the physical domain, but the specified resolution may require
+the problem size to grow.  For adaptive schemes, the quality of the solution
+is specified by the resolution, and the problem size grows to accommodate the
+specified tolerances.
+<P>
+<HR><A NAME="tex2html51" HREF="node3.html"><IMG WIDTH=37 HEIGHT=24 ALIGN=BOTTOM ALT="next" SRC="http://sherlock.math.uml.edu/icons/latex/next_motif.gif"></A> <A NAME="tex2html49" HREF="eccsvm.html"><IMG WIDTH=26 HEIGHT=24 ALIGN=BOTTOM ALT="up" SRC="http://sherlock.math.uml.edu/icons/latex/up_motif.gif"></A> <A NAME="tex2html43" HREF="node1.html"><IMG WIDTH=63 HEIGHT=24 ALIGN=BOTTOM ALT="previous" SRC="http://sherlock.math.uml.edu/icons/latex/previous_motif.gif"></A>   <BR>
+<B> Next:</B> <A NAME="tex2html52" HREF="node3.html">The Vortex Method</A>
+<B>Up:</B> <A NAME="tex2html50" HREF="eccsvm.html">High Order Vortex Methods </A>
+<B> Previous:</B> <A NAME="tex2html44" HREF="node1.html">Introduction</A>
+<P><ADDRESS>
+<I>Louis F. Rossi <BR>
+Thu Nov  4 15:02:00 EST 1999</I>
+</ADDRESS>
+</BODY>
+</HTML>

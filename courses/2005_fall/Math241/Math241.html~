@@ -1,0 +1,203 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+                    
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+                    
+  <meta http-equiv="CONTENT-TYPE"
+ content="text/html; charset=iso-8859-1">
+                    
+  <meta name="generator" content="Bluefish 1.0.4">
+                    
+  <meta name="author" content="Louis Rossi">
+                    
+  <meta name="CREATED" content="20010202;11114500">
+                    
+  <meta name="CHANGEDBY" content="Louis Rossi">
+                    
+  <meta name="CHANGED" content="20010202;11370200">
+  <title>Math 241: Calculus and Analytic Geometric A</title>
+</head>
+  <body text="#000000" bgcolor="#66ffff" link="#0000ee" vlink="#551a8b"
+ alink="#ff0000">
+     &nbsp;     
+<center>    
+<table border="0" cols="3" width="100%" nosave="">
+     <tbody>
+        <tr nosave="">
+     <td width="110" nosave=""><img src="skateboard.jpg" height="180"
+ width="121">
+          </td>
+      <td nosave="">                             
+      <center>                             
+      <h1> Math 241</h1>
+          </center>
+                                  
+      <center>                             
+      <h1> Calculus and Analytic Geometric A</h1>
+          </center>
+                                  
+      <center>                             
+      <h1> Section 010 - 012</h1>
+          </center>
+     </td>
+      <td width="160" nosave=""><img src="udmath_nobackground_sm.png" 
+      align="middle">
+          </td>
+     </tr>
+                 
+  </tbody>    
+</table>
+    </center>
+          
+<h2>      
+<hr width="100%"><a name="Contents:"></a>Contents:</h2>
+          
+<ul>
+     <li> <b><font color="#330000"><font size="+1"><a
+ href="#Contact%20information.">Course contact information.</a></font></font></b></li>
+      <li> <b><font color="#330000"><font size="+1"><a
+ href="#Course%20materials.">Course materials.</a></font></font></b></li>
+     <li> <b><font color="#330000"><font size="+1"><a
+ href="#MapleTA">MapleTA information.</a></font></font></b></li>
+       <li> <b><font color="#330000"><font size="+1"><a href="#archives">Exam archives.</a></font></font></b></li>
+        <li> <b><font color="#330000"><font size="+1"><a href="#Links">Related
+  links.</a></font></font></b></li> 
+</ul>
+          
+<h2>      
+<hr width="100%"><a name="Contact information."></a><b>Contact information.</b></h2>
+          
+<blockquote><b>Instructor: </b>Prof. L. F. Rossi <br>
+      <b>Teaching Assistant:</b> <a href="mailto:udeigwe@math.udel.edu">Lawrence Udeigwe</a>             
+  <p><b>Meetings:</b> </p>
+               
+  <blockquote>Lecture:MWF 1115-1205 in KRB 204. <br>
+    Section 010 recitation: T R 0800-0850 in PRN 228. <br>
+    Section 011 recitation: T R 0905-0955 in WHL 205B. <br>
+    Section 012 recitation: T R 1000-1050 in WHL 205B.</blockquote>
+     <b>Office Hours: </b>Monday 0900-1000, Wednesday 1000-1100, Thursday 1000-1100 &nbsp; 
+  or by <br>
+    appointment.             
+  <p><b>Email: </b><a href="mailto:rossi@math.udel.edu">rossi@math.udel.edu</a></p>
+    </blockquote>
+          
+<ul>
+      <b>Voice: </b>(302) 831-1880 (UDel x1880) <br>
+      <b>Snail mail:</b>             
+  <blockquote>Department of Mathematical Sciences <br>
+    University of Delaware <br>
+    Newark, DE 19711 <br>
+    USA</blockquote>
+         
+</ul>
+     <a href="#Contents:">Back to the top.</a>     
+<ol>
+    &nbsp;    
+</ol>
+          
+<h2>      
+<hr width="100%"><a name="Course materials."></a>Course materials.</h2>
+          
+<ul>
+     <li> Course syllabus  <a
+ href="syllabus.pdf"> syllabus </a>  This has crucial information
+  like exam dates, course objectives and a tentative schedule for lectures.</li>
+      <li> <a href="http://www.adobe.com/support/downloads/main.html">Download
+  a free Acrobat reader.</a></li>
+  <li>The final exam will be on December 12, 2005 from 10:30 to 12:30 in KRB 004.</li>
+  <li>Exam week office hours will be Friday, Dec 9 from 9:00-10:00.  As usual, if you need help and these hours do not
+  fit in your schedule, send me a note.</li>
+  <li>The Math Tutorial Site is located in Ewing 106.  
+  Hours: M-Th: 0800-2000, F 1000-1600.
+  Closed: 9/5, 10/28, 11/24, and 11/25.  The Math Tutorial Site offers free, peer group tutoring.</li>
+<li>The Academic Enrichment Center at 148-150 South College Avenue offers free group tutoring for Math241 on Mondays at 5:00 pm.</li>
+<li><a href="exam1perf_sm.jpg">Exam 1 performance.</a></li>
+<li><a href="exam2perf_sm.jpg">Exam 2 performance.</a></li>
+<li><a href="exam3perf.jpg">Exam 3 performance.</a></li>
+<li><a href="final_codename.pdf">Final exam scores listed by codename.</a></li>
+</ul>
+          
+
+      <p><br>
+<a href="#Contents:">Back to the top.</a> </p>
+
+<h2>
+<hr width="100%"><a name="MapleTA"></a>MapleTA information.</h2>
+
+<ul>
+<li>Links to the course Maple TA sites: 
+  <a href="http://maple-ta.nss.udel.edu:8080/classes/Math241-010-05F/" target="Section 010"> Section 010</a>, 
+  <a href="http://maple-ta.nss.udel.edu:8080/classes/Math241-011-05F/" target="Section 011"> Section 011</a> and
+  <a href="http://maple-ta.nss.udel.edu:8080/classes/Math241-012-05F/" target="Section 012"> Section 012</a>. </li>
+<li>  The rotation schedule for proctored practice exams is available for sections <a href="rotation-010.pdf" target="">010</a>, <a href="rotation-011.pdf" target="">011</a> and <a href="rotation-012.pdf" target="">012</a>.  If there is an "X" by your name under Exam 1, you must take a proctored practice Exam 1.  Exams will be proctored in Ewg 205.  You may practice as much as you like at home before taking a "practice exam" in 205.</li>
+<li>Drop-in hours for those who much take a <b>proctored practice test for Exam 2</b> in Ewing 205 will be Oct 20, 21 and 25 from 5:00 pm until 7:00 pm.  On Friday Oct 21, I will take 20 minutes from 5:00-5:20 to go over MapleTA input notation with those who have questions or are uncertain about it.</li>         
+<li>Drop-in hours for those who must take a <b>proctored practice test for Exam 3</b> in Ewing 205 will be Nov 17 and Nov 18 from 5:00 pm until 7:00 pm. </li>         
+<li>Drop-in hours for the <b>Calculus Proficiency Exam</b> in Ewing 205 will be Dec 5 and Dec 6 from 5:00 pm until 7:00 pm, Dec 8 from 800 am until noon, Dec 10 from 5:00 until 7:00.<li> 
+</ul>
+
+<a href="#Contents:">Back to the top.</a> </p>
+       
+<h1>      
+<hr width="100%"><a name="archives"></a>Exam archives.</h1>
+          
+<table cellpadding="1" cellspacing="1" border="1">
+<tr>
+<td>2002 Fall</td>
+<td><a href="2002_fall/exam1.pdf">Exam 1</a>  
+<a href="2002_fall/exam1soln.pdf">solutions</a></td>
+<td><a href="2002_fall/exam2.pdf">Exam 2</a>  
+<a href="2002_fall/exam2soln.pdf">solutions</a></td>
+<td><a href="2002_fall/exam3.pdf">Exam 3</a>  
+<a href="2002_fall/exam3soln.pdf">solutions</a></td>
+<td><a href="2002_fall/final.pdf">Final exam</a> solutions N/A.</td>
+</tr>
+<tr><td>2005 Fall</td>
+<td><a href="2005_fall/exam1.pdf">Exam 1</a> 
+<a href="2005_fall/exam1soln.pdf">solutions</a></td>
+<td><a href="2005_fall/exam2.pdf">Exam 2</a> 
+<a href="2005_fall/exam2soln.pdf">solutions</a></td>
+<td><a href="2005_fall/exam3.pdf">Exam 3</a> 
+<a href="2005_fall/exam3soln.pdf">solutions</a></td>
+</tr>
+</table>
+    
+<p><br>
+    <a href="#Contents:">Back to the top.</a> </p>
+       
+<h1>      
+<hr width="100%"><a name="Links"></a>Links.</h1>
+          
+<ul>
+     <li> <a href="http://www.hotmath.org">Hotmath.org</a> posts solution 
+guides   to odd numbers problems for Stewart.</li>
+      <li> <a href="http://archives.math.utk.edu/visual.calculus/">The visual
+  calculus project.</a></li>
+      <li> The Walters Art Gallery: Home of the <a
+ href="http://www.thewalters.org/archimedes/">Archimedes Plimpsest.</a></li>
+      <li> A virtual encyclopedia of mathematics: <a
+ href="http://mathworld.wolfram.com/">Eric Weisstein's World of Mathematics</a>.</li>
+      <li> The Consortium on Mathematics and its Applications (COMAP) <a
+ href="http://www.comap.com">home page</a>.</li>
+      <li> Prof. Rossi's <a href="http://www.math.udel.edu/%7Erossi">home 
+page</a>.</li>
+      <li> The Department of Mathematical Sciences <a
+ href="http://www.math.udel.edu">home page</a>.</li>
+      <li> The University of Delaware <a href="http://www.udel.edu">home
+page</a>.</li>
+         
+</ul>
+     &nbsp;<a href="#Contents:">Back to the top.</a>      
+<p style="margin-bottom: 0in;"><img src="vortex2.gif" name="Graphic7"
+ border="0" height="155" width="98" align="bottom">
+    <i>Last modified: 7 Dec 2005</i> </p>
+       
+<address> <a href="mailto:rossi@math.udel.edu">rossi@math.udel.edu</a></address>
+      <br>
+    <br>
+   <br>
+  <br>
+ <br>
+</body>
+</html>

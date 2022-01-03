@@ -1,0 +1,20 @@
+[x y] = ode45(@bvp1,0:0.01:1,[1 0 0 1]);
+[x y] = ode45(@bvp1,0:0.01:1,[1 next2(y) 0 1]);
+[x y] = ode45(@bvp1,0:0.01:1,[1 next2(y) 0 1]);
+[x y] = ode45(@bvp1,0:0.01:1,[1 next2(y) 0 1]);
+[x y] = ode45(@bvp1,0:0.01:1,[1 next2(y) 0 1]);
+[x y] = ode45(@bvp1,0:0.01:1,[1 next2(y) 0 1]);
+[x y] = ode45(@bvp1,0:0.01:1,[1 next2(y) 0 1]);
+y(end,1)
+
+ans =
+
+    2.9999
+
+next2(y)
+
+ans =
+
+    0.1798
+
+diary off

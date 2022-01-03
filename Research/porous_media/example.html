@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+<TITLE>Porous media simulation example</TITLE>
+</HEAD>
+<BODY>
+<H1>A sample porous media simulation.</H1>
+
+<A HREF="gifs/porous.oil1.gif">
+<IMG ALIGN="TOP" SRC = "gifs/porous.oil1.sm.gif" ></A>
+<BR>
+
+<H2>What are you seeing?</H2>
+
+<P>
+This is a snapshot of our CAVE porous media simulation.  We are demonstrating
+what we hope will become a useful tool for environmental engineers.  In this
+case, precomputed data of a workstation is transmitted to the CAVE where the
+data is visualize.  In this image, you can see an oil saturation isosurface
+inside the ground ten years after a leak started at the surface.  The surface
+has variable permeability. (Permeability is a measurement of how easily fluids
+of various types can move through a porous medium.)  Most of the ground has a
+sandy composition but there are two shelves of clay (not shown)
+in the simulation.  This is
+why the oil appears to have progressed less in the foreground than the
+background.  Two fingers of oil run around the sides of one of the clay shelves
+in the background.
+</P>
+
+<P>
+On the right, you can see some of the user interface.  In addition to exploring
+the data in the CAVE by moving about in the virtual environment, investigators
+control simulation with VCR-like buttons to move forward or backward in time.
+The CAVE wand is used to rotate the cube or adjust other viewing parameters such
+as which isosurfaces one wishes to view (water, oil, permeability, etc.)
+the isosurface level.
+</P>
+
+<H2>What does this data mean?</H2>
+
+<P>
+This time the simulation was computed separately and stored in a file for later
+viewing.  However, the investigators can also view simulation data from the
+NCSA Power Challenge Array
+<STRONG>as it is computed</STRONG> in real time.  This is important as
+scientists vary simulation parameters to assess the environmental impact of
+different events and strategies.
+</P>
+
+<P>
+This experimental projection has the following parameters:
+<OL>
+<LI>
+Physical dimensions: (10 m)^3<BR>
+We are simulating a cube of soil of size 10 m X 10 m X 10 m.
+<LI>
+Rainfall: 28 cm/year<BR>
+The rain falls uniformly on the top of the cube.
+<LI>
+Oil leak: 900 kg^3/year<BR>
+The oil leaks onto a square patch of area (0.5 m)^2 centered on the top of
+the cube.
+<LI>
+There is no flow through the side walls and there is an aquifier (saturation of
+water is 1.0) at the bottom of the cube.
+<LI>
+Permeability: Sandy soil [5 X 10^(-14)]... Clay shelves [1 X 10^(-15)]
+<LI>
+Numerical spatial resolution: 20^3<BR>
+The problem is solved on a 20^3 array.
+<LI>
+Numerical temporal resolution: 0.5 month
+</OL>
+</P>
+<H2>The oil flows down and around.</H2>
+<A HREF="gifs/oil.perm.3frames.gif">
+<IMG ALIGN="TOP" SRC = "gifs/oil.perm.3frames.sm.gif" ></A>
+<P>
+Investigators can view many months of oil flow in a few seconds using our
+simulation.  The image above (click for full size) shows several frames of
+oil saturation evolution around the two shelves of clay (shown in white).
+Each frame is one half of a month (15 days) of progression.
+</P>
+
+<ADDRESS><A HREF="mailto:LF-Rossi@nwu.edu">LF-Rossi@nwu.edu</A></ADDRESS>
+</BODY>
+</HTML>

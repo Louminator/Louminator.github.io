@@ -1,0 +1,502 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="exam3soln">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="exam3soln.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+Name: Math 243: Calculus C
+<BR>
+ <B>Exam 3 Solution Guide</B> <BR>
+26 April 2002 <BR>
+
+<P>
+<BR>
+<BR>
+<BR>
+
+<P>
+<EM>Always the beautiful answer who asks a more beautiful question.</EM> <BR>
+-E. E. Cummings
+
+<P>
+<BR>
+<BR>
+<BR>
+
+<P>
+Instructions: <B>Show all work to receive full or partial credit.</B>
+You may use a scientific calculator on this exam.
+All University rules and guidelines for
+student conduct are applicable.
+
+<P>
+<DL COMPACT>
+<DD><P>
+<DT>1.
+<DD>[20 pts] 
+Reverse the order of integration of the following double integral.
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\int_0^1 \int_x^{2x} f(x,y) dy dx.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="165" HEIGHT="64"
+ SRC="img1.gif"
+ ALT="\begin{displaymath}\int_0^1 \int_x^{2x} f(x,y) dy dx.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>The first step is to sketch the region of integration.
+</EM>
+<DIV ALIGN="CENTER">
+<!-- MATH: $\resizebox{2in}{!}{\includegraphics{regionint.eps}}$ -->
+<IMG
+ WIDTH="229" HEIGHT="250" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.gif"
+ ALT="\resizebox{2in}{!}{\includegraphics{regionint.eps}}"></DIV><EM>If we are going to integrate in y first, we must break
+the integral into two parts.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\int_0^1\int_{\frac{y}{2}}^y f(x,y) dx dy +
+\int_1^2\int_{\frac{y}{2}}^1 f(x,y) dx dy.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="335" HEIGHT="68"
+ SRC="img3.gif"
+ ALT="\begin{displaymath}\int_0^1\int_{\frac{y}{2}}^y f(x,y) dx dy +
+\int_1^2\int_{\frac{y}{2}}^1 f(x,y) dx dy.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+
+<P>
+<DT>2.
+<DD>Consider the solid object bounded by the surfaces <I>z</I>=0,
+<I>z</I>+<I>y</I><SUP>2</SUP>=1, <I>x</I>+<I>z</I>=1 and -<I>x</I>+<I>z</I>=1.
+<DL COMPACT>
+<DT>(a)
+<DD>[5 pts]
+Sketch the object labeling all axes carefully.
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>The toughest part of problems involving double and triple integrals is 
+determining the proper region.  After doodling around a little and
+roughly drawing each surface, you should see the intersection start to 
+emerge.  In the end, it will look like
+</EM>
+<DIV ALIGN="CENTER">
+<!-- MATH: $\resizebox{2in}{!}{\includegraphics{triple.eps}}$ -->
+<IMG
+ WIDTH="228" HEIGHT="221" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.gif"
+ ALT="\resizebox{2in}{!}{\includegraphics{triple.eps}}"></DIV><EM>which is not nearly as good as what I can do by hand.  Or, if I ask
+Maple to sketch it,
+</EM>
+<DIV ALIGN="CENTER">
+<!-- MATH: $\resizebox{2in}{1in}{\includegraphics{triple2.eps}}$ -->
+<IMG
+ WIDTH="231" HEIGHT="116" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.gif"
+ ALT="\resizebox{2in}{1in}{\includegraphics{triple2.eps}}">
+<!-- MATH: $\resizebox{2in}{1in}{\includegraphics{triple3.eps}}$ -->
+<IMG
+ WIDTH="231" HEIGHT="116" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.gif"
+ ALT="\resizebox{2in}{1in}{\includegraphics{triple3.eps}}"></DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>(b)
+<DD>[15 pts]
+If the density of the object is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+f(x,y,z) = 1-z,
+\end{displaymath} -->
+
+
+<I>f</I>(<I>x</I>,<I>y</I>,<I>z</I>) = 1-<I>z</I>,
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+find the mass of the object.
+
+<P>
+
+<P><P>
+<BR>
+<EM>Integrating the density over this region, we find that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="308" HEIGHT="212"
+ SRC="img7.gif"
+ ALT="\begin{eqnarray*}m & = & \int_{-1}^1 \int_0^{1-y^2} \int_{z-1}^{1-z} (1-z) dx dz...
+...
+& = & \int_{-1}^1 \frac{2}{3} (y^6-1) dy \\
+& = & \frac{8}{7}
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><EM>This is one way to set up the triple integral.  There are others, but
+this one is very simple.
+</EM>
+
+<P><P>
+<BR>
+
+<P>
+</DL>
+<P>
+
+<P>
+<DT>3.
+<DD>[20 pts] 
+Find the volume of the hour-glass.
+<DIV ALIGN="CENTER">
+
+<!-- MATH: $\resizebox{!}{3in}{\includegraphics{hourglass.eps}}$ -->
+<IMG
+ WIDTH="202" HEIGHT="344" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.gif"
+ ALT="\resizebox{!}{3in}{\includegraphics{hourglass.eps}}"></DIV>
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>By symmetry, we can find the volume of one cone and then multiply by
+two.  We see that the edge of the cone satisfies the equation </EM><I>z</I>=2<I>r</I><EM>if we use cylindrical coordinates.  Thus, the total volume is
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+V = 2 \int_0^{2\pi} \int_0^1 \int_{2r}^2 r dz dr d\theta = \frac{4 \pi}{3}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="269" HEIGHT="64"
+ SRC="img9.gif"
+ ALT="\begin{displaymath}V = 2 \int_0^{2\pi} \int_0^1 \int_{2r}^2 r dz dr d\theta = \frac{4 \pi}{3}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P>
+<DT>4.
+<DD>[20 pts] 
+Find the volume of the intersection of the cylinder 
+<!-- MATH: $x^2+y^2 \leq 1$ -->
+<IMG
+ WIDTH="98" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.gif"
+ ALT="$x^2+y^2 \leq 1$">and the sphere 
+<!-- MATH: $x^2+y^2+z^2 \leq 4$ -->
+<IMG
+ WIDTH="138" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.gif"
+ ALT="$x^2+y^2+z^2 \leq 4$">.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>Either cylindrical or spherical coordinates will do the trick fairly
+directly for this problem.  Both approaches will involve two pieces.
+Here, I present a solution using spherical coordinates.  Let </EM><I>R</I><SUB>1</SUB><EM> be
+the wedges at the top and bottom.  Let </EM><I>R</I><SUB>2</SUB><EM> be the cylinders with the 
+wedges removed.  
+</EM>
+<DIV ALIGN="CENTER">
+<!-- MATH: $\resizebox{2in}{!}{\includegraphics{sphere.eps}}$ -->
+<IMG
+ WIDTH="228" HEIGHT="245" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.gif"
+ ALT="\resizebox{2in}{!}{\includegraphics{sphere.eps}}"></DIV><EM>Again, we can use symmetry to compute the top half
+and multiply by two.  The boundary between </EM><I>R</I><SUB>1</SUB><EM> and </EM><I>R</I><SUB>2</SUB><EM> can be
+found to be </EM>
+<!-- MATH: $\varphi=\frac{\pi}{6}$ -->
+<IMG
+ WIDTH="54" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.gif"
+ ALT="$\varphi=\frac{\pi}{6}$"><EM>.  
+For </EM><I>R</I><SUB>1</SUB><EM>, the limits of integration are fairly routine.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+V_1 = 2 \int_0^2 \int_0^{2\pi} \int_0^{\frac{\pi}{6}}
+\rho^2 \sin \varphi d\varphi d\theta d\rho = \frac{16 \pi}{3}
+\left(2-\sqrt{3}  \right)
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="415" HEIGHT="65"
+ SRC="img14.gif"
+ ALT="\begin{displaymath}V_1 = 2 \int_0^2 \int_0^{2\pi} \int_0^{\frac{\pi}{6}}
+\rho^2...
+...rphi d\theta d\rho = \frac{16 \pi}{3}
+\left(2-\sqrt{3} \right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<EM>The second volume is a little more subtle because the outer bound on
+</EM><IMG
+ WIDTH="14" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.gif"
+ ALT="$\rho$"><EM> corresponds to </EM><I>r</I>=1<EM> in cylindrical coordinates.  In other
+words, </EM>
+<!-- MATH: $\rho \sin \varphi = 1$ -->
+<IMG
+ WIDTH="91" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.gif"
+ ALT="$\rho \sin \varphi = 1$"><EM>, so </EM>
+<!-- MATH: $\rho = \csc \varphi$ -->
+<IMG
+ WIDTH="79" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.gif"
+ ALT="$\rho = \csc \varphi$"><EM> is the
+outside boundary.  Thus, the volume can be expressed by the integral
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+V_2 = 2 \int_0^{2\pi} \int^{\frac{\pi}{2}}_{\frac{\pi}{6}}
+\int_0^{\csc \varphi} \rho^2 \sin \varphi  d\rho d\varphi d\theta =
+\frac{4 \pi}{3} \int^{\frac{\pi}{2}}_{\frac{\pi}{6}} \csc^2 \varphi d \varphi.
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="458" HEIGHT="70"
+ SRC="img18.gif"
+ ALT="\begin{displaymath}V_2 = 2 \int_0^{2\pi} \int^{\frac{\pi}{2}}_{\frac{\pi}{6}}
+\...
+...\int^{\frac{\pi}{2}}_{\frac{\pi}{6}} \csc^2 \varphi d \varphi.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+At this point, some students stopped because they could not remember that
+the anti-derivative of </EM>
+<!-- MATH: $\csc^2 \varphi$ -->
+<IMG
+ WIDTH="52" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.gif"
+ ALT="$\csc^2 \varphi$"><EM> is </EM>
+<!-- MATH: $\cot \varphi$ -->
+<IMG
+ WIDTH="45" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.gif"
+ ALT="$\cot \varphi$"><EM>.  This is
+understandable, and getting this far is worth most of the points for
+the problem.  To complete the problem, we see that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+V_2 = \left. \frac{4 \pi}{3} \cot \varphi
+\right |^{\frac{\pi}{2}}_{\frac{\pi}{6}} = \frac{4 \pi \sqrt{3}}{3}.
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="210" HEIGHT="73"
+ SRC="img21.gif"
+ ALT="\begin{displaymath}V_2 = \left. \frac{4 \pi}{3} \cot \varphi
+\right \vert^{\frac{\pi}{2}}_{\frac{\pi}{6}} = \frac{4 \pi \sqrt{3}}{3}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Adding the two together, we arrive at the solution,
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+V = V_1 + V_2 = \frac{4 \pi}{3}
+\left(8-3\sqrt{3}  \right) = \frac{32 \pi}{3} - 4 \sqrt{3} \pi.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="375" HEIGHT="55"
+ SRC="img22.gif"
+ ALT="\begin{displaymath}V = V_1 + V_2 = \frac{4 \pi}{3}
+\left(8-3\sqrt{3} \right) = \frac{32 \pi}{3} - 4 \sqrt{3} \pi.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P>
+<DT>5.
+<DD>[20 pts] 
+Suppose 
+<!-- MATH: $f(x,y) = x^2 y$ -->
+<I>f</I>(<I>x</I>,<I>y</I>) = <I>x</I><SUP>2</SUP> <I>y</I>.  Find
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\int_C f(x,y) ds
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="96" HEIGHT="60"
+ SRC="img23.gif"
+ ALT="\begin{displaymath}\int_C f(x,y) ds
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <I>C</I> is the line segment running from (0,0) to (3,4).
+
+<P>
+
+<P><P>
+<BR>
+<EM>We can parametrize this line as
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\v r (s,t) = \langle 3,4 \rangle t.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="126" HEIGHT="43"
+ SRC="img24.gif"
+ ALT="\begin{displaymath}\v r (s,t) = \langle 3,4 \rangle t.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Then, we find that </EM><I>ds</I> = 5 <I>dt</I><EM>.  Now, it is simply a matter of
+computing the path integral:
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\int_0^1 (3t)^2(4t) (5dt) = 45.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="183" HEIGHT="64"
+ SRC="img25.gif"
+ ALT="\begin{displaymath}\int_0^1 (3t)^2(4t) (5dt) = 45.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</DL>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2002-05-08</I>
+</ADDRESS>
+</BODY>
+</HTML>

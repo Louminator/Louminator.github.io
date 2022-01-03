@@ -1,0 +1,1049 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>No Title</TITLE>
+<META NAME="description" CONTENT="No Title">
+<META NAME="keywords" CONTENT="exam2soln">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="STYLESHEET" HREF="exam2soln.css">
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+Name: Math 349: Linear Algebra
+<BR>
+ <B>Exam 2 Solutions</B> <BR>
+12 April 2001 <BR>
+
+<P>
+<BR>
+<BR>
+<BR>
+
+<P>
+<EM>It's kind of fun to do the impossible.</EM> <BR>
+- Walt Disney
+
+<P>
+<BR>
+<BR>
+<BR>
+
+<P>
+Instructions: <B>Show all work to receive full or partial credit.</B>  
+All University rules and guidelines for
+student conduct are applicable.
+
+<P>
+<DL COMPACT>
+<DD><P>
+<DT>1.
+<DD>[15 pts] Prove that the null space of an 
+<!-- MATH: $n \times n$ -->
+<IMG
+ WIDTH="50" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.gif"
+ ALT="$n \times n$">
+matrix
+<I>A</I> is a subspace of <I>R</I><SUP><I>n</I></SUP>.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>It is enough to show that the null space of </EM><I>A</I><EM> is closed under
+addition and scalar multiplication.  Suppose </EM><I>x</I><EM> and </EM><I>y</I><EM> are two
+elements of the null space, and </EM><I>c</I><EM> is a scalar.  Then,
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+Ax = 0 \ \ \ \ Ay = 0
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="142" HEIGHT="42"
+ SRC="img2.gif"
+ ALT="\begin{displaymath}Ax = 0 \ \ \ \ Ay = 0
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+by definition of the null space of </EM><I>A</I><EM>.  To check for closure under
+addition, we see that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+A(x+y) = Ax + Ay = \v 0 + \v 0 = \v 0.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="274" HEIGHT="43"
+ SRC="img3.gif"
+ ALT="\begin{displaymath}A(x+y) = Ax + Ay = \v 0 + \v 0 = \v 0.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Thus, the null space is closed under addition.  Similarly, to check
+for closure under scalar multiplication, we find that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+A(cx) = cAx = c\v 0 = \v 0.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="186" HEIGHT="43"
+ SRC="img4.gif"
+ ALT="\begin{displaymath}A(cx) = cAx = c\v 0 = \v 0.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Hence, the null space is closed under vector addition and scalar
+multiplication.  Therefore the null space is a linear subspace of </EM><I>R</I><SUP><I>n</I></SUP><EM>.
+</EM>
+
+<P>
+
+<P>
+<DT>2.
+<DD>[10 pts] Find the angle between the vectors <I>u</I> and <I>v</I> where
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u =
+\left[
+\begin{matrix}
+1 \\
+-1  \\
+1
+\end{matrix}
+\right], \ \ \ \ 
+v = 
+\left[
+\begin{matrix}
+2 \\
+1  \\
+1
+\end{matrix}
+\right].
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="199" HEIGHT="86"
+ SRC="img5.gif"
+ ALT="\begin{displaymath}u =
+\left[
+\begin{matrix}
+1 \\
+-1 \\
+1
+\end{matrix}\right]...
+...
+v =
+\left[
+\begin{matrix}
+2 \\
+1 \\
+1
+\end{matrix}\right].
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>This is straightforward calculation using the fact that
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u \cdot v = \cos \theta \|u\| \|v\|.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="160" HEIGHT="43"
+ SRC="img6.gif"
+ ALT="\begin{displaymath}u \cdot v = \cos \theta \Vert u\Vert \Vert v\Vert.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<EM>The solution is </EM>
+<!-- MATH: $\arccos(\sqrt{2}/3)$ -->
+<IMG
+ WIDTH="113" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.gif"
+ ALT="$\arccos(\sqrt{2}/3)$"><EM>, </EM>1.08<EM> radians or </EM>61,9<EM>degrees.
+</EM>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>3.
+<DD>[10 pts] Find a basis for the null space of <I>A</I> where
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+A = \left[
+\begin{matrix}
+4 & 1 & 2 & 4 \\
+-1 & 0 & 1 & 3 \\
+10 & 2 & 2 & 2 \\
+3 & 1 & 3 & 7
+\end{matrix}
+\right].
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="172" HEIGHT="109"
+ SRC="img8.gif"
+ ALT="\begin{displaymath}A = \left[
+\begin{matrix}
+4 & 1 & 2 & 4 \\
+-1 & 0 & 1 & 3 \\
+10 & 2 & 2 & 2 \\
+3 & 1 & 3 & 7
+\end{matrix}\right].
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+What is the rank of A? What is the nullity of A?
+
+<P>
+<EM>Finding the null space of a matrix is the same as solving the
+corresponding homogeneous system.  Performing elementary row
+operations on </EM><I>A</I><EM>, one can put it into reduced row echelon form:
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left[
+\begin{matrix}
+1 & 0 & -1 & -3 \\
+0 & 1 & 6 & 16\\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0
+\end{matrix}
+\right].
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="142" HEIGHT="109"
+ SRC="img9.gif"
+ ALT="\begin{displaymath}\left[
+\begin{matrix}
+1 & 0 & -1 & -3 \\
+0 & 1 & 6 & 16\\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0
+\end{matrix}\right].
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+From this, we find that null solutions are of the form
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left[
+\begin{matrix}
+s + 3 t \\
+-6 s - 16 t \\
+s \\
+t
+\end{matrix}
+\right].
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="108" HEIGHT="109"
+ SRC="img10.gif"
+ ALT="\begin{displaymath}\left[
+\begin{matrix}
+s + 3 t \\
+-6 s - 16 t \\
+s \\
+t
+\end{matrix}\right].
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Thus, one possible basis for this solution space is
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left\{
+\left[
+\begin{matrix}
+1 \\-6 \\1 \\0
+\end{matrix}
+\right],
+\left[
+\begin{matrix}
+3 \\-16 \\0 \\1
+\end{matrix}
+\right]
+\right\}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="159" HEIGHT="109"
+ SRC="img11.gif"
+ ALT="\begin{displaymath}\left\{
+\left[
+\begin{matrix}
+1 \\ -6 \\ 1 \\ 0
+\end{matrix}\...
+...begin{matrix}
+3 \\ -16 \\ 0 \\ 1
+\end{matrix}\right]
+\right\}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<EM>The nullity of </EM><I>A</I><EM> is the dimension of the null space, so the nullity
+of </EM><I>A</I><EM> is 2.  Since the dimension is 4, the rank is 2 also.
+</EM>
+
+<P>
+
+<P>
+<DT>4.
+<DD>[15 pts] Given <I>u</I> and <I>v</I> in <I>R</I><SUP>3</SUP>, define
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+(u,v) = u^T A v
+\end{displaymath} -->
+
+
+(<I>u</I>,<I>v</I>) = <I>u</I><SUP><I>T</I></SUP> <I>A v</I>
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+A =
+\left[
+\begin{matrix}
+3 & 0 & 0 \\
+0 & 2 & 0 \\
+0 & 0 & 1/2
+\end{matrix}
+\right].
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="150" HEIGHT="86"
+ SRC="img12.gif"
+ ALT="\begin{displaymath}A =
+\left[
+\begin{matrix}
+3 & 0 & 0 \\
+0 & 2 & 0 \\
+0 & 0 & 1/2
+\end{matrix}\right].
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Prove that (<I>u</I>,<I>v</I>) is an inner product.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>Before doing anything, you must examine the proposed inner product.
+In this case,
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u^T A v = 3 u_1 v_1 + 2u_2 v_2 + \frac{1}{2} u_3 v_3.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="256" HEIGHT="55"
+ SRC="img13.gif"
+ ALT="\begin{displaymath}u^T A v = 3 u_1 v_1 + 2u_2 v_2 + \frac{1}{2} u_3 v_3.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+<EM>Now, we can start checking its properties.
+</EM><DL COMPACT>
+<DT>(a)
+<DD>We must show that 
+<!-- MATH: $(u,u) \geq 0$ -->
+<IMG
+ WIDTH="84" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.gif"
+ ALT="$(u,u) \geq 0$">
+and that (<I>u</I>,<I>u</I>) = 0 if and
+only if <IMG
+ WIDTH="50" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.gif"
+ ALT="$u = \v 0$">.
+Both are true because the proposed inner product
+is a weighted sum of squares.
+<P>
+<DT>(b)
+<DD>We must show that 
+<!-- MATH: $(u,v) = (v,u)$ -->
+(<I>u</I>,<I>v</I>) = (<I>v</I>,<I>u</I>).  This is clear from the
+expression of (<I>u</I>,<I>v</I>) above, and the fact that multiplication is
+commutative.
+
+<P>
+<DT>(c)
+<DD>We must show that that 
+<!-- MATH: $(u,v+w) = (u,v) + (u,v)$ -->
+(<I>u</I>,<I>v</I>+<I>w</I>) = (<I>u</I>,<I>v</I>) + (<I>u</I>,<I>v</I>).  Again, this
+is true from the expression above.  One could also show it with matrix 
+algebra:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+u^T A (v+w) = u^T A v + u^T A w.
+\end{displaymath} -->
+
+
+<I>u</I><SUP><I>T</I></SUP> <I>A</I> (<I>v</I>+<I>w</I>) = <I>u</I><SUP><I>T</I></SUP> <I>A v</I> + <I>u</I><SUP><I>T</I></SUP> <I>A w</I>.
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<DT>(d)
+<DD>We must show that 
+<!-- MATH: $(cu,v) = c(u,v)$ -->
+(<I>cu</I>,<I>v</I>) = <I>c</I>(<I>u</I>,<I>v</I>).  Again, this can be seen by 
+inspection of the expression above, or  one can use matrix algebra again.
+
+<P>
+</DL>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>5.
+<DD>[10 pts] Let <I>u</I> and <I>v</I> be two vectors in <I>R</I><SUP><I>n</I></SUP> and let
+(<I>u</I>,<I>v</I>) be the standard ``dot product.''  <B>Prove</B> that
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\|u+v\|^2 = \|u\|^2 + \|v\|^2
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="188" HEIGHT="43"
+ SRC="img16.gif"
+ ALT="\begin{displaymath}\Vert u+v\Vert^2 = \Vert u\Vert^2 + \Vert v\Vert^2
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<B>if and only if</B> <I>u</I> and <I>v</I> are orthogonal.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>This property can be deduced directly from the properties of the
+standard inner product.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="298" HEIGHT="89"
+ SRC="img17.gif"
+ ALT="\begin{eqnarray*}\Vert u+v\Vert^2 & = & (u+v,u+v) \\
+& = & (u,u) + 2(u,v) + (v,v) \\
+& = & \Vert u\Vert^2 + \Vert v\Vert^2 + 2(u,v)
+\end{eqnarray*}">
+</DIV><P></P>
+<BR CLEAR="ALL"><EM>Thus, the property stated in the question is true if and only if
+</EM>(<I>u</I>,<I>v</I>) = 0<EM>.  This is the definition of orthogonality, so the property 
+is valid if and only if </EM><I>u</I><EM> and </EM><I>v</I><EM> are orthogonal.
+</EM>
+
+<P>
+
+<P>
+<DT>6.
+<DD>[15 pts] Let
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+W = {\rm span}
+\left\{
+\left[
+\begin{matrix}
+3  \\
+0  \\
+0 \\
+1
+\end{matrix}
+\right],
+\left[
+\begin{matrix}
+1  \\
+0 \\
+1  \\
+1
+\end{matrix}
+\right],
+\left[
+\begin{matrix}
+0 \\
+-1  \\
+0  \\
+1
+\end{matrix}
+\right]
+\right\}.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="269" HEIGHT="109"
+ SRC="img18.gif"
+ ALT="\begin{displaymath}W = {\rm span}
+\left\{
+\left[
+\begin{matrix}
+3 \\
+0 \\
+0 \\...
+...gin{matrix}
+0 \\
+-1 \\
+0 \\
+1
+\end{matrix}\right]
+\right\}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Use the Gram-Schmidt process to find an orthonormal basis for <I>W</I>.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>This problem wins the award for being the ugliest on the exam.  Let's
+refer to the elements in the original basis as </EM><I>w</I><SUB>1</SUB><EM>, </EM><I>w</I><SUB>2</SUB><EM> and
+</EM><I>w</I><SUB>3</SUB><EM>.
+</EM>
+<P>
+<EM>Performing the Gram-Schmidt process is elementary, but the
+calculations tripped some people.
+</EM>
+<P>
+<EM>For the first element, simply take </EM><I>w</I><SUB>1</SUB><EM>.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\overline{v}_1 =
+\left[
+\begin{matrix}
+3  \\
+0  \\
+0 \\
+1
+\end{matrix}
+\right]
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="72" HEIGHT="109"
+ SRC="img19.gif"
+ ALT="\begin{displaymath}\overline{v}_1 =
+\left[
+\begin{matrix}
+3 \\
+0 \\
+0 \\
+1
+\end{matrix}\right]
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+To grab the second element, we compute
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\overline{v}_2 = w_2 -
+\frac{w_2 \cdot \overline{v}_1}{\|\overline{v}_1\|^2}\overline{v}_1 =
+\left[
+\begin{matrix}
+-\frac{1}{5}  \\
+0  \\
+1 \\
+\frac{3}{5}
+\end{matrix}
+\right]
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="230" HEIGHT="109"
+ SRC="img20.gif"
+ ALT="\begin{displaymath}\overline{v}_2 = w_2 -
+\frac{w_2 \cdot \overline{v}_1}{\Vert...
+...}
+-\frac{1}{5} \\
+0 \\
+1 \\
+\frac{3}{5}
+\end{matrix}\right]
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+To capture the third element, we calculate
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\overline{v}_3 = w_3 -
+\frac{w_3 \cdot \overline{v}_1}{\|\overline{v}_1\|^2}\overline{v}_1 -
+\frac{w_3 \cdot \overline{v}_2}{\|\overline{v}_2\|^2}\overline{v}_2 =
+\left[
+\begin{matrix}
+-\frac{3}{14}  \\
+-1  \\
+-\frac{3}{7} \\
+\frac{9}{14}
+\end{matrix}
+\right]
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="333" HEIGHT="109"
+ SRC="img21.gif"
+ ALT="\begin{displaymath}\overline{v}_3 = w_3 -
+\frac{w_3 \cdot \overline{v}_1}{\Vert...
+...} \\
+-1 \\
+-\frac{3}{7} \\
+\frac{9}{14}
+\end{matrix}\right]
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+These three elements form an orthogonal basis.  To make it an
+orthonormal basis, you must normalize the vectors as follows.
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+\left\{
+\frac{\sqrt{10}}{10}
+\left[
+\begin{matrix}
+3  \\
+0  \\
+0 \\
+1
+\end{matrix}
+\right]
+,
+\sqrt{\frac{5}{7}}
+\left[
+\begin{matrix}
+-\frac{1}{5}  \\
+0  \\
+1 \\
+\frac{3}{5}
+\end{matrix}
+\right]
+,
+\sqrt{\frac{14}{23}}
+\left[
+\begin{matrix}
+-\frac{3}{14}  \\
+-1  \\
+-\frac{3}{7} \\
+\frac{9}{14}
+\end{matrix}
+\right]
+\right\}
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="316" HEIGHT="109"
+ SRC="img22.gif"
+ ALT="\begin{displaymath}\left\{
+\frac{\sqrt{10}}{10}
+\left[
+\begin{matrix}
+3 \\
+0 \\...
+...\\
+-\frac{3}{7} \\
+\frac{9}{14}
+\end{matrix}\right]
+\right\}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<DT>7.
+<DD>[10 pts] Let 
+<!-- MATH: $L: P^3 \rightarrow P^3$ -->
+<IMG
+ WIDTH="107" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.gif"
+ ALT="$L: P^3 \rightarrow P^3$">
+be the linear transformation 
+defined as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+L(p) = \frac{1}{2} x \frac{dp}{dx} - p.
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="146" HEIGHT="56"
+ SRC="img24.gif"
+ ALT="\begin{displaymath}L(p) = \frac{1}{2} x \frac{dp}{dx} - p.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Find <IMG
+ WIDTH="46" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img25.gif"
+ ALT="$\ker L$">.
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>A general element of </EM><I>P</I><SUP>3</SUP><EM> is
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+p = ax^3 + bx^2 + cx + d.
+\end{displaymath} -->
+
+
+<I>p</I> = <I>ax</I><SUP>3</SUP> + <I>bx</I><SUP>2</SUP> + <I>cx</I> + <I>d</I>.
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+The action of </EM><I>L</I><EM> on </EM><I>p</I><EM> is
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+L(p) = \frac{1}{2} a x^3 -\frac{1}{2} c x -d
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="192" HEIGHT="55"
+ SRC="img26.gif"
+ ALT="\begin{displaymath}L(p) = \frac{1}{2} a x^3 -\frac{1}{2} c x -d
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+The only way for </EM><I>L</I>(<I>p</I>)<EM> to be </EM>0<EM> is if </EM><I>a</I>=0<EM>, </EM><I>c</I>=0<EM> and </EM><I>d</I>=0<EM>.
+However, </EM><I>b</I><EM> can be anything.  Thus, the </EM><IMG
+ WIDTH="46" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img25.gif"
+ ALT="$\ker L$"><EM> is the set of all
+polynomials of the form </EM><I>b x</I><SUP>2</SUP><EM>.
+</EM>
+
+<P>
+
+<P>
+<DT>8.
+<DD>[15 pts] Let
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+S = \left\{
+\left[
+\begin{matrix}
+1 \\3 \\2
+\end{matrix}
+\right],
+\left[
+\begin{matrix}
+1 \\-1 \\0
+\end{matrix}
+\right],
+\left[
+\begin{matrix}
+2 \\1 \\1
+\end{matrix}
+\right]
+\right\}, \ \ \ \ \
+T = 
+\left\{ 
+\left[
+\begin{matrix}
+1 \\-1 \\0
+\end{matrix}
+\right],
+\left[
+\begin{matrix}
+1 \\0 \\0
+\end{matrix}
+\right],
+\left[
+\begin{matrix}
+0 \\-1 \\1
+\end{matrix}
+\right]
+\right\}.
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="493" HEIGHT="76"
+ SRC="img27.gif"
+ ALT="\begin{displaymath}S = \left\{
+\left[
+\begin{matrix}
+1 \\ 3 \\ 2
+\end{matrix}\r...
+...eft[
+\begin{matrix}
+0 \\ -1 \\ 1
+\end{matrix}\right]
+\right\}.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Find the transition matrix 
+<!-- MATH: $P_{S \leftarrow T}$ -->
+<IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.gif"
+ ALT="$P_{S \leftarrow T}$">
+from
+the <I>T</I>-basis to the <I>S</I>-basis.  Find [<I>u</I>]<SUB><I>S</I></SUB>, if
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+[u]_T =
+\left[
+\begin{matrix}
+2 \\0 \\1
+\end{matrix}
+\right].
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="98" HEIGHT="86"
+ SRC="img29.gif"
+ ALT="\begin{displaymath}[u]_T =
+\left[
+\begin{matrix}
+2 \\ 0 \\ 1
+\end{matrix}\right].
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<EM>There are two ways to compute the transition matrix, either by row
+operations on the augmented system or by directly computing </EM>
+<!-- MATH: $M_S^{-1}
+M_T$ -->
+<I>M</I><SUB><I>S</I></SUB><SUP>-1</SUP>
+<I>M</I><SUB><I>T</I></SUB><EM>.  Either way, one obtains
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+P_{S \leftarrow T} =
+\left[
+\begin{matrix}
+0 & -\frac{1}{2} & 2 \\
+1 & -\frac{1}{2} & 4 \\
+0 & 1 & -3 \\
+\end{matrix}
+\right].
+
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="194" HEIGHT="86"
+ SRC="img30.gif"
+ ALT="\begin{displaymath}P_{S \leftarrow T} =
+\left[
+\begin{matrix}
+0 & -\frac{1}{2} ...
+...
+1 & -\frac{1}{2} & 4 \\
+0 & 1 & -3 \\
+\end{matrix}\right].
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P><EM>
+Thus,
+</EM>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH: \begin{displaymath}
+[u]_S = \left[
+\begin{matrix}
+2 \\6 \\-3
+\end{matrix}
+\right].
+\end{displaymath} -->
+
+
+<IMG
+ WIDTH="111" HEIGHT="86"
+ SRC="img31.gif"
+ ALT="\begin{displaymath}[u]_S = \left[
+\begin{matrix}
+2 \\ 6 \\ -3
+\end{matrix}\right].
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</DL>
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS">&#160;</A>
+<UL>
+<LI><A NAME="tex2html3"
+ HREF="node1.html">About this document ... </A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/opt/latex2html/icons.gif/next_motif.gif"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/opt/latex2html/icons.gif/up_motif_gr.gif"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/opt/latex2html/icons.gif/previous_motif_gr.gif">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+ HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Louis F Rossi</I>
+<BR><I>2001-04-16</I>
+</ADDRESS>
+</BODY>
+</HTML>

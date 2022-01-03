@@ -1,0 +1,1231 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                  %%
+%%      Package ed provides macros to typeset EDU 2.5.2             %%
+%%      testbanks in LaTeX. Macros can be run in XML production     %%
+%%      mode to generate XML output, or in tex preview mode         %%
+%%      (the default).                                              %%
+%%                                                                  %%
+%%      Options: xml - Declare the xml option to compile            %%
+%%                     XML production output (deprecated)           %%
+%%                                                                  %%
+%%      Author: John L. Orr                                         %%
+%%      Last Modified: 2004-Mar-01 by Steve Whalen                  %%
+%%                                                                  %%
+%%      Send comments to latex@brownstone.net                       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ProvidesPackage{ed}[1994/01/01 LaTeX2e standard classes]
+
+\RequirePackage{ifthen,keyval}
+
+\setlength{\parindent}{0pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                  %%
+%%        Define macros for LaTeX Preview Mode                      %%
+%%                                                                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% error messages
+
+\newcommand{\edu@errmessage}[1]{\errmessage{EDU error: #1}}
+
+% These macros control the appearance of field labels.  Available
+% options for each are listed; use \relax for LaTeX default.  Not all
+% combinations are available in NFSS.
+
+\let\Family\sffamily  % \sffamily, \rmfamily, \ttfamily
+\let\Series\bfseries  % \bfseries, \mdseries
+\let\Shape\upshape    % \upshape, \slshape, \scshape, \itshape
+
+% Calculate appropriate margins
+
+\setlength\textheight{9in}
+\setlength\topmargin{-.5in}
+\setlength\textwidth{512pt} % seems to create right margin of 1in
+\setlength\hoffset{-59pt}   % seems to create left margin of .75in
+\newlength\QuestionBoxWidth
+\setbox\@tempboxa=\hbox{\large\Family\Series\Shape
+  Question 0.00\normalsize\enspace}
+\setlength\QuestionBoxWidth{\wd\@tempboxa}
+\addtolength\textwidth{-\QuestionBoxWidth}
+\addtolength\hoffset{\QuestionBoxWidth}
+\newlength\PartBoxWidth
+\setbox\@tempboxa=\hbox{\large\Family\Series\Shape
+  Part (M)\normalsize\enspace}
+\setlength\PartBoxWidth{\wd\@tempboxa}
+\newlength\BlankBoxWidth
+\setbox\@tempboxa=\hbox{\large\Family\Series\Shape
+  Blank 10\normalsize\enspace}
+\setlength\BlankBoxWidth{\wd\@tempboxa}
+
+% The text that goes in the ``answer'' field should treat $, %, ^ as
+% ordinary characters.
+
+\def\@removeSpecialCharCodes{%
+  \catcode`$=12% $
+  \catcode`\%=12%
+  \catcode`\^=12%
+  \catcode`\_=12%
+  \catcode`\&=12%
+  \def~{\edu@errmessage{You can't use `\string~' here}}}
+\def\@removeSpecialCharCodesNoPerc{%
+  \catcode`$=12% $
+  \catcode`\^=12%
+  \catcode`\_=12%
+  \catcode`\&=12%
+  \def~{\edu@errmessage{You can't use `\string~' here}}}
+\def\@removeSpecialCharCodesNoPercNoDollar{%
+  \catcode`\^=12%
+  \catcode`\_=12%
+  \catcode`\&=12%
+  \def~{\edu@errmessage{You can't use `\string~' here}}}
+
+% Utility macros used by the other higher level macros
+
+\newcommand{\@raw}[1]{\texttt{\ignorespaces #1}}
+\newcommand{\@openhtmltag}[2][]{\par
+  \ifthenelse{\equal{#1}{}}{\@raw{<#2>}}{\@raw{<#2 #1>}}}
+\newcommand{\@closehtmltag}[1]{\@raw{</#1>}\par}
+
+\newif\ifis@inline
+\newtoks\var@optarg
+\newcommand{\var}{\@ifstar\var@\var@}
+\newcommand{\var@}[1][]{\begingroup\let\var\v@r
+  \@removeSpecialCharCodes
+  \@var[#1]}
+\newcommand{\@var}[2][]{\edef\var@arg{#2}%
+  \var@optarg{#1}%
+  \expandafter\@@var\expandafter{\var@arg}}
+{\catcode`$=12% $
+\gdef\@@var#1{\check@inline#1$\relax % $
+  \ifis@inline
+    \ifthenelse{\equal{\var@optarg}{mo}}
+      {\;\@raw{\$\char"7B}\@raw{#1\char"7D}\;}
+      {\@raw{$\char"7B}\@raw{#1\char"7D}}% $
+  \else
+    \ifthenelse{\equal{\var@optarg}{mo}}{\;\@raw{$#1}\;}% $
+      {\@raw{$#1}}% $
+  \fi\endgroup\is@inlinefalse}
+\gdef\check@inline#1$#2{% $
+  \ifx#2\relax
+  \else\is@inlinetrue
+    \expandafter\@check@inline\expandafter#2\fi}
+\gdef\@check@inline#1$#2{% $
+  \ifx#2\relax\else\expandafter\@check@inline\expandafter#2\fi}
+\gdef\v@r#1{$#1}}% $
+\newcommand{\bvar}{\v@r}
+
+\newcommand{\id}[1]{\element*{id}{#1}}
+
+% Macro that sets field labels
+
+\newcommand{\labelbox}[2][.5]{\noindent
+  \llap{\Family\Series\Shape #2\normalsize\hskip#1em}}
+
+% Several macros are defined below for preview mode.
+% Alternate defs are provided for production mode. 
+
+\newcommand\HTML{\begingroup\@removeSpecialCharCodes\@HTML}
+\newcommand\@HTML[1]{\texttt{#1}\endgroup}
+\newcommand\html{\HTML} % \let\html\HTML won't work in XML mode
+
+\newcommand{\htmltag}{\@ifstar{\@gobble}{\@htmltag}}
+\newcommand{\@htmltag}[2][]{\par\labelbox{#2}\ignorespaces\@raw{#1 }}
+\let\htmltag@nopar\htmltag
+
+
+% Topic and question environments. The argument for topic
+% is the topic name; the argument for question is the 
+% question mode
+
+\newcounter{Topic@Number}
+\newcounter{Question@Number}
+\newcounter{PartNumber@i}
+\newcounter{PartNumber@ii}
+\newcounter{PartNumber@iii}
+\newcounter{PartNumber@iv}
+\newcounter{nesting@level}
+\newtoks\mode
+\newtoks\@LabelName
+\@LabelName{Question \arabic{Question@Number}}
+\newlength\@LabelBoxWidth
+\setlength\@LabelBoxWidth{\QuestionBoxWidth}
+\newif\if@FirstQuestionInTopic
+\newif\if@NumberingDeclared
+\newif\if@WithinMultipart
+\newcommand{\Set@QuestionBox}{%
+  \hskip-\@LabelBoxWidth\lower.5ex\hbox to \@LabelBoxWidth{\hrulefill
+    \Family\Series\Shape\hskip.25em}%
+  \labelbox{\large\the\@LabelName}}
+\let\numbering@style\alph
+\def\topic@break{\bigskip\goodbreak}
+\newenvironment{topic}[1]{\topic@break\global\let\topic@break\pagebreak
+  \stepcounter{Topic@Number}
+  \hskip-\QuestionBoxWidth\hrulefill
+  {\Large\raise.5ex\hbox{\labelbox[.25]{Topic \arabic{Topic@Number}}}%
+    {\Family\Series\Shape\hskip.25em}\ignorespaces\raise.5ex\hbox{#1}}%
+  \nopagebreak
+  \medskip\nopagebreak
+  \@FirstQuestionInTopictrue
+  \setcounter{Question@Number}{0}}%
+  {\par}
+\newenvironment{question}[1]{\par
+  \mode{#1}% need the mode in other macros
+  \if@NumberingDeclared\else\let\numbering@style\alph\fi
+  \if@WithinMultipart
+    \advance\leftskip by 2pc%
+    \stepcounter{PartNumber@\roman{nesting@level}}%
+  \else
+    \stepcounter{Question@Number}%
+  \fi
+  \bigskip
+  \Set@QuestionBox
+  \nopagebreak
+  \ifthenelse{\equal{#1}{inline} \or \equal{#1}{Inline}}{%
+    \stepcounter{nesting@level}%
+    \setcounter{blank@count}{0}%
+    \setcounter{PartNumber@\roman{nesting@level}}{0}%
+    \setlength\@LabelBoxWidth{\BlankBoxWidth}%
+    \@LabelName{Blank \arabic{PartNumber@\roman{nesting@level}}}%
+    \let\blank\@newblank
+    \def\blank@env{\let\blank\newblank\let\endblank\endnewblank}}{}%
+  \ifthenelse{\equal{#1}{list} \or \equal{#1}{List}}{%
+    \let\answer\@@@answer}{}%
+  \ifthenelse{\equal{#1}{sketch} \or \equal{#1}{Sketch}}{%
+    \expandafter\def\csname example\endcsname##1{\element*{example}%
+      {\@raw{##1}}}}{}%
+  \ifthenelse{\equal{#1}{palette} \or \equal{#1}{Palette}}%
+    {\let\answer\palette@answer}{}%
+  \ifthenelse{\equal{#1}{multipart} \or \equal{#1}{Multipart}}{%
+    \@NumberingDeclaredfalse
+    \@WithinMultiparttrue
+    \stepcounter{nesting@level}%
+    \ifnum\c@nesting@level>4\errmessage{latex2edu does not support
+      nesting multiparts deeper than four levels}\fi
+    \setcounter{PartNumber@\roman{nesting@level}}{0}%
+    \setlength\@LabelBoxWidth{\PartBoxWidth}%
+    \@LabelName{Part (\numbering@style{PartNumber@\roman{nesting@level}})}}{}%
+  \element{mode}{#1}}%
+ {% we first need to place any unused blanks
+  \par
+  \let\end@of@blank\relax
+  \advance\leftskip by 2pc%
+  \the\Bl@nks
+  \global\Bl@nks{}%
+  \setcounter{blank@count}{0}%
+  \par
+  \advance\leftskip by -2pc%
+  \ifthenelse{\equal{\the\mode}{numeric} \or
+              \equal{\the\mode}{Numeric}}{%
+    \if@userSetPerc\else
+      \if@userSetDigit\else
+        \if@userSetErr\else
+          \if@ignoreDefaultTolerance\else\the\@defaultTolerance@\par\fi
+        \fi
+      \fi
+    \fi}{}%
+  \if@WithinMultipart\advance\leftskip by -2pc\fi
+  \global\@FirstQuestionInTopicfalse
+  \ifthenelse{\equal{\the\mode}{multipart} \or
+              \equal{\the\mode}{Multipart} \or
+              \equal{\the\mode}{inline} \or
+              \equal{\the\mode}{Inline}}{%
+    \addtocounter{nesting@level}{-1}}{}}
+
+% These are adapted from Victor Eijkhout's \textsl{\TeX\ by Topic},
+% subsection 14.5.1.
+
+\def\@append#1\to#2{\toks0={#1}%
+  \edef\do@this{\global\noexpand#2={\the#2\the\toks0//}}%
+  \do@this}
+
+\def\@readfirst#1\into#2{\edef\do@this{\noexpand\Pick@Off\the#1%
+  (head:)\noexpand#2(tail:)}\do@this}
+\def\Pick@Off#1//#2(head:)#3(tail:){\def#3{#1}}
+
+\def\@pop#1\into#2{\edef\do@this{\noexpand\Split@Off\the#1%
+  (head:)\noexpand#2(tail:)\noexpand#1}\do@this}
+\def\Split@Off#1//#2(head:)#3(tail:)#4{\def#3{#1}\global#4={#2}}
+
+\def\@pop@oneblank#1\into#2{\edef\do@this{\noexpand\Split@Blanks\the#1%
+  (head:)\noexpand#2(tail:)\noexpand#1}\do@this}
+\long\def\Split@Blanks#1\end@of@blank#2(head:)#3(tail:)#4{\def#3{#1}\global#4={#2}}
+
+\newenvironment{newblank}[1]{\par
+  \advance\leftskip by 2pc%
+  \@readfirst\noninline@blanks\into\first@number
+  \ifnum\first@number>\arabic{PartNumber@\roman{nesting@level}}%
+    \loop
+      \@pop@oneblank\Bl@nks\into\@oneblank
+      \@oneblank
+    \ifnum\first@number>\arabic{PartNumber@\roman{nesting@level}}%
+    \repeat
+  \fi
+  \mode{#1}% need the mode in other macros
+  \stepcounter{PartNumber@\roman{nesting@level}}%
+  \bigskip
+  \Set@QuestionBox
+  \nopagebreak
+  \ifthenelse{\equal{#1}{list} \or \equal{#1}{List}}{%
+    \let\answer\@@@answer}{}%
+  \element{mode}{#1}}
+ {\ifthenelse{\equal{\the\mode}{numeric} \or
+              \equal{\the\mode}{Numeric}}{%
+    \if@userSetPerc\else
+      \if@userSetDigit\else
+        \if@userSetErr\else
+          \if@ignoreDefaultTolerance\else\the\@defaultTolerance@\fi
+        \fi
+      \fi
+    \fi}{}%
+  \par\advance\leftskip by -2pc\@pop\noninline@blanks\into\first@number}
+
+\newcommand\g@addto@toks[2]{\global#1\expandafter{\the#1#2}}
+
+\newtoks\Bl@nks
+\newtoks\noninline@blanks
+\newcounter{blank@count}
+\newcommand\@newblank{\@ifnextchar[{\edu@errmessage{\string\blank\space
+  in Inline questions does not take an optional argument}}\@@newblank}
+\newcommand\@@newblank{\@ifnextchar\bgroup\inline@newblank\@newbl@nk}
+\newcommand\@newbl@nk{%\expandafter\g@addto@toks\expandafter\noninline@blanks
+  %\expandafter{\the\c@blank@count}%
+  \expandafter\@append\the\c@blank@count\to\noninline@blanks
+  % to get the comparisons correct in \begin{newblank}, we do need
+  % to append blank@count to \noninline@blanks BEFORE incrementing it
+  \stepcounter{blank@count}%
+  \Set@BlankBox}
+\newcommand\Set@BlankBox{%
+  \fbox{\small\Family\Shape Blank \arabic{blank@count}}}
+\let\blank@env\relax
+
+%%% keys for inline blanks
+\define@key{inline}{err}{\g@addto@toks\Bl@nks{\err{#1}}}
+\define@key{inline}{digits}{\g@addto@toks\Bl@nks{\digits{#1}}}
+\define@key{inline}{percenterr}{\g@addto@toks\Bl@nks{\percenterr{#1}}}
+\define@key{inline}{answer}{%
+  \ifthenelse{\equal{\the\mode}{numeric} \or \equal{\the\mode}{Numeric}}
+    {\parse@answer#1 \relax}
+    {\g@addto@toks\Bl@nks{\answer{#1}}}}
+\def\parse@answer#1 #2\relax{%
+  \def\@tempa{#2}
+  \ifx\@tempa\@empty
+    \g@addto@toks\Bl@nks{\answer{#1}}
+  \else
+    \g@addto@toks\Bl@nks{\answer[#2]{#1}}
+  \fi}
+\define@key{inline}{maple}{\g@addto@toks\Bl@nks{\maple{#1}}}
+
+
+\newcommand\inline@newblank[2]{\stepcounter{blank@count}\Set@BlankBox
+  \g@addto@toks\Bl@nks{\par\begingroup
+    \mode{#1}% need the mode in other macros
+    \stepcounter{PartNumber@\roman{nesting@level}}%
+    \bigskip
+    \Set@QuestionBox
+    \nopagebreak
+    \ifthenelse{\equal{#1}{list} \or \equal{#1}{List}}{%
+      \let\answer\@@@answer}{}%
+    \element{mode}{#1}}%
+  \setkeys{inline}{#2}%
+  \g@addto@toks\Bl@nks{\endgroup\par\end@of@blank}}
+
+\newtoks\@footnotes@
+\def\qutext{\begingroup
+  \global\@footnotes@{}\futurelet\next\qut@xt}
+\def\qut@xt{\ifcat\bgroup\noexpand\next \let\next\q@t@xt
+  \else \let\next\qt@xt
+  \fi \next}
+\def\q@t@xt{\htmltag{text}\bgroup\aftergroup\@qutext\let\next}
+\def\qt@xt#1{\htmltag{text}\ignorespaces#1\@qutext}
+\def\@qutext{\the\@footnotes@\endgroup\blank@env}
+
+\def\hb@xt@onepointeightem{\hb@xt@1.8em}
+\long\def\@footnotetext#1{\ifthenelse{\equal{\the\@footnotes@}{}}
+  {\@footnotes@{\footnoterule}}{}%
+  \edef\@thisfnmark{\@thefnmark}%
+  \expandafter\global\expandafter\@footnotes@\expandafter{\the\@footnotes@\par
+    \parindent 1em\noindent}%
+  \expandafter\expandafter\expandafter\global
+    \expandafter\expandafter\expandafter\@footnotes@
+    \expandafter\expandafter\expandafter{\expandafter
+      \the\expandafter\@footnotes@\expandafter
+      \hb@xt@onepointeightem\expandafter{\expandafter\hss\expandafter
+        \@textsuperscript\expandafter{\expandafter\normalfont\@thisfnmark}}%
+      \rule\z@\footnotesep\ignorespaces#1\@finalstrut\strutbox}}
+
+% \setTopMatter{foo} causes foo to be placed at the beginning of every
+% subsequent \qutext.
+
+\newtoks\@TopMatter@ \@TopMatter@{\empty}
+\newcommand{\setTopMatter}{\@TopMatter@}
+\newcommand{\ignoreTopMatter}{\@TopMatter@{\empty}}
+
+% the \answer macro, with an optional argument in numeric mode
+
+\newcommand{\answer}{\htmltag{answer}\begingroup
+  \@removeSpecialCharCodesNoPerc
+  \ifthenelse{\equal{\the\mode}{numeric} \or \equal{\the\mode}{Numeric}}%
+    {\@@answer}{\@answer}}
+\newdimen\units@width
+\newbox\units@box
+\setbox\units@box=\hbox{\Family\Shape units\hskip.7em}%
+\units@width=\wd\units@box
+\newdimen\credit@width
+\newbox\credit@box
+\setbox\credit@box=\hbox{\Family\Shape credit\hskip.7em}%
+\credit@width=\wd\credit@box
+\newcommand{\@answer}[1]{\@raw{#1}\endgroup}
+\newcommand{\@@answer}{\@ifnextchar[\@@answer@units\check@unitslast}
+\newcommand{\check@unitslast}[1]{\@ifnextchar[{\@@answer@unitslast{#1}}%
+  {\@answer{#1}}}
+\def\@@answer@units[#1]#2{\hbox to \units@width{\Family\Shape num\hss}%
+  \@raw{#2}\newline
+  \hbox to \units@width{\Family\Shape units\hss}\@raw{#1}\endgroup}
+\def\@@answer@unitslast#1[#2]{\@@answer@units[#2]{#1}}
+\def\@@@answer#1#2{\htmltag{answer}\@raw{#2}\newline
+  \hbox to \credit@width{\Family\Shape credit\hss}\@raw{#1}}
+
+%\let\useOldAnswer\relax
+
+\newcommand{\tol}{\begingroup\@removeSpecialCharCodes\@tol}
+\newcommand{\@tol}[1]{\element*{tolerance}{\@raw{#1}}\endgroup}
+
+% significant digits and tolerance (for numeric mode)
+
+\newif\if@userSetDigit
+\newif\if@userSetErr
+\newif\if@userSetPerc
+\newcommand{\check@numeric}[1]{\ifthenelse{\equal{\the\mode}{numeric} \or
+  \equal{\the\mode}{Numeric}}{\relax}{\edu@errmessage{#1 allowed only in
+    `numeric' mode}}}
+\newcommand{\digits}{\check@numeric{\string\digits}%
+  \if@userSetPerc\edu@errmessage{\string\percenterr\space may not be used
+    with \string\digits}\fi
+  \@userSetDigittrue
+  \htmltag{digits}\begingroup\@removeSpecialCharCodes\@digits}
+\newcommand{\@digits}[1]{\@raw{#1}\endgroup}
+\newcommand{\err}{\check@numeric{\string\err}%
+  \if@userSetPerc\edu@errmessage{\string\percenterr\space may not be used
+    with \string\err}\fi
+  \@userSetErrtrue
+  \htmltag{err}\begingroup\@removeSpecialCharCodes\@digits}
+\newcommand{\percenterr}{\check@numeric{\string\percenterr}%
+  \if@userSetDigit\edu@errmessage{\string\percenterr\space may not be used
+    with \string\digits}\fi
+  \if@userSetErr\edu@errmessage{\string\percenterr\space may not be used
+    with \string\err}\fi
+  \@userSetPerctrue
+  \htmltag{percenterr}\begingroup\@removeSpecialCharCodes\@digits}
+
+% macros for global tolerance settings
+
+\newif\if@ignoreDefaultTolerance \@ignoreDefaultTolerancefalse
+\newtoks\@defaultTolerance@
+\newcommand\setDefaultTolerance{\@defaultTolerance@=}
+\newcommand\exactgrading{\@ignoreDefaultTolerancetrue}
+
+\newcommand{\property}[2]{\element[name='#1']{property}{#2}}
+
+\newcommand{\units}{\check@numeric{\string\units}%
+  \htmltag{units}\begingroup\@removeSpecialCharCodes\@units}
+\newcommand{\@units}[1]{\@raw{#1}\endgroup}
+
+% These macros set \blanks as text in a box. For \blank[menu],
+% comma-delimited selections are set in a boxed, vertical list.
+
+{\catcode`\,=\active
+\gdef\makecomma{\catcode`\,=\active
+  \def,{\egroup\hbox\bgroup\ignorespaces}}}
+\newcommand{\blank}[1][text]{\begingroup
+  \def\ge{>=}\def\le{<=}%
+  \ifthenelse{\equal{#1}{menu}}{\makecomma}{}%
+  \@removeSpecialCharCodes\tt\@blank}
+\newcommand{\@blank}[1]{\fbox{\vtop{\hbox{#1}}}\endgroup\hskip2pt}
+
+% Macros to insert a line break after semicolons in \code, \info,
+% and \TableOfUnits fields
+
+\newcommand{\add@breaks}[1]{{\edef\@arg{#1}%
+  \let\var\v@r
+  \expandafter\add@breaks@recurse\@arg;\relax}\endgroup}
+\def\add@breaks@recurse#1;#2{%
+  \ifx#2\relax\par
+  \else
+    \@raw{#1};\par
+    \expandafter\expandafter\expandafter
+      \add@breaks@recurse\expandafter#2\fi}
+\newcommand{\code}{\par\labelbox{code}\ignorespaces
+  \begingroup\@removeSpecialCharCodes\add@breaks}
+\newcommand{\algorithm}{\par\labelbox{algorithm}\ignorespaces
+  \begingroup\@removeSpecialCharCodes\add@breaks}
+\newcommand{\info}{\par\labelbox{info}\ignorespaces
+  \begingroup\@removeSpecialCharCodes\add@breaks}
+\newcommand{\TableOfUnits}[1]{\par\labelbox{#1}\ignorespaces
+  \begingroup\@removeSpecialCharCodes\add@breaks}
+
+% Macros for Palette questions
+
+\newenvironment{Palette}{\begingroup\@removeSpecialCharCodes\@Palette}
+  {\endgroup}
+\newcommand\@Palette[1]{\par\element*{Palette}{#1}\par
+  \advance\leftskip by 2pc\ignorespaces}
+\newenvironment{menu}[2][3]{\element*{menu}{\texttt{#2}
+  {\sffamily(#1 columns)}}\par\advance\leftskip by 2pc}{}
+\newcommand\button[1]{\element*{button}{#1}}
+\newcommand\sep{\element*{---separator---\hskip-2pc}{}}
+{\catcode`#=11
+\gdef\toolbar{\begingroup\catcode`#=11\@toolbar}}
+\newcommand\@toolbar[1]{\element*{toolbar}{\@raw{#1}}\endgroup}
+\newcommand\palette@answer[1]{\element*{answer}{\@raw{#1}}}
+
+% Macro to specify text to automatically appear in all \info fields
+
+\def\setGlobalInfo#1{\def\@GlobalInfo{#1}}
+\def\@GlobalInfo{}
+  
+% A replacement for ^\circ to produce the degree symbol.
+% Included because its XML definition produces superior results.
+
+\newcommand{\textdegree}{\ensuremath{^\circ}}
+\let\mathdegree\textdegree
+\let\degree\textdegree
+
+% A horizontal rule.
+
+\def\hr{\par\vspace{.5\baselineskip}\hrule\vspace{.5\baselineskip}}
+
+% A hyperlink.
+
+\newcommand\link[2]{\underline{#2}\texttt{[#1]}}
+
+\newcommand\sound[2]{\link{\@SoundBase #1}{#2}}
+
+% Base path for sounds
+
+\newcommand{\setSoundBase}{\begingroup\catcode`~=12\@removeSpecialCharCodes
+  \@setSoundBase}
+\let\setSoundPath\setSoundBase
+\newcommand{\@setSoundBase}[1]{\filename@parse{#1}\relax
+  \ifx\filename@base\empty
+    \gdef\@SoundBase{#1}%
+  \else
+    \gdef\@SoundBase{#1/}%
+  \fi\endgroup}
+\@ifundefined{@SoundBase}{\let\@SoundBase\relax}\relax
+\newcommand{\ignoreSoundBase}{\def\@SoundBase{}}
+
+
+% To include images in the testbank, set the image base once, 
+% in the preamble to the document, then use:
+%   \image{imagename.gif}
+
+\newcommand{\setImageBase}{\begingroup\catcode`~=12\@removeSpecialCharCodes
+  \@setImageBase}
+\let\setImagePath\setImageBase
+\newcommand{\@setImageBase}[1]{\filename@parse{#1}\relax
+  \ifx\filename@base\empty
+    \gdef\@ImageBase{#1}%
+  \else
+    \gdef\@ImageBase{#1/}%
+  \fi\endgroup}
+\@ifundefined{@ImageBase}{\let\@ImageBase\relax}\relax
+\newcommand{\ignoreImageBase}{\def\@ImageBase{}}
+\newif\if@ImageExtDefault \@ImageExtDefaultfalse
+\def\@stripdot#1{\ifx#1.\else#1\fi}
+\newcommand{\setImageExt}[2][]{\edef\@ImageExt{\expandafter\@stripdot#2}%
+  \ifx#1!\@ImageExtDefaulttrue\fi}
+\@ifundefined{@ImageExt}{\let\@ImageExt\relax}\relax
+\newtoks\@extension@
+\def\@DetermineExt#1{%
+  \ifx\filename@ext\relax
+    \if@ImageExtDefault
+      \expandafter\@extension@\expandafter{\expandafter.\@ImageExt}%
+    \else\ifx#1\relax
+      \ifx\@ImageExt\relax
+        \@extension@{.jpg}%
+      \else\expandafter\@extension@\expandafter{\expandafter.\@ImageExt}%
+      \fi
+    \else\@extension@{.#1}%
+    \fi
+    \fi
+  \else
+    \expandafter\@extension@\expandafter{\expandafter.\filename@ext}
+  \fi}
+\newdimen\PathBoxWidth
+\PathBoxWidth=\textwidth
+\advance\PathBoxWidth by -10pc \advance\PathBoxWidth by -1em
+\newif\if@image@star
+\newcommand{\image}{\@ifstar\image@star\image@}
+\newcommand{\image@star}{\@image@startrue\image@}
+\newcommand{\image@}{\begingroup
+  \catcode`~=12\@removeSpecialCharCodes
+  \let\var\bvar
+  \im@ge}
+\newcommand{\im@ge}[2][\relax]{\filename@parse{#2}%
+  \edef\given@extension{\ifx\filename@ext\relax\else.\filename@ext\fi}%
+  \ifthenelse{\equal{\filename@ext}{eps}}{\let\filename@ext\relax}{}%
+  \@DetermineExt{#1}%
+  \ifthenelse{\equal{\given@extension}{\the\@extension@}}{}%
+    {\PackageInfo{ed}{'\filename@base\given@extension' changed to
+       '\filename@base\the\@extension@'}}%
+  \if@image@star
+    \fbox{\@raw{\@ImageBase\filename@area\filename@base\the\@extension@}}
+  \else
+    \par
+    \fbox{\rule[-3pc]{0pt}{6pc}\hspace{8.4pc}}%
+    \parbox{\the\PathBoxWidth}%
+      {\@raw{\@ImageBase\filename@area\filename@base\the\@extension@}\hfil}%
+    \\
+  \fi
+  \endgroup
+  \@image@starfalse
+}
+
+\def\includegraphics{\PackageError{ed}
+  {\@backslashchar includegraphics cannot be used in EDU
+   authoring.\MessageBreak Please use \@backslashchar image instead}}
+\def\epsfig{\PackageError{ed}
+  {\@backslashchar epsfig cannot be used in EDU
+   authoring.\MessageBreak Please use \@backslashchar image instead}}
+
+% macros for popup windows
+
+\newcommand{\setPopupBase}{\begingroup\catcode`~=12\@removeSpecialCharCodes
+  \@setPopupBase}
+\newcommand{\@setPopupBase}[1]{\filename@parse{#1}\relax
+  \ifx\filename@base\empty
+    \gdef\@PopupBase{#1}%
+  \else
+    \gdef\@PopupBase{#1/}%
+  \fi\endgroup}
+\@ifundefined{@PopupBase}{\let\@PopupBase\relax}\relax
+\newcommand{\ignorePopupBase}{\def\@PopupBase{}}
+\newlength\PopupBoxWidth
+\setbox\@tempboxa=\hbox{\large\Family\Series\Shape
+  Popup\normalsize\enspace}
+\setlength\PopupBoxWidth{\wd\@tempboxa}
+\newenvironment{popup}{\begingroup\@removeSpecialCharCodes\@popup}{\par}
+\newcommand{\@popup}[2][\relax]{\endgroup\hskip-\PopupBoxWidth
+  \lower.4ex\hbox to \PopupBoxWidth{\hrulefill
+    \Family\Series\Shape\hskip.25em}%
+  \labelbox{\large Popup}\par
+  \labelbox{label}#2\par
+  \labelbox{contents}\the\@TopMatter@\ignorespaces}
+\newcommand{\popupref}{\@ifstar\@popuprefstar\@popupref}
+\newtoks\@linkText@
+\newtoks\@options@
+\newcommand{\@popupref}[1][\relax]{\@linkText@{#1}\@p@pupref}
+\newcommand{\@p@pupref}[1][width=450,height=650]{\@options@{#1}%
+  \begingroup\catcode`~=12\@removeSpecialCharCodes\@@popupref}
+\newcommand{\@@popupref}[1]{\underline{%
+  \ifthenelse{\equal{\the\@linkText@}{\relax}}
+    {\@PopupBase#1.html}{\the\@linkText@}}\endgroup}
+\newcommand{\@popuprefstar}[1][\relax]{\@linkText@{#1}\@p@puprefstar}
+\newcommand{\@p@puprefstar}[1][width=450,height=650]{\@options@{#1}%
+  \begingroup\catcode`~=12\@removeSpecialCharCodes\@@popuprefstar}
+\newcommand{\@@popuprefstar}[1]{\underline{%
+  \ifthenelse{\equal{\the\@linkText@}{\relax}}
+    {\@PopupBase#1}{\the\@linkText@}}\endgroup}
+
+% macros for examples
+
+\newtoks\@thislabelname@
+\newtoks\@temptoks
+\newbox\@thisexamplebox
+\long\outer\def\example#1#2{\expandafter\def\csname example-#1\endcsname{#2}}
+\def\exampleref#1{\csname example-#1\endcsname}
+
+% \setTdAttrib{foo} adds foo in every *subsequent* <td> element.
+% A common use would be \setTdAttrib{valign="top"}.
+% Another use would be for horizontal (re-)alignment:
+% \setTdAttrib{halign="left"} will change all *subsequent* cells
+% to left-aligned.
+
+\catcode`:=11
+\newcommand{\setTdAttrib}{\begingroup\@removeSpecialCharCodes
+  \@setTdAttrib}
+\newcommand{\@setTdAttrib}[1]{\gdef\SMW:TdAttrib{#1 }\endgroup}
+\@ifundefined{SMW:TdAttrib}{\def\SMW:TdAttrib{}}\relax
+\newcommand{\ignoreTdAttrib}{\def\SMW:TdAttrib{}}
+\catcode`:=12
+
+\def\@{@}
+
+\newif\ifXML \XMLfalse
+\DeclareOption{xml}{\XMLtrue}
+%\newif\if@Old
+%\DeclareOption{old}{\@Oldtrue}
+\ProcessOptions
+
+\@ifundefined{production}{\XMLfalse}{\XMLtrue}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                  %%
+%%                  Main Body of Macro Defs                         %%
+%%                                                                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \element[attlist]{elt}{body} sets an element. Eg
+%   \element[href='home.html']{a}{Click here} 
+% is presented as
+%   <a href='home.html'>Click here</a>
+
+\newcommand{\element}{\@ifstar{\element@nopar}{\element@par}}
+\newcommand{\element@nopar}[3][]{\htmltag@nopar[#1]{#2}#3%
+  \htmltag@nopar*{#2}}
+\newcommand{\element@par}[3][]{\htmltag[#1]{#2}#3\htmltag*{#2}}
+
+% \param{name}{value} sets an applet <param> tag
+
+\newcommand{\param}[2]{\element[name='#1' value='#2']{param}{}}
+
+% Common fields for all (or almost all) question types
+
+\newcommand{\name}[1]{\element{name}{#1}}
+\def\hint{\futurelet\next\h@nt}
+\def\h@nt{\ifcat\bgroup\noexpand\next \let\next\@h@nt
+  \else \let\next\h@nt@
+  \fi \next}
+\def\@h@nt{\htmltag{hint}\bgroup\let\next}
+\def\h@nt@#1{#1}
+\def\comment{\futurelet\next\comm@nt}
+\def\comm@nt{\ifcat\bgroup\noexpand\next \let\next\c@mm@nt
+  \else \let\next\c@mmnt
+  \fi \next}
+\def\c@mm@nt{\htmltag{comment}\bgroup\let\next}
+\def\c@mmnt#1{#1}
+\newcommand{\solution}[1]{\element{solution}{#1}}
+
+\newcommand{\display}[1]{\element*{display}{#1}}
+\newcommand{\grader}[1]{\element*{grader}{#1}}
+\newcommand{\grading}[1]{\element*{grading}{#1}}
+
+\newcommand\nonpermuting{\element*{display.permute}{false}}
+
+% Controls numbering for multipart questions
+
+\newcommand{\numbering}[1]{\@NumberingDeclaredtrue
+  \element*{numbering}{#1}%
+  \ifthenelse{\equal{#1}{none}}{\let\numbering@style\@gobble}{%
+    \ifthenelse{\equal{#1}{alpha}}{\let\numbering@style\alph}{%
+      \ifthenelse{\equal{#1}{Alpha}}{\let\numbering@style\Alph}{%
+        \def\numbering@style{\csname#1\endcsname}}}}}
+
+% Allows weighting for multipart questions. Argument should be a
+% comma-delimited list of the weights for each part.
+
+\newcommand{\weighting}[1]{\element*{weighting}{#1}}
+
+% Macros for multiple choice, multiple selection and true/false.
+% Use \choice* to mark the correct choice(s)
+
+\newcommand{\choice}{\@ifstar{\@choicec}{\@choice}}
+%\newcommand{\@choicec}[1]{\element{correct-choice}{#1}}
+%\newcommand{\@choice}[1]{\element{choice}{#1}}
+
+\def\@choice{\begingroup\futurelet\next\@choic@}
+\def\@choic@{\ifcat\bgroup\noexpand\next \let\next\@ch@ic@
+  \else \let\next\@ch@@c@
+  \fi \next}
+\def\@ch@ic@{\htmltag{choice}\bgroup\aftergroup\@choice@\let\next}
+\def\@ch@@c@#1{\ignorespaces#1\@choice@}
+\def\@choice@{\endgroup\htmltag*{choice}}
+
+\def\@choicec{\begingroup\futurelet\next\@choic@c}
+\def\@choic@c{\ifcat\bgroup\noexpand\next \let\next\@ch@ic@c
+  \else \let\next\@ch@@c@
+  \fi \next}
+\def\@ch@ic@c{\htmltag{correct-choice}\bgroup\aftergroup\@choicec@\let\next}
+\def\@choicec@{\endgroup\htmltag*{correct-choice}}
+
+\newcommand{\chcomment}[1]{\element{chcomment}{#1}}
+
+\newcommand{\true}{\choice*{True}\choice{False}}
+\newcommand{\false}{\choice{True}\choice*{False}}
+
+
+% Used in matrix question type. Rare - safe to ignore
+
+\newcommand{\size}[2]{\element[rows='#1' cols='#2']{size}{}}
+
+
+% Macros for matching question types; \cols defined separately for each mode
+% It's hard to tell just what the macros are, because of the complicated
+% defs, so here's the summary:
+%   \match{this}\with{that} is self explanatory: `this' is to be matched
+%     with `that'
+%   \match{this}\with{that}\also{the other} sets `that' and `the other' as
+%     correct matches, but also lists the wrong answer `the other' as a
+%     choice.
+
+{\catcode`\{=\active \catcode`\[=1%
+\gdef\@dotags#1[\htmltag[#1}%
+  \def\end@this@tag[\htmltag*[#1}}%
+  \begingroup
+  \catcode`\{=\active \catcode`\[=1%
+  \def{[\endgroup
+    \bgroup\aftergroup\end@this@tag}}}
+\def\match{\@dotags{match}}
+\def\with{\@dotags{with}}
+\def\decoy{\@dotags{also}}
+\def\also{\PackageWarning{ed}{\@backslashchar also outdated;\MessageBreak
+  \@backslashchar decoy should be used instead}\decoy}
+\newcommand{\cols}[1]{\element[size='#1']{cols}{}}
+
+
+% Macros for drawing axes
+
+\newcommand{\axes}[2][]{\element*[labeled="true"
+  background="\@ImageBase #1"]{axes}{\@raw{#2}}}
+\newcommand{\unlabeledaxes}[2][]{\element*[labeled="false"
+  background="\@ImageBase #1"]{axes}{\@raw{#2}}}
+\let\unlabelledaxes\unlabeledaxes
+\newcommand{\gridlines}[1]{\element*{gridlines}{\@raw{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                  %%
+%%             Maple Macros                                         %%
+%%                                                                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\maple}{\htmltag@nopar{maple}\begingroup
+  \@removeSpecialCharCodes\@ifstar\maple@raw\maple@short}
+\newcommand{\maple@short}[1]{\maple@raw{evalb(\string$RESPONSE = #1);}} % $
+\newcommand{\maple@raw}[1]{\@raw{#1}\endgroup\htmltag@nopar*{maple}}
+
+\newif\if@userSetMapleType
+\newcommand{\type}[1]{\element*{type}{#1}\@userSetMapleTypetrue}
+
+\newcommand{\plot}{\htmltag@nopar{plot}\begingroup
+  \@removeSpecialCharCodes\@ifnextchar 3\@plotthree\@plot}
+\newcommand{\@plot}{\@ifstar\@plot@raw\@plot@short}
+\newcommand{\@plot@short}[3]{\@plot@raw{plot(\string$RESPONSE, #1=#2..#3);}} % $
+\def\@plotthree 3{\@ifnextchar d\@plotthreed{\errmessage{Perhaps you mean
+  `\string\plot3d' on line \the\inputlineno}}}
+\def\@plotthreed d#1#2#3#4#5#6{\@plot@raw{plot3d(\string$RESPONSE, #1=#2..#3,
+  #4=#5..#6);}} % $
+\newcommand{\@plot@raw}[1]{\@raw{#1}\endgroup\htmltag@nopar*{plot}}
+
+\newtoks\@drawMaplePlot@width
+\newtoks\@drawMaplePlot@height
+\newcommand{\drawMaplePlot}{\begingroup\@removeSpecialCharCodes
+  \@ifnextchar 3\@drawMaplePlotthree\@drawMaplePlot}
+\newcommand{\@drawMaplePlot}{\@ifstar\pre@drawMaplePlot@raw
+  \@drawMaplePlot@short}
+\newcommand{\@drawMaplePlot@short}[1][250]{%
+  \@drawMaplePlot@width{#1}%
+  \@@drawMaplePlot@short}
+\newcommand{\@@drawMaplePlot@short}[5][250]{%
+  \@drawMaplePlot@height{#1}%
+  \@drawMaplePlot@raw{plot(#2,#3=#4..#5)}}
+\def\@drawMaplePlotthree 3{\@ifnextchar d\pre@drawMaplePlotthreed
+  {\errmessage{Perhaps you mean `\string\drawMaplePlot3d' on line
+   \the\inputlineno}}}
+\def\pre@drawMaplePlotthreed d{\@drawMaplePlotthreed}
+\newcommand{\@drawMaplePlotthreed}[1][250]{%
+  \@drawMaplePlot@width{#1}%
+  \@@drawMaplePlotthreed}
+\newcommand{\@@drawMaplePlotthreed}[8][250]{%
+  \@drawMaplePlot@height{#1}%
+  \@drawMaplePlot@raw{plot3d(#2,#3=#4..#5, #6=#7..#8)}}
+\newcommand{\pre@drawMaplePlot@raw}[1][250]{%
+  \@drawMaplePlot@width{#1}%
+  \@pre@drawMaplePlot@raw}
+\newcommand{\@pre@drawMaplePlot@raw}[1][250]{%
+  \@drawMaplePlot@height{#1}%
+  \@drawMaplePlot@raw}
+\newcommand{\@drawMaplePlot@raw}[1]{\par
+    \fbox{\rule[-3.5pc]{0pt}{7pc}\hspace{10pc}}
+    \parbox{\the\PathBoxWidth}{\@raw{#1}\hfil}
+    \endgroup}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                  %%
+%%             Code for various applets                             %%
+%%                                                                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% A graph plotting component
+% Use: \graph{formula}{xMin}{xMax}{yMin}{yMax}
+
+\let\graph@width\relax  \let\graph@height\relax
+\newcommand\setGraphSize[2]{\def\graph@width{#1}
+  \def\graph@height{#2}}
+\newcommand{\graph}{\par\begingroup
+  \let\var\bvar\@removeSpecialCharCodes\catcode`\#=12\@graph}
+\newcommand{\@graph}[2][10]{%
+  \htmltag[code='applets.grapher.Graph' 
+    width='\ifx\graph@width\relax 250\else \graph@width \fi' 
+    height='\ifx\graph@height\relax 250\else \graph@height \fi'
+    archive='graphing.jar']{applet}
+  \param{y1}{#2}
+  \param{gridLines}{#1}
+  \@graph@x}
+\newcommand\@graph@x[3][\relax]{%
+  \param{xMin}{#2}
+  \param{xMax}{#3}
+  \ifx#1\relax\else\param{xfmt}{#1}\fi
+  \@graph@y}
+\newcommand\@graph@y[3][\relax]{%
+  \param{yMin}{#2}
+  \param{yMax}{#3}
+  \ifx#1\relax\else\param{yfmt}{#1}\fi
+  \htmltag*{applet}
+  \endgroup\HtmlPar}
+
+\let\HtmlPar\par
+
+\newcommand{\multigraph}{\begingroup
+  \let\var\bvar\@removeSpecialCharCodes\catcode`\#=12\@multigraph}
+\newcommand{\@multigraph}[3][10]{%
+  \htmltag[code='applets.grapher.Graph'
+    width='\ifx\graph@width\relax 250\else \graph@width \fi'
+    height='\ifx\graph@height\relax 250\else \graph@height \fi'
+    archive='graphing.jar']{applet}
+  \param{y1}{#2}
+  \param{y2}{#3}
+  \param{gridLines}{#1}
+  \@graph@x}
+
+
+% A labelled image
+% Use:
+%   \begin{labelgraphic}{img.gif}{width}{height}
+%     \grlabel{\var{mass}}{x1}{y1}
+%     \grlabel{\var{height}}{x2}{y2}
+%     ...
+%   \end{labelgraphic}
+
+\newcounter{labelgraphic}
+\newenvironment{labelgraphic}[3]{
+  \htmltag[code="applets.labelImage.LabelImage" width='#2' height='#3']%
+    {applet}
+  \param{image}{\@ImageBase #1}
+}{
+  \param{size}{\arabic{labelgraphic}}
+  \setcounter{labelgraphic}{0}
+  \htmltag*{applet}
+}
+
+\newcommand{\grlabel}{\begingroup\let\var\bvar\@grlabel}
+\newcommand{\@grlabel}[4][]{
+  \stepcounter{labelgraphic}
+  \ifthenelse{\equal{#1}{}}{}{%
+    \ifthenelse{\equal{#1}{l}}{%
+      \param{label.\arabic{labelgraphic}.align}{left}}{%
+      \ifthenelse{\equal{#1}{c}}{%
+        \param{label.\arabic{labelgraphic}.align}{center}}{%
+        \ifthenelse{\equal{#1}{r}}{%
+          \param{label.\arabic{labelgraphic}.align}{right}}{%
+          \errmessage{Unrecognized alignment option `#1' in
+            \string\grlabel}}}}}%
+  \param{label.\arabic{labelgraphic}.text}{#2}
+  \param{label.\arabic{labelgraphic}.x}{#3}
+  \param{label.\arabic{labelgraphic}.y}{#4}
+\endgroup}
+
+% A clickable image
+% Use:
+%   \begin{clickableimage}{img.gif}{width}{height}
+%     \region*{x11,y11,x12,y12,...}
+%     \region{x21,y21,x22,y22,...}
+%     ...
+%   \end{clickableimage}
+
+\newcounter{@region}
+\newcounter{@correctregion}
+\newenvironment{clickableimage}[3]{%
+  \element*{imageURL}{\@ImageBase #1}
+  \element*{width}{#2}
+  \element*{height}{#3}
+}{%
+  \element*{correctregion}{\arabic{@correctregion}}
+  \setcounter{@region}{0}
+}
+
+\newcommand{\region}{\@ifstar{\@correctregion\@region}{\@region}}
+\newcommand{\@region}[1]{%
+  \stepcounter{@region}%
+  \element*[number="\arabic{@region}"]{region}{#1}%
+}
+\newcommand{\@correctregion}{%
+  \setcounter{@correctregion}{\arabic{@region}}%
+  \stepcounter{@correctregion}%
+}
+
+% Sketch
+% Use: \begin{sketch}[gridlines]{xMin}{xMax}{yMin}{yMax}
+%        \example{point-list}
+%        \check{criterion1}
+%        \check{criterion2}
+%        ...
+%      \end{sketch}
+
+\newenvironment{sketch}[5][10]{\begingroup
+  \renewcommand\check{\begingroup\@removeSpecialCharCodes\@check}%
+  \gridlines{#1}
+  \axes{#2,#3,#4,#5}}%
+  {\endgroup}
+\newcommand{\@check}{\@ifstar\raw@check\@@check}
+\newcommand{\@@check}[2][\relax]{\element{check}{\@raw{#2}%
+  \ifx#1\relax\else{} (on [#1])}\fi\endgroup}
+\let\raw@check\@@check
+
+
+
+%%% begin edualgo.sty
+%%% (macros to simplify the authoring of algorithmic questions)
+
+%%% Note (2003-Feb-01): These macros are rapidly becoming obsolete, with
+%%% EDU's introduction of inline algorithms and several new functions
+%%% (like frac and mathml) that are designed to simplify the coding of
+%%% mathematical notation. New macros will be added to these to better
+%%% take advantage of these advanced features.
+
+% In my view, the two most common problem with algorithmic variables are
+% ones and signs. If a variable appears in an expression as a coefficient,
+% and if a particular instance of that variable has value 1, then the 1
+% shouldn't display. Also, a negative variable shouldn't have a plus sign
+% in front of it. Here are some examples:
+% --------------
+%   \code{$m = int(rand(1,10));}  % $m takes a value in [1,9]
+%   \qutext{Let $y = \var{m} x$.}
+%
+%   This could display ``Let y = 1x.''
+% --------------
+%   \code{$m = int(rand(1,10));
+%         $b = int(rand(-9,10));} % $b takes a value in [-9,9]
+%   \qutext{Let $y = \var{m} x + \var{b}$.}
+%
+%   This is really bad. As well as allowing ``Let y = 1x + 1'', it also
+%   allows atrocities like ``y = 1x + 0'' and ``y = 1x + -9''.
+% --------------
+%
+% Working around these issues creates a significant amount of work for
+% question bank authors. For instance, a good way to code the first
+% example is
+%
+%   \code{$m = int(rand(1,10));
+%         $displaym = if(eq($m,1),"","$m");}
+%   \qutext{Let $y = \var{displaym} x$.}
+%
+% Here, $displaym is an empty string if $m is 1. Notice that, if $m is not 1,
+% $displaym is still a string; if we don't use the quotation marks around $m,
+% then $displaym is a floating-point value. That is,
+%
+%         $displaym = if(eq($m,1),"",$m);
+%
+% would result in ``Let y = 2.0m'' if $m is 2.
+%   The same type of construction works for plus/minus signs. Of the various
+% ways to fix the second example, the most direct is probably
+%
+%   \code{$m = int(rand(1,10));
+%         $displaym = if(eq($m,1),"","$m");
+%         $absb = int(rand(1,10));
+%         $signb = switch(rint(2),"+","-");}
+%   \qutext{Let $y = \var{displaym} x \var[mo]{signb} \var{absb}$.}
+%
+% If a signed value of $b is needed later, we could add
+%
+%   $b = int($signb$absb);
+%
+% in \code. (This has the side effect of making $b nonzero.)
+%   Notice that \var{signb} wouldn't work here; WE MUST ADD THE [mo] OPTION
+% to \var when the variable is an operator, but only if that \var appears
+% in LaTeX math mode (between dollar signs). The reason for this is that
+% MathML expects to be told what kind of object everything is. Three basic
+% types of objects are numbers, identifiers (e.g., variables), and operators.
+% In most cases, an algorithmic variable holds a numerical value, so \var{a}
+% by default translates into (roughly) <mn>$a</mn>, the MathML way to say
+% that $a is a number.
+%   But, if a variable holds an operator, like $signb in our example, we
+% need to wind up with <mo>$signb</mo> in MathML. That's what \var[mo]{signb}
+% does. While we're on the subject, \var[mi]{variable} would set $variable
+% as an identifier, should the need ever arise; for instance, maybe we had
+%
+%   $variable = switch(rint(3),"A","B","C");
+%
+% for some reason.
+%   Note that the optional argument isn't necessary when we use \var within
+% a macro like \answer, which doesn't accept TeX math, so that there's no
+% translation into MathML to worry about.
+%
+% This file defines several macros to simplify the coding of algorithmic
+% variables.
+
+% First, a macro to turn a value of 1 into the empty string. \mkdisplay{a}
+% (named for ``make display'') is equivalent to
+%
+%   $da = if(eq($a,1),"","$a");
+%
+% Note that this requires that $a be previously defined, and that it's really
+% only useful if $a is positive. \mkd is an alias for \mkdisplay.
+
+\def\mkdisplay#1{\string$d#1 = if(eq(\string$#1,1),"","\string$#1");} % $
+\let\mkd\mkdisplay
+
+%%% Here's one of the ``new macros'' mentioned above. It's basically \mkd
+%%% for use inline. Use \dvar{a} where you need a 'displayable' version of
+%%% $a.
+%%%   The optional argument to this macro is the value that is not to be
+%%% displayed. This is most often 1 (which is the default). An example
+%%% where the value would be different from 1 would be \sqrt[\var{a}]{x},
+%%% say with $a >= 2. We'd want to use \sqrt[{\dvar[2]{a}}]{x}.
+%%%   Note that the optional argument may not be an inline algorithm.
+
+\newcommand{\dvar}[1][1]{\begingroup
+  \let\var\bvar
+  \@removeSpecialCharCodes\@dvar[#1]}
+{\catcode`$=12 % $
+\gdef\@dvar[#1]#2{\edef\@dvar@arg{#2}%
+  \expandafter\check@inline\@dvar@arg$\relax % $
+  \ifis@inline
+    \@raw{$\char"7B}\@raw{if(eq(#2,#1),"",#2)\char"7D}% $
+  \else
+    \@raw{$\char"7B}\@raw{if(eq($#2,#1),"",$#2)\char"7D}% $
+  \fi\endgroup}}
+
+%%% Here's another one. \mvar encases its argument in the mathml() function.
+
+%\newcommand{\mvar}[1]{\var[mo]{#1}}
+\newcommand{\mvar}{\begingroup
+%  \let\var\bvar
+  \@removeSpecialCharCodes\@mvar}
+\newcommand{\@mvar}[1]{\ifmmode\var{mathml(#1,0)}\else\var{mathml(#1)}\fi
+  \endgroup}
+
+% \mksign{a} randomly assigns "+" or "-" to $sa. $a does not have to exist
+% when \mksign{a} is called, because \mksign{a} doesn't care what $a is.
+% \mks is a shortcut.
+
+\def\mksign#1{\string$s#1 = switch(rint(2),"+","-");} % $
+\let\mks\mksign
+
+% In case you don't want the plus sign to show up, like in
+%
+%   $y = \var[mo]{sa} \var{a}$,
+%
+% there's \mksignnoplus, abbreviated \mksnp. Note that this type of
+% construction is purely a matter of vanity. $y = \var{a}$ is fine, regardless
+% of whether $a is postive, negative, or zero; the difference between the two
+% is that the minus sign is more noticeable in the complicated version.
+
+\def\mksignnoplus#1{\string$s#1 = switch(rint(2),"","-");} % $
+\let\mksnp\mksignnoplus
+
+% Having to type
+%
+%   $a = int(rand(1,10));
+%   \mkd{a}
+%
+% gets old. \displayint{a}{10} accomplishes the same thing. The second
+% argument should be one greater than the largest value $a should take.
+% (Truthfully, the second argument can be anything in (max,max+1], where
+% max is the largest value $a should assume.)
+%   \dint is a shortcut.
+
+\def\displayint#1#2{\string$#1 = int(rand(1,#2));
+  \mkd{#1}} % $
+\let\dint\displayint
+
+% Similarly, \signint{a}{10} declares $a (an integer in [1,9]), $da (empty
+% if $a is 1, $a otherwise), and $sa (randomly "+" or "-"). It does not
+% declare a variable that is the signed version of $a.
+%   \signintnoplus does the same, except that $sa is randomly "" or "-".
+%   \sint and \sintnp are shortcuts.
+
+\def\signint#1#2{\mks{#1}
+  \string$#1 = int(rand(1,#2)); % $
+  \mkd{#1}}
+\let\sint\signint
+\def\signintnoplus#1#2{\mksnp{#1}
+  \string$#1 = int(rand(1,#2)); % $
+  \mkd{#1}}
+\let\sintnp\signintnoplus
+
+% \mksigned{b} takes a variable $b that already has a value and creates a
+% "signed" version of it. Specifically, it defines $ab to be the absolute
+% value of $b, and declares $sb to be "-" if $b is negative, "+" otherwise.
+% It's useful when $b is the result of other calculations done in \code, and
+% you want to display $b in a nice way (perhaps $b is part of the answer,
+% and you need it in \comment).
+%  \mksignednoplus{b} does the same, but $sb is either "-" or empty.
+%  \mksd and \mksdnp are shortcuts.
+
+\def\mksigned#1{\string$a#1 = int(abs(\string$#1));
+  \string$s#1 = if(lt(\string$#1,0),"-","+");}
+\let\mksd\mksigned
+\def\mksignednoplus#1{\string$a#1 = int(abs(\string$#1));
+  \string$s#1 = if(lt(\string$#1,0),"-","");}
+\let\mksdnp\mksignednoplus
+
+% \mkdisplayable{b} does \mksigned{b}, and then does \mkd{ab} to create $dab
+% (empty if $ab is 1).
+%  \mkdisplayablenoplus{b} does the same, but $sb is either "-" or empty.
+%  \mkdl and \mkdlnp are shortcuts.
+
+\def\mkdisplayable#1{\mksd{#1}
+  \mkd{a#1}}
+\let\mkdl\mkdisplayable
+\def\mkdisplayablenoplus#1{\mksdnp{#1}
+  \mkd{a#1}}
+\let\mkdlnp\mkdisplayablenoplus
+
+% \makefrac is poorly named. It was meant to make sure that things like
+% ``4/2'' can be displayed as just 2, but it doesn't turn ``2/4'' into
+% ``1/2''. Specifically, \makefrac{a}{stuff} takes a (possibly complicated)
+% expression 'stuff' and defines the variable $a thusly:
+%   * if 'stuff' evaluates to an integer, then $a = int($stuff)
+%   * otherwise, $a is the string "stuff".
+% An example is probably necessary. Let's say you've computed variables $n
+% and $d, and the answer to the problem is $n/$d, so you have
+%
+%   \answer{\var{n}/\var{d}}
+%
+% to avoid having to use floating-point values and the ? operator. It would
+% be nice, especially if you want to make a \comment, to have something
+% like 6/3 show up as 2 instead. \makefrac{ans}{$n/$d} will do this, so that
+% $ans contains int($n/$d) if $n/$d is actually an integer. Thus, if $n is
+% 6 and $d is 3, then $ans is 2; but, if $n is 6 and $d is 4, then $ans is
+% "6/4" (not 1.5). \makefrac doesn't reduce fractions that aren't integers.
+%   \mkf is a shortcut.
+%   \makefrac actually applies to things besides fractions, because the
+% second argument can be anything EDU can evaluate. Here are other examples:
+% --------------
+% The code
+%
+%   $a = decimal(1,rand(1,10));
+%   \mkf{b}{$a}
+%
+% defines $a to be a number in [1,10), rounded to the first decimal place.
+% Thus, $a could be 3.8, 2.0, or 9.9. $b is equal to $a, but $b doesn't have
+% the trailing '.0' if $a is an integer. So, with the example values of $a,
+% $b would be 3.8, 2, or 9.9.
+% --------------
+% The code
+%
+%   $a = int(rand(-5,6));
+%   \mkf{b}{sin($a)}
+%
+% defines $a to be an integer in [-5,5]. $b is then the string "sin($a)",
+% with $a suitably replaced by an integer, unless $a is zero, in which
+% case $b is the string "0".
+% --------------
+
+\def\makefrac#1#2{\string$int#1 = int(#2);
+  \string$#1 = if(eq(#2,\string$int#1),"\string$int#1","#2");}
+\let\mkf\makefrac
+
+%%% end edualgo.sty
+
+
+\ifXML
+  \InputIfFileExists{ed-xml.sty}\relax\relax
+\fi
+
