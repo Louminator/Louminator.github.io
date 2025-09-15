@@ -9,39 +9,37 @@ redirect_from:
 
 {% include base_path %}
 
+These are highlights. My full vitae is <a href="/files/CV.pdf" target="_blank"> here</a>. This page has highlights only.
+
+
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D. in Applied Mathematics, University of Arizona. December 1993. <br> Dissertation: <i> A Spreading Blob Vortex Method for Viscous Bounded Flows.</i> <br> Adviser: B. J. Bayly.
 
-Work experience
+* M.A. in Mathematics, University of California Berkeley. 1990.
+
+* B.S. in Mathematics,  Harvey Mudd College, 1988}
+
+Academic employment
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Aug 2020-Aug 2025: Dean of the Graduate College <br> Vice Provost for Graduate and Professional Education} <br> University of Delaware
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Jan 2015-Aug 2020: Chair <br> Department of Mathematical Sciences <br> University of Delaware
 
-Publications
+* Aug 2011-present: Professor <br> Department of Mathematical Sciences <br> University of Delaware
+
+* Aug 2012-present: Professor (joint appointment) <br> Department of Computer and Information Sciences <br> University of Delaware
+
+* Aug 2004-Aug 2011: Associate Professor <br> Department of Mathematical Sciences <br> University of Delaware
+
+* Jan 2001-Aug 2004: Assistant Professor <br> Department of Mathematical Sciences <br> University of Delaware
+
+* 1996-Dec 2000: Assistant Professor <br> Department of Mathematical Sciences <br> University of Massachusetts Lowell
+
+* 1994-1996: NSF Postdoctoral Fellow <br> Department of Engineering Sciences and Applied Mathematics <br> Department of Mechanical Engineering <br> Northwestern University
+
+Select publications (Still working at this.)
 ======
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
@@ -59,6 +57,4 @@ Teaching
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+
