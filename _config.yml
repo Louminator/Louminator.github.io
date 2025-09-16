@@ -23,7 +23,7 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "NewRiverPortrait.jpg"
-  name             : "Louis F. Rossi*"
+  name             : "Louis F. Rossi"
   pronouns         : # example: "she/her"  
   bio              : "I am a mathematician, educator, academic leader, husband, parent, cyclist, sailor and a few other things. I wander often, but I am seldom lost."
   location         : "Newark Delaware"
@@ -270,6 +270,15 @@ defaults:
       share: true
       comments: true
   # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  # _test
   - scope:
       path: ""
       type: portfolio
