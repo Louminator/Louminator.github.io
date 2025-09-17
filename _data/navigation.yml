@@ -18,10 +18,13 @@ main:
   #  url: /teaching/    
     
   - title: "Teaching"
-    url: /portfolio/
+    url: /teaching/
         
-  - title: "Leadership/Admin"
-    url: /leadership/
+#  - title: "Leadership/Admin"
+#    url: /leadership/
+
+#  - title: "Test"
+#    url: /test/
         
   - title: "Blog Posts"
     url: /year-archive/

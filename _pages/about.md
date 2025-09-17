@@ -1,13 +1,13 @@
 ---
 permalink: /
-title: "Mathematics is everywhere and for everyone."
+title: "I am Lou Rossi"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-I am a mathematician, an educator and a leader at the University of
+I am a mathematician, an educator and often a leader at the University of
 Delaware. I see mathematics in everything around me. One of the
 great things about a career as a university faculty member is that you
 have the opportunity and freedom to play many roles working with many

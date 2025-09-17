@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "Prof. Louis F. Rossi"
+title                    : "Louis Rossi Home"
 title_separator          : "-"
 name                     : &name "Lou Rossi"
 description              : &description "personal description"
