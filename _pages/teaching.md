@@ -5,6 +5,10 @@ title: "Teaching and learning"
 author_profile: true
 ---
 
+## Fall 2025
+
+I am not teaching any courses this term because I am on sabbatical.
+
 ## Study abroad experience
 * Mathematics of Sustainable Systems. Melbourne Australia. Co-leader. Winter 2018.
 * Mathematics of Sustainable Systems. Melbourne Australia. Co-leader. Winter 2016.

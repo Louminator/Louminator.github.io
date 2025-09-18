@@ -39,22 +39,9 @@ Academic employment
 
 * 1994-1996: NSF Postdoctoral Fellow <br> Department of Engineering Sciences and Applied Mathematics <br> Department of Mechanical Engineering <br> Northwestern University
 
-Select publications (Still working at this.)
+Select publications
 ======
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-
