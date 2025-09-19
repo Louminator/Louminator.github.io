@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-These are highlights. My full vitae is <a href="/files/CV.pdf" target="_blank"> here</a>. This page has highlights only.
+My full vitae is <a href="/files/CV.pdf" target="_blank"> here</a>. This page has highlights only.
 
 
 Education
