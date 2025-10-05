@@ -23,7 +23,7 @@ Education
 Academic employment
 ======
 
-* Aug 2020-Aug 2025: Dean of the Graduate College <br> Vice Provost for Graduate and Professional Education} <br> University of Delaware
+* Aug 2020-Aug 2025: Dean of the Graduate College <br> Vice Provost for Graduate and Professional Education <br> University of Delaware
 
 * Jan 2015-Aug 2020: Chair <br> Department of Mathematical Sciences <br> University of Delaware
 
