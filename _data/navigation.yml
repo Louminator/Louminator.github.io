@@ -23,9 +23,12 @@ main:
 #  - title: "Test"
 #    url: /test/
         
+  - title: "Other"
+    url: /otherthings/
+
   - title: "Blog Posts"
     url: /year-archive/
-    
+
   - title: "CV"
     url: /cv/
     
