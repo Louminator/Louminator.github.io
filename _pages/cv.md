@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-My full vitae is <a href="/files/CV.pdf" target="_blank"> here</a>. This page has highlights only.
+My full vitae is <a href="/files/CV.pdf" target="_blank"> here</a>. This page has **highlights only**.
 
 
 Education
@@ -18,7 +18,7 @@ Education
 
 * M.A. in Mathematics, University of California Berkeley. 1990.
 
-* B.S. in Mathematics,  Harvey Mudd College, 1988}
+* B.S. in Mathematics,  Harvey Mudd College, 1988
 
 Academic employment
 ======
