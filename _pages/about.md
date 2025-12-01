@@ -7,19 +7,20 @@ redirect_from:
   - /about.html
 ---
 
-I am a mathematician, an educator and often a leader at the University of
-Delaware. I see mathematics in everything around me. One of the
+I am a mathematician, an educator and often a leader at the University
+of Delaware. I see mathematics in everything around me. One of the
 great things about a career as a university faculty member is that you
 have the opportunity and freedom to play many roles working with many
 talented faculty, staff and students. As a scholar and educator, I
 enjoy helping students learn about and discover mathematics at all
-levels. I enjoy teaching at all levels. Some of my most advanced students have gone on to be faculty
-elsewhere while others have gone into industry.  As a department
-chair, I enjoyed advancing our department's mission and supporting the
-faculty in achieving their goals and aspirations. As the inaugural dean of
-the Graduate College, I led the creation of our Graduate College, a
-college that worked across the entire university to promote excellence
-in graduate preparation and research.
+levels. I enjoy teaching at all levels. Some of my most advanced
+students have gone on to be faculty elsewhere while others have gone
+into industry.  As a department chair, I enjoyed advancing our
+department's mission and supporting the faculty in achieving their
+goals and aspirations. As the inaugural dean of the Graduate College,
+I led the creation of the University of Delaware's newest college, one
+that worked across the entire university to promote excellence in
+graduate preparation and research.
 
 Research and students
 ======
