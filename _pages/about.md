@@ -34,7 +34,7 @@ computational methods. My research has been applied to fluid flows,
 insect swarms, wired and wireless networks, and robotics. Most
 research at R1 institutions is done by students working side-by-side
 with faculty mentors. So, most of these mathematical advances are stories of
-discovery of knowledge, but they are also stories of the growth and
+discovery of knowledge but they are also stories of growth and
 development of my students.
 
 
