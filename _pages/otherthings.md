@@ -13,7 +13,12 @@ author_profile: true
 
 <img src="{{'/assets/images/biketrain.jpg' | relative_url}}" width="175px"/>
 
-Part 2: Proof of concept from downtown to the Joliet Iron Works and beyond. Coming soon.
+<a href="/files/Cycling from Chicago to Iowa City - Serialization -
+Part 2.pdf" target="_blank"> Part 2: Proof of concept to Morris IL and
+beyond on the Michigan & Illinois Canal trail</a>.
 
 <img src="{{'/assets/images/joliet.jpg' | relative_url}}" width="175px"/>
 
+Part 3: Ups and downs in western Illinois. Coming soon.
+
+<img src="{{'/assets/images/silos.jpg' | relative_url}}" width="175px"/>
