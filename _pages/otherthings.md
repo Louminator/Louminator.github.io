@@ -21,4 +21,4 @@ beyond on the Michigan & Illinois Canal trail</a>.
 
 Part 3: Ups and downs in western Illinois. Coming soon.
 
-<img src="{{'/assets/images/silos.jpg' | relative_url}}" width="175px"/>
+<img src="{{'/assets/images/locks.jpg' | relative_url}}" width="175px"/>
