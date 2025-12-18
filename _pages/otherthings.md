@@ -40,7 +40,7 @@ but quite possibly the toughest leg. </a> We traverse the "Iowa
 highlands," explore Wildcat Den State Park, push our way through a lot of
 gravel and gravel, and celebrate on the farm.
 
-<img src="{{'/assets/images/IowaTrain.jpg' | relative_url}}" width="300px"/>
-<img src="{{'/assets/images/WildcatDen.jpg' | relative_url}}" width="300px"/>
-<img src="{{'/assets/images/Agritruck.jpg' | relative_url}}" width="300px"/>
+<img src="{{'/assets/images/IowaTrain.jpg' | relative_url}}" width="200px"/>
+<img src="{{'/assets/images/WildcatDen.jpg' | relative_url}}" width="200px"/>
+<img src="{{'/assets/images/Agritruck.jpg' | relative_url}}" width="200px"/>
 
