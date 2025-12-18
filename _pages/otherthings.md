@@ -26,7 +26,21 @@ infrastructure project that was never used for commerce</a>. I learn that when I
 
 <img src="{{'/assets/images/locks.jpg' | relative_url}}" width="300px"/>
 
-Part 4: We overcome minor mechanical problems and a roadblock, reach the mighty Mississippi River and see Iowa at last. Coming soon.
+<a href="/files/Cycling from Chicago to Iowa City - Serialization -
+Part 4.pdf" target="_blank"> Part 4: We overcome minor mechanical
+problems and a roadblock, reach the mighty Mississippi River and see
+Iowa at last. </a>
 
 <img src="{{'/assets/images/roadblock.jpg' | relative_url}}" width="300px"/>
 <img src="{{'/assets/images/MightyMiss.jpg' | relative_url}}" width="170px"/>
+
+<a href="/files/Cycling from Chicago to Iowa City - Serialization -
+Part 5.pdf" target="_blank"> Part 5: The Iowa leg is not the longest
+but quite possibly the toughest leg. </a> We traverse the "Iowa
+highlands," explore Wildcat Den State Park, push our way through a lot of
+gravel and gravel, and celebrate on the farm.
+
+<img src="{{'/assets/images/IowaTrain.jpg' | relative_url}}" width="300px"/>
+<img src="{{'/assets/images/WildcatDen.jpg' | relative_url}}" width="300px"/>
+<img src="{{'/assets/images/Agritruck.jpg' | relative_url}}" width="300px"/>
+
