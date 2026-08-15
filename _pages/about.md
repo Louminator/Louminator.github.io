@@ -18,9 +18,9 @@ students. As a scholar and educator, I enjoy helping students learn
 about and discover mathematics at all levels. I enjoy teaching at all
 levels. Some of my most advanced students have gone on to be faculty
 elsewhere while others have gone into industry.  As a department chair
-at UD, I enjoyed advancing our department's mission and supporting the
+at the University of Delaware (UD), I enjoyed advancing our department's mission and supporting the
 faculty in achieving their goals and aspirations. As the inaugural
-dean of the Graduate College at the University of Delaware, I led the creation of the University of
+dean of the Graduate College at the UD, I led the creation of the University of
 Delaware's newest college, one that worked across the entire
 university to promote excellence in graduate preparation and
 research. Now, as the Dean of Natural Sciences at UC Merced, I look forward to providing administrative leadership to a spectacular and committed school faculty with expertise in chemistry, life sciences spanning all scales from molecular to environmental, mathematics and physics.
