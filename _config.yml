@@ -22,14 +22,14 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "NewRiverPortrait.jpg"
+  avatar           : "headshot1.jpg"
   name             : "Louis F. Rossi"
   pronouns         : # example: "she/her"  
   bio              : "I am a mathematician, educator, academic leader, husband, parent, cyclist, sailor and a few other things. I wander often, but I am seldom lost."
   location         : "Newark Delaware"
   employer         : "University of Delaware"
   uri              : # URL
-  email            : "rossi@udel.edu" 
+  email            : "louisrossi@ucmerced.edu" 
 
   # Academic websites
   academia         : # URL
