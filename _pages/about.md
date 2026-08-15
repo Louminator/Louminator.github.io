@@ -7,10 +7,10 @@ redirect_from:
   - /about.html
 ---
 
-I am a mathematician, an educator and often a leader at the
-[University of Delaware](https://udel.edu){:target="_blank"} (UD)
-**and in August 2026, I will be joining the [University of California
-at Merced](http://ucmerced.edu){:target="_blank"}.** I see mathematics
+I am a mathematician, an educator and the Dean of the School of Natural Sciences at 
+the [University of California
+at Merced](http://ucmerced.edu){:target="_blank"}.
+I see mathematics
 in everything around me. One of the great things about a career as a
 university faculty member is that you have the opportunity and freedom
 to play many roles working with many talented faculty, staff and
@@ -20,11 +20,10 @@ levels. Some of my most advanced students have gone on to be faculty
 elsewhere while others have gone into industry.  As a department chair
 at UD, I enjoyed advancing our department's mission and supporting the
 faculty in achieving their goals and aspirations. As the inaugural
-dean of the Graduate College, I led the creation of the University of
+dean of the Graduate College at the University of Delaware, I led the creation of the University of
 Delaware's newest college, one that worked across the entire
 university to promote excellence in graduate preparation and
-research. This summer, I look forward to joining UC Merced as the dean
-of the School of Natural Sciences.
+research. Now, as the Dean of Natural Sciences at UC Merced, I look forward to providing administrative leadership to a spectacular and committed school faculty with expertise in chemistry, life sciences spanning all scales from molecular to environmental, mathematics and physics.
 
 Research and students
 ======
